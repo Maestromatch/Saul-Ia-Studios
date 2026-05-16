@@ -1,0 +1,136 @@
+CÓMO CONFIGURARLO
+
+Cómo hacer un chatbot de WhatsApp
+Esta guía explica cómo construir un chatbot de IA para WhatsApp desde cero usando Claude Code y n8n. El proceso va de lo más simple a lo más completo — primero lo dejas funcionando en el chat, lo pruebas bien, y solo al final lo conectas a WhatsApp.
+
+Antes de empezar
+Necesitas tener instalado y funcionando:
+
+Claude Code con el plan Pro activo
+
+n8n corriendo en tu VPS (puedes pagar la nube de n8n si quieres)
+
+La información del negocio del cliente recopilada y ordenada en un documento
+
+Si no tienes n8n instalado todavía, instálalo desde Easypanel antes de continuar.
+
+Paso 1 — Instalar las skills y el MCP de n8n en Claude Code
+Las skills le enseñan a Claude cómo construir workflows correctamente. El MCP conecta Claude directamente con tu instancia de n8n para que pueda subir los workflows automáticamente sin que tengas que copiar y pegar nada.
+
+Abre Claude Code y pega esto:
+
+Instala estos 2 plugins:
+/plugin install czlonkowski/n8n-mcp
+/plugin install czlonkowski/n8n-skills
+
+Acepta cuando te pida confirmar. Cuando termine, recarga Claude Code.
+
+Repositorios originales para referencia:
+
+https://github.com/czlonkowski/n8n-mcp
+
+https://github.com/czlonkowski/n8n-skills
+
+Paso 2 — Obtener la API key de n8n
+Para que Claude pueda conectarse a tu n8n y subir workflows directamente, necesita la URL de tu instancia y una API key.
+
+Entra a tu n8n — ej. https://n8n.tudominio.cl
+
+Ve a Settings > API
+
+Clic en Create API Key
+
+Dale un nombre descriptivo, por ejemplo claude-code-access
+
+Copia la key — no la vas a ver de nuevo
+
+Paso 3 — Conectar Claude Code con tu n8n
+Con la API key copiada, dile a Claude Code que configure la conexión:
+
+Configura la conexión con mi n8n usando estos datos:
+- URL: https://n8n.tudominio.cl
+- API Key: [pega tu key aquí]
+
+Claude actualiza la configuración del MCP automáticamente. Reinicia Claude Code cuando termine para que tome los cambios.
+
+Verifica que funciona con esto:
+
+Conéctate a mi n8n y dime cuántos workflows tengo activos.
+
+Si te responde con el número, la conexión está funcionando.
+
+Paso 4 — Recopilar y preparar la información del negocio
+Antes de pedirle a Claude que construya el chatbot, necesita conocer el negocio. Junta toda la información disponible en un solo documento:
+
+Nombre del negocio y descripción de lo que hace
+
+Servicios o productos que ofrece con sus precios
+
+Preguntas frecuentes que reciben los clientes
+
+Tono de comunicación que quiere proyectar
+
+Qué debe hacer el chatbot — ¿responder consultas, calificar leads, agendar citas?
+
+Qué información debe recopilar del cliente que escribe
+
+Si el negocio tiene página web, usa la extensión de Claude en Chrome para extraer toda la información de ahí y agregarla al documento.
+
+Paso 5 — Crear el chatbot en modo one shot
+El objetivo es mandarle todo el contexto a Claude de una sola vez para que genere un nodo bien estructurado desde el principio, y luego ir refinando.
+
+Abre Claude Code y pega algo así:
+
+Voy a construir un chatbot de IA para WhatsApp usando n8n.
+Te voy a dar toda la información del negocio para que la uses 
+como base de conocimiento del agente.
+
+[Pega aquí toda la información del negocio]
+
+Quiero que el agente pueda:
+- [describe qué debe hacer — ej. responder consultas, calificar leads, agendar citas]
+- [agrega más acciones si las hay]
+
+Antes de construir nada, dime:
+1. Qué nodos vas a usar
+2. Qué APIs y credenciales necesito tener listas
+3. Cómo vas a estructurar el flujo
+
+Cuando lo apruebe, crea el workflow completo y súbelo directamente a mi n8n.
+
+Claude te va a dar el plan primero. Revísalo, ajusta lo que no te convenza, y cuando estés de acuerdo le dices que proceda.
+
+Paso 6 — Probar en el chat antes de conectar WhatsApp
+No conectes WhatsApp todavía. Primero prueba el chatbot directamente desde n8n usando el nodo de chat — es mucho más rápido y no necesitas el número ni Chatwoot para hacer las pruebas.
+
+Dentro de n8n, activa el workflow y usa el chat integrado para simular conversaciones. Prueba distintos escenarios:
+
+Preguntas básicas sobre el negocio
+
+Casos que el agente debería derivar a un humano
+
+Información que debería recopilar del cliente
+
+Paso 7 — Debuggear hasta que funcione bien
+Cuando algo no funcione como esperas, tienes dos opciones:
+
+Si es un error de n8n — toma una captura de pantalla del error y pégasela a Claude Code:
+
+Me aparece este error en n8n. [captura de pantalla]
+¿Qué está pasando y cómo lo soluciono?
+
+Si quieres cambiar el comportamiento del agente — descríbele exactamente qué quieres cambiar:
+
+Quiero que el agente cambie únicamente [describe qué].
+El resto del flujo debe quedar igual.
+
+Si Claude Code está consumiendo demasiados tokens — pásate a Antigravity, explícale el error con una captura de pantalla y deja que él lo debuggee. Una vez resuelto, vuelves a Claude Code si necesitas hacer cambios en el workflow de n8n.
+
+El proceso normal es ir refinando el agente hasta que las respuestas sean correctas, el tono sea el adecuado y el flujo funcione sin errores.
+
+Paso 8 — Conectar a WhatsApp
+Cuando el chatbot esté funcionando bien en el chat de prueba, ya puedes conectarlo a WhatsApp a través de Chatwoot.
+
+El proceso completo de conexión está en la guía Cómo conectar WhatsApp con Chatwoot. Una vez conectado, haz las pruebas finales enviando mensajes reales desde un teléfono y verificando que todo funciona de punta a punta.
+
+⚠️ Siempre revisa el workflow antes de activarlo en producción. Si tienes workflows importantes, haz una copia antes de que Claude los modifique.

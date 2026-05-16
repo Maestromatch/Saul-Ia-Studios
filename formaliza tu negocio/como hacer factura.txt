@@ -1,0 +1,108 @@
+CÓMO HACER FACTURAS
+
+Cómo emitir una factura electrónica en el SII
+Esta guía es para agencias de marketing y servicios de publicidad. Estos servicios sí pagan IVA, así que el documento que debes emitir es una Factura Electrónica (no la versión exenta).
+
+Antes de empezar: necesitas un certificado digital
+Para firmar y emitir facturas electrónicas necesitas un certificado digital. Sin él no puedes emitir nada.
+
+Se compra una sola vez y tiene una duración de 1 a 3 años según lo que elijas. El trámite es 100% online y toma pocos minutos.
+
+Cómo comprarlo:
+
+Entra a e-cert (o la plataforma de tu preferencia — hay varias en Chile)
+
+Selecciona Certificado digital y haz clic en Comprar
+
+Elige la duración (1, 2 o 3 años)
+
+Activa la opción de certificado protegido — si algún día lo pierdes, puedes recuperarlo sin costo adicional - Completamente opcional, yo no lo compré protegido
+
+Completa el formulario con tus datos. Importante: el RUT que ingreses debe ser el tuyo, no el de la empresa
+
+Acepta los términos y paga
+
+Te llegan las claves de activación al correo
+
+Con eso ya tienes todo lo que necesitas para emitir facturas.
+
+Paso a paso
+1. Entra al SII
+
+Ve a sii.cl e ingresa con el RUT y la clave del representante legal de la empresa. No con tu RUT personal si es distinto al representante legal.
+
+2. Ve al sistema de facturación
+
+Servicios online
+
+Factura electrónica
+
+Sistema de facturación gratuito del SII
+
+Emisión de documentos tributarios electrónicos (DTE)
+
+3. Selecciona el tipo de documento
+
+Elige Factura Electrónica. Esta es la opción para servicios afectos a IVA como publicidad, marketing y automatizaciones.
+
+4. Selecciona tu empresa
+
+Si tienes más de una empresa registrada, elige la que corresponde.
+
+5. Completa los datos del cliente
+
+Ingresa el RUT de la empresa o persona a la que le vas a facturar. El sistema carga automáticamente los datos (razón social, giro, dirección).
+
+6. Completa el detalle de la factura
+
+Descripción: escribe el servicio que estás cobrando. Sé específico — por ejemplo: "Servicio de gestión de campañas digitales" o "Implementación de automatizaciones de marketing"
+
+Cantidad: generalmente 1 para servicios
+
+Precio unitario: el monto neto que cobras (sin IVA)
+
+El sistema calcula automáticamente el IVA (19%) y el total.
+
+7. Condición de pago
+
+Selecciona según lo acordado con el cliente:
+
+Al contado
+
+Al crédito (si el pago es diferido)
+
+8. Valida y visualiza
+
+Haz clic en Validar. El sistema te muestra un borrador de la factura antes de emitirla. Revisa que estén correctos:
+
+RUT y razón social de tu empresa
+
+RUT y razón social del cliente
+
+Descripción del servicio
+
+Monto neto, IVA (19%) y total
+
+9. Firma y emite
+
+Si todo está correcto, haz clic en Firmar. El sistema te va a pedir la clave del certificado digital. La ingresas y confirmas.
+
+Con eso la factura queda emitida y se envía automáticamente al correo del cliente.
+
+Lo que aparece en una factura afecta a IVA
+A diferencia de una factura exenta, acá el desglose es:
+
+Monto neto — lo que cobras antes de impuestos
+
+IVA (19%) — el impuesto que se suma
+
+Total — lo que paga el cliente
+
+Ese IVA que cobras no es tuyo. Lo declaras en el F29 del mes como IVA débito fiscal y lo pagas al SII (descontando el IVA de tus propias compras).
+
+Importante
+Si no firmas, la factura no se emite
+
+Siempre revisa el borrador antes de firmar — una factura emitida con error hay que anularla con una nota de crédito, lo que genera más trámite
+
+El RUT del cliente tiene que estar correcto desde el principio

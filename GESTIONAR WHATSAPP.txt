@@ -1,0 +1,52 @@
+7. GESTIONAR WHATSAPP
+
+Chatwoot — gestión de mensajes de WhatsApp
+Chatwoot es la plataforma desde donde se gestionan todos los mensajes de WhatsApp de un cliente. Funciona como una bandeja de entrada centralizada — todos los chats llegan ahí, el agente de IA responde automáticamente, y si en algún momento se necesita intervención humana, el cliente puede ver y responder desde la misma plataforma.
+
+Está instalado directamente en tu VPS, así que no tiene costo adicional.
+
+Por qué es clave en el servicio que ofreces
+Cuando vendes automatizaciones con WhatsApp no solo estás vendiendo un bot — estás vendiendo un sistema de atención completo, organizado y escalable. Chatwoot es la pieza que convierte un simple número de WhatsApp en un canal de soporte y ventas en serio, con historial de conversaciones, etiquetas, notas internas y control total de lo que está pasando.
+
+El número que necesitas
+Necesitas comprar un chip nuevo. El número que viene en ese chip es el que vas a usar — nada más. Tiene que ser un chip que no tenga WhatsApp instalado ni ninguna cuenta asociada previamente.
+
+Es muy barato y vale completamente la pena.
+
+Cómo se conecta todo
+El proceso completo para dejar Chatwoot funcionando con WhatsApp está en la guía práctica Cómo conectar WhatsApp con Chatwoot. Ahí está el paso a paso detallado desde cero.
+
+En resumen, el proceso implica:
+
+Instalar Chatwoot desde Easypanel
+
+Asignarle tu subdominio (ej. chat.tudominio.cl)
+
+Crear una aplicación en Meta for Developers
+
+Conectar el número del chip a esa aplicación
+
+Generar un token permanente
+
+Vincular todo con Chatwoot
+
+Cómo asignarle tu dominio a Chatwoot
+Una vez instalado Chatwoot en el VPS, hay que asignarle un subdominio para poder acceder desde el navegador.
+
+1. En Cloudflare:
+
+Ve a DNS > Records
+
+Agrega un registro tipo A con el nombre chat apuntando a la IP de tu VPS
+
+Déjalo en nube gris (DNS only)
+
+2. En Easypanel:
+
+Entra al servicio de Chatwoot
+
+Ve a la configuración de dominios
+
+Ingresa chat.tudominio.cl y guarda
+
+Desde ese momento accedes a Chatwoot desde chat.tudominio.cl en cualquier navegador.

@@ -1,0 +1,121 @@
+1. CREAR EMPRESA
+
+Cómo crear tu empresa en Chile (SpA) — paso a paso
+Esta guía te muestra cómo constituir una Sociedad por Acciones usando la plataforma Tu Empresa en Un Día. Todo el proceso es online y lo puedes hacer en menos de una hora.
+
+Lo que necesitas antes de empezar:
+
+Clave Única activa
+
+Por qué una SpA
+La Sociedad por Acciones es la forma más flexible para emprender en Chile:
+
+La puede constituir una sola persona
+
+No exige capital mínimo
+
+Puedes tener múltiples giros comerciales
+
+Es fácil incorporar socios después, simplemente transfiriendo acciones
+
+Se adapta si el negocio cambia de dirección
+
+Paso 1 — Constituir la empresa
+Ve a tuempresaenundia.cl e ingresa con tu Clave Única.
+
+Selecciona Constituir nueva empresa → SpA.
+
+Vas a completar estos campos:
+
+Tip de la plataforma: en varios campos vas a ver un ícono de ampolleta o lupa al lado del texto Ej:💡. Si lo aprietas, la plataforma te carga un texto de ejemplo directamente en el campo. Úsalo como punto de partida, especialmente en los campos más técnicos.
+
+Razón social El nombre debe terminar obligatoriamente con la sigla "SpA". El nombre de fantasía es opcional.
+
+Domicilio tributario Ingresa la dirección donde operará la empresa. En este paso solo la declaras. Cuando hagas el inicio de actividades en el SII vas a tener que acreditarla con un contrato de arriendo, escritura u otro documento que pruebe que usas ese domicilio.
+
+Objeto social (giro) Describe a qué se va a dedicar la empresa. Tiene que ser lo suficientemente específico para que el SII entienda el giro, pero lo suficientemente amplio para no quedarte corto después. Si no tienes claro cómo redactarlo, busca referencias de empresas similares o consulta con un contador. Puedes pedirle a la IA que te ayude a redactar esto en base a lo que vas a hacer con tu negocio, incluyendo "todas las actividades directa o indirectamente relacionadas con el giro"
+
+Paso 2 — Capital y acciones
+Indica el monto de capital con el que partes. No necesitas que ese dinero esté depositado en ningún lado, puedes dejarlo "por enterar" en un plazo de hasta 36 meses.
+
+¿Cuánto capital declarar? No pongas un monto muy bajo. Si después necesitas financiamiento o cuentas corrientes, los bancos miran esto. Un rango razonable para partir: entre $5.000.000 y $10.000.000 CLP. Tampoco vayas tan alto.
+
+Acciones Trabaja con números redondos. Si partes solo, una buena práctica es emitir 100 acciones. Así, si incorporas un socio después, puedes ceder un porcentaje exacto sin complicaciones.
+
+Configuración extra:
+
+Serie única, dejar las opciones que ya vienen marcadas en No
+
+Duración de la sociedad: indefinida
+
+Paso 3 — Administración
+Selecciona Gerente General como forma de administración. No directorio, a menos que tengas varios socios que necesiten estructura formal.
+
+Debes marcar: "Sí. Se le solicitará identificar al Gerente General en el paso 2" y abajo marcar lo que pone en "Ej:💡"
+
+En las facultades de la administración, selecciona todas las sugerencias que entrega la plataforma (botón que pone Ej:💡). Incluyen representación ante bancos, firma de contratos, créditos, comercio exterior y representación judicial. Si omites alguna, después te puede traer problemas al abrir una cuenta corriente o firmar contratos.
+
+Paso 4 — Configuraciones adicionales
+En estas secciones la plataforma también tiene sugerencias precargadas (ícono de ampolleta). En la mayoría de los casos puedes usarlas directamente. Las configuraciones recomendadas son:
+
+Comunicaciones: usar la sugerencia de la plataforma Ej:💡
+
+Junta de accionistas: usar la sugerencia de la plataforma Ej:💡
+
+Resolución de diferencias: árbitro arbitrador/ 1  / "La designación corresponderá al juzgado civil o de Letras del domicilio de la sociedad.
+
+Distribución de utilidades: usar la sugerencia de la plataforma Ej:💡
+
+PASO 5 - Accionistas y administradores
+Aquí debes rellenar con toda la información del Gerente General (tú)
+
+Calidad: Gerente 
+
+Aporte de Capital del Accionista: Debe ser el mismo que pusimos anteriormente. 
+
+Tipo de bien: "Dinero" 
+
+Serie: "Única"
+
+Cantidad de acciones: Las que pusimos antes
+
+Capital por pagar: Monto que pusimos antes
+
+Plazo para pagar: El que marcamos antes
+
+Forma de pago: Cuotas mensuales
+
+Luego de eso te pedirá "Adjuntar documentos" pero simplemente pasas al paso siguiente
+
+Paso 6 — Revisar y firmar
+Antes de firmar, descarga el borrador de los estatutos y revísalo. Confirma que toda la información esté correcta.
+
+Para firmar necesitas una Firma Electrónica Avanzada (FEA). Puedes comprarla directamente desde la plataforma solo para este trámite. La opción que funciona bien es firma.cl — tiene soporte todos los días, cualquier horario.
+
+Comprar firma<Selecciona la firma<Sigue el procedimiento que indican y listo
+
+Una vez firmado, descargas el Certificado de Estatutos. Con ese documento tu empresa está legalmente constituida.
+
+Qué sigue después
+Con la empresa creada, el próximo paso es el inicio de actividades ante el SII. Puedes hacerlo directamente desde la misma plataforma.
+
+Para eso vas a necesitar:
+
+El certificado de estatutos
+
+Acreditar el domicilio tributario (contrato de arriendo, escritura, etc.)
+
+Resumen
+tuempresaenundia.cl → Constituir SpA
+
+Completar: razón social, domicilio, objeto social
+
+Definir capital y acciones (recomendado: $10M / 100 acciones)
+
+Administración: Gerente General con todas las facultades
+
+Revisar borrador → Comprar firma
+
+Descargar certificado de estatutos
+
+Iniciar actividades en el SII

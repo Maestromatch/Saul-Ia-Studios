@@ -1,0 +1,52 @@
+CÓMO DEFINIR LOS PRECIOS
+
+Fijar precios sin referencia es adivinar. Lo primero que hice fue investigar.
+
+El punto de partida: investigación con IA
+Le pedí a Claude que hiciera un análisis del mercado chileno. Que buscara agencias y freelancers ofreciendo servicios similares, que comparara rangos de precios, que me diera una idea de qué se estaba cobrando por cada cosa.
+
+Eso me dio un piso y un techo. Un número mínimo debajo del cual no tiene sentido trabajar, y un máximo que me indicaba hasta dónde el mercado está dispuesto a llegar.
+
+Si quieres hacer lo mismo, el prompt es simple:
+
+Haz un análisis de mercado de agencias digitales en Chile que ofrezcan 
+servicios de automatización con IA, chatbots, páginas web y Meta Ads. 
+Compara rangos de precios, qué incluyen los servicios y cómo posicionan 
+su oferta. Dame una tabla comparativa y una recomendación de precios 
+para alguien que está empezando.
+
+Los costos primero
+Antes de pensar en ganancia, tienes que saber exactamente cuánto te cuesta operar.
+
+Haz una lista de todas las suscripciones que vas a necesitar para entregar cada servicio: el servidor, la IA, las herramientas de automatización, el diseño, lo que sea. Suma todo.
+
+Ese número es tu piso real. Cualquier precio que fijes tiene que cubrir eso primero, más el tiempo que vas a invertir en el proyecto.
+
+El tiempo como variable
+El precio de implementación tiene que reflejar cuánto tiempo vas a tardar en entregar el proyecto. No es una ciencia exacta al principio, pero puedes estimarlo.
+
+Piensa en cada parte del proyecto, estima cuántos días te toma cada una, y ponle un valor a tu hora. Eso te da un número base.
+
+Con el tiempo vas a afinar esas estimaciones. Los primeros proyectos siempre toman más de lo que calculas — eso es normal y está bien.
+
+La lógica del ingreso recurrente
+Acá está la parte más importante a largo plazo.
+
+La implementación — construir el sitio, configurar las campañas, montar el chatbot — es un ingreso puntual. Cobras una vez y listo. Para volver a cobrar, necesitas un cliente nuevo.
+
+El plan mensual es distinto. Lo configuras una vez y te genera ingreso todos los meses con poco trabajo adicional. Mientras más clientes tengas en plan mensual, menos dependes de estar consiguiendo proyectos nuevos constantemente.
+
+La estrategia es esta: no necesariamente cobrar caro en la implementación, pero sí mantener una tarifa mensual sólida que cubra tus costos y te deje un margen real de ganancia. Con el tiempo, cuando tengas varios clientes activos en plan mensual, vas a estar generando ingresos sin tener que cerrar cinco proyectos nuevos al mes.
+
+Ese es el modelo que escala.
+
+Cómo partir si estás empezando
+Al principio no tienes experiencia ni testimonios. Eso es una desventaja real a la hora de vender, y la única forma de resolverla es trabajando.
+
+Si estás estancado y no consigues clientes, considera ofrecer tus servicios gratis o muy baratos al principio. No es perder el tiempo — es invertirlo. Cada proyecto que haces, aunque no te pague bien, te da dos cosas que no tienen precio cuando estás empezando: experiencia real y un testimonio.
+
+La experiencia hace que el próximo proyecto lo hagas en la mitad del tiempo. El testimonio te abre puertas que de otra forma estarían cerradas.
+
+Una estrategia que tiene sentido: cada cinco clientes, sube un poco el precio. Partes barato, acumulas experiencia y testimonios, y vas subiendo gradualmente a medida que puedes demostrar resultados. No hay salto brusco — es una escalera.
+
+Con el tiempo, vas a estar cobrando precios más altos, entregando proyectos más rápido y con clientes recurrentes que pagan mes a mes. Eso es un negocio que funciona solo. Además, los referidos son la mejor forma de poder cerrar clientes con la menor fricción posible. Puedes crear ofertas las cuales incluyan el que la persona te consiga otro cliente por un descuento en tu servicio.

@@ -1,0 +1,31 @@
+# Datos personales de formalización (privados — se llenan con RUT, capital, dirección)
+mi-spa-datos-clave.md
+mi-spa-checklist.md
+
+# Contexto interno para Claude — no es parte del producto público
+CLAUDE.md
+.claude/
+
+# Imágenes pesadas / con posible copyright en cerebro del agente
+agente ventas/*.png
+
+# Aprendizajes evolutivos del agente — pueden contener datos confidenciales de clientes
+agente ventas/agente-comercial-aprendizajes.md
+
+# OS / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node / build artefactos (por si más adelante hay build)
+node_modules/
+dist/
+build/
+.vercel/
+.env
+.env.local

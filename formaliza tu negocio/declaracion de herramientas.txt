@@ -1,0 +1,48 @@
+DECLARACIÓN DE HERRAMIENTAS
+
+Cómo hacer una declaración jurada de herramientas
+Cuando usas tus equipos personales para trabajar en tu empresa, puedes cederlos formalmente a la SpA mediante una declaración jurada. Esto es útil para efectos contables y tributarios — le da respaldo legal al uso de esos equipos dentro de la empresa.
+
+Cuando intenté hacer una factura por primera vez, me dijeron que no podía demostrar que tenía las herramientas para ejercer mi trabajo. Enviando este documento firmado ante notario, pude solucionar esto sin mayores complicaciones.
+
+Es un documento simple que puedes generar tú mismo en minutos.
+
+Para qué sirve
+Le deja claro al SII que los equipos con los que opera la empresa son tuyos como persona natural y que los estás poniendo a disposición de la sociedad. Sirve como respaldo en caso de fiscalización y es parte de tener la contabilidad ordenada desde el principio.
+
+Cómo hacerla
+Paso 1 — Haz el listado de tus herramientas
+
+Anota todo lo que usas para trabajar: computador, celular, monitor, micrófono, cámara, trípode, teclado, mouse, disco duro externo, etc. Para cada ítem indica:
+
+Cantidad
+
+Descripción del producto (marca y modelo si tienes)
+
+Paso 2 — Pídele a Claude que redacte el documento
+
+Entrégale esta información:
+
+"Redáctame una declaración jurada de herramientas. Mis datos: [tu nombre], RUT [tu RUT]. La empresa es [nombre de la empresa], RUT [RUT de la empresa]. El listado de herramientas es el siguiente: [pega tu lista]."
+
+Claude te genera el documento listo para imprimir. El formato es el de una declaración jurada estándar donde tú, como persona natural, declaras ser dueño de esas herramientas y las cedes a tu empresa para el desarrollo de sus actividades.
+
+Paso 3 — Revisa y firma
+
+Lee el documento, confirma que los datos estén correctos y fírmalo. En mi caso, la opción más segura fue firmarlo ante notario, me salió como $4.000 y me fui a la segura de que me lo iban a aceptar.
+
+Qué debe incluir el documento
+Tu nombre completo y RUT como persona natural
+
+Tu calidad de representante legal de la empresa
+
+El nombre y RUT de la empresa
+
+El listado numerado de herramientas con cantidad y descripción
+
+Una cláusula que indique que pones esas herramientas a disposición de la empresa para el desarrollo de sus actividades
+
+Tu firma al final
+
+Tip final
+Incluye una cláusula abierta al final del listado que diga algo como: "Cualquier otra herramienta o equipo necesario para el adecuado desarrollo de la actividad económica será proporcionado oportunamente." Así no tienes que actualizar el documento cada vez que compras algo nuevo.

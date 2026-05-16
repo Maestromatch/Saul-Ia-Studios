@@ -1,0 +1,97 @@
+1. HERRAMIENTAS QUE USO
+
+
+
+Stack real, sin patrocinios (ojalá), sin relleno. Cada herramienta en este documento la uso activamente en producción.
+
+IA y Modelos de Lenguaje
+Claude
+Es la IA que uso para casi todo: redactar, analizar, tomar decisiones, generar código. Es como tener un asistente muy capaz al que le puedes pedir prácticamente cualquier cosa y te da una respuesta útil.
+
+La uso todos los días. Literalmente sin Claude no sabría hacer nada
+
+Claude Code es una versión de Claude que, en vez de solo responderte en el chat, puede actuar directamente en tu computador: crear archivos, escribir y ejecutar código, modificar carpetas. No solo te dice qué hacer — lo hace.
+
+Cowork es una aplicación de escritorio que te permite decirle a Claude que haga tareas con tus archivos y programas. En realidad solo lo uso para ordenar archivos y funciona de pana.
+
+OpenAI (API de ChatGPT)
+Es la tecnología detrás de ChatGPT. Yo no la uso a través de la página web sino de forma directa desde mis automatizaciones, para que los chatbots y agentes que construyo puedan responder mensajes de forma automática.
+
+El modelo que más uso se llama gpt-4o-mini. Es más barato que las versiones grandes y responde bien para el tipo de tareas que le doy.
+
+Gemini
+Es la IA de Google. La uso de forma ocasional para consultas rápidas y para generar imágenes. No es mi herramienta principal, pero está disponible porque ya pago una suscripción que la incluye.
+
+Extensión de Claude en Chrome
+Es una extensión que instalas en Chrome y que te permite usar Claude directamente desde el navegador, sin tener que abrir una pestaña aparte.
+
+Para instalarla:
+
+Abre Chrome y ve a la Chrome Web Store
+
+Busca "Claude for Chrome" e instálala
+
+Inicia sesión con tu cuenta de Claude
+
+Listo. Desde ese momento tienes a Claude disponible en cualquier página que estés visitando. Lo usas principalmente para extraer información de páginas web de clientes, investigar competencia, o hacer preguntas sobre lo que estás viendo en pantalla sin salir de donde estás.
+
+Desarrollo y Código
+Antigravity
+Es una aplicación que me ayuda a organizar y gestionar mis proyectos de código. Funciona como un tablero visual donde defino qué quiero construir y cómo está estructurado el proyecto, antes de que Claude Code empiece a trabajar.
+
+Sirve para no tener que explicarle todo desde cero a la IA cada vez. Ahorra tiempo y reduce costos.
+
+GitHub
+Es el lugar donde guardo todo el código de mis proyectos. Funciona como una carpeta en la nube, pero diseñada para código: guarda el historial de cambios, me permite volver a versiones anteriores y compartir el trabajo con otras personas.
+
+Automatización y Agentes
+n8n
+Es la herramienta que uso para conectar aplicaciones y crear flujos automáticos. Por ejemplo: cuando alguien manda un mensaje por WhatsApp, n8n lo recibe, se lo pasa a la IA, obtiene una respuesta y la manda de vuelta — todo sin que yo haga nada.
+
+Es como el pegamento que une todas las piezas de una automatización.
+
+Se puede subir a tu propio servidor, evitándote pagar por la nube de n8n.
+
+Retell AI
+Es una herramienta para crear agentes de voz con IA. Básicamente, un agente que puede contestar o hacer llamadas telefónicas y hablar con clientes de forma natural, sin que haya un humano del otro lado. 
+
+Lo uso cuando un cliente quiere automatizar llamadas: confirmar citas, hacer seguimiento, atender consultas básicas.
+
+Infraestructura
+Contabo
+Es el servidor donde viven todos mis servicios. Piénsalo como un computador que está encendido 24/7 en algún lugar del mundo y que yo arriendo para correr mis herramientas y las de mis clientes.
+
+Cloudflare
+Va entre internet y mi servidor. Su trabajo es proteger el tráfico, gestionar los dominios (las direcciones web) y asegurarse de que la conexión esté cifrada. Todo dominio que uso pasa por Cloudflare.
+
+Es gratis en el plan básico.
+
+Easypanel
+Es el panel de control de mi servidor. Me permite instalar y gestionar aplicaciones con unos pocos clics, sin tener que escribir comandos complicados. Con esto se pueden levantar n8n, bases de datos y otros servicios fácilmente.
+
+Supabase
+Es una base de datos en la nube. La uso cuando un agente necesita recordar cosas: el historial de una conversación, los datos de un cliente, el estado de un proceso.
+
+Sin una base de datos, cada vez que alguien le escribe al agente, este parte desde cero sin recordar nada de lo anterior. Supabase le da memoria.
+
+Diseño y Contenido
+Stitch
+Es una herramienta de diseño visual que uso al inicio de cada proyecto web. Me permite definir cómo va a verse una página — colores, tipografía, estructura — antes de empezar a construirla.
+
+Flow
+Es una herramienta de generación de imágenes con IA. La uso para crear logos, imágenes para redes sociales y creatividades para anuncios. Le describes lo que necesitas y genera la imagen.
+
+Canva
+Herramienta de diseño para editar manualmente imágenes. No es la más sofisticada, pero apaña full, sirve para crear ads, guardar diseños, tener todo el diseño de la marca organizado.
+
+CapCut
+Es el programa que uso para editar videos — tanto para contenido de la comunidad como para material de clientes.
+
+Comunicación y Equipos
+Slack
+Es la app que uso para comunicarme con las personas con las que trabajo. Funciona como un WhatsApp más organizado: puedo tener canales separados por proyecto o tema. También se puede conectar con el n8n, bacan, pero no indispensable en realidad.
+
+Discord
+Lo uso para coordinar con colaboradores externos y participar en comunidades técnicas. Es más informal que Slack y funciona bien para trabajo puntual con personas que no son parte fija del equipo. Reemplaza full a Slack de ser necesario economizar
+
+Este arsenal se actualiza a medida que cambio o descubro herramientas mejores.

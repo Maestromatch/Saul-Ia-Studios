@@ -1,0 +1,91 @@
+2. INICIO DE ACTIVIDADES
+
+Cómo hacer el inicio de actividades en el SII
+El inicio de actividades es el trámite donde le informas al SII que tu empresa va a comenzar a operar. Sin esto no puedes emitir facturas ni boletas.
+
+Es 100% online y en la mayoría de los casos se resuelve rápido (Si se hace bien).
+
+Antes de empezar
+Tienes dos meses desde que obtuviste tu RUT para hacer este trámite. Si se te pasa ese plazo, tendrás que ir presencialmente a una oficina del SII.
+
+También necesitas tener claro el domicilio que vas a declarar y el documento que lo acredita. Si tienes dudas sobre eso, revisa la guía anterior sobre cómo acreditar domicilio.
+
+Lo que implica hacer inicio de actividades
+Esto no es solo un trámite. Al hacerlo, adquieres dos obligaciones que no puedes ignorar:
+
+Formulario 29 — declaración mensual Tienes que declararlo todos los meses sin excepción. Aunque no hayas tenido ningún movimiento. Aunque solo hayas tenido gastos y cero ventas. Si no lo haces, acumulas multas por cada mes no declarado. Cuando quieras ponerte al día, ya tienes deuda.
+
+Formulario 22 — operación renta anual Se declara una vez al año, entre marzo y abril. Ahí muestras todo el movimiento del año tributario y se calcula el impuesto a pagar. Este es más complejo y conviene hacerlo con un contador.
+
+El trámite paso a paso
+1. Ingresa al SII
+
+Ve a sii.cl → Servicios online → RUT e inicio de actividades → Iniciar actividades.
+
+Ingresa con las credenciales del representante legal de la empresa.
+
+2. Completa los datos de identificación
+
+Datos básicos de la sociedad. Sin complicaciones.
+
+3. Define tus actividades económicas
+
+Acá están los errores más comunes, así que presta atención:
+
+La fecha de inicio puede ser la del día en que estás haciendo el trámite
+
+Tienes que ingresar una descripción del giro (texto libre que describe lo que hace tu empresa — este es el que aparece en tus facturas)
+
+Luego seleccionas los códigos de actividad, que se dividen en afectos a IVA y exentos de IVA. Revisa bien cuál corresponde a tu caso porque ha habido cambios recientes
+
+Ejemplos de códigos que aplican para Flow State son estos, todos afectos a IVA por ser servicios prestados por una empresa:
+
+731001 — Servicios de publicidad prestados por empresas El principal. Cubre todo lo que tenga que ver con marketing digital, campañas, gestión de ads. El SII lo confirmó explícitamente como afecto a IVA.
+
+620900 — Otras actividades de tecnología de la información y servicios informáticos Cubre automatizaciones, integraciones, desarrollo de flujos con IA. Es código G, lo que significa que puede ser afecto o no a IVA dependiendo de cómo lo declares — para una empresa SpA va afecto.
+
+Puedes ingresar hasta 7 actividades, pero no metas todo lo que se te ocurra que podrías usar. Ingresa solo las que realmente estás o quieres estar operando hoy y que puedas demostrar con facturas si el SII te pide verificación. 
+
+Si ingresas una actividad que requiere demostrar algo (por ejemplo, transporte de pasajeros requiere acreditar los vehículos), y no tienes ese documento, te van a rechazar el trámite completo, no solo esa actividad
+
+4. Declara el domicilio
+
+Ingresa la dirección y el rol de la propiedad (se puede buscar por dirección en el mismo formulario).
+
+5. Adjunta los documentos
+
+El SII te va a indicar exactamente qué necesitas subir según lo que declaraste. Típicamente:
+
+Documento que acredita el domicilio (contrato de arriendo notariado, escritura, autorización de uso comercial)
+
+Documentos adicionales si alguna actividad lo requiere
+
+No olvides ninguno. Si rechazan el trámite, te van a pedir nuevamente los documentos que consideren necesarios.
+
+6. Envía la solicitud
+
+Revisa el resumen, confirma que todo esté correcto y envía.
+
+Después del inicio de actividades
+Una vez aprobado, el SII te envía el certificado al correo. Con eso ya puedes:
+
+Emitir boletas y facturas electrónicas desde el portal del SII
+
+Solicitar tu patente comercial en la municipalidad (tienes 15 días para hacer ese trámite)
+
+Resumen
+sii.cl → Servicios online → Iniciar actividades
+
+Ingresar con credenciales del representante legal
+
+Completar datos de identificación
+
+Definir giro y actividades económicas (solo las que operas hoy)
+
+Declarar domicilio
+
+Adjuntar documentos requeridos
+
+Enviar y esperar aprobación
+
+Con el certificado en mano: emitir facturas y solicitar patente municipal

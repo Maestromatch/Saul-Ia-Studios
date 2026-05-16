@@ -1,0 +1,163 @@
+ HACER LOS CREATIVOS
+
+Cómo crear los creativos para tus anuncios de Meta
+Los creativos son las imágenes o videos que ve la gente cuando aparece tu anuncio. Son una de las partes más importantes de cualquier campaña — un buen creativo puede marcar la diferencia entre que alguien ignore el anuncio o que haga clic.
+
+Esta guía explica cómo estructurar la campaña primero, y luego crear los creativos en base a esa estructura usando Claude y Flow.
+
+Por qué partir con imágenes y no con video
+La mejor forma de probar una campaña al principio es con creativos de imagen, no con video.
+
+¿Por qué? Porque con imagen puedes sacar 5, 10 o 15 variantes en media hora. Cada variante puede probar un ángulo distinto — el dolor del cliente, el beneficio del servicio, una oferta específica, una pregunta directa. Así descubres rápido qué mensaje conecta mejor con tu público sin gastar tiempo ni dinero en producción.
+
+Un video bien hecho toma horas o días. Una imagen generada con Flow y ajustada en Canva toma 10 minutos. Y en la mayoría de los casos, una imagen bien hecha convierte igual o mejor que un video.
+
+La estrategia es esta: primero pruebas con imágenes, encuentras qué ángulo funciona, y recién ahí — si quieres — inviertes en hacer un video basado en lo que ya sabes que da resultado.
+
+Paso 1 — Investigar y estructurar la campaña con Claude
+Antes de crear cualquier imagen o texto, necesitas que Claude entienda bien el negocio, el mercado y la competencia. Saltarse esta parte es el error más común — terminas creando creativos bonitos que no conectan con nadie porque no sabes qué está funcionando ni qué quiere realmente el cliente.
+
+Empieza con este prompt de investigación:
+
+Necesito que hagas una investigación profunda antes de estructurar 
+una campaña de Meta Ads para un negocio de [rubro] en [ciudad/país].
+
+Investiga y analiza lo siguiente:
+
+1. Análisis de mercado
+   - Cómo está el mercado de [rubro] actualmente
+   - Qué tendencias existen en el consumo de este servicio o producto
+   - Qué tan saturado está el mercado y qué oportunidades hay
+
+2. Análisis de competencia
+   - Qué tipo de negocios compiten en este rubro
+   - Qué mensajes y propuestas de valor usan más frecuentemente
+   - Qué están haciendo bien y qué están dejando sin cubrir
+   - Qué ángulos o diferenciadores podrían destacar frente a ellos
+
+3. Análisis del cliente ideal
+   - Cuáles son los dolores y frustraciones principales de este cliente
+   - Qué resultados o transformaciones está buscando
+   - Qué objeciones tiene antes de comprar
+   - Qué lenguaje usa para describir su problema
+
+El negocio es: [descripción del negocio]
+El cliente ideal es: [descripción del cliente — edad, ubicación, situación]
+Con eso Claude va a darte una base real para tomar decisiones. Una vez que tengas ese análisis, pasa a estructurar la campaña:
+
+En base a la investigación que hiciste, ahora necesito estructurar 
+la campaña de Meta Ads.
+
+El objetivo es [lo que quieres conseguir — ej. conseguir leads, 
+generar llamadas, vender un producto].
+El presupuesto mensual es [monto].
+
+Dime:
+1. Cuántos conjuntos de anuncios y cuántos anuncios debería tener 
+   la campaña con este presupuesto
+2. Qué ángulos o mensajes debería usar cada anuncio, basándote 
+   en los dolores y diferenciadores que encontraste
+3. Qué tipo de creativos funcionan mejor para este objetivo
+4. Qué formatos recomiendas — imagen, carrusel, video
+5. Qué debe comunicar cada anuncio específicamente
+Con esto tienes una estructura de campaña construida sobre datos reales, no sobre suposiciones. Sabes exactamente cuántos creativos necesitas, qué debe decir cada uno y por qué.
+
+Paso 2 — Pedir los textos de los anuncios
+Con la estructura definida, pídele a Claude que redacte los textos para cada anuncio — el titular, el texto principal y el llamado a la acción.
+
+En base a la estructura que me diste, redacta los textos para 
+cada anuncio:
+
+- Titulo
+- 5 Variantes de texto principal 
+- Llamado a la acción
+
+El tono debe ser [ej. profesional, cercano, directo].
+El objetivo es que la persona [ej. llame, llene un formulario, 
+visite la página].
+
+Guarda estos textos — los vas a necesitar al momento de configurar la campaña en Meta.
+
+Acá va el Paso 3 reemplazado para que lo copies y pegues:
+Paso 3 — Generar los prompts para las imágenes
+Con la estructura y los textos listos, ahora le pides a Claude que te dé los prompts para crear las imágenes. El objetivo es tener 2 variantes por cada anuncio — así puedes probar cuál conecta mejor con el público sin tener que rehacer todo desde cero.
+
+En base a la estructura de campaña y los textos que definimos, 
+necesito crear imágenes para cada anuncio.
+
+Para cada anuncio dame 2 prompts distintos:
+- Variante A: enfocada en [el dolor o problema del cliente]
+- Variante B: enfocada en [el beneficio o resultado que obtiene]
+
+Cada prompt debe ser detallado y listo para usarse directamente 
+en un generador de imágenes con IA. Incluye:
+- Descripción de la escena o composición visual
+- Estilo visual (ej. moderno, cálido, minimalista, profesional)
+- Colores predominantes si corresponde
+- Si debe aparecer texto en la imagen o no
+
+El negocio es [descripción breve].
+El público objetivo es [descripción del cliente ideal].
+Claude te va a entregar 2 prompts por cada anuncio que definiste en la estructura. Guárdalos todos antes de pasar al siguiente paso — los vas a usar uno por uno en Flow.
+
+Paso 4 — Crear las imágenes
+Para generar las imágenes tienes varias opciones. Mi recomendación hoy es ChatGPT con Image 2 — la calidad es notablemente mejor que cualquier otra alternativa disponible y vale completamente la pena. Si ya tienes suscripción de ChatGPT Plus o Pro, ya lo tienes incluido.
+
+Opción recomendada — ChatGPT (Image 2):
+
+Ve a chatgpt.com
+
+Abre una conversación nueva
+
+Pega el prompt que te entregó Claude
+
+Genera la imagen y descárgala directamente
+
+Opción alternativa — Flow (Google):
+
+Flow es la herramienta de Google para generar imágenes con IA. La tienes incluida en tu suscripción de Google AI Pro.
+
+Ve a labs.google/flow o accede desde tu cuenta de Google
+
+Crea un nuevo proyecto
+
+Selecciona el modelo Nano Banana Pro 
+
+Pega el primer prompt que te dio Claude
+
+Genera las imágenes — normalmente genera varias opciones, elige la que mejor represente el negocio
+
+Si ninguna te convence, ajusta el prompt y vuelve a generar
+
+Repite el proceso para cada anuncio.
+
+Paso 5 — Ajustar en Canva
+Las imágenes de Flow casi siempre necesitan algún ajuste — agregar el logo, cambiar un color, añadir texto encima, ajustar el tamaño al formato correcto.
+
+Formatos recomendados para Meta Ads:
+
+Feed de Facebook e Instagram: 1080 x 1080 px (cuadrado)
+
+Stories e Instagram Reels: 1080 x 1920 px (vertical)
+
+Feed horizontal: 1200 x 628 px
+
+En Canva:
+
+Crea un nuevo diseño con el tamaño que necesitas
+
+Sube la imagen que generaste en Flow
+
+Ajusta lo que sea necesario — logo, texto, colores de marca
+
+Descarga en formato JPG o PNG en alta calidad
+
+Si los creativos no te están quedando como quieres
+Si las imágenes de Flow no están representando bien al negocio o no tienen el estilo que buscas, pídele a Claude que mejore el prompt:
+
+El creativo que generé no me está quedando como quiero.
+El problema es [describe qué no te gusta — ej. muy genérico, 
+no se ve profesional, los colores no van con la marca].
+¿Cómo puedo mejorar el prompt para conseguir algo mejor?
+
+También puedes mandarle una captura de pantalla del resultado y pedirle que te diga cómo ajustarlo o pedirle una evaluación para ver que cambiar o como mejorarlo.

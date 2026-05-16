@@ -1,0 +1,66 @@
+BASE DE DATOS
+
+Supabase — la memoria de tus automatizaciones
+Supabase es una base de datos en la nube. En términos simples, es el lugar donde se guarda toda la información que generan tus automatizaciones y chatbots — los datos de los clientes, el historial de conversaciones, el estado de cada lead.
+
+Sin una base de datos, cada vez que alguien le escribe al chatbot, este parte desde cero sin recordar nada. Supabase le da memoria.
+
+¿Cuándo lo necesitas y cuándo no?
+Lo necesitas cuando:
+
+Tienes un chatbot que debe recordar conversaciones anteriores
+
+Quieres guardar los datos de los leads que llegan
+
+Tienes un panel de gestión que muestra información en tiempo real
+
+Cualquier servicio que necesite almacenar datos de usuarios o configuraciones
+
+No lo necesitas cuando:
+
+Tu proyecto es solo una página web estática
+
+No tienes ningún servicio que genere o almacene datos
+
+El plan gratuito de Supabase es suficiente para empezar y para la mayoría de proyectos de clientes iniciales.
+
+Qué función cumple en este stack
+Cuando alguien le escribe al chatbot por WhatsApp:
+
+El mensaje llega a Chatwoot
+
+n8n lo procesa y el agente de IA responde
+
+Los datos de esa conversación — quién escribió, qué preguntó, qué respondió el agente — se guardan en Supabase
+
+El panel de gestión del cliente lee esa información desde Supabase y la muestra en tiempo real
+
+Supabase es la pieza que conecta el chatbot con el panel. Sin ella, el panel no tiene datos que mostrar.
+
+Autenticación — para qué sirve
+Una de las funciones más útiles de Supabase es la autenticación. Te permite agregar un sistema de login a cualquier aplicación que construyas — usuarios, contraseñas, sesiones — sin tener que construirlo desde cero.
+
+Si el panel de gestión del cliente necesita que solo personas autorizadas puedan entrar, Supabase maneja eso por ti. Le pides a Claude que lo configure y queda funcionando en minutos.
+
+Cómo conectarlo a tu proyecto
+No necesitas configurarlo manualmente. Una vez que tienes tu cuenta de Supabase y tu proyecto creado, le pides a Claude que haga la conexión:
+
+Quiero conectar este proyecto a Supabase. 
+Hazme las preguntas necesarias para entender 
+qué datos necesito guardar y dame el paso a paso 
+para dejarlo conectado y funcionando.
+
+Claude te va a pedir las credenciales de tu proyecto de Supabase — la URL y la API key, que las encuentras en la configuración del proyecto — y desde ahí configura todo.
+
+Si en algún paso algo no funciona o no sabes dónde encontrar algún dato, tomas una captura de pantalla de la pantalla donde estás y se la mandas. Claude identifica exactamente dónde estás y te dice qué hacer.
+
+Cómo crear una cuenta
+Ve a supabase.com
+
+Crea una cuenta gratis con tu correo o con GitHub
+
+Crea un nuevo proyecto — dale el nombre del cliente con el que estás trabajando
+
+Guarda en un lugar seguro la URL del proyecto y la API key — las vas a necesitar para conectar todo
+
+Con eso ya tienes Supabase listo para usar.

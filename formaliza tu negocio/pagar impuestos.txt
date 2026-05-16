@@ -1,0 +1,83 @@
+PAGAR IMPUESTOS
+
+El F29: qué es y cómo declararlo
+El F29 es la declaración mensual de impuestos que toda empresa debe presentar ante el SII. Se declara entre el 1 y el 20 de cada mes, sin excepción. Aunque no hayas tenido ningún movimiento en el mes.
+
+Si no lo declaras, acumulas multas desde el día 21. Y esas multas crecen todos los días.
+
+Qué incluye el F29
+El F29 no es solo el IVA, aunque así lo llame todo el mundo. Dentro de esa declaración mensual van varios impuestos:
+
+IVA débito fiscal — el IVA de tus ventas (boletas y facturas emitidas)
+
+IVA crédito fiscal — el IVA de tus compras (facturas recibidas), que se descuenta del anterior
+
+PPM — Pago Provisional Mensual, un ahorro para la operación renta de abril
+
+Retención de boletas de honorarios — si pagaste a freelancers o profesionales (actualmente 14,5%)
+
+Impuesto único de segunda categoría — si tienes trabajadores con sueldo sobre ~$950.000 o si te autocontrataste
+
+El error más común: usar la propuesta del SII
+Cuando entras a declarar, el SII te ofrece una "propuesta de declaración" prellenada automáticamente. Parece cómodo, pero tiene problemas serios:
+
+1. No incluye el remanente de crédito del mes anterior Si el mes pasado tuviste más compras que ventas, te quedó un crédito acumulado. La propuesta no lo carga. Si la usas sin revisarla, ese crédito desaparece y terminas pagando más de lo que deberías.
+
+2. No incluye el PPM correcto La propuesta pone el PPM mínimo: 0,125%. Eso es casi nada. Si vendes bien durante el año y no ahorras con el PPM, en abril te llega una cuenta de operación renta de millones de pesos sin tener de dónde sacarla. Lo recomendado es declarar mínimo un 2% de PPM, y más si estás vendiendo bien.
+
+3. Las ventas pueden estar mal o incompletas Si usas plataformas de pago (Mercado Pago, Transbank, etc.), esos reportes a veces llegan desfasados al registro del SII. La propuesta puede mostrar menos ventas de las que tuviste. Si pagas sobre esa base y el SII hace un cruce, te van a impugnar el F29 y tendrás que rectificarlo y pagar la diferencia más multas.
+
+4. No incluye boletas de honorarios Si pagaste a un freelancer o profesional que te emitió boleta de honorarios, esa información no aparece en la propuesta. Tienes que cargarla manualmente.
+
+5. No incluye el impuesto único de segunda categoría Si tienes trabajadores o te autocontrataste, ese impuesto no aparece en la propuesta. Si no lo declaras, el SII no registra que tienes trabajadores y todos esos gastos de sueldo no quedan enlazados con tu operación renta — lo que significa que pagas más impuestos de los que corresponde.
+
+6. No incluye importaciones Si compraste mercadería del extranjero, la aduana te entrega una DIN (Declaración de Ingreso) que tiene un IVA asociado. Esa información no se carga sola en el registro de compras y ventas — hay que ingresarla manualmente. Si no lo haces, ese crédito fiscal se pierde.
+
+¿Cuándo sí puedes usar la propuesta?
+Solo si no tuviste absolutamente ningún movimiento en el mes: cero ventas, cero compras, cero personal, cero honorarios. En ese caso declaras todo en cero y listo. El plazo se extiende hasta el 28 del mes si no tienes nada que pagar.
+
+Cómo llegar al formulario en pantalla
+Esta es la ruta correcta dentro del SII. Sigue los pasos en orden y cuando el sistema te ofrezca la propuesta, no la uses — sigue hasta el formulario completo.
+
+Entra a sii.cl con tu Clave Única
+
+Ve a Servicios online
+
+Selecciona Impuestos mensuales
+
+Selecciona Declaración mensual (F29)
+
+Haz clic en Declarar IVA (F29)
+
+Selecciona el mes a declarar (solo aparecen meses cerrados)
+
+Haz clic en Continuar
+
+El sistema te pregunta si tienes información adicional a incorporar — confirma que no
+
+Haz clic en Confirmar
+
+En la siguiente pantalla verás dos opciones: la propuesta del SII y Formulario en pantalla — selecciona Formulario en pantalla
+
+Desde ahí tienes acceso al formulario completo donde puedes ingresar todos los códigos manualmente.
+
+La forma correcta de declarar
+Usar el formulario en pantalla (formulario completo), no la propuesta. Eso te permite ingresar manualmente todos los códigos: el remanente del mes anterior, el PPM ajustado, las boletas de honorarios, el impuesto único si corresponde.
+
+Si tienes movimientos — ventas, compras, personal — lo más seguro es trabajar con un contador. No porque sea difícil entenderlo, sino porque un error en el F29 puede costarte más caro que el contador mismo.
+
+Fechas clave
+Hasta el día 20 de cada mes — plazo normal para declarar y pagar
+
+Hasta el día 28 — si la declaración queda en cero (sin movimientos)
+
+Desde el día 21 — empieza a correr la multa si no declaraste teniendo movimientos
+
+Resumen
+El F29 se declara todos los meses, siempre, aunque no hayas vendido nada
+
+No uses la propuesta del SII si tienes movimientos — te puede salir caro
+
+Usa el formulario en pantalla y carga el remanente, el PPM real y todo lo que corresponda
+
+Si tienes compras, ventas, personal o honorarios: trabaja con un contador

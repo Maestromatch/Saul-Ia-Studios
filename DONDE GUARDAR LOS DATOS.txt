@@ -1,0 +1,53 @@
+5. DONDE GUARDAR EL CÓDIGO
+
+Qué es GitHub y cómo usarlo
+GitHub es donde vive el código de tus proyectos. Piénsalo como una carpeta en la nube diseñada específicamente para código — guarda todo, registra cada cambio que haces y te permite volver a versiones anteriores si algo se rompe.
+
+En el flujo de trabajo, GitHub cumple un rol clave: es el puente entre donde construyes el proyecto (Antigravity o Claude Code) y donde lo publicas (el servidor con Easypanel). Subes el código a GitHub y desde ahí lo vinculas al servidor para que la página quede online.
+
+Crear una cuenta
+Ve a github.com
+
+Haz clic en Sign up
+
+Crea tu cuenta con tu correo — usa el mismo que usas para todo lo relacionado al negocio
+
+Elige el plan gratuito — es suficiente para todo lo que necesitas
+
+Crear un repositorio
+Un repositorio es simplemente la carpeta donde va a vivir el código de un proyecto. Crea uno por cada proyecto de cliente.
+
+Una vez dentro de GitHub, haz clic en el botón verde New o en el ícono + arriba a la derecha
+
+Dale un nombre descriptivo — por ejemplo el nombre del cliente o del proyecto
+
+Déjalo en Private para que no sea visible públicamente
+
+Haz clic en Create repository
+
+Conectar Antigravity y Claude Code a tu cuenta de GitHub
+En vez de configurarlo manualmente, pídele directamente a Claude que te guíe. Copia este prompt y pégalo en el chat:
+
+Quiero conectar mi cuenta de GitHub con Antigravity/Claude Code 
+para poder subir código directamente desde aquí. 
+Hazme las preguntas necesarias para entender como configurarlo 
+y luego dame el paso a paso completo para dejarlo funcionando. 
+Haz todo lo que puedas hacer tu solo
+Claude/Antigravity te va a preguntar lo que necesita saber y te va a guiar por todo el proceso hasta que quede andando.
+
+Y él ejecuta el proceso completo.
+
+Vincular GitHub con Easypanel
+Una vez que el código está en GitHub, lo conectas a Easypanel para que la página quede online.
+
+Dentro de Easypanel, crea un nuevo servicio
+
+Selecciona GitHub como fuente
+
+Autoriza el acceso a tu cuenta de GitHub
+
+Selecciona el repositorio del proyecto
+
+Easypanel despliega la página automáticamente
+
+Cada vez que subas cambios a GitHub, Easypanel los detecta y actualiza la página solo — sin que tengas que hacer nada adicional.

@@ -1,0 +1,49 @@
+3. QUÉ SON LOS MCP Y API KEYS
+
+Dos conceptos que van a aparecer constantemente cuando trabajas con automatizaciones e integraciones. No son complicados — solo hay que tenerlos claros.
+
+API keys
+Una API key es una contraseña especial que le permite a una herramienta comunicarse con otra de forma automática.
+
+Cuando conectas n8n con WhatsApp, o Claude con tu base de datos, o cualquier herramienta con otra — en algún momento te van a pedir una API key. Esa key le dice al servicio "este es el permiso para que tal herramienta pueda acceder a mis datos o funciones".
+
+Lo más importante sobre las API keys:
+
+Cada servicio genera las suyas propias — las encuentras en la configuración o sección de desarrolladores de cada plataforma
+
+Son como contraseñas — no las compartas ni las dejes visibles en el código público
+
+Si sospechas que alguien más las tiene, las revocas y generas unas nuevas
+
+Cuando termines un proyecto, pídele a Claude que revise que ninguna API key quedó expuesta en el código
+
+Cuando no sepas cómo obtener la API key de un servicio específico, pregúntale a Claude:
+
+¿Cómo obtengo la API key de [nombre del servicio] 
+y cómo la configuro en [herramienta que estás usando]?
+
+MCP (Model Context Protocol)
+Un MCP es una conexión que le permite a Claude interactuar directamente con herramientas externas — no solo responder preguntas sobre ellas, sino usarlas.
+
+Sin MCP, Claude te dice cómo hacer algo en n8n pero no puede hacerlo él mismo. Con el MCP de n8n conectado, Claude puede crear, modificar y subir workflows directamente a tu instancia sin que tú tengas que hacer nada manualmente.
+
+Es la diferencia entre un asistente que te da instrucciones y uno que ejecuta las tareas.
+
+En la práctica, los MCP que más vas a usar:
+
+MCP de n8n — para que Claude cree y modifique workflows directamente en tu n8n
+
+MCP de GitHub — para que Claude pueda leer y modificar el código de tus repositorios
+
+MCP de Supabase — para que Claude pueda interactuar con tu base de datos
+
+Cómo se instalan:
+
+Los MCP se configuran en Claude Code o en el cliente de Claude que estés usando. Cada MCP tiene su propio proceso de instalación — generalmente requiere una API key del servicio que estás conectando.
+
+Para instalar cualquier MCP, el proceso más simple es pedírselo a Claude Code directamente:
+
+Quiero instalar el MCP de [nombre del servicio] en Claude Code. 
+Dame el paso a paso para configurarlo.
+
+Él te guía por el proceso completo.

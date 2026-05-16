@@ -1,0 +1,11 @@
+segmento,comuna,dolor_principal,oferta_entrada,mensaje_angulo
+Opticas,El Bosque,responden precios y disponibilidad muchas veces,Bot + formulario + agenda,"Responder consultas de lentes, horarios y reserva sin perder interesados"
+Dentistas,San Bernardo,agenda y preguntas repetidas,Bot + agenda + CRM,"Capturar pacientes y derivar urgencias o evaluaciones"
+Talleres mecanicos,La Cisterna,cotizaciones desordenadas,Formulario + CRM + seguimiento,"Ordenar solicitudes por patente, problema y estado"
+Servicios tecnicos,San Miguel,muchos WhatsApp sin seguimiento,Bot + planilla + alerta,"Registrar cada solicitud y recordar seguimiento"
+Constructoras pequenas,Maipu,cotizaciones lentas,Landing + formulario + CRM,"Capturar obras/remodelaciones con datos suficientes para cotizar"
+Centros esteticos,La Florida,agenda manual,Bot + agenda + recordatorio,"Responder servicios, precios desde y horarios disponibles"
+Ferreterias,El Bosque,consultas de stock repetidas,Bot FAQ + derivacion,"Filtrar preguntas frecuentes y derivar ventas reales"
+Academias,San Bernardo,consultas de cursos,Bot + landing curso + CRM,"Capturar interesados por curso y enviar seguimiento"
+Corredores propiedades,La Cisterna,leads dispersos,Landing + CRM simple,"Registrar compradores/arrendatarios y preferencias"
+Pymes B2B,Santiago Sur,procesos manuales,Diagnostico + automatizacion,"Ahorrar horas en reportes, correos y planillas"

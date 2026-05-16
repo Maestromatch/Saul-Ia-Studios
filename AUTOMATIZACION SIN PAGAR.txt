@@ -1,0 +1,93 @@
+AUTOMATIZACIONES SIN PAGAR
+
+Cómo instalar n8n en tu VPS con Easypanel
+n8n es la herramienta que usamos para crear todas las automatizaciones. En vez de pagar la versión en la nube, la instalamos directamente en tu VPS — así no tienes límites de ejecuciones ni costos mensuales adicionales.
+
+Esta guía asume que ya tienes Easypanel instalado y funcionando en tu VPS. Si no lo tienes, revisa primero la guía Cómo subir tu página desde cero.
+
+Paso 1 — Crear un proyecto en Easypanel
+Entra a tu Easypanel — ej. https://panel.tudominio.cl
+
+En el dashboard principal, haz clic en Create Project
+
+Dale un nombre al proyecto — por ejemplo automatizaciones
+
+Haz clic en Create
+
+Paso 2 — Instalar n8n desde la plantilla
+Easypanel tiene n8n disponible como plantilla de un clic — no necesitas instalar nada manualmente.
+
+Dentro del proyecto que acabas de crear, haz clic en el botón + o Create Service
+
+Selecciona Template
+
+Busca n8n en la lista
+
+Haz clic en el ícono de n8n y luego en Create
+
+Easypanel va a descargar e instalar n8n automáticamente. El proceso toma entre 1 y 3 minutos. Cuando termine, vas a ver que el servicio está corriendo.
+
+Paso 3 — Asignar un subdominio a n8n
+Para acceder a n8n desde el navegador necesitas asignarle un subdominio propio.
+
+En Cloudflare:
+
+Ve a DNS > Records
+
+Agrega un registro tipo A con el nombre n8n apuntando a la IP de tu VPS
+
+Déjalo en nube gris (DNS only)
+
+En Easypanel:
+
+Dentro del servicio de n8n, ve a la pestaña Domains
+
+Haz clic en Add Domain
+
+Escribe n8n.tudominio.cl y el puerto 5678
+
+Haz clic en Create
+
+Haz clic en la estrella para dejarlo como dominio principal
+
+Paso 4 — Configurar la variable WEBHOOK_URL
+Este paso es importante para que los webhooks funcionen correctamente — sin esto, las automatizaciones que reciben datos externos no van a funcionar bien.
+
+Dentro del servicio de n8n en Easypanel, ve a la pestaña Environment
+
+Busca la variable WEBHOOK_URL
+
+Cámbiala por https://n8n.tudominio.cl
+
+Haz clic en Save
+
+Haz clic en Deploy para aplicar los cambios
+
+Paso 5 — Crear tu cuenta de administrador
+Abre el navegador y ve a https://n8n.tudominio.cl
+
+Te va a aparecer el formulario de configuración inicial
+
+Llena tu nombre, correo y contraseña — guárdalos en un lugar seguro
+
+Haz clic en Next
+
+Paso 6 — Verificar que todo funciona
+Para confirmar que n8n está funcionando correctamente:
+
+En el panel principal de n8n, haz clic en Create Workflow
+
+Agrega un nodo de Manual Trigger
+
+Haz clic en Execute Workflow
+
+Si se ejecuta sin errores, n8n está listo
+
+Si algo no funciona
+Si en algún paso algo falla o no ves lo que describe esta guía, toma una captura de pantalla y pégasela a Claude:
+
+Estoy instalando n8n en Easypanel y me aparece esto. 
+[captura de pantalla]
+¿Qué está pasando y cómo lo soluciono?
+
+Claude identifica el problema y te dice exactamente qué hacer.

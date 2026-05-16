@@ -1,0 +1,201 @@
+SUBIR TU PÁGINA WEB DESDE 0
+
+De NIC Chile a Easypanel sin saber programar servidores
+
+01 — Comprar el Nombre de tu Negocio
+El dominio es la dirección que la gente escribirá para encontrarte (ejemplo: tu-idea.cl). Es tu terreno digital — lo compras una vez y lo controlas tú.
+
+Registrador en Chile: Ve directo a NIC Chile (nic.cl) para dominios .cl
+
+Dominio .com: Usa Namecheap o Cloudflare Registrar
+
+Costo: Aprox. $10 USD / $10.000 CLP al año
+
+Al terminar: deja abierta la sección de Servidores de Nombre (DNS) — la necesitas en el siguiente paso.
+
+02 — Conectar el Escudo Principal (Cloudflare)
+No enviaremos el tráfico directo al servidor. Pasamos todo por Cloudflare: acelera tu página con caché mundial, encripta con SSL gratis y filtra ataques.
+
+Crea cuenta gratuita en Cloudflare.com
+
+Presiona "Add Site" y escribe tu dominio
+
+Selecciona el Plan Gratuito (Free)
+
+Cloudflare te dará dos Nameservers — anótalos
+
+Vuelve a NIC Chile, borra los servidores de nombre actuales y pega los de Cloudflare. Guarda.
+
+Puede demorar un par de horas en hacer efecto mundial.
+
+03 — Alquilar la Máquina (VPS Contabo)
+Necesitas un computador encendido 24/7 que corra tu página web. Contabo es el proveedor más económico y potente de Europa y EE.UU. para este nivel.
+
+Configuración recomendada:
+
+Plan: Cloud VPS 1 (~$6 USD/mes). Sirve para decenas de webs con miles de visitas
+
+Duración: 1 Mes (renovación automática)
+
+Región: Si tus clientes son de Chile/México/Latam → elige "US East" o "US Central"
+
+Storage: SSD o NVMe base (gratuito). Suficiente
+
+Sistema Operativo: Ubuntu 22.04 LTS (o 24.04). Nunca Windows ni CentOS
+
+Password root: Escríbela y guárdala. Es la llave maestra del servidor
+
+Add-On Autobackup: Agrégalo. Contabo saca fotos del disco diariamente — te salva de errores pagando luca extra.
+
+En un par de minutos llega un correo con la IP de tu servidor (ej. 85.240.240.XX).
+
+04 — Instalar el Gestor Visual (Easypanel)
+Easypanel convierte la pantalla negra del servidor en un panel visual a un clic. Sin tocar código ni configuración manual.
+
+Conectarse al servidor:
+
+ssh root@<TU_IP_DE_CONTABO>
+
+Escribe yes para confirmar, luego ingresa la contraseña del paso anterior (no se verá nada mientras escribes — es normal).
+
+Instalar Easypanel:
+
+curl -sSL https://get.easypanel.io | sh
+
+Tarda un par de minutos. Al terminar, cierra la consola.
+
+Acceder al panel:
+
+Abre Chrome y escribe en la barra:
+
+http://<TU_IP_DE_CONTABO>:3000
+
+Sale la interfaz de Easypanel. Registra tu usuario y clave para el panel.
+
+05 — Programar el Proyecto a Prueba de Balas
+Antes de escribir una sola línea de código, dale a Claude Code este prompt maestro de seguridad. Define la arquitectura desde el inicio — no a mitad del proyecto.
+
+Toma el proyecto de landing page que ya existe en este directorio y prepáralo para producción. No crees nada desde cero, trabaja con lo que hay. Haz todo el trabajo de forma autónoma. Solo detente si necesitas una credencial real o una decisión que únicamente yo puedo tomar.
+
+---
+
+PARTE 1 — SEGURIDAD (aplicar antes de cualquier otra cosa)
+
+Revisa todo el código existente y corrige lo siguiente:
+
+1. API KEYS: Si hay alguna clave, token o secret escrito directamente en el código, muévela a una variable de entorno. Toda llamada a APIs externas debe pasar por el backend (/api/...), nunca desde el frontend.
+
+2. SANITIZACIÓN DE INPUTS: Si hay formularios (contacto, suscripción, etc.), asegúrate de que los datos se saniticen en el servidor antes de procesarse. Filtra tags como <script>, <iframe> y caracteres peligrosos. Previene XSS e inyección SQL.
+
+3. AUTENTICACIÓN: Si el proyecto tiene login, no uses un sistema manual. Delega el 100% a Supabase Auth, Clerk o Auth0. Si aún no hay proveedor definido, pregúntame antes de escribir cualquier lógica de usuario.
+
+---
+
+PARTE 2 — COMPATIBILIDAD CON EASYPANEL
+
+Configura el proyecto para que pueda deployarse en EasyPanel sin modificaciones:
+
+1. Crea un Dockerfile en la raíz con multi-stage build (build + runtime). Imagen final en node:alpine. El servidor debe escuchar en la variable PORT con fallback a 3000.
+
+2. Crea .env.example en la raíz con todas las variables necesarias listadas sin valores reales. Este archivo SÍ va al repositorio.
+
+3. Agrega un endpoint GET /health que retorne HTTP 200 con { status: "ok" }.
+
+4. El comando de inicio en el Dockerfile debe ser el de producción (npm start o node server.js). Nunca next dev ni nodemon.
+
+5. Usa npm ci en el Dockerfile, no npm install.
+
+---
+
+PARTE 3 — SUBIR A GITHUB
+
+Cuando todo lo anterior esté listo:
+
+1. Verifica que .env y .env.local estén en .gitignore.
+2. Verifica que .env.example exista con todas las variables documentadas.
+3. Verifica que no haya ninguna clave hardcodeada en el código.
+4. Inicializa el repositorio git si no existe, haz el primer commit con mensaje descriptivo y ejecuta el push a GitHub.
+
+---
+
+RESUMEN FINAL
+
+Al terminar, entrégame:
+- Qué cambios de seguridad aplicaste
+- Qué variables de entorno debo configurar en EasyPanel y para qué sirve cada una
+- Puerto en el que corre la app
+- Comando de inicio
+- Confirmación de que el repositorio quedó limpio sin datos sensibles
+
+06 — Conectar Cloudflare con tu Servidor
+Tu dominio ya apunta a Cloudflare, pero Cloudflare todavía no sabe dónde está tu servidor. Ahora le damos la dirección exacta del VPS.
+
+Crear los registros DNS
+
+En Cloudflare → DNS → Records → Add Record:
+
+Registro A (dominio raíz): Type: A | Name: @ | IPv4: Tu IP de Contabo | Proxy: DNS only (nube gris) | TTL: Auto
+
+Registro CNAME (www): Type: CNAME | Name: www | Target: tu-idea.cl | Proxy: DNS only (nube gris) | TTL: Auto
+
+¿Por qué nube gris? Easypanel necesita generar el certificado SSL con Let's Encrypt. Si el proxy naranja está activo, Cloudflare intercepta la verificación y el certificado nunca se crea.
+
+Configurar SSL en Cloudflare
+
+En Cloudflare → SSL/TLS → Overview → Cambia el modo a Full (Strict).
+
+⚠️ NUNCA uses el modo Flexible. Con Flexible, Cloudflare entra en loop infinito HTTP↔HTTPS y tu sitio nunca carga.
+
+07 — Desplegar la App desde Easypanel
+El código está en GitHub, la máquina encendida, los DNS apuntando. Ahora conectamos todo.
+
+Entra a Easypanel (http://<TU_IP>:3000)
+
+Create Project → ponle el nombre de tu empresa
+
+Dentro del proyecto → + App
+
+Conecta tu cuenta de GitHub con 1 botón. Selecciona el repositorio y el branch main
+
+Pestaña Environment: Aquí y solo aquí pegas tus claves secretas:
+
+OPENAI_API_KEY=sk-tu-clave-mega-secreta-aqui
+
+Pestaña Domains: Agrega tu dominio final. Easypanel genera el SSL con Let's Encrypt automáticamente
+
+Dale al botón verde Deploy
+
+En minutos, Easypanel baja el código, instala dependencias, oculta las llaves y conecta el dominio. Tu página sale viva a internet.
+
+08 — Activar el Escudo Completo de Cloudflare
+Tu sitio ya está online con SSL propio. Ahora activamos la protección completa de Cloudflare.
+
+Verificar antes de tocar nada
+
+Abre una ventana incógnito
+
+Entra a https://tu-idea.cl — debe cargar con candado verde
+
+Prueba también https://www.tu-idea.cl
+
+Si algo falla: revisa los logs del deploy en Easypanel, la IP en Cloudflare, y que el dominio esté en la pestaña Domains
+
+Encender el proxy naranja
+
+Cloudflare → DNS → Records
+
+En el registro A (@): clic en la nube gris → nube naranja (Proxied). Guarda.
+
+En el registro CNAME (www): mismo proceso. Guarda.
+
+Qué ganaste:
+
+IP oculta: Los atacantes ya no pueden encontrar tu servidor directamente
+
+WAF gratuito: Filtro de tráfico malicioso en la capa de Cloudflare
+
+Caché global: Imágenes, CSS y JS se sirven desde servidores cercanos al visitante
+
+Protección DDoS: Nivel básico gratuito activado automáticamente
+
+Si seguiste los pasos, tienes una arquitectura nivel corporativo: dominio propio, Cloudflare como escudo y CDN, VPS Contabo 24/7 con backups, Easypanel sin tocar terminal, SSL doble capa y claves secretas aisladas en el servidor.

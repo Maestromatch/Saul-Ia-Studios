@@ -1,0 +1,137 @@
+DISEÑAR TU PÁGINA Y HACERLA FUNCIONAL
+
+Este es el flujo completo: diseñas en Stitch, pasas el diseño a Antigravity con el MCP conectado. Sin tocar código directamente.
+
+Lo que vas a necesitar
+Cuenta en Stitch (gratis)
+
+Cuenta de Google (plan Google AI pro)
+
+Cuenta en Claude.ai (plan Pro recomendado)
+
+El logo de tu empresa en JPG o PNG
+
+Una captura de pantalla de algún sitio que te guste como referencia
+
+Paso 1 — Captura el sitio de referencia
+Antes de diseñar, busca un sitio web que te guste visualmente. Ese sitio va a ser tu referencia.
+
+Para capturar la página completa (no solo lo que se ve en pantalla):
+
+Abre Chrome y ve al sitio
+
+Presiona F12  (o Cmd + Shift + C en Mac) para abrir las herramientas de desarrollo
+
+Presiona Ctrl + Shift + P (o Cmd + Shift + P en Mac)
+
+Escribe screenshot y selecciona Capture full size screenshot
+
+Se descarga automáticamente como PNG
+
+Ya tienes tu referencia visual lista.
+
+Paso 2 — Diseña la interfaz en Stitch
+Stitch es una herramienta de Google que genera interfaces con IA a partir de texto e imágenes.
+
+Ve a stitch.withgoogle.com e inicia sesión
+
+Crea un nuevo proyecto
+
+En el chat de Stitch, describe lo que quieres. Ejemplo:
+
+Quiero una landing page para una agencia de automatización con IA.
+Sección principal con título grande, subtítulo y botón de contacto.
+Sección de servicios con 3 tarjetas.
+Footer simple con redes sociales.
+
+Sube la captura de pantalla que tomaste como referencia visual
+
+Sube el logo de tu empresa
+
+Agrega esto al prompt:
+
+Usa los colores y estilo del sitio de referencia que adjunto.
+Incorpora el logo que subo como imagen principal de la barra de navegación.
+
+Genera el diseño. Si algo no te gusta, pídele ajustes directamente en el chat:
+
+Cambia el color del botón a negro.
+Pon el título más grande.
+Mueve el logo a la izquierda.
+
+Cuando el diseño esté como quieres, continúa al siguiente paso.
+
+Paso 3 — Conecta el MCP de Stitch a Antigravity
+Esto le permite a Antigravity acceder directamente a tu proyecto en Stitch y convertirlo en código.
+
+Obtén tu API Key de Stitch
+En Stitch, ve a tu perfil y luego configuración de cuenta
+
+Busca la sección API Keys o Clave de API
+
+Genera una nueva API Key y cópiala
+
+Instala el MCP en Antigravity
+Abre Antigravity
+
+Ve a 3 puntitos al lado de la X → MCP Servers 
+
+Busca Stitch en la lista de MCPs disponibles
+
+Haz clic en instalar e ingresa la API Key que copiaste
+
+Guarda y vuelve al chat
+
+Ahora Antigravity tiene acceso a tus proyectos de Stitch.
+
+Paso 4 — Genera el código
+Con el MCP conectado, Antigravity puede leer tu diseño y convertirlo en código real.
+
+Abre un chat nuevo en Claude y escribe algo así:
+
+Tengo un diseño en Stitch llamado [nombre de tu proyecto].
+Quiero que lo conviertas en una página web completa,
+lista para desplegar en un servidor.
+Que sea un solo archivo index.html con todo incluido.
+
+Antigravity va a buscar tu proyecto en Stitch y generar el código.
+
+Si quieres agregar funcionalidades
+Aquí es donde puedes pedirle lo que necesitas. Sé específico con cada botón o sección:
+
+El botón "Contáctanos" que abra un formulario con nombre, email y mensaje.
+Cuando el formulario se envíe, que mande los datos a este email: hola@miempresa.com.
+(SE PUEDE INTEGRAR AUTOMATIZACIONES SI CONECTAS N8N)
+
+Quiero que la sección de servicios tenga un efecto al pasar el mouse por encima de cada tarjeta.
+
+Agrega un menú que funcione en celular también.
+
+Regla general: descríbele lo que quieres que pase, no cómo hacerlo. Antigravity/Claude Code saben hacerla
+
+Si en algún momento no sabes cómo pedirle algo, puedes preguntarle directamente:
+
+¿Cómo le pido que agregue un chat de WhatsApp flotante en la esquina inferior derecha?
+
+Antigravity/Claude Code te va a explicar exactamente qué escribirle.
+
+Paso 5 — ¿Y ahora cómo lo subo?
+El código está listo. Todo lo que viene después — preparar el servidor, configurar el dominio y desplegar la página — está cubierto en la guía "Cómo subir tu página web desde cero".
+
+Esa guía parte desde comprar el dominio y llega hasta tener el sitio en línea. Búscala en la comunidad y sigue desde ahí.
+
+Cómo seguir ajustando la página después
+No necesitas volver a empezar cada vez que quieras cambiar algo. El código se guarda en la carpeta que estas usando para el proyecto. Vuelve al chat cuando necesites modificar algo:
+
+- Quiero agregar una sección nueva de testimonios con 3 comentarios de clientes.
+- Quiero añadir X
+Le dices al terminar, "sube este archivo a mi repositorio de Github"
+
+Haces deploy nuevamente en easy panel
+
+Antigravity/Claude Code modifica solo lo que le pides, sin tocar el resto. 
+
+Resumen del flujo
+Referencia visual → Stitch (diseño) → Antigravity con MCP (código) → EasyPanel (despliegue)
+
+Cada paso tiene su herramienta. El único que necesita tu atención real es describir bien lo que quieres en cada prompt.

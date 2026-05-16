@@ -1,0 +1,133 @@
+4. VOICE CALL
+
+Cómo configurar un agente de voz con Retell AI
+Retell AI es la herramienta que permite crear un agente telefónico que contesta o hace llamadas automáticamente, habla con el cliente de forma natural y puede agendar citas, calificar leads o responder consultas — sin que haya un humano del otro lado.
+
+El costo de la plataforma va directamente al cliente. Tú cobras el setup por configurarlo.
+
+Lo que necesitas antes de empezar
+Cuenta creada en retellai.com
+
+Cuenta de Twilio para el número de teléfono
+
+La extensión de Claude en Chrome instalada
+
+Información del negocio del cliente — guión, servicios, cómo debe responder el agente
+
+Paso 1 — Crear el número de teléfono en Twilio
+El agente de voz necesita un número de teléfono propio desde el cual va a contestar o hacer llamadas. Usamos Twilio porque funciona mejor con Retell AI.
+
+Ve a twilio.com y crea una cuenta
+
+Dentro del panel de Twilio, ve a Phone Numbers > Manage > Buy a number
+
+Busca un número disponible — selecciona el país del cliente
+
+Compra el número
+
+Copia el Account SID y el Auth Token que aparecen en el dashboard de Twilio — los vas a necesitar para conectarlo con Retell AI
+
+Paso 2 — Crear la cuenta en Retell AI y conectar Twilio
+Ve a retellai.com y crea tu cuenta
+
+Dentro del dashboard, ve a Phone Numbers
+
+Haz clic en Import Phone Number
+
+Selecciona Twilio como proveedor
+
+Ingresa el Account SID y el Auth Token que copiaste de Twilio
+
+Selecciona el número que compraste y haz clic en Import
+
+El número ya está conectado a Retell AI.
+
+Paso 3 — Crear el agente con ayuda de Claude
+En vez de configurar el agente manualmente campo por campo, usa la extensión de Claude en Chrome para que te guíe — o directamente para que configure todo por ti.
+
+Abre Retell AI en el navegador, activa la extensión de Claude y pégale este prompt:
+
+Estoy en Retell AI y quiero crear un agente de voz para un negocio de [rubro].
+
+El agente debe:
+- Contestar llamadas de clientes interesados en [servicio o producto]
+- [describe qué debe hacer — ej. calificar al lead, agendar una cita, 
+  responder preguntas frecuentes]
+- Hablar en un tono [ej. profesional, cercano, formal]
+
+La información del negocio es:
+[pega aquí toda la información del negocio — servicios, precios, 
+horarios, preguntas frecuentes, cómo agendar]
+
+Mira la pantalla que estoy viendo y dime paso a paso cómo configurar 
+el agente. Si puedes hacer algo directamente, hazlo.
+
+Claude va a leer lo que tienes en pantalla y te va a guiar por cada campo — el guión del agente, la voz, el idioma, el comportamiento, todo. Si algo puede configurarlo directamente, lo hace.
+
+Paso 4 — Configurar el guión del agente
+El guión es lo que el agente dice y cómo responde. Retell AI tiene un editor donde defines el flujo de la conversación.
+
+Si no sabes qué poner, pídele a Claude que lo escriba:
+
+Necesito el guión completo para un agente de voz de [rubro].
+
+El agente debe:
+1. Saludar al cliente
+2. Preguntar en qué puede ayudar
+3. [describe el flujo — ej. calificar si el cliente es potencial, 
+   agendar una cita, resolver dudas]
+4. Despedirse de forma cordial
+
+La información del negocio es: [descripción del negocio]
+Dame el guión completo listo para pegarlo en Retell AI.
+
+Copia el guión que te da Claude y pégalo en el editor de Retell AI.
+
+Paso 5 — Asignar el número al agente
+Dentro de Retell AI, ve a Phone Numbers
+
+Selecciona el número que importaste desde Twilio
+
+Asígnalo al agente que acabas de crear
+
+Guarda los cambios
+
+Paso 6 — Probar el agente
+Dentro de Retell AI, busca el botón Test Call o Llamada de prueba
+
+Llama al número desde tu teléfono
+
+Conversa con el agente como si fueras un cliente
+
+Verifica que el flujo de conversación funciona correctamente y que las respuestas son las correctas
+
+Si algo no suena natural o el agente responde algo incorrecto, ajusta el guión y vuelve a probar.
+
+Paso 7 — Conectar Retell AI con n8n (opcional)
+Esto solo es necesario si el agente necesita hacer algo que Retell AI no puede hacer por sí solo — por ejemplo agendar una cita en Google Calendar, crear un contacto en un CRM, enviar una notificación, o registrar la llamada en una base de datos.
+
+Para conectarlo, abre Claude Code y pégale este prompt:
+
+Quiero conectar Retell AI con n8n para que cuando el agente 
+de voz complete una llamada, [describe qué acción quieres que ocurra — 
+ej. agende una cita en Google Calendar, guarde los datos del cliente 
+en Supabase, envíe una notificación por Telegram].
+
+Dime:
+1. Cómo configurar el webhook en Retell AI para que envíe 
+   los datos a n8n
+2. Cómo construir el nodo en n8n que reciba esos datos 
+   y ejecute la acción
+3. Qué APIs y credenciales necesito tener listas
+
+Cuando lo tengamos claro, construye el workflow en n8n 
+y súbelo directamente.
+
+Claude Code te va a pedir las credenciales que necesite, construir el workflow completo en n8n y subirlo directamente a tu instancia.
+
+Si algo no funciona
+Toma una captura de pantalla de donde estás y pégasela a Claude — ya sea en el chat normal o con la extensión de Chrome si estás dentro de Retell AI:
+
+Estoy configurando el agente de voz en Retell AI y me aparece esto.
+[captura de pantalla]
+¿Qué está pasando y cómo lo soluciono?

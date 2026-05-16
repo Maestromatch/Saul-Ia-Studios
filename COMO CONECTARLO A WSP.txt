@@ -1,0 +1,281 @@
+3. CÓMO CONECTARLO A WHATSAPP
+
+Cómo conectar WhatsApp con Chatwoot y tu chatbot de n8n
+Esta es la guía completa para dejar WhatsApp conectado a Chatwoot y funcionando con tu agente de IA en n8n. Al terminar, los mensajes que lleguen al número van a ser respondidos automáticamente por el chatbot.
+
+Lo que necesitas antes de empezar:
+
+VPS con Easypanel instalado y funcionando
+
+n8n instalado en tu VPS con el chatbot ya creado
+
+Un chip nuevo con un número que no tenga WhatsApp
+
+Una cuenta en Meta Business Suite
+
+Parte 1 — Instalar y configurar Chatwoot
+Paso 1 — Instalar Chatwoot desde Easypanel
+Entra a Easypanel y abre tu proyecto
+
+Haz clic en + o Create Service
+
+Selecciona Template
+
+Busca chatwoot y selecciónalo
+
+Haz clic en Create y espera a que se instale
+
+Cuando termine vas a ver que el servicio está escuchando en el puerto 3000
+
+Paso 2 — Asignar el subdominio a Chatwoot
+En Cloudflare:
+
+Ve a DNS > Records
+
+Haz clic en Add Record
+
+Tipo: A / Nombre: chat / IP: la IP de tu VPS / Proxy: nube gris (DNS only)
+
+Guarda el registro
+
+En Easypanel:
+
+Dentro del servicio de Chatwoot, ve a la pestaña Domains
+
+Haz clic en Add Domain
+
+Escribe chat.tudominio.cl y el puerto 3000
+
+Haz clic en Create
+
+Espera unos minutos y abre chat.tudominio.cl en el navegador. Debe aparecer el formulario de configuración inicial.
+
+Paso 3 — Crear tu cuenta de administrador en Chatwoot
+Rellena el formulario: tu nombre, nombre de la empresa, correo y contraseña
+
+Haz clic en Finish
+
+Inicia sesión nuevamente con el correo y contraseña que acabas de crear
+
+Ya estás dentro de Chatwoot. Ahora hay que conectar WhatsApp.
+
+Parte 2 — Configurar Meta Business y la API de WhatsApp
+Paso 4 — Crear el portafolio comercial en Meta Business Suite
+Ve a business.facebook.com e inicia sesión con tu cuenta de Facebook
+
+Si es la primera vez, te va a pedir crear un portafolio comercial
+
+Rellena el nombre de la empresa, tu nombre y tu correo
+
+Haz clic en Enviar
+
+Si te llega un correo de confirmación, ábrelo y confirma
+
+Paso 5 — Crear la aplicación en Meta for Developers
+Ve a developers.facebook.com
+
+Haz clic en Mis aplicaciones y luego en Crear aplicación
+
+Nombre de la aplicación: el nombre de tu agencia o del proyecto
+
+Haz clic en Siguiente
+
+En tipo de aplicación selecciona Otro y luego Siguiente
+
+En la siguiente pantalla selecciona Negocio
+
+En portafolio comercial selecciona el que acabas de crear — esto es importante, si no lo asocias aquí vas a tener problemas después
+
+Haz clic en Crear aplicación
+
+Paso 6 — Agregar WhatsApp a la aplicación
+Dentro de tu aplicación, busca el producto WhatsApp y haz clic en Configurar
+
+Selecciona el portafolio comercial que creaste y haz clic en Continuar
+
+Espera a que se instale WhatsApp dentro de la aplicación
+
+Paso 7 — Agregar y verificar el número de teléfono
+Dentro de WhatsApp > Configuración de la API, haz clic en Agregar número de teléfono
+
+Nombre del perfil: el nombre del negocio
+
+Categoría: elige la que corresponda al negocio
+
+Haz clic en Siguiente
+
+Ingresa el número del chip con el código de país (ej. +56912345678) — sin espacios
+
+Elige recibir el código por mensaje de texto
+
+Ingresa el código que llegó al chip y haz clic en Siguiente
+
+El número queda agregado. En la mayoría de los casos aparece como "pendiente" — el Paso 8 es necesario para activarlo y que quede conectado. No te lo saltes.
+
+Paso 8 — Activar el número si aparece como "pendiente" (usando Postman)
+Este paso solo es necesario si el número quedó en estado pendiente. Si ya está conectado, sáltalo.
+
+Postman es una herramienta gratuita para hacer peticiones a APIs. Descárgala en postman.com si no la tienes.
+
+Dentro de Meta for Developers, ve a tu número y copia el Certificado que aparece en la sección de configuración
+
+Descarga Postman https://www.postman.com/downloads/
+
+Abre Postman y crea una nueva petición
+
+Método: Cambia de GET a POST
+
+En Body > Raw, pega este código y reemplaza los valores entre parentesís:
+
+{
+  "cc": "(número con el que parte tu teléfono 56)",
+  "phone_number": "(número de teléfono que vamos a conectar, 929362817)",
+  "method": "sms",
+  "cert": "(aqui pones el certificado que copiaste"
+}
+
+Donde pone: cc es tu número con código de país sin espacios ni el + (ej. 56912345678).
+
+Ve a Auth > Bearer Token y pega el token de acceso temporal que aparece en Meta for Developers al seleccionar tu número, si no te sale, le das a generar token de acceso, te pide iniciar sesión y está listo.
+
+Ve a Headers y agrega: en KEY:Content-Type y en VALUEapplication/json
+
+En la URL pega: https://graph.facebook.com/v20.0/PHONE_NUMBER_ID/messages
+
+Reemplaza PHONE_NUMBER_ID con el identificador del número de teléfono — lo encuentras en Meta for Developers al seleccionar tu número (usa el ID del número de teléfono, no el de la cuenta de WhatsApp).
+
+Haz clic en Send
+
+Recarga la página de Meta for Developers — el número debería aparecer como Conectado
+
+Paso 9 — Personalizar el perfil del número
+Dentro de Meta for Developers, selecciona tu número
+
+Agrega una foto de perfil y el nombre del negocio
+
+Agrega el sitio web si el negocio tiene uno
+
+Guarda los cambios
+
+Paso 10 — Generar el token permanente
+El token temporal que usaste antes expira. Necesitas un token permanente para que la conexión funcione siempre.
+
+Ve a Meta Business Suite > Configuración > Usuarios del sistema
+
+Si no tienes ninguno, crea uno nuevo con rol de Administrador
+
+Haz clic en el usuario y luego en Asignar activos
+
+Selecciona tu aplicación y dale permiso de Administrar aplicación
+
+Haz clic en Guardar
+
+Haz clic en Generar token
+
+Selecciona tu aplicación
+
+En caducidad elige Nunca
+
+En permisos busca whatsapp — aparecerán tres permisos, selecciona los tres
+
+Haz clic en Generar token
+
+Copia el token y guárdalo en un lugar seguro — lo vas a necesitar en el siguiente paso
+
+Parte 3 — Conectar todo en Chatwoot
+Paso 11 — Crear el inbox de WhatsApp en Chatwoot
+Dentro de Chatwoot, ve a Settings > Inboxes
+
+Haz clic en Add Inbox
+
+Selecciona WhatsApp
+
+Rellena los campos:
+
+Nombre del inbox — el nombre del negocio del cliente
+
+Número de teléfono — con código de país, sin espacios (ej. +56912345678)
+
+Phone Number ID — el identificador del número de teléfono que está en Meta for Developers
+
+WhatsApp Account ID — el identificador de la cuenta de WhatsApp, también en Meta for Developers
+
+API Key — el token permanente que generaste en el paso anterior
+
+Haz clic en Create Inbox
+
+Selecciona un agente y haz clic en Add Agents
+
+Paso 12 — Configurar el webhook en Meta
+Dentro de Chatwoot, ve al inbox que acabas de crear y copia la Webhook URL y el Verify Token
+
+Ve a Meta for Developers > tu aplicación > WhatsApp > Configuración
+
+En la sección de webhooks, pega la Webhook URL y el Verify Token
+
+Asegúrate de que la URL tenga el formato correcto con el dominio de Chatwoot que configuraste. Debe verse así: https://chatwoot.tudominio.cl/...
+
+Haz clic en Verificar y guardar
+
+Activa el permiso messages haciendo clic en Suscribirte
+
+Vuelve a la configuración de la API
+
+Haz clic en Generar token de acceso y luego en Reconectar
+
+Paso 13 — Verificar que los mensajes llegan
+Envía un mensaje desde tu teléfono al número del chip. Si el mensaje aparece en Chatwoot, la conexión está funcionando.
+
+Parte 4 — Conectar Chatwoot con n8n para respuestas automáticas
+Paso 14 — Crear el webhook en n8n
+Para que n8n reciba los mensajes que llegan a Chatwoot y los responda automáticamente:
+
+Abre n8n y entra al workflow del chatbot que ya tienes creado
+
+Agrega un nodo de Webhook al inicio del flujo
+
+En el nodo de webhook copia la URL que genera — se ve así: https://n8n.tudominio.cl/webhook/...
+
+Activa el workflow
+
+Paso 15 — Conectar Chatwoot con el webhook de n8n
+Dentro de Chatwoot, ve a Settings > Integrations > Webhooks
+
+Haz clic en Add new webhook
+
+Pega la URL del webhook de n8n
+
+Activa el evento Message Created
+
+Guarda
+
+Paso 16 — Configurar n8n para responder por WhatsApp
+Para que n8n pueda enviar las respuestas de vuelta por WhatsApp a través de Chatwoot:
+
+En tu workflow de n8n, al final del flujo agrega un nodo de HTTP Request
+
+Pídele a Claude Code que configure este nodo para enviar la respuesta del agente de vuelta a Chatwoot:
+
+Tengo un workflow en n8n donde el agente de IA genera una respuesta.
+Necesito agregar un nodo al final que envíe esa respuesta de vuelta
+a Chatwoot para que llegue al usuario por WhatsApp.
+Mi URL de Chatwoot es: chat.tudominio.cl
+Dame la configuración exacta del nodo HTTP Request.
+
+Paso 17 — Prueba final de punta a punta
+Envía un mensaje desde tu teléfono al número del chip
+
+Verifica que el mensaje aparece en Chatwoot
+
+Verifica que n8n recibe el mensaje y el agente genera una respuesta
+
+Verifica que la respuesta llega de vuelta a tu teléfono
+
+Si todos los pasos funcionan, el sistema está completo. El chatbot está recibiendo mensajes por WhatsApp, procesándolos con IA en n8n y respondiendo automáticamente.
+
+Si algo no funciona
+Toma una captura de pantalla de donde estás y pégasela a Claude:
+
+Estoy configurando Chatwoot con WhatsApp y me aparece esto.
+[captura de pantalla]
+¿Qué está pasando y cómo lo soluciono?

@@ -1,0 +1,187 @@
+CÓMO PONER PRECIO
+
+Pricing: cómo ponerle precio a tu servicio de IA
+El error más común al cobrar
+La mayoría de las personas que empiezan en esto calcula sus costos, los multiplica por dos, y llama a eso su precio.
+
+El problema es que ese método no tiene nada que ver con el valor que entregas. Solo tiene que ver con lo que te cuesta a ti.
+
+Un cliente no te paga para cubrirte los costos. Te paga porque el resultado que le entregas vale más que lo que te está pagando. Esa diferencia — entre lo que paga y lo que obtiene — es exactamente lo que lo hace decir que sí.
+
+Por eso el pricing parte del valor, no del costo. Los costos son el piso. El valor es el techo. Y tu precio vive en algún lugar entre los dos.
+
+Paso 1 — Entiende el mercado antes de definir tu precio
+Antes de calcular cualquier cosa, necesitas saber en qué rango se mueve el mercado donde vas a vender.
+
+El mercado en Chile es distinto al de México, al de España, al de Estados Unidos. Los precios varían según el país, la ciudad, el tipo de cliente y el tipo de servicio.
+
+Cómo hacerlo:
+
+Usa IA para investigar. Pídele a Claude o a ChatGPT que investigue cuánto cobran agencias y freelancers de automatización en el país o ciudad donde quieres vender. Busca en LinkedIn, en sitios de freelancers, en páginas de agencias locales. Anota rangos — no un número, sino un rango.
+
+Lo que buscas entender:
+
+¿Cuánto cobra alguien con poca experiencia por un proyecto similar?
+
+¿Cuánto cobra una agencia establecida por lo mismo?
+
+¿Qué incluye cada oferta?
+
+Ese rango te da el contexto. No tienes que cobrar lo mismo que todos — pero sí tienes que saber dónde te posicionas y por qué.
+
+Paso 2 — Calcula tus costos reales
+Los costos son el piso. Nunca cobres por debajo de ellos.
+
+Hay dos tipos de costos que tienes que calcular:
+
+Costos fijos — lo que pagas independiente de cuántos clientes tengas
+Estos son los costos de tener tu stack de herramientas activo. Anota cuánto pagas mensualmente por cada herramienta que usas en tus proyectos.
+
+Herramientas comunes en una agencia de automatización con IA:
+
+n8n (self-hosted o cloud)
+
+OpenAI API
+
+Anthropic API (Claude)
+
+Contabo u otro servidor (VPS)
+
+Herramientas de chatbot (Manychat, Typebot, etc.)
+
+Almacenamiento o bases de datos
+
+Dominio y hosting si aplica
+
+Suma todo. Ese número es tu costo fijo mensual base.
+
+Costos variables — lo que depende del uso del cliente
+Los tokens de API, el uso de servidor, el almacenamiento de datos — todo lo que crece según cuánto use el cliente — son costos variables.
+
+La estrategia más limpia para manejarlos: derivárselos directamente al cliente.
+
+Esto significa que el cliente tiene su propia cuenta en OpenAI, Anthropic, o el proveedor que uses. Él paga su consumo directamente. Tú no intermedias ni asumes ese riesgo.
+
+Las ventajas son claras: no tienes que estimar cuánto va a usar, no corres el riesgo de que un cliente consuma más de lo esperado, y la relación es más transparente.
+
+Si por alguna razón prefieres incluirlo en tu precio, agrega un margen conservador y establece un límite de uso en el contrato. Si el cliente supera ese límite, se cobra aparte.
+
+Costo de tu tiempo
+Este es el costo que más gente olvida calcular.
+
+¿Cuántas horas te toma construir e implementar un proyecto típico? Multiplícalo por el valor hora que le asignas a tu tiempo. Ese número tiene que estar cubierto en tu precio — y si no lo está, estás trabajando gratis.
+
+Al principio el valor hora puede ser bajo porque estás aprendiendo. Pero a medida que ganas experiencia, ese número tiene que subir.
+
+Paso 3 — Define el valor que entregas
+Aquí es donde el precio deja de ser un cálculo y se convierte en comunicación.
+
+La pregunta que tienes que responder antes de ponerle precio a cualquier proyecto es: ¿cuánto vale el resultado para el cliente?
+
+No cuánto te cuesta a ti. Cuánto vale para él.
+
+Algunos ejemplos concretos:
+
+Un negocio que pierde 5 leads al día por falta de seguimiento, con un ticket promedio de $200, está dejando $1.000 al día sobre la mesa. $30.000 al mes. Si tú implementas un sistema que recupera aunque sea el 30% de eso, el cliente gana $9.000 al mes. ¿Cuánto vale ese sistema? Claramente mucho más que $500.
+
+Una clínica que tiene a una recepcionista respondiendo las mismas preguntas básicas 4 horas al día. Si ese tiempo vale $15 la hora, son $60 al día, $1.800 al mes solo en ese proceso. Un chatbot que resuelve el 70% de esas consultas libera $1.260 al mes. ¿Cuánto vale implementarlo? Más de lo que parece al principio. (es bastante menos en chile, pero tomar cómo referencia para sacar el cálculo) 
+
+El ejercicio que tienes que hacer antes de cada propuesta:
+
+¿Cuánto le está costando el problema al cliente ahora mismo? (en tiempo, en dinero, en clientes perdidos)
+
+¿Cuánto de ese costo resuelves tú con tu implementación?
+
+¿En cuánto tiempo empieza a ver resultados?
+
+Esos tres números te dicen cuánto puedes cobrar con confianza.
+
+Los modelos de precio — cuál usar y cuándo
+Proyecto fijo
+Un precio por una implementación específica con entregables claros. Ideal para empezar porque es fácil de vender y de entender para el cliente.
+
+Cuándo usarlo: cuando el scope está bien definido y el proyecto tiene un punto de inicio y fin claro.
+
+Ventaja: el cliente sabe exactamente qué paga y qué recibe. Desventaja: si el proyecto se complica o el cliente pide más de lo acordado, tu margen se achica. Por eso el contrato tiene que definir exactamente qué incluye y qué no.
+
+Retención mensual
+El cliente paga un monto fijo cada mes por mantenimiento, soporte, mejoras y monitoreo del sistema.
+
+Cuándo usarlo: después del proyecto inicial, como continuación natural de la relación.
+
+Ventaja: ingresos predecibles para ti, continuidad para el cliente. Desventaja: tienes que definir bien qué incluye la retención para que no se convierta en soporte ilimitado.
+
+La combinación que más funciona al principio: proyecto fijo para la implementación + retención opcional para el mantenimiento. El proyecto te paga el trabajo inicial. La retención te genera ingresos recurrentes sin tener que conseguir nuevos clientes todo el tiempo.
+
+Por performance o resultado
+Cobras un porcentaje de los resultados generados — por ejemplo, un porcentaje de los ingresos adicionales que genera el sistema en los primeros meses.
+
+Cuándo usarlo: cuando tienes confianza total en que el sistema va a generar resultados medibles y cuando el cliente también confía en eso.
+
+Ventaja: alineas completamente tus incentivos con los del cliente. Si gana él, ganas tú. Desventaja: requiere métricas claras y confianza mutua. Más difícil de vender al principio cuando no tienes casos de éxito.
+
+Cómo subir el precio con el tiempo
+Ya lo viste en el módulo de los primeros clientes, pero vale repetirlo acá en contexto de pricing:
+
+Sube el precio cada 5 clientes.
+
+No porque sí — porque cada 5 clientes tienes más experiencia, más casos de éxito, más testimonios y más confianza en tu propio trabajo. Todo eso justifica cobrar más.
+
+La regla práctica de Bessemer Venture Partners aplica perfectamente acá: si el cliente dice "vendido" inmediatamente sin ninguna fricción, probablemente estás cobrando poco. El precio correcto genera una pequeña pausa — no un rechazo, pero sí un momento de consideración. Cuando empiezas a escuchar "necesito pensarlo" con más frecuencia de la que escuchas "muy caro", estás en el rango correcto.
+
+Cómo presentar el precio sin que parezca caro
+El precio nunca va solo. Siempre va acompañado del valor que lo justifica.
+
+La secuencia correcta en la propuesta:
+
+Primero el dolor — cuánto le cuesta el problema ahora mismo
+
+Luego la solución — qué resultado específico vas a entregar
+
+Luego la garantía — que elimina el riesgo de pagar
+
+Último el precio — cuando el cliente ya entiende qué está comprando
+
+Cuando el precio aparece después de haber mostrado que el cliente está perdiendo $3.000 al mes y que tu solución recupera al menos $1.500 de eso, cobrar $800 por la implementación parece obvio.
+
+Cuando el precio aparece antes de todo eso, parece caro aunque sea barato.
+
+El análisis de costos en la práctica — ejemplo real
+Supón que vas a implementar un sistema de seguimiento automático de leads para una inmobiliaria pequeña.
+
+Costos del proyecto:
+
+n8n (cloud): $20/mes — proporcional a 1 mes de proyecto = $20
+
+OpenAI API: el cliente tiene su propia cuenta, costo derivado
+
+Servidor Contabo: $10/mes — proporcional = $10
+
+Tu tiempo: 15 horas de trabajo × $30 valor hora = $450
+
+Total costos: $480
+
+Valor para el cliente:
+
+La inmobiliaria pierde en promedio 4 leads calificados al mes por falta de seguimiento rápido
+
+Cada propiedad vendida genera $800 de comisión
+
+Si el sistema recupera 2 de esos 4 leads al mes = $1.600/mes adicional para el cliente
+
+Precio que tiene sentido:
+
+Tu costo es $480. El valor mensual que generas es $1.600. Cobrar $900 por la implementación es completamente razonable — el cliente recupera la inversión en menos de un mes.
+
+Además, puedes ofrecer retención de $150/mes para mantenimiento. En 6 meses de retención ya recuperaste el doble de lo que costó el proyecto inicial.
+
+Resumen — los 5 principios del pricing que funciona
+1. El costo es el piso, no el precio. Calcúlalo para saber cuánto es lo mínimo que puedes cobrar. Nunca para definir cuánto vas a cobrar.
+
+2. El precio lo define el valor para el cliente. Cuánto gana él, cuánto ahorra, cuánto deja de perder. Eso es lo que justifica el número.
+
+3. Investiga el mercado antes de definir cualquier cifra. Saber dónde te posicionas respecto a la competencia te da contexto y confianza al momento de presentar tu precio.
+
+4. Deriva los costos variables al cliente. Tokens, API, consumo de servidor según uso — eso no es tu riesgo, es del cliente. Que tenga su propia cuenta y pague directamente.
+
+5. Sube el precio con cada ciclo de clientes. No es arrogancia — es que con cada proyecto tienes más experiencia, más prueba y más derecho a cobrar lo que vale tu trabajo.

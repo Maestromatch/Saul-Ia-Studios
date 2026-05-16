@@ -1,0 +1,46 @@
+CUANTO CUESTA TODO
+
+Una de las ventajas reales de este modelo de negocio es que el costo de entrada es bajo. Acá está el desglose honesto de lo que cuesta tener todo funcionando.
+
+Herramientas esenciales para empezar
+Claude Pro — $19.990 CLP/mes. La IA principal para todo. Incluye Claude Code.
+
+Google AI Pro — $21.700 CLP/mes. Incluye Antigravity, Flow para generación de imágenes, Gemini, 5 TB de almacenamiento en Google y Notebooklm (para estudiar). Si ya tienes esta suscripción, no necesitas pagar nada adicional por esas herramientas. Es la que mayor valor te da por el precio
+
+Canva Pro — $7.900 CLP/mes. Diseño y creativos. Opcional, puedes usar la versión gratis.
+
+GitHub — Gratis. Para guardar y versionar el código.
+
+Total para empezar: ~$49.590 CLP/mes
+
+OPCIÓN full económica: $21.700 CLP/mes
+
+UNICAMENTE pagar Google AI Pro para empezar, te da acceso a todo lo mencionado anteriormente y para poder empezar a prospectar, ofrecer tus servicios, cumple muy bien. Puedes crear aplicaciones, páginas web, usar Gemini como asistente, todo en realidad.
+
+Con eso puedes entregar proyectos completos desde el día uno. Un solo cliente en plan mensual cubre este costo con margen. Puedes hacer páginas web, apps, todo.
+
+Herramientas para cuando tienes clientes activos
+Contabo VPS — ~$8 USD/mes. El servidor donde viven todos tus proyectos. Cubre todos tus clientes — no pagas uno por cliente.
+
+Cloudflare — Gratis. Seguridad y dominios.
+
+n8n — Gratis. Se instala directamente en el VPS que ya pagas. Puedes usar múltiples cuentas en el plan gratuito sin necesidad de pagar un plan pro.
+
+Supabase — Gratis. Base de datos para los agentes.
+
+OpenAI u otros modelos de IA — Se cobra por uso, en base a la cantidad de mensajes procesados. El costo es muy bajo — para pruebas propias es prácticamente un par de dólares. Una vez que el chatbot está en producción con un cliente real, ese costo va directamente a su cuenta. No es un gasto tuyo.
+
+Costo adicional: ~$8 USD/mes
+
+Herramientas variables — van al cliente
+Retell AI, modelos de IA y WhatsApp Business API se cobran según el uso. Estos costos no son tuyos — van directamente a la cuenta del cliente. Déjalo claro desde el principio en tu propuesta.
+
+Opcionales recomendados
+Dominio propio (.cl) — ~$10.000 CLP/año. Tu dirección web, por ejemplo flowstate.cl.
+
+Zoho Mail — Gratis. Te permite tener un correo con tu dominio, por ejemplo pedro@flowstate.cl. Tener un correo institucional le da mucha más seriedad a tus propuestas. En vez de enviar desde un Gmail, envías desde tu propia empresa.
+
+La lógica del costo
+Con menos de $50.000 CLP (o menos de 22.000CLP, si te vas por la versión más económica) al mes tienes todo lo necesario para operar y entregar proyectos completos. Si en el primer mes cierras aunque sea un cliente en plan mensual, ese ingreso cubre todos tus gastos y te deja margen.
+
+A medida que sumas clientes, el costo casi no escala — el servidor que tienes hoy puede soportar varios proyectos sin que tengas que pagar más. La ganancia crece, el costo se mantiene relativamente fijo. Ese es el modelo que escala.

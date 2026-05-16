@@ -1,0 +1,86 @@
+ACREDITAR DOMICILIO
+
+Cómo acreditar domicilio en el SII
+Cuando haces el inicio de actividades en el SII, te van a pedir un documento que acredite el domicilio de tu empresa. Ese documento tiene que estar a nombre de la empresa, no a tu nombre personal.
+
+Si tienes un contrato de arriendo a tu nombre y quieres usarlo, el SII no lo va a aceptar. El documento tiene que decir el nombre de tu SpA, no el tuyo.
+
+Las 4 opciones para acreditar domicilio
+Opción 1 — Contrato de arriendo a nombre de la empresa
+
+Si arriendas donde vives, habla con el dueño y pídele cambiar el contrato a nombre de tu empresa. En realidad, no recomiendo esta opción, pero está ahí. Si el contrato ya existe pero tiene una cláusula que prohíbe el uso comercial, ese contrato no sirve. Hay que cambiarlo o usar la Opción 2. 
+
+Opción 2 — Autorización de uso comercial del inmueble (Lo que yo usé)
+
+Esta es la opción que yo usé, pero tiene un requisito importante que hay que entender antes de considerarla: la propiedad tiene que estar pagando contribuciones. Es decir, tiene que ser un inmueble que ya tiene un uso comercial o mixto reconocido. Si partes desde cero y no tienes acceso a un domicilio así, esta opción probablemente no es para ti — en ese caso, ve directo a la Opción 3.
+
+En mi caso aproveché que ya tenía acceso a un domicilio que pagaba contribuciones, lo que hizo que el trámite fuera directo. Pero si no tienes eso, no tiene sentido complicarse con esta opción.
+
+Si sí tienes acceso a ese tipo de propiedad, el dueño firma una autorización cediendo un espacio del inmueble para fines tributarios y comerciales a nombre de tu empresa. El documento debe especificar que el uso es parcial, así:
+
+"Se autoriza el uso del inmueble ubicado en [dirección] para fines tributarios y comerciales, limitado al uso de una oficina o espacio de trabajo, equivalente a aproximadamente el [X]% de la superficie total del inmueble, manteniéndose el destino habitacional del resto de la propiedad."
+
+No necesitas medir con exactitud ni hacer un plano — basta con declararlo así en el documento.
+
+Este documento tiene que estar firmado ante notario para que el SII lo acepte. El trámite cuesta alrededor de $4.000 pesos. Puedes generar el documento con Claude y llevarlo a firmar, pero lo ideal es tenerlo revisado por un abogado antes.
+
+El SII también te va a pedir el carnet de identidad del dueño por ambos lados.
+
+Opción 3 — Oficina virtual ← la más cómoda para una agencia
+
+Si no tienes acceso a ninguna de las opciones anteriores, o simplemente quieres la solución más directa, la oficina virtual es probablemente la mejor opción para una agencia de servicios digitales. Te presta una dirección tributaria legal a cambio de un pago anual, sin necesidad de arrendar un espacio físico real. Más abajo explico el paso a paso para contratarla.
+
+Opción 4 — Arrendar un espacio con fines comerciales
+
+Si tu negocio lo requiere, arriendas directamente un lugar con un contrato que diga explícitamente que es para uso comercial. Ese contrato tiene que estar a nombre de tu empresa. Esta opción aplica si necesitas un espacio físico real — no es el caso de la mayoría de las agencias digitales.
+
+Por qué la oficina virtual es probablemente tu mejor opción
+Para una agencia que opera 100% online y no atiende clientes de forma presencial, la oficina virtual resuelve el problema de domicilio sin depender de si tienes casa propia, si tu arrendador te da permiso o si tienes un familiar dispuesto a firmar un documento.
+
+Pagas una vez al año, recibes toda la documentación que el SII exige, y listo.
+
+Un punto importante: el SII no tiene un listado oficial de actividades que sí o no pueden usar oficina virtual. En la práctica, los negocios de servicios digitales no suelen tener problemas.
+
+Lo que te entrega el servicio:
+
+Una dirección tributaria legal (solo para efectos del SII y la municipalidad)
+
+La documentación necesaria para acreditar el domicilio
+
+Algunos proveedores ofrecen además contabilidad mensual o apoyo en la formalización
+
+No vas a trabajar ahí. No recibes clientes ahí. Solo usas la dirección para el SII y para la patente municipal.
+
+Cómo contratar una oficina virtual — paso a paso
+1. Elige una cerca de donde vives
+
+Búscala en la comuna más cercana a tu domicilio. La razón es práctica: si el SII necesita notificarte o citarte, lo hará en la oficina del SII de esa comuna. Lo mismo aplica para la patente municipal — la vas a tramitar en la municipalidad de la comuna donde está la oficina virtual.
+
+2. Paga y firma el contrato
+
+Una vez que pagas, firmas un contrato entre tu empresa y la oficina virtual. Ese contrato tiene que estar notariado o firmado con Firma Electrónica Avanzada. Sin eso no tiene validez ante el SII.
+
+3. Reúne los documentos para el SII
+
+La oficina virtual debe entregarte:
+
+Contrato entre tu empresa y la oficina virtual (notariado o con FEA)
+
+Avalúo fiscal de la propiedad
+
+Uso de suelo de la propiedad (tiene que ser uso de oficina, no habitacional)
+
+Con esa documentación presentas la solicitud al SII, de forma presencial o mediante una petición administrativa online.
+
+4. Tramita la patente municipal
+
+Con el domicilio validado por el SII, vas a la municipalidad de esa comuna a solicitar tu patente comercial. La mayoría de las municipalidades ya conocen las oficinas virtuales de su comuna, así que el trámite suele ser directo. Si no, presentas la misma documentación que usaste en el SII.
+
+Resumen
+El documento de domicilio tiene que estar siempre a nombre de la empresa, no tuyo
+
+Si tienes acceso a domicilio que pague contribuciones o familiar dispuesto a firmar → Opción 2 (autorización notarial, ~$4.000)
+
+Si no tienes eso o quieres la solución más directa → Oficina virtual (pago anual, documentación lista, sin depender de nadie)
+
+Después de validar el domicilio en el SII, tienes 15 días para tramitar la patente municipal

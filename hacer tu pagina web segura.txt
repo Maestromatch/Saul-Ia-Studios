@@ -1,0 +1,344 @@
+HACER TU PÁGINA SEGURA
+
+Stack: Contabo + Cloudflare + Easypanel
+
+Esta guía asume que ya tienes tu servidor corriendo y tu dominio conectado. El objetivo es cerrarlo bien para que no quede expuesto y no te cogoteen digitalmente.
+
+Intenté hacerla lo más sencilla de entender, pero en realidad lo mejor es subirla directamente a Antigravity y preguntarle en cada cosa que tengas dudas y que te ayude en caso de que hagas algo mal o te de error (Así lo hice yo)
+
+La mejor forma de usarla a mi parecer:
+Sube este documento a tu asistente de IA favorito y úsalo como guía mientras avanzas (Yo prefiero Antigravity en gemini flash). Mándale capturas de tu terminal, de Cloudflare, de Easypanel, y pregúntale todo lo que no entiendas. La próxima vez que algo falle, vas a saber exactamente por donde va la cosa.
+
+Si ya más o menos entiendes, 
+
+Modo rápido — Copia, pega y ejecuta. En 30-45 minutos tienes el servidor protegido.
+
+Glosario rápido
+Antes de empezar, ten claro estos términos. Si aparece una palabra rara en la guía, vuelve aquí.
+
+VPS — Un computador virtual que alquilas en internet. Lo controlas desde tu terminal, igual que si estuviera en tu escritorio.
+
+Terminal / CMD — La pantalla negra donde escribes comandos. En Mac se llama Terminal, en Windows es CMD o PowerShell.
+
+SSH — El método para conectarte a tu servidor de forma segura. Es una conexión encriptada entre tu computadora y el VPS.
+
+IP — La dirección de tu servidor en internet. Un número como 185.123.45.67.
+
+DNS — El sistema que traduce nombres como tudominio.cl a direcciones IP. Es la guía telefónica de internet.
+
+Proxy inverso — Un intermediario que se pone entre tu servidor y el visitante. El visitante habla con el intermediario (Cloudflare), nunca directamente con tu VPS. Tu IP real queda oculta.
+
+SSL / HTTPS — La tecnología que encripta la comunicación entre el navegador del visitante y tu servidor. Es el candado que ves en la barra del navegador.
+
+WAF — Un filtro que analiza el tráfico web y bloquea solicitudes maliciosas antes de que lleguen a tu servidor.
+
+DDoS — Un ataque donde miles de computadoras envían tráfico basura a tu servidor al mismo tiempo para tirarlo.
+
+Firewall / UFW — Un programa que controla qué conexiones pueden entrar o salir de tu servidor. Como un guardia en la puerta.
+
+Puerto — Un canal numerado por donde pasa un tipo específico de tráfico. Puerto 22 = SSH. Puerto 80 = web HTTP. Puerto 443 = web HTTPS. Puerto 3000 = panel de Easypanel.
+
+Docker — Tecnología que empaqueta apps en "cajas" aisladas dentro de tu servidor. Easypanel lo usa por debajo.
+
+R2 — El servicio de almacenamiento en la nube de Cloudflare. Ahí van los backups. 10 GB gratis.
+
+Backup — Copia de seguridad de tus datos. Si algo se rompe, restauras desde aquí.
+
+Cron — Sistema para programar tareas automáticas. La expresión 0 3 * * * significa "todos los días a las 3 AM".
+
+Fuerza bruta — Ataque donde un bot prueba miles de contraseñas por minuto hasta adivinar la tuya.
+
+Fail2Ban — Programa que vigila los intentos de login fallidos. Si alguien se equivoca demasiadas veces, lo bloquea automáticamente.
+
+SSH Keys — Un par de archivos (uno público, uno privado) que te permiten entrar al servidor sin contraseña. Tu computadora se identifica sola.
+
+2FA — Autenticación de dos pasos. Además de tu contraseña, necesitas un código de tu celular. Si alguien roba tu clave, sin el teléfono no entra.
+
+Rate Limiting — Limitar cuántas veces alguien puede hacer algo en un período de tiempo. Ejemplo: máximo 5 intentos de login por minuto.
+
+Webhook — Una URL que recibe datos automáticamente cuando ocurre un evento. Las herramientas de automatización como n8n las usan constantemente.
+
+Fase 1 — El escudo perimetral (Cloudflare)
+Cloudflare actúa como un guardia de tu servidor real. Cuando alguien visita tu sitio, primero pasa por los servidores de Cloudflare — nunca llega directo a tu VPS. Esto oculta tu IP real y bloquea ataques antes de que lleguen.
+
+Paso 1 — Activar el proxy (ocultar tu IP real)
+Tu VPS tiene una IP pública. Si un atacante la conoce, puede intentar atacar tu servidor directamente, saltándose a Cloudflare. El proxy oculta esa IP.
+
+Entra a Cloudflare y ve al panel de tu dominio.
+
+Abre DNS > Records.
+
+Asegúrate de que tu registro tipo A tenga la nube naranja (Proxied) activada.
+
+Excepción: el subdominio del panel de Easypanel (ej. panel.tudominio.cl) debe quedarse en nube gris (DNS only). Lo vemos en la Fase 3.
+
+⚠️ Una vez activado el proxy, nunca publiques tu IP real de Contabo en GitHub, foros ni documentos públicos.
+
+Paso 2 — SSL estricto
+El modo estricto garantiza que la conexión esté encriptada de punta a punta, sin posibilidad de que alguien la intercepte en el camino.
+
+Ve a SSL/TLS > Overview.
+
+Cambia el modo a Full (Strict).
+
+Paso 3 — Protección contra bots y tráfico malicioso
+Ve a Security > Bots.
+
+Activa Bot Fight Mode y Block AI Bots (deben quedar en azul). Esto detiene ataques DDoS, spam de formularios y scanners automáticos.
+
+En Security > WAF, puedes agregar reglas gratuitas para filtrar tráfico sospechoso:
+
+Regla 1 — Bloquear países no relevantes
+
+Si tu negocio opera solo en Chile o Latinoamérica, puedes bloquear tráfico de países donde se originan la mayoría de los ataques automatizados.
+
+Campo: Country / Operador: is in / Valores: los países que elijas (ej. Rusia, China, Irán)
+
+Acción: Block
+
+Regla 2 — Bloquear bots por su firma
+
+Cada programa que visita tu sitio se identifica con un "User-Agent". Los bots maliciosos usan herramientas conocidas como sqlmap o nikto. Puedes bloquearlos directamente.
+
+Campo: User Agent / Operador: contains / Valores: sqlmap, nikto, nmap
+
+También: Campo: User Agent / Operador: equals / Valor vacío
+
+Acción: Block
+
+Paso 4 — Revisar que ninguna API quede expuesta
+Copia este prompt y pégalo en tu asistente de IA (Antigravity, Claude, el que uses):
+
+Revisa mi configuración completa y dime si tengo alguna API, webhook o clave 
+expuesta públicamente sin autenticación. Si encuentras algo, dime exactamente 
+cómo cerrarlo o protegerlo.
+Mándale capturas de tu Easypanel, tu configuración de n8n, y cualquier servicio que tengas corriendo. Él se encarga del resto.
+
+Fase 2 — Backups externos (Cloudflare R2)
+Regla de oro: los backups nunca se guardan en el mismo servidor que estás respaldando. Si el servidor se cae o lo borran, pierdes todo junto.
+
+Vamos a guardar las copias de tus bases de datos en Cloudflare R2 (10 GB gratis).
+
+¿Necesitas esto ahora? Solo si tienes instalado en tu VPS algún servicio con datos que no puedas recuperar: bases de datos (PostgreSQL, MySQL), n8n self-hosted, Supabase, o cualquier app que guarde información de usuarios. Si tus servicios son sitios estáticos con código en GitHub y usas herramientas en la nube, puedes saltarte esto por ahora y configurarlo cuando instales tu primer servicio con datos persistentes.
+
+Paso 1 — Crear el bucket en R2
+Un bucket es simplemente una carpeta virtual en la nube donde se van a guardar tus archivos de backup.
+
+En Cloudflare, ve a R2 Object Storage.
+
+Clic en Create bucket.
+
+Dale un nombre descriptivo, como mis-backups-panel.
+
+Deja la región en Automática.
+
+Paso 2 — Generar las llaves de acceso
+Para que Easypanel pueda guardar archivos en R2 de forma automática, necesita una "contraseña especial" (API token) que le dé permiso solo para ese bucket.
+
+Ve a R2 > Overview > Manage R2 API Tokens.
+
+Clic en Create Account API token.
+
+Permiso: Object Read & Write. Selecciona Apply to specific buckets y elige el bucket que creaste.
+
+Copia en un lugar seguro: Access Key ID, Secret Access Key y S3 Endpoint URL. No los vas a ver de nuevo.
+
+Paso 3 — Conectar R2 con Easypanel
+Ve a Easypanel > Settings (engranaje) > Storage Providers.
+
+Selecciona Generic S3.
+
+Rellena los campos con lo que copiaste: Endpoint, Access Key, Secret Key y Bucket.
+
+En Region escribe auto.
+
+Guarda.
+
+Paso 4 — Programar los backups automáticos
+Ahora que la conexión está lista, activa los respaldos para cada base de datos que tengas.
+
+Ve a Easypanel > Dashboard y entra al proyecto que tiene datos importantes.
+
+Selecciona el servicio de base de datos específico (aparece como un contenedor separado, generalmente con ícono de base de datos).
+
+Ve a la pestaña Backups > Add Backup Schedule.
+
+Configura:
+
+Cron: define la frecuencia. Ejemplos:
+
+0 3 * * * → todos los días a las 3:00 AM
+
+0 3 * * 1 → todos los lunes a las 3:00 AM
+
+0 */6 * * * → cada 6 horas
+
+Storage: selecciona el almacenamiento R2 que vinculaste.
+
+Keep last: escribe 7 para conservar los últimos 7 backups. El octavo reemplaza al más antiguo, así no se llena el espacio gratuito.
+
+Guarda y luego ejecuta un backup manual con Backup Now para confirmar que funciona.
+
+Verificación: ve a Cloudflare R2 > tu bucket y confirma que aparece un archivo con la fecha de hoy.
+
+Fase 3 — Firewall del servidor (UFW)
+Los servidores de Contabo vienen con todos los puertos abiertos por defecto. UFW cierra todas las puertas innecesarias y deja abiertas solo las que necesitas. Es como poner un guardia en la entrada del edificio.
+
+Paso 1 — Conectarse al servidor
+Abre tu Terminal (Mac) o CMD (Windows):
+
+ssh root@TU_DIRECCION_IP
+
+Paso 2 — Configurar el firewall
+⛔ CRÍTICO: Ejecuta estos comandos en orden exacto. Si activas el firewall sin abrir el puerto 22 primero, perderás acceso a tu servidor permanentemente.
+
+Permitir acceso SSH (tu conexión de administrador):
+
+ufw allow 22/tcp
+
+Permitir tráfico web normal:
+
+ufw allow 80/tcp
+ufw allow 443/tcp
+
+Paso 3 — Crear un subdominio privado para Easypanel y cerrar el puerto 3000
+Por defecto, el panel de Easypanel es accesible desde internet en el puerto 3000 de tu IP pública. Cualquiera que sepa tu IP puede intentar entrar. Lo vamos a mover a un subdominio propio con SSL, y luego cerramos el puerto.
+
+A. Crear el subdominio en Cloudflare:
+
+Ve a DNS > Add Record
+
+Tipo: A / Nombre: panel / IP: tu IP de Contabo / Proxy: nube gris (DNS only)
+
+Lo dejamos en nube gris para evitar conflictos con el certificado SSL que genera Easypanel.
+
+B. Asignarlo en Easypanel:
+
+Ve a Settings > General > Panel Domain
+
+Escribe panel.tudominio.cl
+
+Guarda
+
+C. Encender el firewall:
+
+ufw enable
+
+Cuando te pregunte si estás seguro, escribe y y presiona Enter. UFW bloquea todo lo que no esté explícitamente permitido — incluido el puerto 3000.
+
+Verificar que quedó bien:
+
+ufw status
+
+Solo deben aparecer los puertos 22, 80 y 443. Si ves eso, el firewall está correcto.
+
+Fase 4 — Protección contra ataques de fuerza bruta (Fail2Ban + SSH Keys)
+Cada segundo que tu servidor está online, hay bots intentando adivinar tu contraseña. Fail2Ban los detecta y los bloquea automáticamente. Las SSH Keys reemplazan la contraseña por un archivo criptográfico que el bot no puede adivinar.
+
+Paso 1 — Instalar Fail2Ban
+Fail2Ban vigila los intentos de login fallidos. Si alguien se equivoca 5 veces en 10 minutos, lo bloquea por una hora automáticamente.
+
+Instalar:
+
+apt update && apt install fail2ban -y
+
+Configurar la celda de máxima seguridad (copia este bloque completo y pégalo directo en la terminal):
+
+cat << 'EOF' > /etc/fail2ban/jail.local
+[DEFAULT]
+bantime = 3600
+findtime = 600
+maxretry = 5
+
+[sshd]
+enabled = true
+port = ssh
+logpath = /var/log/auth.log
+backend = auto
+EOF
+
+Esto le dice a Fail2Ban: si alguien falla 5 veces en 10 minutos, bloquearlo por 1 hora.
+
+Activar el servicio:
+
+systemctl enable fail2ban
+systemctl restart fail2ban
+
+Para ver cuántos bots están bloqueados en este momento:
+
+fail2ban-client status sshd
+
+Paso 2 — Configurar SSH Keys (entrada sin contraseña)
+Las SSH Keys son un par de archivos matemáticos: uno se queda en tu computadora (llave privada) y otro se copia al servidor (llave pública). Cuando te conectas, el servidor verifica que los archivos coincidan. Sin la llave privada, no hay entrada posible, sin importar cuántas contraseñas pruebe un bot.
+
+Mantenemos la contraseña activa como respaldo de emergencia — Fail2Ban se encarga de frenar los intentos de adivinación.
+
+Paso 1 — Generar las llaves (en tu Mac, en una terminal nueva, NO en el servidor):
+
+ssh-keygen -t ed25519 -C "mi-servidor-vps"
+
+Presiona Enter tres veces sin escribir nada. Si dice "already exists", salta directo al paso siguiente.
+
+Paso 2 — Copiar la llave pública al servidor:
+
+ssh-copy-id root@TU_DIRECCION_IP
+
+Escribe yes cuando pregunte, y pon tu contraseña de Contabo por última vez.
+
+Paso 3 — Probar que funciona:
+
+ssh root@TU_DIRECCION_IP
+
+Si entras sin que te pida contraseña, está listo.
+
+Fase 5 — Actualizaciones automáticas de seguridad
+Ubuntu lanza parches de seguridad constantemente. Esta fase instala un servicio que los descarga e instala solo, sin que tengas que hacer nada.
+
+Instalar:
+
+apt update && apt install unattended-upgrades -y
+
+Activar:
+
+dpkg-reconfigure --priority=low unattended-upgrades
+
+Si aparece una pantalla azul o rosa, elige Sí / Yes. Es posible que se salte automáticamente.
+
+Confirmar que está corriendo:
+
+systemctl enable unattended-upgrades
+systemctl status unattended-upgrades
+
+Si ves un punto verde y el texto active (running), está funcionando.
+
+Fase 6 — Autenticación de dos factores en Easypanel (2FA)
+El subdominio panel.tudominio.cl está en nube gris (sin proxy de Cloudflare), así que cualquiera que sepa la URL puede intentar entrar. El 2FA asegura que aunque alguien tenga tu contraseña, sin tu teléfono no puede logearse.
+
+Entra a tu panel en https://panel.tudominio.cl.
+
+Ve a Settings > Security.
+
+Activa Two-Factor Authentication.
+
+Abre Authy, 1Password o Google Authenticator en tu celular y escanea el QR.
+
+Ingresa el código de 6 dígitos para confirmar.
+
+Guarda los Backup Codes en un lugar seguro. Si pierdes el celular sin estos códigos, no vas a poder entrar nunca más.
+
+Apéndice A — Reglas avanzadas en Cloudflare
+Estas reglas son opcionales. Actívalas según lo que necesites.
+
+Regla 3 — Rate limiting en login/admin
+
+Si tienes formularios de login, limita cuántas veces alguien puede intentar en poco tiempo.
+
+Campo: URI Path / Operador: contains / Valor: /login o /admin
+
+Acción: Challenge (Captcha)
+
+Regla 4 — Reserva para bloqueos específicos
+
+Guárdala para bloquear IPs problemáticas o patrones que detectes en tus logs con el tiempo.
+
+Esta guía es todo lo que yo utilicé para hacerla segura, lo más probable es que hayan formas de hacerla AÚN más segura, pero en realidad con esto ya estás mil veces más protegido que si no aplicas los pasos anteriores.

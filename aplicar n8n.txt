@@ -1,0 +1,182 @@
+NO APRENDAS N8N
+
+Cómo crear automatizaciones con n8n y Claude
+Esta guía explica qué es n8n, para qué sirve y cómo pedirle a Claude que construya los flujos por ti — sin necesidad de aprender a usar n8n desde cero.
+
+Qué es n8n y para qué sirve
+n8n es la herramienta que conecta todas las aplicaciones que usas y hace que se hablen entre sí de forma automática. Es el "pegamento" del stack.
+
+Sin n8n, cada vez que llega un lead tienes que hacer todo manualmente — copiarlo a una planilla, enviar un correo, notificarte por WhatsApp. Con n8n, todo eso pasa solo, en segundos, sin que toques nada.
+
+Algunos ejemplos de lo que puedes automatizar:
+
+Cuando alguien llena el formulario de contacto de la página → llega una notificación inmediata por Telegram o email
+
+Cuando el chatbot califica un lead → se crea automáticamente un contacto en el CRM
+
+Cuando alguien agenda una cita → le llega una confirmación por WhatsApp
+
+Cuando un cliente hace una compra → se registra en una planilla y se activa un flujo de seguimiento
+
+Cuando llega un mensaje a WhatsApp → el agente de IA lo procesa y responde automáticamente
+
+Prácticamente cualquier cosa que hagas de forma repetitiva en un negocio se puede automatizar con n8n.
+
+Cómo funciona n8n
+n8n trabaja con workflows — flujos de trabajo compuestos por nodos. Cada nodo hace una cosa: recibir un mensaje, enviar un email, consultar una base de datos, llamar a una API.
+
+Tú defines el flujo — qué pasa primero, qué pasa después — y n8n lo ejecuta automáticamente cada vez que se activa el trigger (el evento que lo dispara).
+
+Lo bueno es que no necesitas construir estos flujos manualmente. Claude puede construirlos por ti si le das las instrucciones correctas.
+
+Paso 1 — Instalar las skills y el MCP de n8n en Claude Code
+Para que Claude pueda construir y subir workflows directamente a tu n8n, necesitas instalar dos cosas:
+
+n8n-skills — le enseñan a Claude cómo construir workflows correctamente
+
+n8n-mcp — conecta Claude directamente con tu instancia de n8n
+
+Abre Claude Code y pega esto:
+
+Instala estos 2 plugins:
+/plugin install czlonkowski/n8n-mcp
+/plugin install czlonkowski/n8n-skills
+
+Acepta cuando te pida confirmar y recarga Claude Code cuando termine.
+
+Repositorios originales para referencia:
+
+https://github.com/czlonkowski/n8n-mcp
+
+https://github.com/czlonkowski/n8n-skills
+
+Paso 2 — Obtener la API key de n8n
+Para que Claude pueda conectarse a tu n8n, necesita la URL de tu instancia y una API key.
+
+Entra a tu n8n — ej. https://n8n.tudominio.cl
+
+Ve a Settings > API
+
+Haz clic en Create API Key
+
+Dale un nombre descriptivo — ej. claude-code-access
+
+Copia la key que aparece. No la vas a ver de nuevo.
+
+Paso 3 — Conectar Claude Code con tu n8n
+Con la API key copiada, dile a Claude Code que configure la conexión:
+
+Configura la conexión con mi n8n usando estos datos:
+- URL: https://n8n.tudominio.cl
+- API Key: [pega tu key aquí]
+
+Claude actualiza la configuración del MCP automáticamente. Reinicia Claude Code cuando termine para que tome los cambios.
+
+Verifica que funciona con esto:
+
+Conéctate a mi n8n y dime cuántos workflows tengo activos.
+
+Si te responde con el número, la conexión está funcionando.
+
+Paso 4 — Crear automatizaciones
+A partir de aquí puedes pedirle cualquier automatización directamente. La clave es darle suficiente contexto — qué quieres que pase, cuándo y con qué herramientas.
+
+Cómo pedirle una automatización:
+
+Quiero crear un workflow en n8n que haga lo siguiente:
+- Trigger: [qué lo activa — ej. cuando alguien llena el formulario 
+  de contacto de mi página]
+- Acción 1: [qué pasa primero — ej. guardar los datos en Supabase]
+- Acción 2: [qué pasa después — ej. enviarme una notificación por Telegram]
+
+Las credenciales que tengo disponibles son:
+[lista las APIs o servicios que ya tienes configurados]
+
+Construye el workflow completo y súbelo directamente a mi n8n.
+
+Ejemplos concretos que puedes pedirle:
+
+Crea un workflow que reciba los datos del formulario de contacto 
+de mi página y me los envíe por email.
+
+Crea un workflow que se active cuando alguien llene el formulario de demo 
+y que cree automáticamente un contacto en mi CRM.
+
+Crea un workflow que me notifique por Telegram cada vez que llegue 
+un nuevo lead desde mi página.
+
+Crea un workflow que cuando el chatbot de WhatsApp califique un lead 
+como interesado, lo registre en Supabase y me avise por email.
+
+Claude busca los nodos correctos, los configura y los sube directamente a tu n8n. Tú entras, revisas y activas el workflow.
+
+Cómo debuggear cuando algo falla
+Los workflows a veces fallan — un nodo no está bien configurado, falta una credencial, hay un error en la lógica. Esto es normal y tiene solución fácil.
+
+Si n8n muestra un error en el workflow: Toma una captura de pantalla del error y pégasela a Claude Code:
+
+Este workflow me está dando un error en n8n.
+[captura de pantalla]
+¿Qué está pasando y cómo lo corriges?
+
+Si el workflow se ejecuta pero no hace lo que esperabas: Descríbele el problema:
+
+El workflow se ejecuta sin errores pero [describe qué está pasando 
+que no debería, o qué no está pasando que debería].
+¿Qué hay que cambiar?
+
+Si quieres modificar un workflow existente:
+
+Quiero cambiar el workflow [nombre] para que además de [lo que hace ahora], 
+también [lo que quieres agregar].
+Modifícalo directamente en n8n.
+
+Acá va el listado. Cópialo y pégalo reemplazando la sección "Qué automatizaciones puedes ofrecer como servicio" en la guía:
+Qué automatizaciones puedes ofrecer como servicio
+Estos son ejemplos concretos por rubro. Úsalos para identificar qué le puedes ofrecer a cada cliente según su negocio:
+
+Clínicas y centros médicos
+
+Cuando un paciente agenda una cita online, le llega una confirmación automática por WhatsApp con la fecha, hora y dirección — y un recordatorio 24 horas antes
+
+Cuando termina una consulta, el sistema envía automáticamente una encuesta de satisfacción al paciente y guarda las respuestas en una planilla
+
+Restaurantes y cafeterías
+
+Cuando alguien hace una reserva, le llega una confirmación por WhatsApp y el dueño recibe un aviso inmediato con los datos de la reserva
+
+Cuando un cliente escribe por WhatsApp preguntando por el menú o disponibilidad, el chatbot responde al instante con la información actualizada sin que nadie tenga que contestar manualmente
+
+Inmobiliarias
+
+Cuando alguien llena el formulario de una propiedad en la página, el agente responsable recibe los datos del interesado por WhatsApp o email en segundos
+
+Cuando un lead no ha tenido respuesta en 24 horas, el sistema envía automáticamente un mensaje de seguimiento para no perder el contacto
+
+E-commerce
+
+Cuando se realiza una compra, el cliente recibe automáticamente una confirmación con el número de pedido y el tiempo estimado de entrega
+
+Cuando un carrito queda abandonado, el sistema envía un recordatorio automático por email o WhatsApp al cabo de unas horas
+
+Servicios profesionales (abogados, contadores, consultores)
+
+Cuando un cliente potencial agenda una reunión de diagnóstico, recibe automáticamente un formulario previo para completar con su información — así la reunión es más productiva desde el inicio
+
+Cuando se cierra un proyecto, el sistema envía automáticamente una solicitud de testimonio o reseña al cliente
+
+Gimnasios y centros de entrenamiento
+
+Cuando alguien se interesa por una membresía, el chatbot califica al lead, le entrega los planes disponibles y agenda una visita — todo sin intervención humana
+
+Cuando vence la membresía de un cliente, el sistema envía automáticamente un mensaje ofreciendo la renovación con una promoción
+
+Educación y academias
+
+Cuando alguien se inscribe a un curso, recibe automáticamente los accesos, el calendario de clases y los materiales de bienvenida
+
+Cuando un alumno no ha ingresado a la plataforma en varios días, el sistema le envía un mensaje de seguimiento para reactivarlo
+
+Todo esto se construye en n8n con Claude en menos tiempo del que tomaría ver cientos de guías para cada automatización en concreto.
+
+⚠️ Siempre revisa el workflow antes de activarlo en producción. Si tienes workflows importantes ya configurados, haz una copia antes de que Claude los modifique.

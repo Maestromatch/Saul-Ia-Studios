@@ -1,0 +1,161 @@
+1. CREAR BUSINESS SUITE
+
+Qué es Meta Business Suite y cómo configurarlo desde cero
+Meta Business Suite es la plataforma desde donde se administra toda la presencia publicitaria de un negocio en Facebook e Instagram. Sin ella no puedes correr anuncios, verificar la cuenta, conectar WhatsApp API ni medir resultados.
+
+Configurarla bien desde el principio te ahorra problemas después. Esta guía explica cómo hacerlo desde tu cuenta personal, creando el portafolio del cliente y dándole acceso para que pueda administrarlo.
+
+Cuando abras business.facebook.com por primera vez vas a ver un panel con un menú a la izquierda. Desde ahí se administra todo — páginas, cuentas publicitarias, usuarios, pagos. No te preocupes si al principio parece complejo, esta guía te lleva paso a paso por cada cosa que necesitas configurar.
+
+Por qué se hace desde tu cuenta
+Cuando estás empezando, lo más práctico es crear el portafolio desde tu propia cuenta de Facebook. Así tienes control total del proceso y puedes configurar todo correctamente antes de entregarle acceso al cliente.
+
+Una vez que todo esté listo, le das acceso de administrador al cliente para que pueda entrar con su propia cuenta cuando quiera.
+
+Nota: Meta permite crear hasta 5 portafolios por cuenta personal. Si llegas a ese límite, tendrás que trabajar directamente desde la cuenta de Facebook del cliente. Pero si estás empezando, no deberías tener ese problema.
+
+Paso 1 — Crear el portafolio comercial
+Ve a business.facebook.com e inicia sesión con tu cuenta personal de Facebook
+
+Si es la primera vez, te va a aparecer un botón para crear un portafolio comercial — haz clic en Crear cuenta
+
+Si ya tienes portafolios creados, haz clic en el menú desplegable arriba a la izquierda y selecciona Crear cuenta nueva
+
+Rellena:
+
+Nombre de la empresa — el nombre del negocio del cliente
+
+Tu nombre
+
+Correo electrónico de trabajo — usa el correo del cliente si lo tienes, o el tuyo
+
+Haz clic en Enviar
+
+Si te llega un correo de confirmación, ábrelo y confirma
+
+Ya tienes el portafolio creado. Desde acá se administra todo lo del cliente.
+
+Paso 2 — Crear o conectar la página de Facebook del cliente
+Para correr anuncios necesitas una página de Facebook vinculada al portafolio. Si el cliente ya tiene una, la conectas. Si no tiene, la creas ahora.
+
+Si el cliente ya tiene página:
+
+Ve a Configuración > Cuentas > Páginas
+
+Haz clic en Agregar
+
+Selecciona Agregar una página
+
+Busca la página del cliente por nombre y selecciónala
+
+Haz clic en Agregar página
+
+Si el cliente no tiene página:
+
+Ve a Configuración > Cuentas > Páginas
+
+Haz clic en Agregar
+
+Selecciona Crear una nueva página
+
+Elige la categoría que mejor describe el negocio — por ejemplo "Empresa local" o "Servicios profesionales"
+
+Ingresa el nombre del negocio
+
+Agrega una foto de perfil y una foto de portada — puedes usar el logo del cliente
+
+Haz clic en Crear página
+
+Una vez creada, vuelve a Configuración > Cuentas > Páginas y conéctala al portafolio
+
+Paso 3 — Conectar la cuenta de Instagram del cliente
+Ve a Configuración > Cuentas > Cuentas de Instagram
+
+Haz clic en Agregar
+
+Haz clic en Conectar cuenta de Instagram
+
+Inicia sesión con el usuario y contraseña de Instagram del cliente
+
+Autoriza la conexión cuando te lo pida
+
+Si el cliente no tiene Instagram, puedes crearlo directamente desde la app de Instagram antes de hacer este paso.
+
+Paso 4 — Crear la cuenta publicitaria
+La cuenta publicitaria es donde se configuran y pagan los anuncios. Es distinta al portafolio — el portafolio es el contenedor general, la cuenta publicitaria es donde va el presupuesto de los anuncios.
+
+Ve a Configuración > Cuentas > Cuentas publicitarias
+
+Haz clic en Agregar
+
+Selecciona Crear una cuenta publicitaria nueva
+
+Dale un nombre descriptivo — por ejemplo el nombre del negocio del cliente
+
+Selecciona el país: Chile
+
+Selecciona la moneda: CLP (pesos chilenos) o USD según prefiera el cliente
+
+Selecciona la zona horaria correspondiente
+
+Haz clic en Crear
+
+Paso 5 — Agregar método de pago
+Sin método de pago no se pueden publicar anuncios. Este paso lo hace el cliente directamente con su propia tarjeta — no es tu responsabilidad agregar los datos de pago del cliente.
+
+Indícale al cliente que siga estos pasos:
+
+Entre a business.facebook.com con su cuenta de Facebook
+
+Seleccione el portafolio del negocio
+
+Vaya a Configuración > Pagos
+
+Haga clic en Agregar método de pago
+
+Seleccione Tarjeta de crédito o débito
+
+Ingrese los datos de la tarjeta
+
+Haga clic en Guardar
+
+Una vez agregado el método de pago, ya se pueden publicar anuncios.
+
+Paso 6 — Dar acceso al cliente como administrador
+Una vez que todo está configurado desde tu cuenta, le das acceso al cliente para que pueda administrar su propio portafolio.
+
+Ve a Configuración > Usuarios > Personas
+
+Haz clic en Agregar
+
+Ingresa el correo de Facebook del cliente
+
+Selecciona rol Administrador
+
+Haz clic en Invitar
+
+El cliente va a recibir un correo con la invitación. Una vez que la acepte, puede entrar al portafolio con su propia cuenta de Facebook y ver todo lo que configuraste.
+
+Qué tienes listo al terminar esta guía
+Portafolio comercial creado
+
+Página de Facebook conectada o creada
+
+Instagram conectado
+
+Cuenta publicitaria creada
+
+Método de pago agregado por el cliente
+
+Cliente con acceso de administrador
+
+Con esto el negocio del cliente está listo para verificar la cuenta y empezar a correr anuncios. El siguiente paso es la verificación — ve a la guía Cómo verificar tu cuenta de Meta.
+
+Si algo no funciona
+Meta cambia su interfaz con frecuencia, así que es posible que algún botón esté en un lugar distinto al que describe esta guía. Si te pasa eso o cualquier paso te genera dudas, toma una captura de pantalla de donde estás y pégasela a Claude:
+
+Estoy configurando Meta Business Suite y me aparece esto.
+[captura de pantalla]
+¿Qué tengo que hacer acá?
+
+Claude te va a decir exactamente qué hacer en base a lo que estás viendo en pantalla.

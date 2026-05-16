@@ -1,0 +1,29 @@
+2. MODELOS DE CLAUDE
+
+Los modelos de Claude y cuándo usar cada uno
+Claude no es un solo modelo — son varios, cada uno optimizado para un tipo de tarea distinto. Elegir el correcto te ahorra tiempo y dinero.
+
+Los tres modelos principales
+Opus — El más inteligente y el más caro. Úsalo cuando necesitas que Claude piense en profundidad: planificar la arquitectura de un proyecto, tomar decisiones complejas, estructurar algo antes de ejecutar, o resolver un problema difícil que los otros modelos no logran resolver bien. No lo uses para tareas simples — es un desperdicio de tokens.
+
+Sonnet — El equilibrio entre capacidad y costo. Es el modelo que vas a usar el 80% del tiempo. Escribe código, redacta propuestas, responde preguntas, construye componentes. Rinde muy bien para la mayoría de las tareas del día a día sin el costo de Opus.
+
+Haiku — El más rápido y más barato. Para tareas simples y repetitivas donde no necesitas mucha capacidad: resumir texto, responder preguntas cortas, hacer cambios menores en el código. Si estás construyendo algo que hace muchas llamadas a Claude de forma automática, Haiku reduce el costo considerablemente.
+
+La regla práctica
+Antes de empezar cualquier tarea, hazte esta pregunta: ¿necesito que Claude piense o necesito que Claude ejecute?
+
+Pensar — arquitectura, planificación, decisiones complejas → Opus
+
+Ejecutar — construir, redactar, modificar → Sonnet
+
+Tareas simples o automatizadas → Haiku
+
+En la práctica, el flujo más común es: Opus para definir el plan, Sonnet para construirlo. Una vez que el plan está claro, no tiene sentido seguir usando Opus.
+
+Cómo cambiar de modelo
+En la app de Claude, el selector de modelo está en la parte del chat antes de enviar el mensaje.
+
+En Claude Code, escribe /model en el chat y selecciona el que necesites.
+
+En Antigravity, el modelo se selecciona al lanzar un agente en Manager View o desde la configuración del chat en Editor View.

@@ -1,0 +1,93 @@
+2. VERIFICAR CUENTA DE META
+
+Cómo verificar tu cuenta de Meta
+La verificación de Meta es el proceso que confirma que el negocio es legítimo. Una vez verificada, la cuenta tiene acceso completo a la API de WhatsApp, mayores límites publicitarios y más credibilidad frente a los clientes.
+
+Importante: este proceso tarda. En la mayoría de los casos demora entre 1 y 2 semanas. Por eso es lo primero que hay que iniciar en cualquier proyecto — mientras Meta revisa los documentos, tú avanzas con el resto de la configuración.
+
+Qué documentos necesitas
+Antes de empezar, ten listos estos dos documentos del negocio:
+
+Documento 1 — Estatuto de la empresa El documento legal que acredita la existencia de la empresa. Lo entrega el notario al momento de constituir la empresa.
+
+Documento 2 — Documento del Servicio de Impuestos Internos (SII) Necesitas un documento oficial del SII donde aparezcan claramente:
+
+RUT de la empresa
+
+Nombre de la empresa
+
+Dirección fiscal
+
+Lo que mejor funciona es el certificado de inicio de actividades — puedes descargarlo directamente desde el sitio del SII en sii.cl. También sirve cualquier otro documento oficial del SII que tenga esos tres datos, como una boleta de honorarios o una declaración de IVA. En casos donde no se tenga el certificado, un comprobante de pago de servicios a nombre de la empresa también puede funcionar, pero el certificado del SII es lo más sólido.
+
+Estos son los documentos que me han funcionado para verificar cuentas. Meta puede pedir documentos adicionales dependiendo del caso, pero con estos dos generalmente es suficiente.
+
+Paso 1 — Iniciar el proceso de verificación
+Entra a business.facebook.com e inicia sesión
+
+Ve a Configuración > Centro de seguridad
+
+Busca la sección Verificación del negocio
+
+Haz clic en Iniciar verificación
+
+Paso 2 — Ingresar los datos del negocio
+Meta va a pedir información básica del negocio. Rellena todo con exactamente los mismos datos que aparecen en los documentos que vas a subir — cualquier inconsistencia puede resultar en un rechazo.
+
+Nombre legal del negocio — tal cual aparece en el estatuto
+
+País — Chile
+
+Dirección — la dirección fiscal que aparece en el documento del SII
+
+Número de teléfono del negocio
+
+Sitio web — si el negocio tiene página web, ponla acá
+
+Haz clic en Siguiente.
+
+Paso 3 — Subir los documentos
+Selecciona el tipo de documento — elige Documento de registro de empresa para el estatuto
+
+Sube el estatuto de la empresa en formato PDF
+
+Cuando te pida un documento adicional para confirmar la dirección, sube el documento del SII
+
+Asegúrate de que los archivos sean legibles y no estén cortados — Meta los revisa manualmente
+
+Haz clic en Enviar.
+
+Paso 4 — Esperar la revisión
+Una vez enviados los documentos, Meta los revisa manualmente. Este proceso toma entre 3 y 14 días hábiles en la mayoría de los casos.
+
+Ve revisando manualmente la solicitu cuando la verificación sea aprobada o si necesitan información adicional.
+
+Mientras esperas:
+
+No hagas cambios en el nombre del negocio ni en la información que ingresaste
+
+Avanza con el resto de la configuración del proyecto — página web, chatbot, creativos
+
+Si pasan más de 2 semanas sin respuesta, puedes volver al Centro de seguridad y revisar el estado
+
+Si la verificación es rechazada
+No te preocupes — el rechazo no es permanente. Puedes volver a intentarlo.
+
+Las razones más comunes de rechazo son:
+
+Los datos ingresados no coinciden exactamente con los del documento
+
+El documento subido no es legible o está incompleto
+
+Falta información en el documento
+
+Si te rechazan, revisa que el nombre y la dirección ingresados sean idénticos a los del documento, corrige lo que corresponda y vuelve a enviar.
+
+Si algo no funciona o no sabes qué hacer
+Meta cambia su interfaz con frecuencia. Si en algún paso ves algo distinto a lo que describe esta guía, toma una captura de pantalla y pégasela a Claude:
+
+Estoy verificando mi cuenta de Meta y me aparece esto.
+[captura de pantalla]
+¿Qué tengo que hacer acá?
+
+Claude te va a indicar exactamente qué hacer en base a lo que estás viendo.

@@ -1,0 +1,51 @@
+TU SERVIDOR EN LA NUBE
+
+Qué es un VPS y para qué sirve
+Un VPS es un computador que está encendido 24/7 en algún lugar del mundo y que tú arriendas para correr tus herramientas y las de tus clientes.
+
+No lo tienes físicamente — vive en un datacenter y lo controlas desde tu computador a través de internet. Pero funciona igual que si fuera tuyo: puedes instalar lo que quieras, configurarlo como necesites y tiene recursos dedicados solo para ti.
+
+Para qué lo usas en este stack
+El VPS es el lugar donde viven todos los servicios que necesitas para operar:
+
+Las páginas web de tus clientes — cuando alguien entra a la página, el servidor es el que la entrega
+
+n8n — el motor de automatizaciones corre ahí adentro
+
+Supabase — la base de datos donde se guarda la información de los chatbots
+
+Easypanel — el panel desde donde administras todo lo anterior con unos pocos clics
+
+Sin un VPS, tendrías que pagar servicios separados para cada cosa. Con uno solo, tienes todo centralizado y el costo se mantiene fijo sin importar cuántos clientes tengas.
+
+Qué es Easypanel y por qué lo usas
+Easypanel es el panel de control del servidor. Te permite instalar y gestionar aplicaciones sin tener que escribir comandos complicados en la terminal.
+
+Desde Easypanel puedes levantar n8n, conectar bases de datos, subir páginas web y administrar todo lo que corre en el servidor — con una interfaz visual simple.
+
+Cómo funciona el proceso de subir una página
+El flujo para que una página web quede online es este:
+
+Construyes la página en Antigravity o Claude Code y el código queda en tu computador
+
+Subes el código a GitHub
+
+En Easypanel, creas un nuevo servicio y lo vinculas al repositorio de GitHub
+
+Compras un dominio (ej. elnegociodecliente.cl) y lo configuras en Cloudflare
+
+Conectas el dominio al servicio en Easypanel
+
+La página queda online y accesible desde cualquier navegador
+
+Cada vez que hagas cambios y los subas a GitHub, Easypanel los detecta y actualiza la página automáticamente.
+
+Cloudflare — el escudo entre internet y tu servidor
+Cloudflare va entre el servidor y el visitante. Cuando alguien entra a la página, primero pasa por Cloudflare — nunca llega directo al VPS.
+
+Esto sirve para dos cosas: protege el servidor de ataques y gestiona los dominios. Todo dominio que uses pasa por Cloudflare. El plan básico es gratis y es suficiente para todo lo que necesitas al principio.
+
+Contabo — el servidor que usamos
+El proveedor de VPS que uso es Contabo. Económico, el plan que uso cuesta alrededor de $8 USD al mes e incluye todo lo necesario para correr varios proyectos de clientes simultáneamente.
+
+El proceso completo de configurar el servidor desde cero está en la guía Cómo subir tu página desde cero y en Cómo dejar tu VPS blindado.

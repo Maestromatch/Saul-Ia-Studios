@@ -1,0 +1,122 @@
+CÓMO HACER TU PÁGINA BENDITA
+
+Cómo mejorar el diseño de tu página y conectar n8n a Claude Code
+Esta guía cubre dos cosas que van juntas: darle mejor cara a tu sitio sin saber diseño, y conectar tu n8n a Claude Code para que pueda crear automatizaciones directamente desde tu proyecto.
+
+Parte 1 — Mejorar el diseño de tu página con 21st.dev
+Primero, instala la skill escribiéndole a Claude Code 
+Instala el siguiente skill /plugin install nextlevelbuilder/ui-ux-pro-max-skill 
+
+Con esto, cada diseño que hagas va quedar más ficha que de un principio
+
+Qué es 21st.dev
+Es una librería de componentes de interfaz listos para usar. Entras, ves cómo se ve cada componente, copias el código y se lo pasas a Claude Code para que lo instale en tu página.
+
+No necesitas saber diseño. Eliges lo que te gusta visualmente, copias el código y Claude lo integra.
+
+Cómo funciona
+Paso 1 — Entra a 21st.dev
+
+Navega por los componentes disponibles: botones, formularios, cards, menús, hero sections, lo que necesites.
+
+Paso 2 — Elige un componente
+
+Cuando encuentres algo que te guste, abre el componente y copia el código que aparece.
+
+Paso 3 — Pásaselo a Claude Code con instrucciones claras
+
+Abre Claude Code en tu proyecto y pega algo así:
+
+Instala este componente en mi proyecto y reemplaza el [nombre del elemento actual].
+Aquí está el código:
+
+[pega el código que copiaste de 21st.dev]
+Paso 4 — Revisa y ajusta
+
+Claude integra el componente. Si algo no quedó como querías, mándale una captura de pantalla con el comentario específico: "el color no coincide con mi marca", "el botón queda muy abajo", lo que sea. Claude lo ajusta.
+
+Cuándo usar esto
+Úsalo cuando quieras cambiar partes específicas de tu interfaz: la sección de inicio, un formulario de contacto, la barra de navegación, tarjetas de servicios, etc. No tienes que rediseñar todo desde cero cada vez.
+
+Parte 2 — Conectar n8n a Claude Code para crear automatizaciones
+Esto te permite pedirle a Claude que cree flujos de automatización directamente en tu n8n, sin tener que construirlos nodo por nodo a mano. Le das acceso a tu instancia y él arma el workflow por ti.
+
+Para que funcione bien, necesitas instalar dos cosas en Claude Code:
+
+n8n-mcp — el servidor que conecta Claude con tu instancia de n8n
+
+n8n-skills — un set de instrucciones que le enseñan a Claude cómo construir workflows correctamente
+
+Paso 1 — Instalar las skills en Claude Code
+Abre Claude Code y pega esto:
+
+Instala estos 2 plugins:
+/plugin install czlonkowski/n8n-mcp
+/plugin install czlonkowski/n8n-skills
+
+Si te pide confirmar, acepta. Cuando termine, recarga Claude Code.
+
+Los repositorios originales para referencia:
+
+https://github.com/czlonkowski/n8n-mcp
+
+https://github.com/czlonkowski/n8n-skills
+
+Paso 2 — Obtener tu API Key de n8n
+Para que Claude pueda conectarse a tu n8n, necesita dos cosas: la URL de tu instancia y una API key.
+
+Entra a tu n8n (ej. https://n8n.tudominio.cl)
+
+Ve a Settings > API
+
+Clic en Create API Key
+
+Dale un nombre descriptivo (ej. claude-code-access)
+
+Copia la key que aparece. No la vas a ver de nuevo.
+
+Paso 3 — Conectar Claude Code con tu n8n
+Con la API key en mano, dile a Claude Code que configure la conexión:
+
+Configura la conexión con mi n8n usando estos datos:
+- URL: https://n8n.tudominio.cl
+- API Key: [pega tu key aquí]
+
+Claude actualiza el archivo de configuración del MCP automáticamente. Cuando termine, reinicia Claude Code para que tome los cambios.
+
+Paso 4 — Verificar que todo funciona
+Pídele a Claude que haga una prueba simple:
+
+Conéctate a mi n8n y dime cuántos workflows tengo activos.
+
+Si te responde con el número de workflows, la conexión está funcionando.
+
+Paso 5 — Crear automatizaciones
+A partir de aquí ya puedes pedirle workflows directamente. Algunos ejemplos:
+
+Crea un workflow en mi n8n que reciba los datos del formulario de contacto 
+de mi página y me los envíe por email.
+
+Crea un workflow que se active cuando alguien llene el formulario de demo 
+y que cree automáticamente un contacto en mi CRM.
+
+Crea un workflow que me notifique por Telegram cada vez que llegue 
+un nuevo lead desde mi página.
+
+Claude busca los nodos correctos, los configura y los sube directamente a tu n8n. Tú entras a revisar y activas el workflow.
+
+⚠️ Siempre revisa el workflow antes de activarlo en producción. Si tienes workflows importantes, haz una copia antes de que Claude los modifique.
+
+Parte 3 — Proteger las APIs antes de terminar
+Antes de dar por lista cualquier integración, hay un paso que no se puede saltarse: asegurarte de que ninguna API key quede expuesta en el código de tu página.
+
+Cuando Claude integra componentes o conecta servicios, a veces las keys quedan escritas directamente en el código frontend. Cualquiera que inspeccione el HTML de tu página las puede ver.
+
+Cuando termines de integrar, pega este prompt en Claude Code:
+
+Revisa todo el proyecto y dime si hay alguna API key, token o credencial 
+expuesta en el código frontend o en archivos públicos. Si encuentras algo, 
+ocúltalo correctamente usando variables de entorno o el método que corresponda 
+para este stack.
+
+Claude revisa, te dice qué encontró y lo corrige. No publiques nada sin hacer este paso.

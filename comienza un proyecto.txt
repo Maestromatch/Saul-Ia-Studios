@@ -1,0 +1,146 @@
+CÓMO PREPARAR UN PROYECTO NUEVO
+
+Antes de escribir una sola línea de código o abrir cualquier herramienta, hay que dejar todo el entorno configurado. Esto te ahorra tiempo, evita repetir contexto en cada conversación y hace que Claude trabaje mucho mejor desde el primer momento.
+
+Antes de empezar — Instala la extensión de Claude en Chrome
+Abre Chrome y ve a la Chrome Web Store
+
+Busca "Claude for Chrome" o entra desde claude.ai — ahí aparece el enlace directo
+
+Haz clic en "Agregar a Chrome" y confirma
+
+Una vez instalada, aparece el ícono de Claude en la barra de extensiones
+
+Haz clic en el ícono e inicia sesión con tu cuenta de Claude
+
+Listo. La vas a usar en el Paso 1 para extraer información de la página web del cliente.
+
+Paso 1 — Recopilar la información del cliente
+Antes de crear nada, necesitas tener toda la información del cliente en un solo lugar.
+
+Lo que debes recopilar:
+
+Nombre del negocio, rubro y descripción de lo que hace
+
+Público objetivo — quién es su cliente ideal
+
+Logo, colores, tipografías y referencias visuales
+
+Página web actual (si tiene)
+
+Redes sociales activas
+
+Servicios o productos que ofrece con sus precios
+
+Cualquier documento que tenga: carta de servicios, lo que sea
+
+Para extraer información de la página web y redes sociales, usa la extensión de Claude en Chrome. Entra a la página del cliente, abre la extensión y pídele:
+
+Extrae toda la información relevante de esta página: 
+descripción del negocio, servicios, precios, público objetivo, 
+tono de comunicación y cualquier dato importante. 
+Dámelo en un documento ordenado.
+
+Repite lo mismo en cada red social que tenga el cliente.
+
+Para investigar el nicho y la competencia, abre Claude y pídele:
+
+Investiga el mercado de [rubro del cliente] en [ciudad/país]. 
+Dime quiénes son los principales competidores, cómo se posicionan, 
+qué ofrecen, a qué precios y cuáles son los dolores más comunes 
+de sus clientes. Dame un resumen ejecutivo que pueda usar 
+para trabajar este proyecto.
+
+Guarda todo en una carpeta del proyecto — un documento por fuente.
+
+Paso 2 — Crear el proyecto en Claude
+Con la información recopilada, crea un proyecto en Claude donde vas a tener todo ese contexto disponible en cada conversación.
+
+Abre Claude y ve a Proyectos > Nuevo proyecto
+
+Dale un nombre claro: el nombre del cliente o del negocio
+
+Antes de configurar las instrucciones, pídele a Claude que te ayude a estructurarlas:
+
+Voy a crear un proyecto en Claude para trabajar con un cliente 
+que tiene [descripción breve del negocio]. Tengo la siguiente 
+información disponible: [pega un resumen de lo que recopilaste].
+
+Hazme las preguntas necesarias para entender bien el proyecto 
+y luego dime exactamente qué incluir en las instrucciones del 
+proyecto. Debe ser breve y preciso — solo lo esencial para que 
+tengas contexto en cada conversación sin consumir demasiados tokens.
+
+Responde lo que te pregunte y usa lo que te entregue como instrucciones del proyecto
+
+Sube los documentos que recopilaste en el paso anterior
+
+Desde ese momento, cualquier conversación dentro de ese proyecto parte con todo el contexto del cliente ya cargado.
+
+Paso 3 — Instalar Antigravity y conectar Claude Code
+Antigravity es el IDE de Google donde vas a construir el proyecto. Funciona como VS Code pero con agentes de IA integrados. Por defecto usa Gemini, y Claude Code se instala dentro como extensión. El flujo que funciona mejor es: Gemini planifica, Claude Code ejecuta — así no gastas tokens de Claude en la parte de planificación.
+
+Instalar Antigravity:
+
+Ve a antigravity.google y descarga la app para tu sistema operativo (Mac, Windows o Linux)
+
+Instálala y ábrela
+
+Inicia sesión con tu cuenta de Google
+
+Antigravity tiene dos vistas principales:
+
+Editor View (Cmd+E en Mac / Ctrl+E en Windows) — el editor de código normal, con autocompletado y comandos inline
+
+Manager View — el panel de agentes, donde puedes lanzar tareas y ver lo que el agente está haciendo en tiempo real
+
+Instalar Claude Code dentro de Antigravity:
+
+Claude Code no viene instalado por defecto — hay que agregarlo como extensión.
+
+Dentro de Antigravity, ve al panel de extensiones (está en el panel de la izquierda, si no sabes donde está, pídele a Claude que te diga donde)
+
+Busca Claude Code e instálala
+
+Una vez instalada, cuando lances un agente en Manager View puedes seleccionar Claude como modelo en vez de Gemini
+
+Para elegir el modelo, dentro del chat de Claude Code escribe /model y selecciona el que necesites — Opus para planificar, Sonnet para ejecutar
+
+El flujo de trabajo recomendado:
+
+Antes de pedirle a Claude que construya algo, usa Claude Code con el modelo Opus para planificar. Opus es el modelo más inteligente — úsalo para pensar, estructurar y anticipar problemas antes de escribir una sola línea de código. Así reduces errores y no pierdes tiempo debuggeando después. Utiliza el modo planificar cuando estés planificando 
+
+En el chat de Claude Code, selecciona Opus y pídele el plan primero:
+
+Antes de escribir cualquier código, dame un plan detallado 
+de cómo vas a construir [lo que necesitas]: qué archivos vas 
+a crear, qué estructura va a tener el proyecto, qué dependencias 
+necesitas y qué pasos vas a seguir en orden.
+Cuando el plan esté claro y lo apruebes, cambia al modelo Sonnet para ejecutar. Sonnet es más rápido y más barato, y con el plan ya definido hace el trabajo bien. Opus para pensar, Sonnet para construir.
+
+Paso 4 — Crear el proyecto en Antigravity
+En Antigravity, un proyecto es simplemente una carpeta en tu computador. Todo el código del cliente va a vivir ahí.
+
+Crea una carpeta nueva en tu computador con el nombre del cliente
+
+Abre Antigravity y arrastra esa carpeta para abrirla como proyecto
+
+Dentro de esa carpeta, crea un archivo llamado CLAUDE.md
+
+El CLAUDE.md es lo primero que Claude lee cuando empieza a trabajar en el proyecto. Le da el contexto necesario para no tener que explicarle todo desde cero cada vez que abres una sesión. Debe ser corto y preciso — mientras más largo, más tokens consume en cada conversación.
+
+Para crearlo, pídele a Claude:
+
+Voy a crear un archivo CLAUDE.md para el proyecto de [nombre del cliente].
+Lo va a leer Claude Code al inicio de cada sesión — debe ser breve y preciso,
+solo lo esencial para tener contexto sin consumir tokens innecesarios.
+
+La información del proyecto es: [pega el resumen del cliente].
+
+Dame el contenido exacto del CLAUDE.md y crea el archivo en mi carpeta
+Cómo trabajar dentro de Antigravity:
+Antigravity es ideal para tareas puntuales — pedirle que cree un componente, que modifique algo específico, que corrija un error. No hace falta planificación elaborada para ese tipo de cosas.
+
+El modelo que uses importa. Para tareas simples usa Flash — es rápido y consume menos. Para algo más complejo donde necesitas que piense bien antes de ejecutar, cambia a Gemini Pro. La idea es usar el modelo justo para cada tarea y no gastar tokens de más.
+
+Si algo falla, copia el error y pégaselo a Claude directamente. Él te dice qué pasó y cómo resolverlo.

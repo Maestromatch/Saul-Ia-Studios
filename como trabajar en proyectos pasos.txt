@@ -1,0 +1,167 @@
+CÓMO TRABAJO
+
+El flujo de trabajo completo
+Este es el proceso completo cuando un cliente quiere todo: página web, chatbot, campaña de Meta Ads y panel de gestión. No todos los proyectos van a necesitar cada paso — esto es el máximo.
+
+Antes de entrar aquí, asegúrate de haber visto el módulo Cómo usar la IA. Todo este flujo se ejecuta de la mano con Claude. Cada vez que algo no esté claro, mandas una captura de pantalla y preguntas.
+
+Paso 0 — Configurar el entorno de trabajo para el cliente
+Antes de tocar cualquier herramienta, configura el entorno donde vas a trabajar este proyecto.
+
+Para cada cliente necesitas dos cosas:
+
+Un proyecto en Claude — donde vas a tener toda la información del cliente disponible para consultas, redacción de propuestas, ideas y decisiones. No consume créditos como condenao (Claude Code) y te permite trabajar rápido sin tener que repetir el contexto cada vez.
+
+Un proyecto en Claude Code — el entorno técnico donde vas a construir todo: la página, el chatbot, el panel. Acá vive el código del proyecto y el archivo CLAUDE.md con la información precisa que Claude necesita para trabajar bien.
+
+Cómo configurar ambos correctamente está explicado en detalle en la guía Cómo configurar Claude y Claude Code en Antigravity para un proyecto nuevo. Léela antes de continuar.
+
+Paso 1 — Verificar la cuenta de Meta
+Lo primero, aunque parezca raro, no es la página web. Es verificar la cuenta de Meta del cliente.
+
+¿Por qué primero? Porque este proceso tarda. En la práctica suele demorar alrededor de dos semanas. Si lo dejas para el final, retrasa todo el proyecto.
+
+La verificación te da acceso al WhatsApp Business API — sin eso no puedes conectar el chatbot a WhatsApp. También protege la cuenta de baneo.
+
+Qué necesitas del cliente:
+
+Estatuto de la empresa
+
+Documento que muestre el nombre de la empresa, RUT y domicilio (un servicio básico a nombre de la empresa funciona bien)
+
+Con eso inicias el proceso de verificación en Meta Business Suite y lo dejas corriendo mientras avanzas con el resto.
+
+Paso 2 — Recopilar la información de la marca
+Antes de tocar ninguna herramienta de diseño, junta todo lo que tenga el cliente: logo, colores, tipografías, referencias visuales, fotos del negocio, lo que haya.
+
+Si no tiene nada, partes desde cero — pero igual necesitas entender el negocio, el público y el tono que quiere proyectar.
+
+Guarda todo en una carpeta ordenada. Lo vas a usar en varios pasos del flujo.
+
+Paso 3 — Diseño de la marca y la página web
+Con la información lista, abres Stitch — la herramienta de diseño de Google — y construyes todo el branding de la marca: paleta de colores, tipografía, estructura visual general.
+
+Ve mostrándole al cliente los avances. Si el diseño no le convence, lo ajustas antes de seguir. Es mucho más fácil cambiar el diseño acá que después cuando ya está en código.
+
+Cuando el cliente aprueba el diseño, lo pasas a Antigravity y construyes la página completa ahí. Antigravity funciona muy bien para esto — no consume los créditos de Claude Code y para desarrollo de páginas rinde muy bien. Si tienes la mensualidad de Google, ya lo tienes incluido.
+
+El objetivo de este paso es tener la página funcionando en local — es decir, en tu computador — antes de subirla al servidor.
+
+Paso 4 — Subir la página al servidor
+Cuando la página está lista en local, viene el proceso de subirla. Esto incluye:
+
+Comprar el dominio
+
+Configurar el VPS en Contabo
+
+Instalar Easypanel
+
+Subir el código a GitHub y vincularlo al servidor
+
+Conectar el dominio con Cloudflare
+
+Todo esto está explicado paso a paso en la guía Cómo subir tu página desde cero.
+
+Paso 5 — Hacer la página segura
+Una vez que la página está arriba, antes de seguir, aplicas todas las configuraciones de seguridad.
+
+Todo el proceso está en la guía Cómo dejar tu VPS blindado. Aplícala completa en el proyecto.
+
+Paso 6 — Construir el chatbot en n8n
+Con la página lista y segura, pasas a construir el chatbot.
+
+La herramienta es n8n. Lo bueno es que puedes pedirle a Claude Code que te cree el flujo completo directamente. Descríbele qué quieres que haga el agente — cómo recibe los mensajes, cómo responde, qué información recopila, qué hace con ella — y Claude te arma toda la estructura.
+
+Puedes copiarlo y pegarlo directo en n8n, o conectarlo con el MCP de n8n para que lo suba automáticamente. Tú solo entras a poner las credenciales y queda funcionando.
+
+Para que el chatbot responda bien, necesita conocer el negocio. Lo que funciona bien es usar la extensión de Claude en Chrome para que extraiga toda la información de la página web del cliente y te la deje en un archivo. Ese archivo se lo pasas a Claude y desde ahí construye las respuestas del agente.
+
+Si el negocio tiene información adicional — especialistas, tratamientos, promociones, precios — pídesela al cliente y agrégala.
+
+Antes de terminar este paso, pregúntale a Claude:
+
+¿Cuáles son todas las APIs y credenciales que necesito 
+configurar para que este flujo de n8n quede funcionando?
+
+Así tienes la lista completa antes de empezar a conectar todo.
+
+Paso 6.5 — Conectar WhatsApp Business API
+Para que el chatbot funcione en WhatsApp, necesitas conectar el número del cliente a la API oficial de Meta. Esto no es opcional — sin este paso el chatbot no tiene por dónde enviar ni recibir mensajes.
+
+El proceso implica tres cosas:
+
+Comprar un chip nuevo — Un número de teléfono dedicado exclusivamente al negocio. No puede ser un número que ya esté usando WhatsApp normal.
+
+Crear la aplicación en Facebook Developers — Dentro de la cuenta de Meta Business Suite del cliente, hay que crear una aplicación de tipo Business, configurar el producto de WhatsApp y vincular el número.
+
+Conectar todo con Chatwoot — Chatwoot es la herramienta que se usa para gestionar los mensajes. Desde acá se conecta el número verificado con el flujo de n8n, de forma que el agente pueda recibir y responder mensajes automáticamente.
+
+Este proceso tiene varios pasos técnicos específicos. El detalle completo está en la guía Cómo conectar WhatsApp Business API con Chatwoot — léela antes de intentar configurar esto.
+
+Paso 7 — Construir el panel de gestión (CRM)
+Justo después del chatbot, construyes el panel donde el cliente va a ver todos sus leads.
+
+Supabase almacena toda la información que el chatbot recopila: datos del cliente, historial de conversaciones, estado de cada lead. El chatbot escribe ahí automáticamente.
+
+El panel visual lo construyes en Antigravity o Claude Code — le pides que te genere un panel que se conecte a tu base de datos de Supabase y muestre la información de forma clara.
+
+Para conectarlo todo correctamente, usa este prompt:
+
+Quiero crear un panel visual que se conecte a mi base de datos 
+en Supabase. Pídeme todas las APIs y la información que necesitas 
+para construirlo, y asegúrate de que quede seguro y funcional.
+
+Paso 8 — Crear los creativos para los anuncios
+Con la infraestructura lista, pasas a los anuncios.
+
+Primero le pides a Claude que te ayude a estructurar la campaña:
+
+Quiero configurar una campaña de Meta Ads para [nombre del negocio]. 
+El objetivo es [objetivo concreto]. El presupuesto es [monto]. 
+El público objetivo es [descripción]. Dime cuántos anuncios hacer, 
+qué formatos usar y dame los prompts para generar las imágenes.
+
+Con los prompts listos, abres Flow — la plataforma de Google para generación de imágenes — y usas el modelo Imagen 3 para crear los creativos.
+
+Si el resultado no es exactamente lo que buscas, lo ajustas en Canva: agregar texto, cambiar colores, recortar. Itera hasta que tengas algo que represente bien al negocio y al objetivo de la campaña.
+
+Paso 9 — Configurar la campaña en Meta
+Esta es la parte más importante de todo el proyecto. Una campaña bien configurada es lo que determina si el cliente consigue clientes o no. No la tomes a la ligera. Hay plata de por medio en todo momento.
+
+Si nunca has configurado una campaña en Meta, no improvises. Antes de tocar cualquier cosa, pídele a Claude el paso a paso completo para tu caso:
+
+Quiero configurar una campaña de Meta Ads desde cero para un negocio 
+de [rubro]. El objetivo es conseguir leads de [público objetivo]. 
+El presupuesto mensual es [monto]. El cliente tiene [página web / sin 
+página web / Instagram activo]. Dame el paso a paso completo de cómo 
+configurar la campaña en Meta Business Suite, desde crear la cuenta 
+publicitaria hasta publicar el primer anuncio.
+Con eso tienes un mapa claro antes de abrir Meta Business Suite. Luego, a medida que vayas avanzando dentro de la plataforma, usa a Claude como guía en tiempo real. Cada sección que no entiendas, cada opción que no sepas cuál elegir — captura de pantalla y pregunta. No adivines.
+
+Estas son las secciones principales que vas a encontrar y cómo abordarlas:
+
+Objetivo de la campaña — ¿Leads, tráfico, conversiones? No elijas el que suena mejor. Cuéntale a Claude qué quiere conseguir el cliente y él te dice cuál configurar.
+
+Segmentación del público — Quién va a ver el anuncio: edad, ubicación, intereses, comportamientos. Si no sabes cómo segmentar, descríbele a Claude el negocio y el cliente ideal, y él te dice exactamente cómo configurarlo.
+
+Presupuesto y distribución — Cuánto gastar por día y cómo distribuirlo. Claude te puede ayudar a calcular cuántos anuncios tiene sentido correr con el presupuesto disponible.
+
+Creativos y textos — Los anuncios del paso anterior van acá. Los textos — titular, descripción, llamado a la acción — pídele a Claude que los redacte en base al objetivo y al público. No los escribas a ojo.
+
+Píxel de Meta — Si la página ya está activa, hay que instalarlo. Es el código que conecta la campaña con lo que pasa en la página. Si no sabes cómo hacerlo, Claude te explica el proceso completo.
+
+La lógica en este paso es siempre la misma: antes de elegir cualquier opción que no entiendas, pregúntale a Claude para qué sirve y cuál conviene para tu caso. No es perder tiempo — es asegurarte de que la campaña esté bien configurada desde el principio.
+
+Cuando tengas todo listo, déjala en borrador. No la publiques hasta que el cliente haya aprobado los creativos y los textos.
+
+Paso 10 — Preparar las redes sociales
+Si el cliente parte desde cero o tiene redes sociales inactivas, crea algunas publicaciones básicas antes de lanzar la campaña. La idea es que cuando alguien vea el anuncio y entre al perfil, encuentre una cuenta activa que transmita confianza.
+
+Pídele a Claude que te ayude a redactar las primeras publicaciones en base al negocio y al tono de la marca.
+
+Paso 11 — Lanzar
+Con todo listo — página segura, chatbot funcionando, panel activo, creativos aprobados y campaña configurada — activas todo.
+
+La campaña empieza a correr, el tráfico llega a la página, los interesados escriben por WhatsApp, el chatbot los atiende y los datos quedan en el panel. El cliente puede ver en tiempo real qué está pasando con sus leads.
+
+Ese es el ecosistema completo funcionando.

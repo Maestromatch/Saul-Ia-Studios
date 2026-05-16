@@ -1,0 +1,225 @@
+CAMPAÑA DE ANUNCIOS DESDE 0
+
+Cómo configurar una campaña de Meta Ads desde cero
+Esta guía asume que ya tienes listo lo siguiente:
+
+Meta Business Suite configurado con la cuenta publicitaria activa
+
+Los creativos e imágenes listos
+
+Los textos de cada anuncio redactados
+
+Si no tienes alguna de esas cosas, vuelve a las guías anteriores antes de continuar.
+
+Antes de entrar a Meta — pídele a Claude que te guíe
+Configurar una campaña tiene muchas decisiones: el objetivo, la segmentación, el presupuesto, el formato. Antes de abrir Meta Ads Manager, pídele a Claude que te explique cómo configurarla para tu caso específico:
+
+Voy a configurar una campaña de Meta Ads para un negocio de [rubro].
+El objetivo es [lo que quiere conseguir el cliente].
+El presupuesto mensual es [monto].
+El público objetivo es [descripción del cliente ideal — edad, 
+ubicación, intereses, comportamientos].
+
+Explícame:
+1. Qué objetivo de campaña debería elegir en Meta y por qué
+2. Cómo estructurar los conjuntos de anuncios con este presupuesto
+3. Qué opciones de segmentación me recomiendas para este público
+4. Cualquier cosa importante que deba configurar bien desde el inicio
+
+Luego, mientras vaya configurando, te voy a mandar capturas de 
+pantalla para que me guíes en cada paso.
+
+A partir de ahí, cada vez que tengas una duda o no sepas qué elegir en alguna pantalla, tomas una captura y se la mandas. Claude te va a decir exactamente qué hacer.
+
+Paso 1 — Entrar a Meta Ads Manager
+Ve a business.facebook.com
+
+Selecciona el portafolio del cliente
+
+En el menú de la izquierda, haz clic en Ads Manager o Administrador de anuncios
+
+Haz clic en el botón verde Crear para empezar una campaña nueva
+
+Paso 2 — Elegir el objetivo de la campaña
+Meta te va a preguntar qué quieres conseguir con la campaña. Las opciones principales son:
+
+Reconocimiento — para que más gente conozca el negocio
+
+Tráfico — para llevar gente a la página web
+
+Interacción — para conseguir mensajes, llamadas o visitas al perfil
+
+Leads — para capturar datos de contacto de personas interesadas
+
+Ventas — para conseguir compras directas
+
+Si no tienes claro cuál elegir para tu caso, pídele a Claude:
+
+El negocio es [descripción]. Quiero conseguir [objetivo concreto].
+¿Qué objetivo de campaña debería elegir en Meta Ads y por qué?
+
+Selecciona el objetivo que te recomiende y haz clic en Continuar.
+
+Paso 3 — Configurar el conjunto de anuncios
+El conjunto de anuncios es donde defines a quién le vas a mostrar los anuncios y cuánto vas a gastar.
+
+Presupuesto:
+
+Elige Presupuesto diario si quieres control día a día (yo recomiendo esta opción, suele dar mejores resultados)
+
+Elige Presupuesto total si tienes un monto fijo para toda la campaña o un horario estricto para que salga
+
+Ingresa el monto — si tienes dudas sobre cómo distribuirlo, pregúntale a Claude
+
+Fechas:
+
+Define cuándo empieza la campaña
+
+Si no tienes fecha de término definida, déjala sin fecha de fin y la pausas manualmente cuando corresponda (No es bueno pausarla y activarla manualmente muchas veces, lo ideal es definir bien la duración y los montos antes para que no pierda el "aprendizaje")
+
+Segmentación del público:
+
+Aquí defines quién va a ver los anuncios. Si no sabes cómo configurarlo para tu cliente específico, mándale a Claude la descripción del cliente ideal y pídele que te diga exactamente qué poner:
+
+El cliente ideal del negocio es [descripción detallada — edad, 
+género, ubicación, qué le interesa, qué problemas tiene].
+¿Cómo debería configurar la segmentación en Meta Ads Manager?
+Dime exactamente qué poner en cada campo.
+
+Los campos principales son:
+
+Ubicación — ciudad, región o país donde está el público
+
+Edad — rango de edad del cliente ideal
+
+Género — si aplica
+
+Intereses y comportamientos — lo que Meta sabe de las personas
+
+Ubicaciones: Deja que Meta optimice automáticamente las ubicaciones al principio — así el algoritmo decide dónde mostrar el anuncio según dónde tenga mejor rendimiento.
+
+CONSEJO EXTRA
+
+La segmentación automática suele dar buenos resultados, la idea es que no segmentemos tanto para que Facebook tenga la posibilidad de probar con audiencias.
+
+Paso 4 — Crear el anuncio
+Haz clic en Agregar anuncio o Crear anuncio nuevo
+
+Selecciona la página de Facebook del cliente como identidad del anuncio
+
+Selecciona también la cuenta de Instagram si quieres que aparezca ahí también
+
+Subir el creativo:
+
+Haz clic en Agregar contenido multimedia
+
+Sube la imagen que creaste en Flow y ajustaste en Canva
+
+Verifica que se vea bien en la vista previa — revisa cómo se ve tanto en feed como en stories
+
+Agregar los textos:
+
+Texto principal — el texto que aparece sobre la imagen
+
+Titular — el texto en negrita debajo de la imagen
+
+Descripción — texto adicional opcional
+
+Llamado a la acción — el botón (ej. "Más información", "Enviar mensaje", "Llamar ahora")
+
+Usa los textos que Claude redactó en la guía anterior.
+
+Agregar las 2 variantes: Repite el proceso para la segunda variante del anuncio — mismos textos, imagen diferente. Así Meta puede comparar cuál funciona mejor y optimizar automáticamente.
+
+Paso 5 — Instalar el Píxel de Meta en tu página
+El Píxel de Meta es un código que se instala en la página web y le dice a Meta qué hacen los visitantes después de ver el anuncio — si entraron a la página, si llenaron un formulario, si llegaron hasta cierta sección. Sin esto no puedes medir si la campaña está generando resultados reales.
+
+Cómo obtener el código del píxel:
+
+Dentro de Meta Ads Manager, ve al menú y busca Administrador de eventos o Events Manager
+
+Haz clic en Conectar fuentes de datos
+
+Selecciona Web
+
+Elige Píxel de Meta y haz clic en Conectar
+
+Dale un nombre al píxel — por ejemplo el nombre del negocio
+
+Ingresa la URL de la página web del cliente
+
+Haz clic en Crear píxel
+
+Selecciona la opción Instalar el código manualmente
+
+Copia el código que aparece
+
+Cómo instalarlo en tu página:
+
+Una vez que tienes el código copiado, pégaselo a Claude Code con este prompt:
+
+Tengo el código del Píxel de Meta que necesito instalar en mi página web.
+El código es el siguiente:
+
+[pega el código aquí]
+
+Instala este píxel en el proyecto para que se cargue en todas 
+las páginas del sitio.
+
+Claude Code va a instalar el píxel directamente en el proyecto y confirmar que quedó bien configurado.
+
+Verificar que el píxel está funcionando:
+
+Vuelve al Administrador de eventos en Meta
+
+Haz clic en Verificar conexión o Test Events
+
+Ingresa la URL de la página
+
+Entra a la página desde el navegador
+
+Si el píxel aparece como activo, está funcionando correctamente
+
+Paso 6 — Revisar y publicar
+Antes de publicar, revisa todo:
+
+El objetivo de la campaña es el correcto
+
+El presupuesto está bien configurado
+
+La segmentación apunta al público correcto
+
+Los creativos se ven bien en la vista previa
+
+Los textos no tienen errores
+
+El píxel está instalado y verificado
+
+Cuando todo esté en orden, haz clic en (Publicar o deja la campaña como borrador para cuando vayas a empezar). La campaña va a entrar en revisión — Meta la revisa en las primeras horas y si cumple con sus políticas, empieza a mostrarse.
+
+Cómo interpretar los primeros resultados
+Los primeros 3 a 7 días son de aprendizaje — el algoritmo de Meta está optimizando a quién mostrarle los anuncios. No hagas cambios durante este período porque interrumpes el proceso.
+
+Después de esa fase, revisa:
+
+CPM — cuánto cuesta que 1000 personas vean el anuncio
+
+CTR — qué porcentaje de personas que ven el anuncio hacen clic
+
+CPC — cuánto cuesta cada clic
+
+CPL — cuánto cuesta cada lead (si ese es el objetivo)
+
+Si tienes dudas sobre cómo interpretar alguna métrica o qué hacer con los resultados, pídele a Claude:
+
+Mi campaña lleva [X días] activa. Estos son los resultados:
+[pega las métricas]
+¿Qué me dicen estos números y qué debería hacer para mejorar 
+el rendimiento?
+
+Si algo no funciona o no sabes qué hacer
+Toma una captura de pantalla de donde estás y pégasela a Claude:
+
+Estoy configurando una campaña en Meta Ads y me aparece esto.
+[captura de pantalla]
+¿Qué tengo que hacer acá?

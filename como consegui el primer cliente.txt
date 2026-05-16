@@ -1,0 +1,38 @@
+CÓMO CONSEGUÍ MI PRIMER CLIENTE
+
+Voy a ser directo: mi primer cliente no llegó por una estrategia elaborada de prospección. Me habló por un comentario en un video que subí. Así fue.
+
+Lo cuento sin adornos porque creo que es más útil saber la verdad que creer que hay una fórmula perfecta para conseguir el primero. Lo que sí importa — y en lo que sí puedes replicar mi proceso — es lo que pasó después de ese primer contacto.
+
+El primer contacto
+Cuando me escribió, no salté directo a explicarle todo lo que hacía. Primero le hice un par de preguntas para entender en qué andaba su negocio y confirmar que lo que yo ofrecía tenía sentido para su caso. No quería llegar a una llamada hablando de algo completamente distinto a lo que él necesitaba.
+
+Con eso claro, le propuse agendar una llamada. Lo antes posible — idealmente el mismo día. Mientras más rápido, mejor. El interés se enfría.
+
+La llamada
+El objetivo de la llamada no era vender. Era entender.
+
+Le pedí que me explicara su negocio, cómo funcionaba, qué tenía y qué le faltaba. Lo dejé hablar. Mientras más me contaba, más claro tenía yo qué podía ofrecerle y dónde estaban los problemas reales.
+
+En su caso, tenía estructura — página web, servicios definidos — pero todo estaba desconectado. No tenía un sistema que captara clientes, los calificara y los atendiera de forma automática. Tenía piezas sueltas, no un embudo.
+
+Ahí fue donde entró mi propuesta: construirle todo el ecosistema completo. Página web, chatbot, campaña de Meta Ads, creativos para los anuncios, configuración de todos los servicios. Todo conectado, todo funcionando, todo administrándose solo gracias a un agente de IA que responde al instante. El objetivo era que él pudiera desligarse del proceso operativo y enfocarse en su negocio.
+
+La propuesta
+Después de la llamada redacté una propuesta detallada. Nada ambiguo — exactamente qué iba a entregar, qué incluía cada cosa y qué no. Mientras más claro queda eso por escrito, menos problemas hay después.
+
+La propuesta la redacté con ayuda de Claude. Le di el contexto de la llamada, lo que el cliente necesitaba y lo que yo iba a ofrecer, y él me dio un borrador que yo ajusté. Lo que habría tomado horas tomó minutos.
+
+El contrato
+Cuando aceptó, lo siguiente fue el contrato. 
+
+Lo generé con Claude — le expliqué los términos del acuerdo y me dio un contrato completo. Pero antes de mandarlo, se lo envié a un abogado para que lo revisara y confirmara que estaba todo en orden. El hizo un par de cambios importantes, como revisar que estuviera toda la información necesaria para que tenga la validez. Importante que lo revise un profesional.
+
+Luego fuimos a notaría a firmarlo.
+
+¿Es necesario siempre? Depende del proyecto y del monto. Pero para un primer proyecto de importante, con todo un ecosistema incluido, protegerse con un contrato firmado es lo correcto. Te da seguridad a ti y le da seriedad al cliente.
+
+Lo que aprendí
+El primer cliente no llegó por una estrategia. Pero el proceso que usé después de ese primer contacto — las preguntas iniciales, la llamada rápida, escuchar antes de vender, la propuesta detallada, el contrato — eso sí es replicable.
+
+El primer cliente es el más difícil. No porque el proceso sea complicado, sino porque todavía no tienes la confianza que da haberlo hecho antes. Una vez que lo tienes, todo lo demás se vuelve más fácil.

@@ -1,0 +1,159 @@
+PANEL DE DATOS
+
+Cómo crear un panel de gestión de leads
+El panel de gestión de leads es la interfaz visual donde el cliente puede ver en tiempo real todos los contactos que llegan a través del chatbot — quién escribió, qué preguntó, en qué estado está cada lead y toda la información que el agente recopiló.
+
+Se construye conectado a Supabase, que es donde se guardan todos esos datos automáticamente cada vez que alguien interactúa con el chatbot.
+
+Lo que necesitas antes de empezar
+Cuenta de Supabase creada y el proyecto del cliente activo
+
+El chatbot de n8n funcionando y guardando datos en Supabase
+
+Claude Code o Antigravity abierto con el proyecto del cliente
+
+Paso 1 — Obtener las credenciales de Supabase
+Para que el panel pueda leer los datos de Supabase, necesita dos cosas: la URL del proyecto y la API key.
+
+Entra a supabase.com e inicia sesión
+
+Abre el proyecto del cliente
+
+Ve a Settings > API
+
+Copia estos dos valores y guárdalos:
+
+Project URL — se ve así: https://xxxxxxxx.supabase.co
+
+anon public key — una clave larga que empieza con eyJ...
+
+Guarda estas credenciales en un lugar seguro. Las vas a necesitar en el siguiente paso y cada vez que conectes algo nuevo al proyecto.
+
+Paso 2 — Revisar las tablas donde están los datos
+Antes de construir el panel, necesitas saber cómo están organizados los datos en Supabase.
+
+Dentro de Supabase, ve a Table Editor
+
+Revisa qué tablas existen — normalmente hay una para los leads o contactos y otra para las conversaciones
+
+Abre cada tabla y fíjate en los nombres de las columnas — por ejemplo: nombre, telefono, email, fecha, estado, mensaje
+
+Si no tienes claro cómo están organizados los datos, pídele a Claude que te ayude:
+
+Tengo estas tablas en Supabase con estas columnas:
+[describe las tablas y columnas que ves]
+
+¿Cómo debería estructurar un panel de gestión de leads 
+que muestre esta información de forma clara para el cliente?
+
+Paso 3 — Pedirle a Claude Code que construya el panel
+Con las credenciales y la estructura de datos claras, abre Claude Code y pégale este prompt adaptándolo a tu caso:
+
+Quiero que construyas un panel de gestión de leads para un cliente.
+El panel debe conectarse a Supabase y mostrar la información 
+de los leads en tiempo real.
+
+Datos de conexión:
+- URL de Supabase: [pega la URL aquí]
+- API Key: [pega la anon public key aquí]
+
+Las tablas que tiene Supabase son:
+- [nombre de la tabla de leads] con columnas: [lista las columnas]
+- [nombre de la tabla de conversaciones] con columnas: [lista las columnas]
+
+El panel debe mostrar:
+- Lista de todos los leads con nombre, teléfono, fecha de contacto y estado
+- Filtros para buscar por nombre o filtrar por estado
+- Al hacer clic en un lead, mostrar el detalle de la conversación completa
+- Indicador visual del estado de cada lead (ej. nuevo, en proceso, cerrado)
+
+El diseño debe ser limpio, profesional y fácil de usar para alguien 
+que no sabe de tecnología. Usa los colores [colores de la marca del cliente 
+si los tienes, o déjalo en blanco para que use un diseño neutro].
+
+Cuando termines, dime qué archivos creaste y cómo puedo verlo en local.
+
+Claude Code va a construir el panel completo. Cuando termine, te va a decir cómo abrirlo en tu navegador para revisarlo.
+
+Paso 4 — Revisar y ajustar el panel
+Una vez que Claude Code termine, abre el panel en el navegador y revísalo:
+
+¿Se ven bien los datos de los leads?
+
+¿Los filtros funcionan correctamente?
+
+¿El diseño se ve profesional?
+
+¿Es fácil de entender para alguien sin conocimientos técnicos?
+
+Si algo no quedó como querías, díselo a Claude Code directamente:
+
+El panel quedó bien pero quiero cambiar [describe qué quieres cambiar].
+Por ejemplo: el color de los estados, agregar una columna más, 
+cambiar cómo se muestra la fecha, etc.
+
+Si algo no funciona o aparece un error, toma una captura de pantalla y pégasela:
+
+El panel me está mostrando este error.
+[captura de pantalla]
+¿Qué está pasando y cómo lo solucionas?
+
+Paso 5 — Configurar la autenticación
+El panel va a tener datos de clientes — no puede quedar abierto para que cualquiera lo vea. Supabase tiene un sistema de autenticación que permite agregar login con usuario y contraseña en minutos.
+
+Pídele a Claude Code que lo configure:
+
+El panel de leads que construiste necesita un sistema de login 
+para que solo el cliente pueda acceder.
+
+Agrégale autenticación usando Supabase Auth. El cliente debe 
+poder entrar con su correo y contraseña.
+
+Una vez que lo tengas listo, dime cómo crear el usuario del cliente 
+en Supabase para que pueda iniciar sesión.
+
+Para crear el usuario del cliente en Supabase:
+
+Ve a Authentication > Users en Supabase
+
+Haz clic en Add user
+
+Ingresa el correo y una contraseña temporal para el cliente
+
+Entrégale esas credenciales al cliente para que pueda entrar
+
+Paso 6 — Verificar que el panel es seguro
+Antes de entregarle el panel al cliente, pídele a Claude que revise que todo esté bien configurado y que no haya ninguna API key o credencial expuesta:
+
+Revisa el panel de leads que acabamos de construir y dime:
+1. ¿Hay alguna API key o credencial de Supabase expuesta 
+   en el código frontend?
+2. ¿La autenticación está bien configurada?
+3. ¿Hay alguna vulnerabilidad obvia que debería corregir?
+4. ¿Qué más puedo hacer para asegurarme de que solo 
+   el cliente autorizado pueda acceder a los datos?
+
+Si encuentras algo, corrígelo directamente.
+No entregues el panel sin hacer este paso. Una API key expuesta en el código frontend puede ser vista por cualquiera que inspeccione el HTML de la página.
+
+Paso 7 — Subir el panel al servidor
+Cuando el panel esté listo y funcionando en local, hay que subirlo al VPS para que el cliente pueda acceder desde cualquier dispositivo.
+
+El proceso es el mismo que para cualquier página web:
+
+Sube el código a GitHub
+
+En Easypanel, crea un nuevo servicio y vincúlalo al repositorio
+
+Asígnale un subdominio — por ejemplo leads.dominiocliente.cl
+
+Configura el subdominio en Cloudflare apuntando a la IP del VPS
+
+Si tienes dudas con alguno de estos pasos, revisa la guía Cómo subir tu página web desde cero.
+
+Si necesitas ayuda en cualquier punto
+Tanto Claude Code como Antigravity pueden ayudarte a construir y debuggear el panel. Si algo no funciona, describe el problema o manda una captura de pantalla:
+
+Estoy construyendo el panel de leads y me aparece esto.
+[captura de pantalla o descripción del error]
+¿Qué está pasando y cómo lo soluciono?

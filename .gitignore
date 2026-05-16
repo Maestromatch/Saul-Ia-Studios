@@ -19,6 +19,11 @@ agente ventas/*.png
 # Aprendizajes evolutivos del agente — pueden contener datos confidenciales de clientes
 agente ventas/agente-comercial-aprendizajes.md
 
+# Notas internas de errores / debugging — efímeras, no van al repo público
+agente ventas/error*.txt
+agente ventas/nuevo error*.txt
+agente ventas/*-error.txt
+
 # OS / editores
 .DS_Store
 Thumbs.db

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Constructora · Pack IA Express — Saul IA Studios</title>
+  <meta name="description" content="Demo de IA para constructoras y maestros: 4 escenarios reales (remodelacion bano, filtracion urgente, ampliacion m2, obra nueva). Captura proyecto, comuna, tipo de propiedad y agenda visita tecnica. Implementado en 7 dias desde $250.000 CLP.">
+  <link rel="canonical" href="https://saul-ia-studios.vercel.app/demo-constructora.html">
+  <meta property="og:title" content="Demo IA para Constructoras y Maestros — Saul IA Studios">
+  <meta property="og:description" content="Ve como una IA recibe consultas de remodelacion, ampliacion y reparacion, captura los datos clave y agenda visita tecnica sola.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Saul IA Studios">
+      <span class="brand-mark">S</span>
+      <span>Saul IA Studios</span>
+    </a>
+    <nav>
+      <a href="#problema">Problema</a>
+      <a href="#flujo">Flujo</a>
+      <a href="#piloto">Piloto</a>
+      <a class="nav-cta" href="https://wa.me/56968171774?text=Hola%2C%20vi%20la%20demo%20para%20constructora%20y%20quiero%20evaluar%20el%20piloto">WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero niche-hero">
+      <div class="hero-copy">
+        <span class="signal-tag">🟢 Demo interactiva · caso real Saul El Constructor</span>
+        <p class="eyebrow">Demo para constructoras y maestros</p>
+        <h1>Menos WhatsApp colgado en obra. Mas visitas tecnicas confirmadas.</h1>
+        <p class="lead">
+          Un flujo IA recibe la consulta, identifica el tipo de proyecto, pide la foto, valida comuna y agenda la visita tecnica — para que el maestro llegue con datos listos y cierre mas trabajos.
+        </p>
+        <p class="proof">Este caso esta funcionando en mi propia constructora. Toca los 4 escenarios para ver como responde a cada tipo de consulta.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20una%20demo%20del%20Pack%20IA%20Express%20para%20mi%20constructora%20o%20maestro">Pedir piloto</a>
+          <a class="button secondary" href="#flujo">Ver flujo</a>
+        </div>
+      </div>
+
+      <div class="demo-panel" aria-label="Demo interactiva de conversacion para constructora">
+        <div class="panel-header">
+          <span></span><span></span><span></span>
+          <strong>Solicitud obra</strong>
+        </div>
+
+        <div class="demo-tabs" role="tablist">
+          <button class="tab-btn active" data-scenario="bano" role="tab" aria-selected="true">Remodelar bano</button>
+          <button class="tab-btn" data-scenario="filtracion" role="tab" aria-selected="false">Filtracion urgente</button>
+          <button class="tab-btn" data-scenario="ampliacion" role="tab" aria-selected="false">Ampliacion</button>
+          <button class="tab-btn" data-scenario="obra-nueva" role="tab" aria-selected="false">Obra nueva</button>
+        </div>
+
+        <div class="chat-scenarios">
+          <div class="chat" data-scenario="bano">
+            <p class="bubble customer">Hola, quiero remodelar mi bano completo. ¿Cuanto sale aprox?</p>
+            <p class="bubble ai">Te ayudo. Remodelacion de bano completo parte desde $1.500.000 — incluye demolicion, sanitarios basicos y ceramica. Para el precio exacto necesito visita tecnica. ¿En que comuna estas?</p>
+            <p class="bubble customer">San Bernardo. Es una casa, bano de 4m2.</p>
+            <p class="bubble ai">Atendemos San Bernardo. ¿Me puedes enviar 2-3 fotos del bano actual y dimensiones aprox? Asi llego a la visita con propuesta inicial.</p>
+            <p class="bubble customer">[3 fotos del bano]</p>
+            <p class="bubble ai">Perfecto. ¿Nombre y horario que te acomoda para visita esta semana? Visita tecnica es gratis si contratas.</p>
+            <p class="bubble customer">Andrea, sabado en la manana.</p>
+            <p class="bubble ai">Listo Andrea. Visita confirmada sabado 11:00. Te llega recordatorio viernes.</p>
+          </div>
+
+          <div class="chat" data-scenario="filtracion" hidden>
+            <p class="bubble customer">URGENTE, se me esta filtrando agua del techo. ¿Pueden venir hoy?</p>
+            <p class="bubble ai">Filtracion la atendemos como urgencia. ¿Comuna y tipo de propiedad? ¿Casa o depto?</p>
+            <p class="bubble customer">Casa en El Bosque. La filtracion es desde el techo de la cocina.</p>
+            <p class="bubble ai">Cobertura El Bosque OK. ¿Me mandas 1-2 fotos del area afectada? Necesito ver si es teja, plancha o losa.</p>
+            <p class="bubble customer">[foto del techo con mancha]</p>
+            <p class="bubble ai">Parece teja con problema de embarrado. Reparacion parte desde $80.000. Hoy tengo disponibilidad 16-19h. ¿Nombre y direccion exacta?</p>
+            <p class="bubble customer">Cristian, Av Padre Hurtado 1234.</p>
+            <p class="bubble ai">Confirmado Cristian. Llego entre 16-18h hoy. Te aviso por aca 30 min antes.</p>
+          </div>
+
+          <div class="chat" data-scenario="ampliacion" hidden>
+            <p class="bubble customer">Quiero ampliar 20m2 en el segundo piso de mi casa. ¿Cuanto sale?</p>
+            <p class="bubble ai">Ampliacion 20m2 segundo piso depende de la estructura. Rango general: $6.000.000 a $10.000.000 segun materiales y terminaciones. Para presupuesto real, ¿tienes plano o medidas exactas?</p>
+            <p class="bubble customer">Solo medidas. ¿Trabajan con permiso municipal?</p>
+            <p class="bubble ai">Si — ampliaciones sobre 6m2 requieren regularizacion o permiso. Lo coordinamos con el arquitecto aliado. ¿Comuna donde esta la casa?</p>
+            <p class="bubble customer">Maipu.</p>
+            <p class="bubble ai">Cobertura Maipu OK. Te derivo con Saul para visita tecnica + conversacion del permiso. ¿Nombre y horario?</p>
+            <p class="bubble customer">Pablo, jueves o viernes en la tarde.</p>
+            <p class="bubble ai">Listo Pablo. Visita agendada viernes 17:00 con Saul. Revisa medidas exactas para esa fecha si puedes.</p>
+          </div>
+
+          <div class="chat" data-scenario="obra-nueva" hidden>
+            <p class="bubble customer">Hola, quiero construir una casa desde cero. Tengo terreno de 150m2.</p>
+            <p class="bubble ai">Te ayudo. ¿Cuantos m2 construidos quieres? ¿Y para que comuna es el terreno?</p>
+            <p class="bubble customer">Quiero 80m2 construidos, en San Miguel.</p>
+            <p class="bubble ai">San Miguel OK. Obra nueva 80m2 estructura solida parte desde $64.000.000 (aprox $800.000/m2) — incluye obra gruesa y terminaciones basicas. ¿Tienes proyecto arquitectonico o partimos desde cero?</p>
+            <p class="bubble customer">Tengo plano y permiso ya aprobado.</p>
+            <p class="bubble ai">Excelente. Con plano aprobado avanzamos rapido. Te derivo con Saul para visita al terreno + cotizacion formal por etapas. ¿Nombre y telefono?</p>
+            <p class="bubble customer">Carolina, 9 1234 5678.</p>
+            <p class="bubble ai">Listo Carolina. Saul te contacta hoy mismo para coordinar visita al terreno en San Miguel.</p>
+          </div>
+        </div>
+
+        <div class="crm-row">
+          <span>Andrea · San Bernardo</span>
+          <strong>Bano 4m2 c/foto</strong>
+          <em>Visita sab 11:00</em>
+        </div>
+      </div>
+    </section>
+
+    <section id="problema" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Dolor real</p>
+        <h2>Pierdes trabajos porque no estas pegado al celular.</h2>
+      </div>
+      <div class="steps">
+        <article>
+          <span>1</span>
+          <h3>WhatsApp colgado en obra</h3>
+          <p>Estas con las manos en la mezcla y el celular suena. El cliente pregunta precio, comuna, foto. No alcanzas a responder.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Visitas mal preparadas</h3>
+          <p>Llegas a la visita sin foto, sin metraje, sin saber que pidio. Pierdes 1 hora preguntando lo que se podia preguntar antes.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Cotizados que no vuelven</h3>
+          <p>Dejaste presupuesto. Pasaron 10 dias. ¿Le hago seguimiento? ¿Cuando? El cliente ya se fue con otro maestro.</p>
+        </article>
+        <article>
+          <span>4</span>
+          <h3>Trabajos chicos que no rinden</h3>
+          <p>Te llaman por filtraciones que ni alcanzas a ir, mientras el proyecto grande de ampliacion se enfria por falta de respuesta.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="flujo" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Flujo instalado</p>
+        <h2>Lo que dejamos funcionando para tu negocio</h2>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-main">
+          <h3>Atencion inicial + foto + visita tecnica agendada.</h3>
+          <p>El bot no cotiza la obra (eso solo lo haces tu en visita). Su trabajo es filtrar, capturar lo importante y dejar tu agenda llena de visitas con datos listos.</p>
+          <ul>
+            <li>Preguntas frecuentes: precios desde por tipo de obra, comunas, permisos, tiempos, garantia, formas de pago.</li>
+            <li>Captura: nombre, telefono, comuna, tipo de proyecto, tipo de propiedad, fotos, urgencia.</li>
+            <li>Agenda directa con confirmacion y recordatorio 24h antes de la visita tecnica.</li>
+            <li>Mensaje de seguimiento para presupuestos enviados que no respondieron.</li>
+            <li>Derivacion a humano para permisos, regularizaciones y proyectos grandes.</li>
+            <li>Registro en CRM simple: cada visita queda con foto, metraje, estado y proximo paso.</li>
+          </ul>
+        </article>
+        <aside class="price-card">
+          <span class="tag">Demo de impacto</span>
+          <h3>De chat saturado a agenda llena de visitas</h3>
+          <p>Ideal para constructoras chicas, maestros independientes y empresas de remodelacion que reciben consultas por WhatsApp.</p>
+          <a class="button primary wide" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20ordenar%20las%20consultas%20de%20mi%20constructora%20con%20IA">Quiero este flujo</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="piloto" class="section muted">
+      <div class="section-heading">
+        <p class="eyebrow">Pack IA Express</p>
+        <h2>Piloto implementado en 7 dias</h2>
+      </div>
+      <div class="timeline">
+        <div><strong>Dia 1</strong><p>Levantamos tipos de obra que haces, precios desde, comunas y proceso actual.</p></div>
+        <div><strong>Dia 2-3</strong><p>Armamos respuestas, formulario/landing y planilla CRM de solicitudes.</p></div>
+        <div><strong>Dia 4-5</strong><p>Probamos conversaciones reales y ajustamos derivaciones para permisos y proyectos grandes.</p></div>
+        <div><strong>Dia 6-7</strong><p>Capacitamos al maestro / equipo y dejamos el flujo operativo.</p></div>
+      </div>
+      <div class="closing-band">
+        <h3>Precio fundador: $250.000 a $450.000 CLP</h3>
+        <p>50% anticipo para comenzar y 50% contra entrega. Cupos piloto limitados. Garantia: si en 7 dias no queda funcionando, te devolvemos el anticipo.</p>
+        <a class="button primary" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20tomar%20un%20cupo%20piloto%20para%20mi%20constructora">Tomar cupo piloto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Saul IA Studios</strong>
+      <span>IA instalada, no explicada.</span>
+    </div>
+    <div class="footer-meta">
+      <a href="https://wa.me/56968171774">WhatsApp +56 9 6817 1774</a>
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var buttons = document.querySelectorAll('.tab-btn');
+      var chats = document.querySelectorAll('.chat[data-scenario]');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = btn.getAttribute('data-scenario');
+          buttons.forEach(function(b) {
+            var active = b === btn;
+            b.classList.toggle('active', active);
+            b.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          chats.forEach(function(c) {
+            c.hidden = c.getAttribute('data-scenario') !== target;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

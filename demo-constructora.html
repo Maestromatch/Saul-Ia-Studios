@@ -80,7 +80,7 @@
 
           <div class="chat" data-scenario="ampliacion" hidden>
             <p class="bubble customer">Quiero ampliar 20m2 en el segundo piso de mi casa. ¿Cuanto sale?</p>
-            <p class="bubble ai">Ampliaciones desde $450.000/m2 — para 20m2 estamos hablando de un rango aproximado de $9.000.000. Depende mucho de la estructura. ¿Tienes plano o medidas exactas?</p>
+            <p class="bubble ai">Ampliaciones desde $450.000/m2 — para 20m2 hablamos de una estimacion inicial alrededor de $9.000.000. El precio final se confirma con visita tecnica. ¿Tienes plano o medidas exactas? ¿Y en que comuna esta la casa?</p>
             <p class="bubble customer">Solo medidas. ¿Trabajan con permiso municipal?</p>
             <p class="bubble ai">Si — ampliaciones sobre 6m2 requieren regularizacion o permiso. Lo coordinamos con arquitecto aliado. ¿Comuna de la casa?</p>
             <p class="bubble customer">Maipu.</p>
@@ -93,7 +93,7 @@
             <p class="bubble customer">Hola, quiero construir una casa desde cero. Tengo terreno de 150m2.</p>
             <p class="bubble ai">Te ayudo. Trabajamos Panel SIP, estructura metalica y proyectos personalizados. Rango construccion: $450.000 a $850.000/m2 segun sistema y terminaciones. ¿Cuantos m2 construidos? ¿Y comuna del terreno?</p>
             <p class="bubble customer">80m2, en San Miguel. ¿Que diferencia Panel SIP de metalica?</p>
-            <p class="bubble ai">Panel SIP: rapido (40-60 dias), buena aislacion, ideal para 1 piso. Metalica: estructural mas robusta, ideal para 2 pisos o cargas mayores. Para 80m2 1 piso, SIP suele convenir. Aprox $36.000.000-$54.000.000 segun terminaciones.</p>
+            <p class="bubble ai">Panel SIP: rapido (40-60 dias), buena aislacion, ideal para 1 piso. Metalica: estructural mas robusta, ideal para 2 pisos o cargas mayores. Para 80m2 1 piso, SIP suele convenir. Estimacion inicial $36.000.000-$54.000.000 — el numero exacto sale tras visita al terreno.</p>
             <p class="bubble customer">Tengo plano y permiso ya aprobado.</p>
             <p class="bubble ai">Excelente. Con plano aprobado avanzamos rapido. Te derivo para visita al terreno + cotizacion por etapas. ¿Nombre y telefono?</p>
             <p class="bubble customer">Carolina, 9 1234 5678.</p>
@@ -154,6 +154,8 @@
             <li>Mensaje de seguimiento para presupuestos enviados que no respondieron.</li>
             <li>Derivacion a humano para permisos, regularizaciones y proyectos grandes.</li>
             <li>Prioridad automatica: urgencias arriba, proyectos grandes con seguimiento dedicado.</li>
+            <li>Validacion de cobertura: dentro de RM sin viatico, fuera de RM evalua transporte y avisa al cliente antes de agendar.</li>
+            <li>Precios siempre "desde" — el bot nunca compromete cifras cerradas. Cierre real en visita tecnica.</li>
           </ul>
         </article>
         <aside class="price-card">

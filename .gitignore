@@ -24,6 +24,13 @@ agente ventas/error*.txt
 agente ventas/nuevo error*.txt
 agente ventas/*-error.txt
 
+# Credenciales y secretos — nunca al repo público
+**/*.local.md
+**/credentials.*
+**/secrets.*
+**/*.secret
+**/.env*
+
 # OS / editores
 .DS_Store
 Thumbs.db

@@ -2,6 +2,13 @@
 mi-spa-datos-clave.md
 mi-spa-checklist.md
 
+# Carpetas de clientes reales — datos confidenciales (RUT, precios, FAQ propias)
+# Solo se sube la plantilla y el README
+/clientes/*
+!/clientes/README.md
+!/clientes/_PLANTILLA-CLIENTE
+!/clientes/_PLANTILLA-CLIENTE/**
+
 # Contexto interno para Claude — no es parte del producto público
 CLAUDE.md
 .claude/

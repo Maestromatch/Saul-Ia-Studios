@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo Servicio Tecnico - Saul IA Studios</title>
-  <meta name="description" content="Demo de IA para servicios tecnicos: captura solicitudes, responde preguntas frecuentes y ordena seguimientos en 7 dias.">
+  <title>Demo Servicio Tecnico · Pack IA Express — Saul IA Studios</title>
+  <meta name="description" content="Demo de IA para servicios tecnicos: 4 escenarios reales (notebook, celular, impresora, retiro a domicilio). Captura solicitudes, califica casos y ordena seguimientos. Implementado en 7 dias desde $250.000 CLP.">
+  <link rel="canonical" href="https://saul-ia-studios.vercel.app/demo-servicio-tecnico.html">
+  <meta property="og:title" content="Demo IA para Servicios Tecnicos — Saul IA Studios">
+  <meta property="og:description" content="Ve como una IA recibe casos tecnicos, califica falla, comuna y urgencia, y deja al tecnico solo con lo importante.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,34 +27,74 @@
   <main>
     <section class="hero niche-hero">
       <div class="hero-copy">
+        <span class="signal-tag">🟢 Demo interactiva · 4 escenarios reales</span>
         <p class="eyebrow">Demo para servicios tecnicos</p>
         <h1>Menos WhatsApp repetido. Mas solicitudes ordenadas.</h1>
         <p class="lead">
           Un flujo IA captura marca, problema, comuna y contacto del cliente para que el tecnico reciba datos utiles desde el primer mensaje.
         </p>
+        <p class="proof">Toca los 4 escenarios del panel para ver como el bot maneja cada tipo de consulta.</p>
         <div class="hero-actions">
           <a class="button primary" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20una%20demo%20del%20Pack%20IA%20Express%20para%20servicio%20tecnico">Pedir piloto</a>
           <a class="button secondary" href="#flujo">Ver flujo</a>
         </div>
       </div>
 
-      <div class="demo-panel" aria-label="Demo de conversacion para servicio tecnico">
+      <div class="demo-panel" aria-label="Demo interactiva de conversacion para servicio tecnico">
         <div class="panel-header">
           <span></span><span></span><span></span>
           <strong>Solicitud tecnica</strong>
         </div>
-        <div class="chat">
-          <p class="bubble customer">Hola, mi notebook HP no prende. ¿Cuanto sale revisar?</p>
-          <p class="bubble ai">Hola. Te ayudo. ¿El equipo no prende nada, prende luces o muestra imagen?</p>
-          <p class="bubble customer">No prende nada. Estoy en San Bernardo.</p>
-          <p class="bubble ai">Perfecto. Te dejo registrado para diagnostico. ¿Me indicas nombre y telefono?</p>
-          <p class="bubble customer">Marco, 9 8888 7777.</p>
-          <p class="bubble ai">Listo, Marco. El tecnico recibe tu caso: notebook HP no enciende, comuna San Bernardo.</p>
+
+        <div class="demo-tabs" role="tablist">
+          <button class="tab-btn active" data-scenario="notebook" role="tab" aria-selected="true">Notebook</button>
+          <button class="tab-btn" data-scenario="celular" role="tab" aria-selected="false">Celular</button>
+          <button class="tab-btn" data-scenario="impresora" role="tab" aria-selected="false">Impresora</button>
+          <button class="tab-btn" data-scenario="domicilio" role="tab" aria-selected="false">A domicilio</button>
         </div>
+
+        <div class="chat-scenarios">
+          <div class="chat" data-scenario="notebook">
+            <p class="bubble customer">Hola, mi notebook HP no prende. ¿Cuanto sale revisar?</p>
+            <p class="bubble ai">Te ayudo. ¿El equipo no prende nada, prende luces o muestra imagen?</p>
+            <p class="bubble customer">No prende nada. Estoy en San Bernardo.</p>
+            <p class="bubble ai">Diagnostico sale $10.000 (gratis si arreglas con nosotros). ¿Lo traes al local o lo retiramos? Para registrar tu caso: ¿nombre y telefono?</p>
+            <p class="bubble customer">Marco, 9 8888 7777. Lo llevo manana.</p>
+            <p class="bubble ai">Listo Marco. Caso registrado: HP, no enciende, San Bernardo. Te espera Pablo manana 10-13h.</p>
+          </div>
+
+          <div class="chat" data-scenario="celular" hidden>
+            <p class="bubble customer">Hola, se me cayo el celular y la pantalla quedo negra. ¿Lo arreglan?</p>
+            <p class="bubble ai">Si. ¿Modelo del celular y prende sonido / vibracion?</p>
+            <p class="bubble customer">iPhone 12. Vibra cuando llaman pero la pantalla negra.</p>
+            <p class="bubble ai">Es cambio de pantalla. Para iPhone 12: $89.000 con pantalla original, $59.000 generica. Entrega mismo dia. ¿Pasas hoy o agendamos?</p>
+            <p class="bubble customer">Hoy en la tarde. Sofia.</p>
+            <p class="bubble ai">Confirmado Sofia. Te esperamos hoy 15-19h. Telefono para avisarte cuando este listo?</p>
+          </div>
+
+          <div class="chat" data-scenario="impresora" hidden>
+            <p class="bubble customer">Hola, mi impresora no imprime. Sale "atasco de papel" pero no hay papel atascado.</p>
+            <p class="bubble ai">Comun. ¿Marca y modelo? Y revisa por favor: ¿el rodillo de arrastre gira al intentar imprimir?</p>
+            <p class="bubble customer">Epson L3210. No, no gira.</p>
+            <p class="bubble ai">Probable sensor o rodillo desgastado. Revision $15.000. Para tu modelo en stock cambio rodillo $25.000-$40.000. ¿La traes o vamos al local?</p>
+            <p class="bubble customer">Es de mi oficina. ¿Pueden venir a Maipu?</p>
+            <p class="bubble ai">Si. Costo retiro Maipu $5.000. ¿Nombre, direccion y horario que les acomoda?</p>
+          </div>
+
+          <div class="chat" data-scenario="domicilio" hidden>
+            <p class="bubble customer">¿Hacen servicio a domicilio? Necesito formateo de notebook.</p>
+            <p class="bubble ai">Si. Para formateo a domicilio: $35.000 dentro de RM. Incluye respaldo basico y reinstalacion Windows + Office.</p>
+            <p class="bubble customer">¿En Puente Alto?</p>
+            <p class="bubble ai">Si llegamos a Puente Alto. ¿Tienes el equipo encendido y con datos importantes que respaldar?</p>
+            <p class="bubble customer">Si, fotos y documentos. Daniela, 9 7777 5555.</p>
+            <p class="bubble ai">Listo Daniela. Disponibilidad: jueves 16h o viernes 11h. ¿Cual te acomoda?</p>
+          </div>
+        </div>
+
         <div class="crm-row">
-          <span>Marco</span>
-          <strong>Notebook HP</strong>
-          <em>Coordinar diagnostico</em>
+          <span>Marco · San Bernardo</span>
+          <strong>Notebook HP no enciende</strong>
+          <em>Diagnostico manana</em>
         </div>
       </div>
     </section>
@@ -124,15 +167,41 @@
       </div>
       <div class="closing-band">
         <h3>Precio fundador: $250.000 a $450.000 CLP</h3>
-        <p>50% anticipo para comenzar y 50% contra entrega. Cupos piloto limitados.</p>
+        <p>50% anticipo para comenzar y 50% contra entrega. Cupos piloto limitados. Garantia: si en 7 dias no queda funcionando, te devolvemos el anticipo.</p>
         <a class="button primary" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20tomar%20un%20cupo%20piloto%20para%20mi%20servicio%20tecnico">Tomar cupo piloto</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <strong>Saul IA Studios</strong>
-    <span>IA instalada, no explicada.</span>
+    <div>
+      <strong>Saul IA Studios</strong>
+      <span>IA instalada, no explicada.</span>
+    </div>
+    <div class="footer-meta">
+      <a href="https://wa.me/56968171774">WhatsApp +56 9 6817 1774</a>
+      <a href="index.html">← Volver al inicio</a>
+    </div>
   </footer>
+
+  <script>
+    (function() {
+      var buttons = document.querySelectorAll('.tab-btn');
+      var chats = document.querySelectorAll('.chat[data-scenario]');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = btn.getAttribute('data-scenario');
+          buttons.forEach(function(b) {
+            var active = b === btn;
+            b.classList.toggle('active', active);
+            b.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          chats.forEach(function(c) {
+            c.hidden = c.getAttribute('data-scenario') !== target;
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

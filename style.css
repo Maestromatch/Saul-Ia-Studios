@@ -390,6 +390,353 @@ footer strong {
   width: fit-content;
 }
 
+/* ============================================
+   v2 — landing dual/triple + ganchos
+   ============================================ */
+
+.signal-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.proof {
+  margin-top: 18px;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.link-secondary {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footnote {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 820px;
+}
+
+/* "Para quien es" — 3 cards */
+.who-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.who-cards article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.who-featured {
+  border-color: var(--accent) !important;
+  background: var(--soft) !important;
+}
+
+.who-num {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 900;
+}
+
+.who-cards p {
+  color: var(--muted);
+  margin-bottom: auto;
+}
+
+.who-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* Pricing 3 tiers — Formaliza */
+.pricing-3-tier {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+  align-items: stretch;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.tier.featured {
+  border-color: var(--accent);
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(8, 127, 104, 0.14);
+  transform: translateY(-4px);
+}
+
+.tier .price-h3,
+.price-h3 {
+  margin: 0;
+  font-size: 34px;
+  color: var(--ink);
+}
+
+.tier-plazo {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tier ul,
+.price-card .price-tier-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.tier ul li {
+  color: var(--muted);
+}
+
+.tier ul li strong {
+  color: var(--ink);
+}
+
+.price-tier-list {
+  list-style: none;
+  padding-left: 0 !important;
+  display: grid;
+  gap: 8px;
+}
+
+.price-tier-list li {
+  padding: 8px 10px;
+  background: var(--soft);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Flagship band — Pack 360 */
+.flagship-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.85fr);
+  gap: clamp(24px, 4vw, 56px);
+  padding: clamp(32px, 5vw, 56px);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--soft) 0%, var(--white) 100%);
+}
+
+.flagship-copy h2 {
+  margin-bottom: 14px;
+}
+
+.flagship-copy p {
+  color: var(--muted);
+}
+
+.flagship-includes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.flagship-includes > div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.flagship-includes strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flagship-includes p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.flagship-cards {
+  display: grid;
+  gap: 14px;
+  align-content: center;
+}
+
+.flagship-cards .tier {
+  padding: 22px;
+}
+
+/* FAQ */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.faq-grid details {
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.faq-grid details[open] {
+  background: var(--soft);
+}
+
+.faq-grid summary {
+  font-weight: 800;
+  font-size: 15px;
+  list-style: none;
+  position: relative;
+  padding-right: 24px;
+}
+
+.faq-grid summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-grid summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--accent-dark);
+  font-size: 22px;
+  font-weight: 900;
+  transition: transform 0.2s ease;
+}
+
+.faq-grid details[open] summary::after {
+  content: "−";
+}
+
+.faq-grid details p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Demo tabs (escenarios interactivos) */
+.demo-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.tab-btn {
+  flex: 1 1 auto;
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.chat-scenarios .chat[hidden] {
+  display: none;
+}
+
+/* Big closing */
+.big-closing {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.big-closing h3 {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.big-closing p {
+  margin: 0 auto;
+}
+
+.big-closing .button {
+  margin: 12px auto 0;
+}
+
+/* Footer mejorado */
+footer {
+  flex-wrap: wrap;
+}
+
+.footer-meta {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-meta a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
 @media (max-width: 860px) {
   .topbar {
     align-items: flex-start;
@@ -401,7 +748,12 @@ footer strong {
 
   .hero,
   .offer-grid,
-  .steps {
+  .steps,
+  .who-cards,
+  .pricing-3-tier,
+  .flagship-band,
+  .flagship-includes,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 
@@ -416,5 +768,9 @@ footer strong {
 
   h1 {
     font-size: 48px;
+  }
+
+  .tier.featured {
+    transform: none;
   }
 }

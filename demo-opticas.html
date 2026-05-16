@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Demo Optica - Saul IA Studios</title>
-  <meta name="description" content="Demo de IA para opticas: responde precios y convenios, agenda citas y ordena leads en 7 dias.">
+  <title>Demo Optica · Pack IA Express — Saul IA Studios</title>
+  <meta name="description" content="Demo de IA para opticas: 4 escenarios reales (lentes con receta, examen visual, reparacion, convenios Isapre). Sistema implementado en 7 dias desde $250.000 CLP.">
+  <link rel="canonical" href="https://saul-ia-studios.vercel.app/demo-opticas.html">
+  <meta property="og:title" content="Demo IA para Opticas — Saul IA Studios">
+  <meta property="og:description" content="Ve como una IA responde precios, agenda examenes, valida convenios y deriva reclamos. 4 escenarios reales.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,30 +27,70 @@
   <main>
     <section class="hero niche-hero">
       <div class="hero-copy">
+        <span class="signal-tag">🟢 Demo interactiva · 4 escenarios reales</span>
         <p class="eyebrow">Demo para opticas</p>
         <h1>Menos preguntas repetidas. Mas agendas confirmadas.</h1>
         <p class="lead">
           Un flujo IA responde precios desde, convenios y horarios al instante, agenda al interesado y deja al equipo libre para vender.
         </p>
+        <p class="proof">Toca los 4 escenarios del panel para ver como el bot maneja cada tipo de consulta.</p>
         <div class="hero-actions">
           <a class="button primary" href="https://wa.me/56968171774?text=Hola%2C%20quiero%20una%20demo%20del%20Pack%20IA%20Express%20para%20mi%20optica">Pedir piloto</a>
           <a class="button secondary" href="#flujo">Ver flujo</a>
         </div>
       </div>
 
-      <div class="demo-panel" aria-label="Demo de conversacion para optica">
+      <div class="demo-panel" aria-label="Demo interactiva de conversacion para optica">
         <div class="panel-header">
           <span></span><span></span><span></span>
           <strong>Lead optica</strong>
         </div>
-        <div class="chat">
-          <p class="bubble customer">Hola, ¿hacen lentes con receta? ¿Cuanto salen?</p>
-          <p class="bubble ai">Hola. Si, hacemos lentes opticos con receta. Desde $35.000 monofocales y desde $90.000 multifocales. ¿Necesitas examen o ya tienes receta?</p>
-          <p class="bubble customer">Tengo receta. ¿En que comuna estan? Estoy en El Bosque.</p>
-          <p class="bubble ai">Estamos en San Bernardo, atendemos El Bosque tambien. ¿Te dejo agenda hoy o manana? Tambien aceptamos Caja Los Andes y Banmedica.</p>
-          <p class="bubble customer">Manana 17:00. Carolina, 9 1234 5678. Caja Los Andes.</p>
-          <p class="bubble ai">Listo, Carolina. Cita confirmada manana 17:00 con Caja Los Andes. Recibiras recordatorio. ¡Te esperamos!</p>
+
+        <div class="demo-tabs" role="tablist">
+          <button class="tab-btn active" data-scenario="lentes" role="tab" aria-selected="true">Lentes c/receta</button>
+          <button class="tab-btn" data-scenario="examen" role="tab" aria-selected="false">Examen visual</button>
+          <button class="tab-btn" data-scenario="reparacion" role="tab" aria-selected="false">Reparacion</button>
+          <button class="tab-btn" data-scenario="convenio" role="tab" aria-selected="false">Convenio Isapre</button>
         </div>
+
+        <div class="chat-scenarios">
+          <div class="chat" data-scenario="lentes">
+            <p class="bubble customer">Hola, ¿hacen lentes con receta? ¿Cuanto salen?</p>
+            <p class="bubble ai">Si. Desde $35.000 monofocales y desde $90.000 multifocales. ¿Necesitas examen o ya tienes receta?</p>
+            <p class="bubble customer">Tengo receta. Estoy en El Bosque.</p>
+            <p class="bubble ai">Atendemos El Bosque. ¿Te dejo agenda hoy o manana? Aceptamos Caja Los Andes y Banmedica.</p>
+            <p class="bubble customer">Manana 17:00. Carolina, 9 1234 5678, Caja Los Andes.</p>
+            <p class="bubble ai">Listo Carolina. Cita confirmada manana 17:00 con Caja Los Andes. Recibiras recordatorio.</p>
+          </div>
+
+          <div class="chat" data-scenario="examen" hidden>
+            <p class="bubble customer">Hola, ¿hacen examen visual? ¿Es pagado?</p>
+            <p class="bubble ai">Si. Examen visual completo $15.000. Gratis si despues compras los lentes con nosotros. Demora 25 min.</p>
+            <p class="bubble customer">¿Tienen cupos para esta semana?</p>
+            <p class="bubble ai">Si. Esta semana tengo: jueves 11:00, jueves 16:30 y viernes 10:00. ¿Cual te acomoda?</p>
+            <p class="bubble customer">Viernes 10:00. Pedro, 9 8765 4321.</p>
+            <p class="bubble ai">Confirmado Pedro, viernes 10:00. Te envio recordatorio el jueves 17:00. ¡Te esperamos!</p>
+          </div>
+
+          <div class="chat" data-scenario="reparacion" hidden>
+            <p class="bubble customer">Hola, se me partio el marco. ¿Lo arreglan?</p>
+            <p class="bubble ai">Generalmente si. ¿Me puedes enviar foto del marco? Asi te confirmo si es soldable o requiere cambio.</p>
+            <p class="bubble customer">[foto del marco roto]</p>
+            <p class="bubble ai">Es soldable. Costo aprox $12.000-$18.000, entrega 2 dias. Para cotizar exacto, ¿pasas al local o lo retiramos?</p>
+            <p class="bubble customer">¿Pueden retirar en San Bernardo?</p>
+            <p class="bubble ai">Si, viernes en la tarde. Te derivo con Pablo del equipo para coordinar hora y direccion exacta.</p>
+          </div>
+
+          <div class="chat" data-scenario="convenio" hidden>
+            <p class="bubble customer">¿Trabajan con Banmedica?</p>
+            <p class="bubble ai">Si, Banmedica y otras: Colmena, Cruz Blanca, FONASA, Caja Los Andes, Caja 18.</p>
+            <p class="bubble customer">¿Cuanto me bonifican por lente?</p>
+            <p class="bubble ai">Banmedica bonifica entre $25.000 y $80.000 segun tu plan. Tienes que traer la orden medica y tu receta vigente.</p>
+            <p class="bubble customer">Ok, ¿que necesitan para agendarme?</p>
+            <p class="bubble ai">Nombre, telefono, comuna, y dia que prefieres. Yo confirmo cupo y te envio aviso 24h antes.</p>
+          </div>
+        </div>
+
         <div class="crm-row">
           <span>Carolina · El Bosque</span>
           <strong>Multifocales c/receta</strong>
@@ -132,8 +175,34 @@
   </main>
 
   <footer>
-    <strong>Saul IA Studios</strong>
-    <span>IA instalada, no explicada.</span>
+    <div>
+      <strong>Saul IA Studios</strong>
+      <span>IA instalada, no explicada.</span>
+    </div>
+    <div class="footer-meta">
+      <a href="https://wa.me/56968171774">WhatsApp +56 9 6817 1774</a>
+      <a href="index.html">← Volver al inicio</a>
+    </div>
   </footer>
+
+  <script>
+    (function() {
+      var buttons = document.querySelectorAll('.tab-btn');
+      var chats = document.querySelectorAll('.chat[data-scenario]');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var target = btn.getAttribute('data-scenario');
+          buttons.forEach(function(b) {
+            var active = b === btn;
+            b.classList.toggle('active', active);
+            b.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+          chats.forEach(function(c) {
+            c.hidden = c.getAttribute('data-scenario') !== target;
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

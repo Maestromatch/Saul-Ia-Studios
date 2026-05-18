@@ -54,6 +54,17 @@ Cuando:
 Promesa:
 - Planilla para estados, fuente y proximo paso.
 
+### Setup Identidad Meta Legal — $89.000 a $149.000
+
+Cuando:
+- Quiere hacer anuncios pero tiene Instagram/Facebook/Business Manager desordenado.
+- Mezcla cuentas personales con negocio.
+- No sabe si usar cuenta antigua o crear una nueva.
+- Quiere operar con factura/datos legales consistentes.
+
+Promesa:
+- Mapa claro de activos Meta, seguridad, IDs y siguiente paso para campañas.
+
 ## Paquetes principales
 
 ### Pack IA Express — $250.000 a $450.000
@@ -96,3 +107,4 @@ Incluye:
 - "Pierdo leads" -> CRM simple / Pack IA.
 - "Quiero mas clientes" -> Sistema captacion / Ads Growth.
 - "Tengo fotos pero no publico" -> Pack posts / Content Engine.
+- "No tengo Meta ordenado" -> Setup Identidad Meta Legal.

@@ -77,6 +77,27 @@ El sistema no reemplaza al tecnico; le entrega solicitudes mejor armadas.
 
 Convertir WhatsApp en pedidos mas ordenados y promociones mejor ejecutadas.
 
+## Emprendedores listos para hacer ads
+
+### Dolor
+
+- Instagram personal mezclado con negocio.
+- No tienen Facebook Page.
+- Business Manager perdido o inexistente.
+- Sin Pixel.
+- Sin cuenta publicitaria clara.
+- Quieren facturar pero datos no coinciden.
+
+### Oferta entrada
+
+- Setup Identidad Meta Legal.
+- Mini Landing de Confianza.
+- Auditoria Ads Express.
+
+### Mensaje clave
+
+Antes de invertir en anuncios, hay que ordenar los activos. Si la base de Meta esta mal, la campaña parte con problemas.
+
 ## Centros esteticos / dentistas
 
 ### Dolor

@@ -384,6 +384,46 @@ Detectar por que campañas no convierten o como lanzar mejor.
 
 Cliente tiene diagnostico y plan de accion.
 
+## 10.1 Setup Identidad Meta Legal
+
+### Objetivo
+
+Ordenar la base digital/legal minima para que el cliente pueda operar Meta Ads, Instagram/Facebook y presencia comercial sin mezclar activos personales con negocio.
+
+### Pasos
+
+1. Cobrar $89K-$149K.
+2. Preguntar si ya tiene:
+   - Instagram.
+   - Facebook Page.
+   - Business Manager.
+   - cuenta publicitaria.
+   - Pixel.
+   - empresa/RUT.
+   - factura electronica.
+3. Auditar Instagram viejo vs nuevo:
+   - restricciones.
+   - correo.
+   - conexion a Business.
+   - historial.
+   - valor de seguidores.
+4. Recomendar estructura:
+   - correo oficial.
+   - Instagram.
+   - Facebook Page.
+   - Business Portfolio.
+   - Ad Account.
+   - Pixel/Dataset.
+5. Guiar configuracion o entregar checklist paso a paso.
+6. Pedir que guarde IDs en archivo seguro.
+7. Explicar que tokens no se comparten por chat.
+8. Si necesita facturar, derivar a Formaliza o contador/abogado aliado.
+9. Ofrecer Ads Growth cuando activos esten listos.
+
+### Criterio terminado
+
+Cliente tiene mapa claro de activos Meta, seguridad basica, IDs ubicados y proximo paso para campañas.
+
 ## 11. Pack IA Express
 
 ### Objetivo

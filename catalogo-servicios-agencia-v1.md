@@ -306,6 +306,7 @@ Partimos chico, demostramos valor y dejamos un camino claro para escalar.
 - Pack 1 Reel Simple: $59.000 - $89.000 CLP.
 - Setup CRM Simple: $79.000 CLP.
 - Auditoria Ads Express: $59.000 CLP.
+- Setup Identidad Meta Legal: $89.000 - $149.000 CLP.
 
 ## Uso
 

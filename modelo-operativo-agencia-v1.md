@@ -41,6 +41,7 @@ Ejecuta:
 - Google Business.
 - Contenido organico.
 - Retargeting.
+- Prospeccion propia de la agencia.
 
 ### 4. Content
 
@@ -167,3 +168,20 @@ Cada cliente debe dejar:
 - 1 pieza para portafolio.
 
 Si no queda aprendizaje documentado, la agencia no escala.
+
+## Agente comercial interno
+
+El sistema comercial propio vive en:
+
+`agente-comercial-agencia/`
+
+Uso:
+- buscar prospectos,
+- filtrar clientes,
+- vender mini-servicios,
+- agendar diagnosticos,
+- alimentar CRM,
+- documentar objeciones,
+- mejorar mensajes.
+
+Este agente se debe usar antes de crear campañas o prospectar manualmente para mantener consistencia.

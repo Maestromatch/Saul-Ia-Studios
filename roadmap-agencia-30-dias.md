@@ -65,6 +65,7 @@ Tareas:
 - [ ] Capturas del bot/CRM.
 - [ ] Resultados ads/contenido.
 - [ ] Oferta Constructor Growth.
+- [ ] Activar agente comercial interno `agente-comercial-agencia/`.
 - [ ] Prospectar 30 constructoras/remodeladores.
 - [ ] Agendar 3 llamadas.
 

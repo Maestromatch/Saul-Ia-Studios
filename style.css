@@ -377,6 +377,11 @@ h3 {
   box-shadow: 0 18px 50px rgba(8, 127, 104, 0.12);
 }
 
+.featured-mini {
+  border-color: rgba(240, 180, 41, 0.68) !important;
+  background: #fffdf5 !important;
+}
+
 .mini-grid {
   grid-template-columns: repeat(3, 1fr);
 }

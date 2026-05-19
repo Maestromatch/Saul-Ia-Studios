@@ -406,7 +406,23 @@ h3 {
 }
 
 .section-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.section-cta p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .mini-cta {
@@ -1100,5 +1116,9 @@ footer {
 
   .mini-cta {
     width: 100%;
+  }
+
+  .section-cta {
+    align-items: stretch;
   }
 }

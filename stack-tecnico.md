@@ -91,3 +91,19 @@ Margen: con 1 cliente activo de mantención básica ($80K), la infra se paga 10 
 | Fecha | Cambio | Razón |
 |---|---|---|
 | 2026-05-16 | Documento inicial | Consolidar antes del primer cierre |
+| 2026-05-19 | n8n-MCP como herramienta interna de diseno y validacion | Reducir errores al crear workflows n8n, validar nodos/conexiones y evitar tocar produccion directo con IA |
+
+## Herramienta interna: n8n-MCP
+
+`n8n-MCP` queda como herramienta interna posible para construir y revisar automatizaciones n8n.
+
+Uso recomendado:
+- Primero en modo documentacion/validacion, sin `N8N_API_KEY`.
+- Solo usar modo gestion con API si existe ambiente de desarrollo, backup y permisos controlados.
+- Nunca editar workflows productivos directamente con IA.
+- Buscar templates antes de crear desde cero.
+- Configurar parametros explicitamente; no confiar en defaults.
+- Validar nodo por nodo y luego workflow completo antes de entregar.
+- Desactivar o limitar herramientas peligrosas si no se necesitan.
+
+No se menciona al prospecto salvo que pregunte por el stack tecnico. Para venta, el mensaje sigue siendo: "dejamos el sistema funcionando, probado y con seguimiento".

@@ -4,6 +4,17 @@
 
 Transformar Saul El Constructor en caso real y usarlo para vender el primer cliente externo con sistema probado.
 
+## Actualizacion de sistema 2026-05-19
+
+Se incorpora memoria progresiva y design system como base operacional:
+
+- `memory/observations-index.md`
+- `memory/evolucion.md`
+- `design-system/MASTER.md`
+- `protocolo-memoria-y-verificacion-agencia.md`
+
+Esto cambia el modo de trabajo: antes de crear nuevas piezas, revisar memoria relevante y verificar con evidencia.
+
 ## Semana 1 — Cerrar sistema interno
 
 Prioridad:
@@ -68,6 +79,11 @@ Tareas:
 - [ ] Activar agente comercial interno `agente-comercial-agencia/`.
 - [ ] Prospectar 30 constructoras/remodeladores.
 - [ ] Agendar 3 llamadas.
+
+Avance 2026-05-19:
+- [x] Agente comercial interno activado con CRM inicial.
+- [x] Primer batch constructoras/remodeladores creado.
+- [ ] Enviar primeros 10 mensajes.
 
 Resultado:
 - Primer prospecto externo para Sistema de Captacion IA Constructoras.

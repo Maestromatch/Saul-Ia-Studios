@@ -4,6 +4,8 @@
 
 La agencia opera como una fabrica de sistemas IA para pymes locales.
 
+La agencia tambien opera como un sistema de aprendizaje compuesto: cada repositorio, cliente, error o servicio nuevo debe convertirse en memoria, SOP o activo reutilizable.
+
 Cada cliente debe pasar por:
 
 1. Diagnostico.
@@ -60,6 +62,8 @@ Controla:
 - Reportes.
 - Learning log.
 - SOPs.
+- Memoria progresiva.
+- Verificacion por evidencia.
 
 ## Producto minimo por cliente
 
@@ -168,6 +172,20 @@ Cada cliente debe dejar:
 - 1 pieza para portafolio.
 
 Si no queda aprendizaje documentado, la agencia no escala.
+
+## Protocolo de memoria
+
+Antes de ejecutar cambios relevantes:
+
+1. Leer `memory/observations-index.md`.
+2. Abrir solo el detalle necesario.
+3. Si toca UI, revisar `design-system/MASTER.md`.
+4. Ejecutar.
+5. Verificar con evidencia.
+6. Registrar aprendizaje si aplica.
+
+Documento rector:
+- `protocolo-memoria-y-verificacion-agencia.md`
 
 ## Agente comercial interno
 

@@ -17,6 +17,17 @@ No empieces a construir si no estan claros:
 
 Si falta uno, estas entrando a estancarte.
 
+## Antes de ejecutar
+
+Para trabajos importantes:
+
+1. Revisa `memory/observations-index.md`.
+2. Revisa `protocolo-memoria-y-verificacion-agencia.md`.
+3. Si es landing, demo o dashboard, revisa `design-system/MASTER.md`.
+4. Ejecuta con checklist.
+5. Verifica con evidencia.
+6. Guarda aprendizaje si sirve para repetirlo.
+
 ---
 
 # Flujo general para cualquier servicio

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Fondo lino -->
+  <rect width="1200" height="630" fill="#F4F3EF"/>
+
+  <!-- Textura grid sutil -->
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgba(17,17,17,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Banda izquierda oscura -->
+  <rect x="0" y="0" width="6" height="630" fill="#111111"/>
+
+  <!-- Marca Ae (cuadrado oscuro) -->
+  <rect x="80" y="80" width="64" height="64" rx="12" fill="#111111"/>
+  <text x="112" y="123" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#FAFAF8" text-anchor="middle">Ae</text>
+
+  <!-- Nombre agencia -->
+  <text x="80" y="230" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#111111" letter-spacing="-1">Aetria Studio</text>
+
+  <!-- Separador -->
+  <rect x="80" y="260" width="120" height="2" fill="#2F3E2B"/>
+
+  <!-- Tagline -->
+  <text x="80" y="320" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#777777" letter-spacing="0.5">Ingeniería Comercial · Automatización · IA</text>
+
+  <!-- Claim principal -->
+  <text x="80" y="400" font-family="Georgia, serif" font-size="36" font-weight="400" fill="#111111">Diseñamos la infraestructura digital</text>
+  <text x="80" y="445" font-family="Georgia, serif" font-size="36" font-weight="400" fill="#111111">que automatiza tus ventas.</text>
+
+  <!-- Precio ancla -->
+  <rect x="80" y="510" width="440" height="56" rx="8" fill="#111111"/>
+  <text x="300" y="544" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#FAFAF8" text-anchor="middle" letter-spacing="0.5">SETUPS DESDE $450.000 CLP · SANTIAGO</text>
+
+  <!-- Decoración círculo -->
+  <circle cx="1050" cy="315" r="220" fill="none" stroke="rgba(47,62,43,0.10)" stroke-width="1"/>
+  <circle cx="1050" cy="315" r="160" fill="none" stroke="rgba(47,62,43,0.07)" stroke-width="1"/>
+  <circle cx="1050" cy="315" r="90" fill="rgba(47,62,43,0.04)"/>
+</svg>

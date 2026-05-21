@@ -1353,6 +1353,47 @@ ul {
 }
 .testimonial-grid p { margin: 12px 0 0; color: var(--text-md); }
 
+/* ============ FOUNDER ============ */
+.founder-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.18), transparent 28rem),
+    var(--bg-2);
+  overflow: hidden;
+}
+
+.founder-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(168,85,247,0.35), rgba(255,255,255,0.04) 48%, rgba(124,58,237,0.18));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.founder-photo {
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+}
+
+.founder-card p:not(.eyebrow) {
+  color: var(--text-md);
+}
+
 /* ============ TIMELINE (proceso 5 pasos) ============ */
 .timeline {
   display: grid;
@@ -1621,7 +1662,7 @@ footer strong, footer .brand-wordmark { color: var(--text-hi); }
 
   .method-strip { grid-template-columns: repeat(2, 1fr); }
   .steps, .delivery-grid { grid-template-columns: repeat(2, 1fr); }
-  .path-grid, .service-grid, .proof-grid, .trust-grid, .testimonial-grid {
+  .path-grid, .service-grid, .proof-grid, .trust-grid, .testimonial-grid, .founder-card {
     grid-template-columns: 1fr;
   }
   .portfolio-grid { grid-template-columns: 1fr; }

@@ -35,3 +35,10 @@ Nota operativa: el repo actual aun contiene HTML estatico. Mientras no exista es
 - `agente-desarrollo-personal-INTEGRACION-AETRIA.md`: reglas de uso dentro de la mente de agencia.
 
 Regla: no subir audios, transcripciones, embeddings, bases SQLite ni datos personales sensibles si contienen informacion privada.
+
+## Panel de mando operativo
+
+- `panel-mando-herramientas-aetria-v1.md`: stack por servicio, credenciales, herramientas y plugins recomendados.
+- `checklist-stack-servicios-aetria.md`: checklist rapido antes de vender o entregar cada servicio.
+
+Regla: antes de prometer un servicio, revisar que el stack y credenciales minimas esten disponibles.

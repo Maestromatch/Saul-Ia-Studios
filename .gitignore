@@ -48,3 +48,8 @@ build/
 .vercel/
 .env
 .env.local
+
+# Agente desarrollo personal - datos privados generados localmente
+agente-desarrollo-personal/audios/
+agente-desarrollo-personal/data/
+agente-desarrollo-personal/.venv/

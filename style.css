@@ -763,6 +763,61 @@ p {
   font-size: 13.5px;
 }
 
+/* ============ TABS ============ */
+.tab-navigation {
+  padding-top: clamp(34px, 5vw, 58px);
+  padding-bottom: clamp(24px, 4vw, 42px);
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.tab-button {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text-md);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.tab-button:hover {
+  border-color: rgba(168, 85, 247, 0.28);
+  color: var(--text-hi);
+  transform: translateY(-1px);
+}
+
+.tab-button.is-active {
+  border-color: rgba(168, 85, 247, 0.42);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.24), rgba(168, 85, 247, 0.12));
+  color: var(--text-hi);
+  box-shadow: 0 14px 40px rgba(124, 58, 237, 0.12);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.is-active {
+  display: block;
+}
+
 /* ============ SECTIONS BASE ============ */
 .section {
   position: relative;

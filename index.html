@@ -245,7 +245,20 @@
       </div>
     </section>
 
-    <section class="section muted reveal">
+    <section class="section tab-navigation reveal" aria-label="Explora Aetria">
+      <div class="section-heading">
+        <p class="eyebrow">Explora Aetria</p>
+        <h2>Elige lo que quieres revisar.</h2>
+      </div>
+      <div class="tab-list" role="tablist" aria-label="Categorías de contenido">
+        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-tab="sistema">Sistema</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="servicios">Servicios</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="confianza">Confianza</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="proceso">Proceso</button>
+      </div>
+    </section>
+
+    <section class="section muted reveal tab-panel is-active" data-tab-panel="sistema">
       <div class="section-heading">
         <p class="eyebrow">El problema real</p>
         <h2>El desorden comercial cuesta dinero.</h2>
@@ -275,7 +288,7 @@
       </div>
     </section>
 
-    <section id="caminos" class="section reveal">
+    <section id="caminos" class="section reveal tab-panel is-active" data-tab-panel="sistema">
       <div class="section-heading">
         <p class="eyebrow">Recepción · Conexión · Control</p>
         <h2>Tres pilares de un sistema que convierte.</h2>
@@ -299,7 +312,7 @@
       </div>
     </section>
 
-    <section id="servicios" class="section muted reveal">
+    <section id="servicios" class="section muted reveal tab-panel" data-tab-panel="servicios">
       <div class="section-heading">
         <p class="eyebrow">Servicios principales</p>
         <h2>Servicios para emprendedores y negocios que venden por WhatsApp.</h2>
@@ -388,7 +401,7 @@
       </div>
     </section>
 
-    <section id="portafolio" class="section portfolio-section reveal">
+    <section id="portafolio" class="section portfolio-section reveal tab-panel" data-tab-panel="servicios">
       <div class="section-heading">
         <p class="eyebrow">Catálogo de implementación</p>
         <h2>Servicios con entregables claros, muestra y resultado esperado.</h2>
@@ -429,7 +442,7 @@
       </div>
     </section>
 
-    <section class="section muted creative-section reveal">
+    <section class="section muted creative-section reveal tab-panel" data-tab-panel="servicios">
       <div class="section-heading">
         <p class="eyebrow">Flyers orgánicos</p>
         <h2>Piezas listas para publicar mientras construimos autoridad.</h2>
@@ -442,7 +455,7 @@
       </div>
     </section>
 
-    <section id="mini" class="section reveal">
+    <section id="mini" class="section reveal tab-panel" data-tab-panel="servicios">
       <div class="section-heading">
         <p class="eyebrow">Entrada de bajo riesgo</p>
         <h2>Servicios de entrada para validar confianza antes de escalar.</h2>
@@ -465,7 +478,7 @@
       </div>
     </section>
 
-    <section id="caso" class="section case-section reveal">
+    <section id="caso" class="section case-section reveal tab-panel" data-tab-panel="confianza">
       <div class="section-heading">
         <p class="eyebrow">Laboratorio operativo</p>
         <h2>No vendemos teoría: probamos sistemas en operaciones reales.</h2>
@@ -491,7 +504,7 @@
       </div>
     </section>
 
-    <section class="section trust-assets reveal">
+    <section class="section trust-assets reveal tab-panel" data-tab-panel="confianza">
       <div class="section-heading">
         <p class="eyebrow">Confianza local</p>
         <h2>Antes de invertir en anuncios, ordenamos las pruebas que hacen que un cliente crea.</h2>
@@ -515,7 +528,7 @@
       </div>
     </section>
 
-    <section class="section testimonials-section reveal">
+    <section class="section testimonials-section reveal tab-panel" data-tab-panel="confianza">
       <div class="section-heading">
         <p class="eyebrow">Testimonios</p>
         <h2>Resultados reales, documentados cuando el cliente autorice publicarlos.</h2>
@@ -551,7 +564,7 @@
       </div>
     </section>
 
-    <section id="quien-soy" class="section founder-section reveal">
+    <section id="quien-soy" class="section founder-section reveal tab-panel" data-tab-panel="confianza">
       <div class="founder-card">
         <!-- TODO Saul: reemplazar por foto real optimizada en /assets/saul-aetria.webp -->
         <img class="founder-photo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='360' viewBox='0 0 320 360'%3E%3Crect width='320' height='360' rx='28' fill='%23110A1F'/%3E%3Ccircle cx='160' cy='125' r='58' fill='%237C3AED'/%3E%3Cpath d='M58 340c14-84 72-130 102-130s88 46 102 130' fill='%239B6DFF'/%3E%3C/svg%3E" alt="Foto de Saul, fundador de Aetria Studio">
@@ -566,7 +579,7 @@
       </div>
     </section>
 
-    <section class="section muted reveal">
+    <section class="section muted reveal tab-panel" data-tab-panel="proceso">
       <div class="section-heading">
         <p class="eyebrow">Proceso</p>
         <h2>Cómo trabajamos sin improvisar.</h2>
@@ -580,7 +593,7 @@
       </div>
     </section>
 
-    <section class="section reveal">
+    <section class="section reveal tab-panel" data-tab-panel="proceso">
       <div class="section-heading">
         <p class="eyebrow">Confianza</p>
         <h2>Sin promesas vacías: alcance, proceso y seguimiento.</h2>
@@ -601,7 +614,7 @@
       </div>
     </section>
 
-    <section class="section muted reveal">
+    <section class="section muted reveal tab-panel" data-tab-panel="proceso">
       <div class="section-heading">
         <p class="eyebrow">Entrega premium</p>
         <h2>Todo servicio sale con orden, prueba y siguiente paso.</h2>
@@ -708,6 +721,40 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
       document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+    })();
+
+    // ============ Content tabs ============
+    (function(){
+      var buttons = document.querySelectorAll('[data-tab]');
+      var panels = document.querySelectorAll('[data-tab-panel]');
+      if (!buttons.length || !panels.length) return;
+
+      function activate(tab) {
+        buttons.forEach(function(btn){
+          var active = btn.getAttribute('data-tab') === tab;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panels.forEach(function(panel){
+          panel.classList.toggle('is-active', panel.getAttribute('data-tab-panel') === tab);
+        });
+      }
+
+      buttons.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          activate(btn.getAttribute('data-tab'));
+        });
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach(function(link){
+        link.addEventListener('click', function(){
+          var id = link.getAttribute('href').slice(1);
+          var target = document.getElementById(id);
+          if (target && target.hasAttribute('data-tab-panel')) {
+            activate(target.getAttribute('data-tab-panel'));
+          }
+        });
+      });
     })();
 
     // ============ Lead Engine: highlight pipeline stages in rotation ============

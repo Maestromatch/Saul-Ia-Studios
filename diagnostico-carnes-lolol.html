@@ -6,8 +6,8 @@
 <title>Diagnóstico Digital · Carnes Lolol · AetriaStudio</title>
 <style>
 :root{
-  --olive:#6B1212;--olive2:#7E1A1A;--olive3:#9A2020;
-  --bronze:#B03030;--bronze2:#C84545;
+  --olive:#1B3A5C;--olive2:#1E4A73;--olive3:#2460A0;
+  --bronze:#8B6914;--bronze2:#A07C20;
   --paper:#FAF8F4;--cream:#F2EDE4;--cream2:#E8E0D4;
   --red:#C0392B;--red2:#E74C3C;
   --green:#27744A;--green2:#2E8A58;--green-lt:#D1FAE5;
@@ -69,7 +69,7 @@ nav a:hover{background:rgba(255,255,255,.12);color:var(--paper);}
 
 /* ── HERO ── */
 .hero{
-  background:linear-gradient(155deg,#1A0505 0%,#6B1212 50%,#7E1A1A 100%);
+  background:linear-gradient(155deg,#0A1E35 0%,#1B3A5C 55%,#1E4A73 100%);
   color:var(--paper);padding:56px 48px 48px;
   position:relative;overflow:hidden;
 }
@@ -188,7 +188,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 .yes{color:var(--green);font-size:16px;}
 .no{color:#D1D5DB;font-size:16px;}
 .partial{color:var(--amber);font-size:13px;font-weight:700;}
-.lolol-win{background:rgba(107,18,18,.07);}
+.lolol-win{background:rgba(27,58,92,.07);}
 .comp-insight{
   margin-top:14px;background:var(--green-lt);border:1px solid #86EFAC;
   border-radius:8px;padding:14px 18px;
@@ -800,6 +800,13 @@ input[type=range] { height: 5px; }
   .roi-controls{grid-template-columns:1fr;}
   .roi-results{grid-template-columns:1fr 1fr;}
   .risk-grid{grid-template-columns:1fr;}
+  /* ── brecha digital móvil — stack vertical ── */
+  .gap-visual{padding:16px 14px;overflow-x:hidden;}
+  .gap-bars{gap:18px;}
+  .gap-bar-row{flex-direction:column;gap:5px;align-items:flex-start;}
+  .gap-bar-label{width:100% !important;font-size:12px;font-weight:700;}
+  .gap-bar-track{width:100%;height:30px;border-radius:5px;}
+  .gap-bar-fill{height:100%;font-size:11px;border-radius:5px;}
   .pricing-grid{grid-template-columns:1fr 1fr;}
   .steps-grid{grid-template-columns:1fr;}
   nav{overflow-x:auto;flex-wrap:nowrap;padding:8px 16px;}

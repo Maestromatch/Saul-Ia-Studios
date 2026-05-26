@@ -363,6 +363,27 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 }
 .price-monthly{font-size:11px;color:var(--muted);margin-top:2px;}
 .price-unico{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;}
+/* ── PRECIO ANCLA ── */
+.price-launch-badge{
+  display:inline-block;background:var(--bronze);color:#fff;
+  font-family:sans-serif;font-size:9px;font-weight:700;letter-spacing:.6px;
+  padding:2px 8px;border-radius:20px;text-transform:uppercase;margin-bottom:4px;
+}
+.price-anchor{
+  font-family:sans-serif;font-size:11px;color:var(--light);
+  text-decoration:line-through;text-decoration-color:var(--red);
+  text-decoration-thickness:1.5px;margin-bottom:2px;
+}
+.pc-launch-badge{
+  display:inline-block;background:var(--bronze);color:#fff;
+  font-family:sans-serif;font-size:9px;font-weight:700;letter-spacing:.6px;
+  padding:2px 8px;border-radius:20px;text-transform:uppercase;margin-bottom:5px;
+}
+.pc-anchor{
+  font-family:sans-serif;font-size:12px;color:var(--light);
+  text-decoration:line-through;text-decoration-color:var(--red);
+  text-decoration-thickness:1.5px;margin-bottom:3px;
+}
 .price-time{
   font-size:10px;color:var(--light);margin-top:3px;
   font-family:sans-serif;
@@ -1134,6 +1155,8 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Google Business reclamado · Error delivery eliminado · 24 horas de entrega <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
+            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-anchor">Valor regular: $159.000</div>
             <div class="price-setup">$79.000</div>
             <div class="price-unico">Pago único</div>
             <div class="price-time">⏱ Entrega: 24 horas</div>
@@ -1180,6 +1203,8 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">WhatsApp Business · Instagram optimizado · SEO Google · QR imprimibles · 7 días <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
+            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-anchor">Valor regular: $359.000</div>
             <div class="price-setup">$179.000</div>
             <div class="price-unico">Incluye 1A</div>
             <div class="price-time">⏱ Entrega: 7 días</div>
@@ -1238,6 +1263,8 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Motor de contenido Zernio · WA broadcast · Publicación automática IG + Google · Mensual <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
+            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-anchor">Valor regular: $259.000 · $119.000/mes</div>
             <div class="price-setup">$129.000 <small style="font-size:11px;">setup</small></div>
             <div class="price-monthly">+ <strong>$59.000/mes</strong></div>
             <div class="price-time">⏱ Entrega: 7 días</div>
@@ -1288,6 +1315,8 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Catálogo digital · Pedidos para retiro · Bot WA básico · Organización de stock anticipada <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
+            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-anchor">Valor regular: $499.000 · $179.000/mes</div>
             <div class="price-setup">$249.000 <small style="font-size:11px;">setup</small></div>
             <div class="price-monthly">+ <strong>$89.000/mes</strong></div>
             <div class="price-time">⏱ Entrega: 10 días</div>
@@ -1340,6 +1369,8 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Web propia · E-commerce · Bot IA WhatsApp · SEO técnico · Publicidad Meta · Dominio propio <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
+            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-anchor">Valor regular: $990.000 · $299.000/mes</div>
             <div class="price-setup">$490.000 <small style="font-size:11px;">setup</small></div>
             <div class="price-monthly">+ <strong>$149.000/mes</strong></div>
             <div class="price-time">⏱ Entrega: 30 días</div>
@@ -1578,6 +1609,8 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 1A</div>
       <div class="pc-name">"Corrección urgente"</div>
+      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-anchor">Valor regular: $159.000</div>
       <div class="pc-setup">$79.000 <small>CLP</small></div>
       <div class="pc-unico">Pago único</div>
       <div class="pc-monthly">Sin mensualidad</div>
@@ -1586,6 +1619,8 @@ input[type=range] { height: 5px; }
     <div class="price-card featured">
       <div class="pc-fase">Fase 1B</div>
       <div class="pc-name">"Fundación completa"</div>
+      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-anchor">Valor regular: $359.000</div>
       <div class="pc-setup">$179.000 <small>CLP</small></div>
       <div class="pc-unico">Incluye 1A · Pago único</div>
       <div class="pc-monthly">Sin mensualidad</div>
@@ -1594,6 +1629,8 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 2</div>
       <div class="pc-name">"Motor de ofertas"</div>
+      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-anchor">Valor regular: $259.000 setup · $119.000/mes</div>
       <div class="pc-setup">$129.000 <small>setup</small></div>
       <div class="pc-monthly">+ <strong>$59.000/mes</strong></div>
       <div class="pc-time">⏱ 7 días</div>
@@ -1601,6 +1638,8 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 3</div>
       <div class="pc-name">"Pedidos y catálogo"</div>
+      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-anchor">Valor regular: $499.000 setup · $179.000/mes</div>
       <div class="pc-setup">$249.000 <small>setup</small></div>
       <div class="pc-monthly">+ <strong>$89.000/mes</strong></div>
       <div class="pc-time">⏱ 10 días</div>
@@ -1608,6 +1647,8 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 4 — Pack 360</div>
       <div class="pc-name">"Tienda online completa"</div>
+      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-anchor">Valor regular: $990.000 setup · $299.000/mes</div>
       <div class="pc-setup">$490.000 <small>setup</small></div>
       <div class="pc-monthly">+ <strong>$149.000/mes</strong></div>
       <div class="pc-time">⏱ 30 días</div>
@@ -1615,7 +1656,8 @@ input[type=range] { height: 5px; }
   </div>
 
   <div style="margin-top:14px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 20px;font-family:sans-serif;font-size:13px;color:var(--muted);line-height:1.7;">
-    <strong style="color:var(--text);">Forma de pago:</strong> 50% al iniciar el trabajo · 50% al entregar todo funcionando. La mensualidad empieza solo cuando el sistema está operativo y el dueño lo verifica.
+    <strong style="color:var(--text);">Forma de pago:</strong> 50% al iniciar el trabajo · 50% al entregar todo funcionando. La mensualidad empieza solo cuando el sistema está operativo y el dueño lo verifica.<br>
+    <strong style="color:var(--bronze);">⚠ Precio de lanzamiento:</strong> Válido para el primer cliente de la zona El Bosque. El valor regular de cada fase está indicado sobre cada precio.
   </div>
 
   <div class="garantia-box">

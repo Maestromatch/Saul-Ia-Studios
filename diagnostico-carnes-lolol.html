@@ -389,10 +389,26 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
   font-family:sans-serif;
 }
 .expand-icon{
-  display:inline-block;margin-left:8px;font-size:12px;
-  transition:transform .25s;color:var(--muted);
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;
+  background:var(--olive);color:#fff;
+  border-radius:50%;
+  font-size:13px;font-weight:900;
+  margin-left:10px;vertical-align:middle;flex-shrink:0;
+  transition:transform .28s ease, background .2s;
+  box-shadow:0 2px 6px rgba(27,58,92,.35);
 }
-.phase-card.expanded .expand-icon{transform:rotate(180deg);}
+.phase-card:not(.expanded) .expand-icon{
+  animation:pulse-arrow 2.4s ease-in-out infinite;
+}
+@keyframes pulse-arrow{
+  0%,100%{box-shadow:0 2px 6px rgba(27,58,92,.35);}
+  50%{box-shadow:0 2px 14px rgba(139,105,20,.7);}
+}
+.phase-card.expanded .expand-icon{
+  transform:rotate(180deg);
+  background:var(--bronze);
+}
 
 /* phase body accordion */
 .phase-body{

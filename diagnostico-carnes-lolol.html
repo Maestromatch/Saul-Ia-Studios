@@ -809,9 +809,103 @@ input[type=range] { height: 5px; }
 .step-card h4 { font-size: 15px; margin-bottom: 10px; }
 .step-card p { font-size: 14px; line-height: 1.7; }
 
+/* ── COUNTDOWN BAR ── */
+#countdown-bar{
+  background:linear-gradient(90deg,#0A1E35 0%,#1B3A5C 60%,#8B6914 100%);
+  color:#fff;font-family:sans-serif;
+  padding:10px 20px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  justify-content:center;
+  position:sticky;top:42px;z-index:99;
+  box-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+.cd-label{
+  font-size:11px;font-weight:700;letter-spacing:.5px;
+  text-transform:uppercase;color:#C8B99A;white-space:nowrap;
+}
+.cd-timer{display:flex;align-items:center;gap:4px;}
+.cd-unit{
+  display:flex;flex-direction:column;align-items:center;
+  background:rgba(255,255,255,.1);border-radius:6px;
+  padding:4px 10px;min-width:44px;
+}
+.cd-unit span{font-size:20px;font-weight:900;line-height:1;color:#FFD875;}
+.cd-unit small{font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#8A9985;margin-top:1px;}
+.cd-sep{font-size:20px;font-weight:900;color:#8B6914;margin:0 2px;}
+.cd-scarcity{
+  font-size:11px;color:#F4C7A0;font-style:italic;white-space:nowrap;
+}
+.cd-expired{
+  font-size:13px;font-weight:700;color:#F87171;letter-spacing:.3px;
+}
+
+/* ── WHATSAPP CTA BUTTON ── */
+.wsp-cta-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,#1DB954,#128C7E);
+  color:#fff;font-family:sans-serif;font-weight:700;
+  font-size:14px;padding:14px 28px;border-radius:50px;
+  text-decoration:none;border:none;cursor:pointer;
+  box-shadow:0 4px 18px rgba(19,185,84,.4);
+  transition:transform .15s,box-shadow .15s;
+  margin-top:20px;width:100%;max-width:420px;
+  letter-spacing:.2px;
+}
+.wsp-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(19,185,84,.5);}
+.wsp-cta-btn svg{width:22px;height:22px;flex-shrink:0;}
+.wsp-phase-wrap{
+  display:flex;justify-content:center;
+  padding:18px 0 4px;border-top:1px solid var(--border2);
+  margin-top:20px;
+}
+
+/* ── FLOATING WSP BUTTON ── */
+#wsp-float{
+  position:fixed;bottom:24px;right:20px;z-index:999;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:#fff;border-radius:50px;
+  padding:12px 20px;font-family:sans-serif;font-size:13px;font-weight:700;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:0 4px 20px rgba(37,211,102,.5);
+  text-decoration:none;cursor:pointer;
+  animation:float-pulse 2.8s ease-in-out infinite;
+}
+@keyframes float-pulse{
+  0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.5);}
+  50%{box-shadow:0 6px 30px rgba(37,211,102,.75);}
+}
+#wsp-float svg{width:20px;height:20px;}
+#wsp-float .float-text{line-height:1.2;}
+#wsp-float .float-sub{font-size:10px;font-weight:400;opacity:.85;}
+
+/* ── CTA FINAL SECTION ── */
+.cta-final-box{
+  background:linear-gradient(135deg,#0A1E35,#1B3A5C);
+  border-radius:16px;padding:36px 32px;
+  text-align:center;margin-top:32px;
+  box-shadow:0 8px 32px rgba(0,0,0,.2);
+}
+.cta-final-title{
+  font-size:22px;color:#FAF8F4;margin-bottom:8px;line-height:1.35;
+}
+.cta-final-sub{
+  font-family:sans-serif;font-size:13px;color:#8A9985;
+  margin-bottom:24px;line-height:1.7;
+}
+.cta-final-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.cta-phase-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  color:#C8B99A;font-family:sans-serif;font-size:12px;font-weight:700;
+  padding:10px 18px;border-radius:50px;text-decoration:none;
+  transition:background .15s,border-color .15s;cursor:pointer;
+  letter-spacing:.3px;
+}
+.cta-phase-btn:hover{background:rgba(139,105,20,.25);border-color:#8B6914;}
+
 /* ── PRINT ── */
 @media print{
-  nav,#progress-bar,.nav-share{display:none;}
+  nav,#progress-bar,.nav-share,#countdown-bar,#wsp-float{display:none;}
   .phase-body{max-height:none !important;}
   .hero{padding:24px;}
   body{background:white;}
@@ -867,6 +961,21 @@ input[type=range] { height: 5px; }
   <a href="#precios">Precios</a>
   <button class="nav-share" onclick="shareWhatsApp()">📲 Compartir</button>
 </nav>
+
+<!-- ── COUNTDOWN BAR ── -->
+<div id="countdown-bar">
+  <span class="cd-label">⚡ Precio lanzamiento válido por:</span>
+  <div class="cd-timer">
+    <div class="cd-unit"><span id="cd-days">5</span><small>días</small></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span id="cd-hours">00</span><small>hrs</small></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span id="cd-mins">00</span><small>min</small></div>
+    <div class="cd-sep">:</div>
+    <div class="cd-unit"><span id="cd-secs">00</span><small>seg</small></div>
+  </div>
+  <span class="cd-scarcity">Solo para el primer cliente de El Bosque</span>
+</div>
 
 <!-- ── HERO ── -->
 <div class="hero">
@@ -1204,6 +1313,12 @@ input[type=range] { height: 5px; }
               </div>
             </div>
           </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1A+%2879.000%29.+%C2%BFCu%C3%A1ndo+arrancamos%3F" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+              Quiero comenzar con la Fase 1A — $79.000
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1264,6 +1379,12 @@ input[type=range] { height: 5px; }
               </div>
             </div>
           </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1B+%28179.000%29.+%C2%BFCu%C3%A1ndo+arrancamos%3F" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+              Quiero comenzar con la Fase 1B — $179.000
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1319,6 +1440,12 @@ input[type=range] { height: 5px; }
               </div>
             </div>
           </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+2+%28motor+de+ofertas%29.+%C2%BFC%C3%B3mo+avanzamos%3F" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+              Me interesa la Fase 2 — $129.000 setup
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1369,6 +1496,12 @@ input[type=range] { height: 5px; }
                 <span class="resolve-tag">✓ Catálogo digital</span>
               </div>
             </div>
+          </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+3+con+cat%C3%A1logo+y+pedidos.+%C2%BFC%C3%B3mo+avanzamos%3F" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+              Me interesa la Fase 3 — $249.000 setup
+            </a>
           </div>
         </div>
       </div>
@@ -1426,6 +1559,12 @@ input[type=range] { height: 5px; }
                 <span class="resolve-tag">✓ SEO dominante</span>
               </div>
             </div>
+          </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360+completo.+%C2%BFPodemos+hablar%3F" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+              Me interesa el Pack 360 — $490.000 setup
+            </a>
           </div>
         </div>
       </div>
@@ -1718,7 +1857,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── PRÓXIMOS PASOS ── -->
 <section id="pasos">
-  <div class="sec-title">▶️ Para avanzar con la Fase 1B esta semana</div>
+  <div class="sec-title">▶️ Para avanzar esta semana</div>
   <div class="sec-sub">Solo necesitamos 3 cosas para arrancar. Nada más.</div>
   <div class="steps-grid">
     <div class="step-card">
@@ -1728,13 +1867,25 @@ input[type=range] { height: 5px; }
     </div>
     <div class="step-card">
       <div class="step-num">2</div>
-      <h4>Primer pago: $89.500</h4>
-      <p>50% del valor de Fase 1B por transferencia. Ese mismo día empieza el trabajo. El saldo ($89.500) se paga cuando todo está funcionando y el dueño lo confirma.</p>
+      <h4>Primer pago: 50% al iniciar</h4>
+      <p>Pago por transferencia. Ese mismo día empieza el trabajo. El saldo restante se paga cuando todo está funcionando y el dueño lo confirma personalmente.</p>
     </div>
     <div class="step-card">
       <div class="step-num">3</div>
-      <h4>Entrega en 7 días</h4>
+      <h4>Entrega en el plazo acordado</h4>
       <p>Google verificado y sin errores. WhatsApp Business activo con mensajes configurados. Instagram actualizado con CTA. QR imprimibles en la mano. Guía para el personal.</p>
+    </div>
+  </div>
+
+  <div class="cta-final-box">
+    <div class="cta-final-title">¿Cuál fase quiere comenzar, Don Juan Carlos?</div>
+    <div class="cta-final-sub">Toque el botón de la fase que le interesa — llega directo a WhatsApp con el mensaje listo. Sin formularios, sin esperas.</div>
+    <div class="cta-final-btns">
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1A+%2879.000%29." target="_blank">▶ Fase 1A — $79.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1B+%28179.000%29." target="_blank">★ Fase 1B — $179.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+2." target="_blank">▶ Fase 2 — $129.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+3." target="_blank">▶ Fase 3 — $249.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360." target="_blank">▶ Pack 360 — $490.000</a>
     </div>
   </div>
 </section>
@@ -1854,6 +2005,42 @@ const gapIO=new IntersectionObserver((entries)=>{
 },{threshold:.3});
 const gapSection=document.querySelector('#riesgo .gap-visual');
 if(gapSection) gapIO.observe(gapSection);
+
+// ── COUNTDOWN TIMER ──
+(function(){
+  // Deadline: 5 días desde envío del documento (2026-05-31 23:59:59 CLT = UTC-4)
+  const deadline = new Date('2026-05-31T23:59:59-04:00');
+  const pad = n => String(n).padStart(2,'0');
+  function tick(){
+    const now = new Date();
+    const diff = deadline - now;
+    if(diff <= 0){
+      document.getElementById('countdown-bar').innerHTML =
+        '<span class="cd-expired">⛔ Precio de lanzamiento expirado — consultar valor regular</span>';
+      return;
+    }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000)  / 60000);
+    const secs  = Math.floor((diff % 60000)    / 1000);
+    document.getElementById('cd-days').textContent  = days;
+    document.getElementById('cd-hours').textContent = pad(hours);
+    document.getElementById('cd-mins').textContent  = pad(mins);
+    document.getElementById('cd-secs').textContent  = pad(secs);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
 </script>
+
+<!-- ── FLOATING WSP BUTTON ── -->
+<a id="wsp-float" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+hablar+sobre+el+diagn%C3%B3stico+digital." target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
+  <div class="float-text">
+    Escribir a Saúl<br>
+    <span class="float-sub">WhatsApp directo</span>
+  </div>
+</a>
+
 </body>
 </html>

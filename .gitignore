@@ -30,6 +30,12 @@ agente ventas/*-error.txt
 **/secrets.*
 **/*.secret
 **/.env*
+**/*api*key*.txt
+**/*password*.txt
+**/*pass*.txt
+
+# MCP config local — contiene API keys (no va al repo)
+.mcp.json
 
 # OS / editores
 .DS_Store

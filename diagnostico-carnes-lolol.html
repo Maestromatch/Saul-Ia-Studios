@@ -74,10 +74,10 @@ nav a:hover{background:rgba(255,255,255,.12);color:var(--paper);}
   position:relative;overflow:hidden;
 }
 .hero::after{
-  content:'🥩';
+  content:'LOLOL';
   position:absolute;right:40px;top:30px;
-  font-size:120px;opacity:.06;pointer-events:none;
-  filter:grayscale(1);
+  font-size:76px;letter-spacing:.08em;opacity:.055;pointer-events:none;
+  font-family:sans-serif;font-weight:900;color:#fff;
 }
 .hero-eyebrow{
   font-family:sans-serif;font-size:11px;letter-spacing:2px;
@@ -337,6 +337,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 .pb2{background:var(--bronze);}
 .pb3{background:var(--blue);}
 .pb4{background:var(--purple);}
+.pb5{background:#111827;}
 
 .phase-head-title{}
 .phase-name{
@@ -353,6 +354,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 .chip-start{background:var(--green-lt);color:#065F46;}
 .chip-agrosuper{background:#FEF3C7;color:#78350F;}
 .chip-360{background:var(--purple-lt);color:#5B21B6;}
+.chip-pro{background:#111827;color:#fff;}
 .phase-tagline{font-family:sans-serif;font-size:11px;color:var(--light);}
 
 .phase-head-price{
@@ -371,8 +373,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 }
 .price-anchor{
   font-family:sans-serif;font-size:11px;color:var(--light);
-  text-decoration:line-through;text-decoration-color:var(--red);
-  text-decoration-thickness:1.5px;margin-bottom:2px;
+  margin-bottom:2px;
 }
 .pc-launch-badge{
   display:inline-block;background:var(--bronze);color:#fff;
@@ -381,8 +382,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 }
 .pc-anchor{
   font-family:sans-serif;font-size:12px;color:var(--light);
-  text-decoration:line-through;text-decoration-color:var(--red);
-  text-decoration-thickness:1.5px;margin-bottom:3px;
+  margin-bottom:3px;
 }
 .price-time{
   font-size:10px;color:var(--light);margin-top:3px;
@@ -415,7 +415,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
   max-height:0;overflow:hidden;
   transition:max-height .5s cubic-bezier(.4,0,.2,1);
 }
-.phase-body.open{max-height:4800px;}
+.phase-body.open{max-height:6200px;}
 .phase-body-inner{
   padding:0 24px 24px;
   display:grid;grid-template-columns:1fr 1fr;gap:20px;
@@ -433,7 +433,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
   line-height:1.5;border-bottom:1px solid var(--border2);
 }
 .phase-tasks ul li:last-child{border-bottom:none;}
-.phase-tasks ul li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px;}
+.phase-tasks ul li::before{content:'•';color:var(--olive);font-weight:700;flex-shrink:0;margin-top:1px;}
 .phase-result-box{
   background:var(--cream);border-radius:8px;padding:16px;
   font-family:sans-serif;font-size:13px;color:var(--muted);
@@ -484,6 +484,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 .gbar2{background:linear-gradient(90deg,var(--bronze),var(--bronze2));}
 .gbar3{background:linear-gradient(90deg,var(--blue),#3B82F6);}
 .gbar4{background:linear-gradient(90deg,var(--purple),#8B5CF6);}
+.gbar5{background:linear-gradient(90deg,#111827,#4B5563);}
 .gbar-result{
   display:block;height:20px;border-radius:4px;
   background:var(--green-lt);border:1px solid #86EFAC;
@@ -505,6 +506,7 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
 .roi-controls{
   display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;
 }
+.roi-control{min-width:0;}
 .roi-control label{
   display:block;font-family:sans-serif;font-size:11px;font-weight:700;
   text-transform:uppercase;letter-spacing:1px;color:#6A7A65;margin-bottom:8px;
@@ -513,17 +515,34 @@ section{margin-bottom:60px;scroll-margin-top:54px;}
   font-family:sans-serif;font-size:24px;font-weight:900;
   color:#C8B99A;margin-bottom:8px;
 }
-input[type=range]{
+.roi-control input[type=range]{
   width:100%;-webkit-appearance:none;appearance:none;
-  height:4px;background:rgba(255,255,255,.2);border-radius:2px;outline:none;
+  height:34px;background:transparent;border-radius:2px;outline:none;
+  cursor:pointer;touch-action:pan-y;-webkit-tap-highlight-color:transparent;
 }
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none;width:18px;height:18px;border-radius:50%;
-  background:#C8B99A;cursor:pointer;
-  box-shadow:0 0 0 3px rgba(200,185,154,.2);
+.roi-control input[type=range]::-webkit-slider-runnable-track{
+  height:7px;background:rgba(255,255,255,.22);border-radius:999px;
 }
-input[type=range].blue-range{background:rgba(99,102,241,.3);}
-input[type=range].blue-range::-webkit-slider-thumb{background:#818CF8;}
+.roi-control input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:28px;height:28px;border-radius:50%;
+  background:#C8B99A;cursor:pointer;margin-top:-10.5px;
+  box-shadow:0 0 0 5px rgba(200,185,154,.18);
+}
+.roi-control input[type=range]::-moz-range-track{
+  height:7px;background:rgba(255,255,255,.22);border-radius:999px;border:none;
+}
+.roi-control input[type=range]::-moz-range-thumb{
+  width:28px;height:28px;border-radius:50%;border:none;background:#C8B99A;cursor:pointer;
+  box-shadow:0 0 0 5px rgba(200,185,154,.18);
+}
+.roi-control input[type=range].blue-range::-webkit-slider-runnable-track{background:rgba(99,102,241,.35);}
+.roi-control input[type=range].blue-range::-webkit-slider-thumb{background:#818CF8;}
+.roi-control input[type=range].blue-range::-moz-range-track{background:rgba(99,102,241,.35);}
+.roi-control input[type=range].blue-range::-moz-range-thumb{background:#818CF8;}
+.roi-scale{
+  display:flex;justify-content:space-between;gap:12px;
+  font-family:sans-serif;font-size:10px;color:#4A5A45;margin-top:2px;
+}
 
 .roi-results{
   display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
@@ -579,7 +598,7 @@ input[type=range].blue-range::-webkit-slider-thumb{background:#818CF8;}
 
 /* ── PRECIOS ── */
 .pricing-grid{
-  display:grid;grid-template-columns:repeat(5,1fr);gap:12px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;
 }
 .price-card{
   background:var(--white);border:2px solid var(--border);
@@ -589,15 +608,15 @@ input[type=range].blue-range::-webkit-slider-thumb{background:#818CF8;}
 .price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);}
 .price-card.featured{border-color:var(--olive);}
 .price-card.featured::before{
-  content:'★ Empezar aquí';
+  content:'Recomendado';
   position:absolute;top:-11px;left:50%;transform:translateX(-50%);
   background:var(--olive);color:var(--paper);
   font-family:sans-serif;font-size:10px;font-weight:700;
   padding:3px 10px;border-radius:20px;white-space:nowrap;
 }
 .pc-fase{font-family:sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px;}
-.pc-name{font-size:13px;margin-bottom:12px;color:var(--text);}
-.pc-setup{font-family:sans-serif;font-size:20px;font-weight:900;color:var(--text);line-height:1;}
+.pc-name{font-size:14px;margin-bottom:12px;color:var(--text);}
+.pc-setup{font-family:sans-serif;font-size:22px;font-weight:900;color:var(--text);line-height:1;}
 .pc-setup small{font-size:11px;font-weight:400;color:var(--muted);}
 .pc-monthly{font-family:sans-serif;font-size:12px;color:var(--muted);margin-top:6px;}
 .pc-monthly strong{color:var(--olive);}
@@ -667,28 +686,28 @@ footer strong{color:#8A9985;}
    ══════════════════════════════════════ */
 
 /* BASE */
-body { font-size: 17px; line-height: 1.85; }
+body { font-size: 18px; line-height: 1.9; }
 
 /* HERO */
-.hero h1 { font-size: 44px; }
-.hero-lead { font-size: 16px; line-height: 1.8; }
-.hero-alert { font-size: 14px; line-height: 1.7; }
+.hero h1 { font-size: 46px; }
+.hero-lead { font-size: 17px; line-height: 1.85; }
+.hero-alert { font-size: 15px; line-height: 1.75; }
 .stat-num { font-size: 32px !important; }
 .stat-lbl { font-size: 12px; letter-spacing: .8px; }
 
 /* SECTIONS */
-.sec-title { font-size: 30px; }
-.sec-sub { font-size: 15px; line-height: 1.75; }
+.sec-title { font-size: 33px; }
+.sec-sub { font-size: 16px; line-height: 1.85; }
 
 /* DIAGNOSIS CARDS */
-.diag-card p { font-size: 14px; line-height: 1.7; }
+.diag-card p { font-size: 15px; line-height: 1.8; }
 .diag-card-tag { font-size: 11px; letter-spacing: 1.2px; }
 
 /* COMPETITOR TABLE */
 .comp-th { font-size: 13px; }
 .comp-th small { font-size: 11px; }
 .comp-td { font-size: 13px; padding: 13px 18px; }
-.comp-insight { font-size: 14px; line-height: 1.7; }
+.comp-insight { font-size: 15px; line-height: 1.8; }
 
 /* ── SEO SECTION — full visual upgrade ── */
 .seo-intro-card { padding: 26px; }
@@ -697,8 +716,8 @@ body { font-size: 17px; line-height: 1.85; }
   display: flex; align-items: center; gap: 8px;
 }
 .seo-intro-card-title::before {
-  content: '🔍';
-  font-size: 14px;
+  content: '';
+  display:none;
 }
 
 .keyword-item { font-size: 14px; gap: 12px; align-items: center; }
@@ -755,14 +774,14 @@ body { font-size: 17px; line-height: 1.85; }
 .flow-icon { font-size: 22px; }
 
 /* PHASES */
-.phase-name { font-size: 19px; }
-.phase-tagline { font-size: 12px; }
-.price-setup { font-size: 19px; }
+.phase-name { font-size: 21px; }
+.phase-tagline { font-size: 13px; line-height:1.55; }
+.price-setup { font-size: 21px; }
 .price-monthly { font-size: 12px; }
-.phase-tasks ul li { font-size: 14px; padding: 6px 0; line-height: 1.6; }
+.phase-tasks ul li { font-size: 15px; padding: 7px 0; line-height: 1.7; }
 .phase-tasks h4 { font-size: 11px; }
 .phase-result h4 { font-size: 11px; }
-.phase-result-box { font-size: 14px; line-height: 1.75; padding: 18px; }
+.phase-result-box { font-size: 15px; line-height: 1.85; padding: 20px; }
 .resolve-tag { font-size: 11px; padding: 4px 10px; }
 
 /* GANTT */
@@ -770,7 +789,7 @@ body { font-size: 17px; line-height: 1.85; }
 .gantt-table th { font-size: 12px; padding: 12px 16px; }
 .gbar-result { font-size: 12px; height: 24px; }
 .gbar { height: 24px; border-radius: 6px; }
-.gbar2, .gbar3, .gbar4 { height: 24px; border-radius: 6px; }
+.gbar2, .gbar3, .gbar4, .gbar5 { height: 24px; border-radius: 6px; }
 
 /* ROI */
 .roi-title { font-size: 26px; }
@@ -791,8 +810,8 @@ input[type=range] { height: 5px; }
 
 /* PRICING CARDS */
 .pc-fase { font-size: 11px; }
-.pc-name { font-size: 14px; line-height: 1.4; margin-bottom: 14px; }
-.pc-setup { font-size: 22px; }
+.pc-name { font-size: 15px; line-height: 1.45; margin-bottom: 14px; }
+.pc-setup { font-size: 26px; }
 .pc-monthly { font-size: 13px; }
 .pc-unico { font-size: 11px; }
 .pc-time { font-size: 11px; }
@@ -896,7 +915,7 @@ input[type=range] { height: 5px; }
 .cta-phase-btn{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
-  color:#C8B99A;font-family:sans-serif;font-size:12px;font-weight:700;
+  color:#C8B99A;font-family:sans-serif;font-size:13px;font-weight:700;
   padding:10px 18px;border-radius:50px;text-decoration:none;
   transition:background .15s,border-color .15s;cursor:pointer;
   letter-spacing:.3px;
@@ -977,8 +996,22 @@ input[type=range] { height: 5px; }
   .comp-thead,.comp-row{grid-template-columns:1.6fr 1fr 1fr;min-width:420px;}
   .comp-th{font-size:11px;padding:10px 10px;}
   .comp-td{font-size:11px;padding:9px 10px;}
-  .roi-controls{grid-template-columns:1fr;}
-  .roi-results{grid-template-columns:1fr 1fr;}
+  .roi-box{padding:24px 16px;border-radius:10px;margin-left:-2px;margin-right:-2px;}
+  .roi-title-row{margin-bottom:20px;}
+  .roi-title{font-size:22px;line-height:1.2;}
+  .roi-subtitle{font-size:13px;line-height:1.55;}
+  .roi-controls{grid-template-columns:1fr;gap:24px;margin-bottom:22px;}
+  .roi-control label{font-size:10px;line-height:1.4;margin-bottom:6px;}
+  .roi-val{font-size:24px;line-height:1.15;margin-bottom:2px;}
+  .roi-scale{font-size:11px;line-height:1.3;}
+  .roi-results{grid-template-columns:1fr;gap:10px;}
+  .roi-result{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:14px;text-align:left;padding:14px 16px;
+  }
+  .roi-result-num{font-size:23px;margin-bottom:0;white-space:nowrap;}
+  .roi-result-lbl{text-align:right;max-width:122px;font-size:10px;line-height:1.25;}
+  .roi-note{font-size:13px;line-height:1.6;padding:14px 16px;}
   .risk-grid{grid-template-columns:1fr;}
   /* ── brecha digital móvil — stack vertical ── */
   .gap-visual{padding:16px 14px;overflow-x:hidden;}
@@ -987,7 +1020,7 @@ input[type=range] { height: 5px; }
   .gap-bar-label{width:100% !important;font-size:12px;font-weight:700;}
   .gap-bar-track{width:100%;height:30px;border-radius:5px;}
   .gap-bar-fill{height:100%;font-size:11px;border-radius:5px;}
-  .pricing-grid{grid-template-columns:1fr 1fr;}
+  .pricing-grid{grid-template-columns:1fr;}
   .steps-grid{grid-template-columns:1fr;}
   nav{overflow-x:auto;flex-wrap:nowrap;padding:8px 16px;}
   .kw-text{width:130px;}
@@ -1007,7 +1040,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── NAV ── -->
 <nav>
-  <span class="nav-brand">🥩 Carnes Lolol</span>
+  <span class="nav-brand">Carnes Lolol</span>
   <a href="#diagnostico">Diagnóstico</a>
   <a href="#competencia">Competencia</a>
   <a href="#seo">SEO</a>
@@ -1015,7 +1048,7 @@ input[type=range] { height: 5px; }
   <a href="#fases">Las fases</a>
   <a href="#roi">ROI</a>
   <a href="#precios">Precios</a>
-  <a href="#premortem" style="color:#F87171 !important;">⚠ Riesgos</a>
+  <a href="#premortem" style="color:#F87171 !important;">Riesgos</a>
   <button class="nav-share" onclick="shareWhatsApp()">📲 Compartir</button>
 </nav>
 
@@ -1033,7 +1066,7 @@ input[type=range] { height: 5px; }
 
   <div class="hero-stats">
     <div class="stat">
-      <div class="stat-num" data-count="4.6" data-suffix="★">0★</div>
+      <div class="stat-num" data-count="4.6" data-suffix="/5">0/5</div>
       <div class="stat-lbl">Nota Google</div>
     </div>
     <div class="stat">
@@ -1051,7 +1084,7 @@ input[type=range] { height: 5px; }
   </div>
 
   <div class="hero-alert">
-    <strong>⚠ Error activo en Google ahora mismo:</strong> El perfil muestra que Carnes Lolol hace "entrega a domicilio" — lo que no es verdad. El dueño no puede corregirlo porque el perfil no está en sus manos. Ese error está decepcionando clientes hoy.
+    <strong>Error activo en Google ahora mismo:</strong> El perfil muestra que Carnes Lolol hace "entrega a domicilio" — lo que no es verdad. El dueño no puede corregirlo porque el perfil no está en sus manos. Ese error está decepcionando clientes hoy.
   </div>
 </div>
 
@@ -1059,23 +1092,23 @@ input[type=range] { height: 5px; }
 
 <!-- ── DIAGNÓSTICO 30s ── -->
 <section id="diagnostico">
-  <div class="sec-title">📍 El estado del negocio hoy</div>
+  <div class="sec-title">El estado del negocio hoy</div>
   <div class="sec-sub">Lo bueno, lo urgente y lo que más dinero cuesta — sin adornos.</div>
   <div class="diag-grid">
     <div class="diag-card bien">
-      <div class="diag-card-tag">✅ El activo más valioso</div>
+      <div class="diag-card-tag">Activo más valioso</div>
       <p><strong>4.6 estrellas con 72 reseñas</strong> es el mejor promedio de carnicerías de la zona. Los clientes ya confían y ya hablan bien del negocio — pero esa reputación no está trabajando porque nadie la puede encontrar online.</p>
     </div>
     <div class="diag-card mal">
-      <div class="diag-card-tag">❌ El error más urgente</div>
+      <div class="diag-card-tag">Error más urgente</div>
       <p>Google muestra <strong>"entrega a domicilio"</strong> en el perfil de Carnes Lolol. El negocio no hace delivery. Cada cliente que llega con esa expectativa y no la encuentra es una reseña negativa evitable.</p>
     </div>
     <div class="diag-card alerta">
-      <div class="diag-card-tag">⚠ El cuello de botella económico</div>
+      <div class="diag-card-tag">Cuello de botella económico</div>
       <p>Cuando llega una buena compra de <strong>Agrosuper</strong>, no hay forma de avisarle a los clientes rápido. Solo se enteran los que pasan ese día. El margen de las ofertas no se capitaliza.</p>
     </div>
     <div class="diag-card mal">
-      <div class="diag-card-tag">❌ Sin presencia digital funcional</div>
+      <div class="diag-card-tag">Sin presencia digital funcional</div>
       <p>No hay WhatsApp Business, no hay forma de contactar sin llamar por teléfono. Instagram existe pero sin CTA. El cliente que busca en Google no puede escribir ni saber qué está disponible.</p>
     </div>
   </div>
@@ -1083,55 +1116,55 @@ input[type=range] { height: 5px; }
 
 <!-- ── COMPETENCIA ── -->
 <section id="competencia">
-  <div class="sec-title">⚔️ La competencia: carnescata.cl a 800 metros</div>
+  <div class="sec-title">La competencia: carnescata.cl a 800 metros</div>
   <div class="sec-sub">Revisamos el sitio web de Carnes Doña Cata (carnescata.cl) para traer datos reales de lo que tiene hoy — no estimaciones.</div>
 
   <div class="comp-table-wrap">
     <div class="comp-thead">
       <div class="comp-th">Canal o capacidad</div>
-      <div class="comp-th">🥩 Carnes Lolol<br><small>Av. P. Hurtado 11868</small></div>
-      <div class="comp-th">🔴 Doña Cata<br><small>carnescata.cl · 800m</small></div>
+      <div class="comp-th">Carnes Lolol<br><small>Av. P. Hurtado 11868</small></div>
+      <div class="comp-th">Doña Cata<br><small>carnescata.cl · 800m</small></div>
     </div>
 
     <div class="comp-row lolol-win">
       <div class="comp-td">Reputación Google (zona El Bosque)</div>
-      <div class="comp-td"><strong style="color:var(--green)">4.6★ · 72 reseñas concentradas</strong></div>
+      <div class="comp-td"><strong style="color:var(--green)">4,6/5 · 72 reseñas concentradas</strong></div>
       <div class="comp-td partial">Divididas entre 6 locales</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Google Business reclamado y verificado</div>
-      <div class="comp-td"><span class="no">✗</span> Sin reclamar</div>
-      <div class="comp-td"><span class="yes">✓</span> Activo</div>
+      <div class="comp-td"><span class="no">No</span> · Sin reclamar</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Activo</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Sitio web propio con tienda online</div>
-      <div class="comp-td"><span class="no">✗</span> No tiene</div>
-      <div class="comp-td"><span class="yes">✓</span> Con carrito y checkout</div>
+      <div class="comp-td"><span class="no">No</span> · No tiene</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Con carrito y checkout</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Delivery a domicilio en RM</div>
-      <div class="comp-td"><span class="no">✗</span> No hace</div>
-      <div class="comp-td"><span class="yes">✓</span> Delivery propio activo</div>
+      <div class="comp-td"><span class="no">No</span> · No hace</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Delivery propio activo</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">WhatsApp Business activo</div>
-      <div class="comp-td"><span class="no">✗</span> No tiene</div>
-      <div class="comp-td"><span class="yes">✓</span> Soporte directo</div>
+      <div class="comp-td"><span class="no">No</span> · No tiene</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Soporte directo</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Catálogo de productos online</div>
-      <div class="comp-td"><span class="no">✗</span> No existe</div>
-      <div class="comp-td"><span class="yes">✓</span> Vacuno, cerdo, pollo, embutidos</div>
+      <div class="comp-td"><span class="no">No</span> · No existe</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Vacuno, cerdo, pollo, embutidos</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Pago con tarjeta o transferencia</div>
-      <div class="comp-td"><span class="no">✗</span> Solo efectivo</div>
-      <div class="comp-td"><span class="yes">✓</span> Débito, crédito, transferencia</div>
+      <div class="comp-td"><span class="no">No</span> · Solo efectivo</div>
+      <div class="comp-td"><span class="yes">Sí</span> · Débito, crédito, transferencia</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Instagram activo (seguidores)</div>
       <div class="comp-td"><span class="partial">~ 113</span></div>
-      <div class="comp-td"><span class="yes">✓</span> ~1.929 seguidores</div>
+      <div class="comp-td"><span class="yes">Sí</span> · ~1.929 seguidores</div>
     </div>
     <div class="comp-row">
       <div class="comp-td">Número de locales</div>
@@ -1147,7 +1180,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── SEO MAP ── -->
 <section id="seo">
-  <div class="sec-title">🔍 Su mapa de búsquedas — esto es lo que busca su cliente</div>
+  <div class="sec-title">Su mapa de búsquedas — esto es lo que busca su cliente</div>
   <div class="sec-sub">Cada vez que alguien escribe esto en Google, es un cliente potencial buscando exactamente lo que vende Carnes Lolol. Hoy esas búsquedas no terminan en el local.</div>
 
   <div class="seo-intro-grid">
@@ -1243,43 +1276,43 @@ input[type=range] { height: 5px; }
 
 <!-- ── CUELLO DE BOTELLA ── -->
 <section id="cuello">
-  <div class="sec-title">🔒 El problema que más dinero le cuesta cada semana</div>
+  <div class="sec-title">El problema que más dinero le cuesta cada semana</div>
   <div class="sec-sub">Cuando hay buena compra en Agrosuper, el margen se queda en la mesa porque no hay sistema para avisarle a los clientes.</div>
 
   <div class="cuello-box">
-    <div class="cuello-header">⚠ Flujo ACTUAL — sin sistema digital</div>
+    <div class="cuello-header">Flujo actual — sin sistema digital</div>
     <div class="cuello-body">
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px;">
-        <div class="flow-step"><span class="flow-icon">📦</span>Buena compra<br>en Agrosuper</div>
+        <div class="flow-step"><span class="flow-icon">1</span>Buena compra<br>en Agrosuper</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="flow-icon">💰</span>Precio<br>especial</div>
+        <div class="flow-step"><span class="flow-icon">2</span>Precio<br>especial</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step block"><span class="flow-icon">⚠</span>¿Cómo aviso<br>a mis clientes?</div>
+        <div class="flow-step block"><span class="flow-icon">3</span>¿Cómo aviso<br>a mis clientes?</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="flow-icon">🚶</span>Solo los que<br>pasan ese día<br>se enteran</div>
+        <div class="flow-step"><span class="flow-icon">4</span>Solo los que<br>pasan ese día<br>se enteran</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step loss"><span class="flow-icon">❌</span>80% de clientes<br>no supo.<br>Margen perdido.</div>
+        <div class="flow-step loss"><span class="flow-icon">5</span>80% de clientes<br>no supo.<br>Margen perdido.</div>
       </div>
 
       <div class="cuello-note">
         <strong>Ejemplo concreto:</strong> Si tiene 100 clientes habituales y ese día pasaron 20, el 80% no se enteró de la oferta. Si cada uno hubiera comprado $10.000 en esa oferta, eso son $800.000 de venta que se perdieron. Por semana.
       </div>
 
-      <div style="margin-top:24px;margin-bottom:6px;font-family:sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);">✓ Flujo con Fase 2 — Sistema de ofertas activo</div>
+      <div style="margin-top:24px;margin-bottom:6px;font-family:sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--green);">Flujo con Fase 2 — Sistema de ofertas activo</div>
       <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
-        <div class="flow-step"><span class="flow-icon">📦</span>Buena compra<br>en Agrosuper</div>
+        <div class="flow-step"><span class="flow-icon">1</span>Buena compra<br>en Agrosuper</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="flow-icon">📸</span>Foto del<br>producto</div>
+        <div class="flow-step"><span class="flow-icon">2</span>Foto del<br>producto</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step win"><span class="flow-icon">📲</span>WA a 200+<br>clientes<br>en 5 min</div>
+        <div class="flow-step win"><span class="flow-icon">3</span>WA a 200+<br>clientes<br>en 5 min</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step win"><span class="flow-icon">📸</span>Post IG +<br>Google<br>automático</div>
+        <div class="flow-step win"><span class="flow-icon">4</span>Post IG +<br>Google<br>automático</div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step win"><span class="flow-icon">✅</span>Clientes van<br>al local o<br>pre-ordenan</div>
+        <div class="flow-step win"><span class="flow-icon">5</span>Clientes van<br>al local o<br>pre-ordenan</div>
       </div>
 
       <div class="cuello-bonus">
-        <strong>🎯 Beneficio extra con Fase 3 (que muy pocos ven):</strong> Si los clientes pueden hacer pedidos anticipados por WhatsApp, el dueño llega a Agrosuper <em>sabiendo exactamente cuántos kilos necesita</em>. Eso es poder de negociación real — llega con un número, no estimando. Menos merma, mejor precio de compra.
+        <strong>Beneficio extra con Fase 3 (que muy pocos ven):</strong> Si los clientes pueden hacer pedidos anticipados por WhatsApp, el dueño llega a Agrosuper <em>sabiendo exactamente cuántos kilos necesita</em>. Eso es poder de negociación real — llega con un número, no estimando. Menos merma, mejor precio de compra.
       </div>
     </div>
   </div>
@@ -1287,7 +1320,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── FASES ── -->
 <section id="fases">
-  <div class="sec-title">🗓️ El plan completo — desde lo urgente hasta una carnicería premium de barrio</div>
+  <div class="sec-title">El plan completo — desde lo urgente hasta una carnicería premium de barrio</div>
   <div class="sec-sub">Cada fase construye sobre la anterior. La recomendación es partir con Fase 1B, porque deja Google, WhatsApp, Instagram, QR y presentación local listos en una sola entrega. Fase 1A queda como opción mínima si solo se quiere corregir Google.</div>
 
   <div class="phase-layout">
@@ -1311,6 +1344,10 @@ input[type=range] { height: 5px; }
       </div>
       <div class="ladder-step" onclick="scrollToPhase(4)">
         <div class="ladder-dot" id="ld4">4</div>
+        <div class="ladder-line" id="ll4"></div>
+      </div>
+      <div class="ladder-step" onclick="scrollToPhase(5)">
+        <div class="ladder-dot" id="ld5">5</div>
       </div>
     </div>
 
@@ -1332,7 +1369,7 @@ input[type=range] { height: 5px; }
             <div class="price-anchor">Valor regular: $159.000</div>
             <div class="price-setup">$79.000</div>
             <div class="price-unico">Pago único</div>
-            <div class="price-time">⏱ Entrega: 24 horas</div>
+            <div class="price-time">Entrega: 24 horas</div>
           </div>
         </div>
         <div class="phase-body" id="pb0">
@@ -1352,12 +1389,12 @@ input[type=range] { height: 5px; }
               <h4>Qué cambia para el negocio</h4>
               <div class="phase-result-box">
                 <strong>Mañana mismo:</strong> Google deja de mentir por el negocio. El perfil queda en manos del dueño y el error que decepcionaba clientes desaparece. A partir de ahí, cualquier cambio en Google lo hace el dueño — sin depender de nadie.
-                <div class="phase-seo-tag">📍 SEO: Google sube el ranking de negocios verificados. El primer día de estar verificado ya mejora la visibilidad.</div>
+                <div class="phase-seo-tag">SEO: Google sube el ranking de negocios verificados. El primer día de estar verificado ya mejora la visibilidad.</div>
               </div>
               <div class="phase-resolves">
-                <span class="resolve-tag">✓ Error delivery eliminado</span>
-                <span class="resolve-tag">✓ Control del perfil</span>
-                <span class="resolve-tag">✓ Ranking Google mejora</span>
+                <span class="resolve-tag">Error delivery eliminado</span>
+                <span class="resolve-tag">Control del perfil</span>
+                <span class="resolve-tag">Ranking Google mejora</span>
               </div>
             </div>
           </div>
@@ -1377,7 +1414,7 @@ input[type=range] { height: 5px; }
           <div class="phase-head-title">
             <div class="phase-name">
               "Fundación digital completa — el negocio es contactable"
-              <span class="fase-chip chip-start">★ Empezar aquí</span>
+              <span class="fase-chip chip-start">Empezar aquí</span>
             </div>
             <div class="phase-tagline">WhatsApp Business · Instagram optimizado · SEO Google · QR imprimibles · 7 días <span class="expand-icon">▼</span></div>
           </div>
@@ -1386,7 +1423,7 @@ input[type=range] { height: 5px; }
             <div class="price-anchor">Precio fijo y cerrado</div>
             <div class="price-setup">$219.000</div>
             <div class="price-unico">Incluye 1A</div>
-            <div class="price-time">⏱ Entrega: 7 días</div>
+            <div class="price-time">Entrega: 7 días</div>
           </div>
         </div>
         <div class="phase-body" id="pb1">
@@ -1417,13 +1454,13 @@ input[type=range] { height: 5px; }
                 <strong>En 7 días:</strong> Por primera vez, un cliente que busca "carnicería El Bosque" encuentra el local con fotos reales, horario correcto y un botón de WhatsApp. Puede escribir directamente y recibe respuesta automática aunque el local esté cerrado.
                 <br><br>
                 El QR en el mesón empieza a generar reseñas nuevas en Google — cada reseña nueva sube el ranking automáticamente.
-                <div class="phase-seo-tag">📍 SEO: Con descripción optimizada + fotos + reseñas respondidas, Carnes Lolol entra al "Local Pack" — los 3 primeros resultados que Google muestra cuando alguien busca carnicerías cercanas.</div>
+                <div class="phase-seo-tag">SEO: Con descripción optimizada + fotos + reseñas respondidas, Carnes Lolol entra al "Local Pack" — los 3 primeros resultados que Google muestra cuando alguien busca carnicerías cercanas.</div>
               </div>
               <div class="phase-resolves">
-                <span class="resolve-tag">✓ Canal de contacto activo</span>
-                <span class="resolve-tag">✓ Local Pack Google</span>
-                <span class="resolve-tag">✓ Instagram con CTA</span>
-                <span class="resolve-tag">✓ QR en el local</span>
+                <span class="resolve-tag">Canal de contacto activo</span>
+                <span class="resolve-tag">Local Pack Google</span>
+                <span class="resolve-tag">Instagram con CTA</span>
+                <span class="resolve-tag">QR en el local</span>
               </div>
             </div>
           </div>
@@ -1452,7 +1489,7 @@ input[type=range] { height: 5px; }
             <div class="price-anchor">Para mantener Instagram y Google activos</div>
             <div class="price-setup">$129.000 <small style="font-size:11px;">/mes</small></div>
             <div class="price-monthly"><strong>Sin setup</strong> si viene de Fase 1B</div>
-            <div class="price-time">⏱ Entrega: 7 días</div>
+            <div class="price-time">Entrega: 7 días</div>
           </div>
         </div>
         <div class="phase-body" id="pb2">
@@ -1479,12 +1516,12 @@ input[type=range] { height: 5px; }
                 <strong>El cambio clave:</strong> Cuando Agrosuper ofrece un buen lote, el dueño toma una foto, la envía al número de gestión, y esa oferta llega simultáneamente a 200+ clientes por WhatsApp, a Instagram y a Google Business — en minutos, sin aprender ninguna herramienta.
                 <br><br>
                 El viernes, automáticamente, los clientes reciben el post del asado del fin de semana. Sin que el dueño tenga que hacer nada ese día.
-                <div class="phase-seo-tag">📍 SEO: Google favorece negocios que publican contenido nuevo frecuentemente. 4 posts/mes en Google Business = ranking orgánico sube sostenidamente.</div>
+                <div class="phase-seo-tag">SEO: Google favorece negocios que publican contenido nuevo frecuentemente. 4 posts/mes en Google Business = ranking orgánico sube sostenidamente.</div>
               </div>
               <div class="phase-resolves">
-                <span class="resolve-tag">✓ Cuello botella Agrosuper</span>
-                <span class="resolve-tag">✓ Broadcast 200+ clientes</span>
-                <span class="resolve-tag">✓ Contenido automático</span>
+                <span class="resolve-tag">Cuello botella Agrosuper</span>
+                <span class="resolve-tag">Broadcast 200+ clientes</span>
+                <span class="resolve-tag">Contenido automático</span>
               </div>
             </div>
           </div>
@@ -1510,7 +1547,7 @@ input[type=range] { height: 5px; }
             <div class="price-anchor">Pedido para retiro, sin prometer delivery</div>
             <div class="price-setup">$349.000 <small style="font-size:11px;">único</small></div>
             <div class="price-monthly">Gestión mensual opcional</div>
-            <div class="price-time">⏱ Entrega: 10 días</div>
+            <div class="price-time">Entrega: 10 días</div>
           </div>
         </div>
         <div class="phase-body" id="pb3">
@@ -1535,13 +1572,13 @@ input[type=range] { height: 5px; }
                 <strong>El avance más importante:</strong> El dueño puede hacer una "preventa" antes de ir a Agrosuper. Publica la oferta, los clientes responden con pedidos. Con esa lista en mano, llega a Agrosuper sabiendo exactamente cuántos kilos necesita — mejor negociación, menos merma, más margen.
                 <br><br>
                 El bot responde fuera de horario, los pedidos llegan organizados, y el dueño abre el local sabiendo qué viene.
-                <div class="phase-seo-tag">📍 SEO: El catálogo en Google Business activa "rich results" — los productos aparecen con fotos directamente en la búsqueda, atrayendo más clics antes de que lleguen al perfil.</div>
+                <div class="phase-seo-tag">SEO: El catálogo en Google Business activa "rich results" — los productos aparecen con fotos directamente en la búsqueda, atrayendo más clics antes de que lleguen al perfil.</div>
               </div>
               <div class="phase-resolves">
-                <span class="resolve-tag">✓ Pre-pedidos = compra exacta</span>
-                <span class="resolve-tag">✓ Menos merma</span>
-                <span class="resolve-tag">✓ Bot 24/7</span>
-                <span class="resolve-tag">✓ Catálogo digital</span>
+                <span class="resolve-tag">Pre-pedidos = compra exacta</span>
+                <span class="resolve-tag">Menos merma</span>
+                <span class="resolve-tag">Bot 24/7</span>
+                <span class="resolve-tag">Catálogo digital</span>
               </div>
             </div>
           </div>
@@ -1560,58 +1597,115 @@ input[type=range] { height: 5px; }
           <div class="phase-badge pb4">4</div>
           <div class="phase-head-title">
             <div class="phase-name">
-              "Tienda online — al nivel de Doña Cata, pero optimizada para el barrio"
-              <span class="fase-chip chip-360">Pack 360</span>
+              "Pack 360 MVP — presencia premium con catálogo y pedidos para retiro"
+              <span class="fase-chip chip-360">Pack 360 MVP</span>
             </div>
-            <div class="phase-tagline">Web propia · E-commerce · Bot IA WhatsApp · SEO técnico · Publicidad Meta · Dominio propio <span class="expand-icon">▼</span></div>
+            <div class="phase-tagline">Web premium · catálogo inicial · pedidos para retiro · WhatsApp · SEO local · medición <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Visión premium</div>
-            <div class="price-anchor">Evolución completa, paso a paso</div>
+            <div class="price-launch-badge">Premium inicial</div>
+            <div class="price-anchor">No es clon completo de Carnes Cata</div>
             <div class="price-setup">$690.000 <small style="font-size:11px;">setup</small></div>
             <div class="price-monthly">Gestión mensual opcional</div>
-            <div class="price-time">⏱ Entrega: 30 días</div>
+            <div class="price-time">Entrega: 21 a 30 días</div>
           </div>
         </div>
         <div class="phase-body" id="pb4">
           <div class="phase-body-inner">
             <div class="phase-tasks">
-              <h4>Qué se hace en el setup + gestión mensual</h4>
+              <h4>Qué se hace en el setup</h4>
               <ul>
-                <li>Sitio web propio (carneslolol.cl) con catálogo, pedidos para retiro e historia del negocio</li>
-                <li>E-commerce básico: carrito, pago por transferencia y/o Webpay</li>
-                <li>Bot IA WhatsApp: responde preguntas complejas, recibe pedidos, califica clientes</li>
-                <li>SEO técnico completo: Schema.org LocalBusiness + FoodEstablishment, sitemap, meta tags</li>
-                <li>Página de cada categoría de producto optimizada para keywords locales</li>
-                <li>Google My Business Products: catálogo con precios directamente en la búsqueda de Google</li>
-                <li>Campañas básicas Meta Ads (Facebook + Instagram) con presupuesto de $30.000/mes sugerido</li>
-                <li>Estrategia de contenido anual planificada por temporada (Fiestas Patrias, Navidad, etc.)</li>
-                <li>Reporte mensual: tráfico web, consultas WA, conversiones, ventas online</li>
-                <li>Revisión estratégica trimestral con ajuste de campañas</li>
-                <li>Todo lo mensual de Fase 3 incluido</li>
+                <li>Sitio web propio con estética premium, historia del local, ubicación, horarios y botón de WhatsApp visible</li>
+                <li>Catálogo inicial de 20 a 40 productos, cortes o combos con fotos, descripción y precio referencial</li>
+                <li>Formulario o carrito simple para pedidos de retiro en local, sin prometer delivery</li>
+                <li>Cierre de pedidos por WhatsApp Business, para que el equipo confirme stock, horario y monto final</li>
+                <li>SEO local base: títulos, descripciones, estructura para "carnicería El Bosque" y mapa integrado</li>
+                <li>QR para mesón, caja y boletas: web, WhatsApp, catálogo y reseñas Google</li>
+                <li>Medición inicial: visitas web, clics a WhatsApp y productos más consultados</li>
+                <li>Capacitación simple para el dueño o encargado: cómo cambiar ofertas y responder pedidos</li>
+                <li>Documento claro de lo que no incluye: delivery, stock en tiempo real, login de clientes, checkout avanzado ni operación completa tipo supermercado</li>
               </ul>
             </div>
             <div class="phase-result">
               <h4>Qué cambia para el negocio</h4>
               <div class="phase-result-box">
-                <strong>El resultado final:</strong> Carnes Lolol tiene las mismas capacidades que carnescata.cl — tienda online, bot IA, pagos digitales, publicidad. Pero con una diferencia que Doña Cata no puede copiar: está construido para un solo barrio, con 20 años de historia y 72 reseñas concentradas.
+                <strong>El resultado correcto para este precio:</strong> Carnes Lolol se ve premium, ordenado y moderno, pero sigue operando de forma simple: el cliente revisa productos, pide para retiro y el cierre queda por WhatsApp. Es una evolución fuerte sin cargar al negocio con una operación digital demasiado grande desde el primer mes.
                 <br><br>
-                El posicionamiento no es "compite en escala" — es "la carnicería del barrio con la tecnología de las grandes". Eso es defensible.
-                <div class="phase-seo-tag">📍 SEO: Web propia + Schema.org + contenido semanal = dominar toda la búsqueda "carnicería El Bosque" en Google, Maps y Shopping.</div>
+                Esto se parece a una tienda online en presencia, claridad y catálogo, pero no replica toda la infraestructura de Carnes Cata. Sirve para validar si los clientes del barrio realmente piden por internet antes de invertir en e-commerce completo.
+                <div class="phase-seo-tag">SEO: Web propia + catálogo inicial + Google activo = más opciones de aparecer cuando buscan carnicería, cortes, ofertas y retiro cerca de Metro La Copa.</div>
               </div>
               <div class="phase-resolves">
-                <span class="resolve-tag">✓ Nivel Doña Cata</span>
-                <span class="resolve-tag">✓ Web + e-commerce</span>
-                <span class="resolve-tag">✓ Bot IA completo</span>
-                <span class="resolve-tag">✓ Publicidad Meta</span>
-                <span class="resolve-tag">✓ SEO dominante</span>
+                <span class="resolve-tag">Web premium</span>
+                <span class="resolve-tag">Catálogo inicial</span>
+                <span class="resolve-tag">Pedidos para retiro</span>
+                <span class="resolve-tag">Base para crecer</span>
               </div>
             </div>
           </div>
           <div class="wsp-phase-wrap">
-            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360+completo.+%C2%BFPodemos+hablar%3F" target="_blank">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360+MVP+de+%24690.000.+%C2%BFPodemos+hablar%3F" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
-              Me interesa el Pack 360 — $690.000 setup
+              Me interesa Pack 360 MVP — $690.000 setup
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FASE 5 -->
+      <div class="phase-card" id="pc5" onclick="togglePhase(5)">
+        <div class="phase-head">
+          <div class="phase-badge pb5">5</div>
+          <div class="phase-head-title">
+            <div class="phase-name">
+              "Premium Pro — e-commerce completo tipo Carnes Cata"
+              <span class="fase-chip chip-pro">Premium Pro</span>
+            </div>
+            <div class="phase-tagline">Tienda online completa · carrito y checkout · pagos · retiro o despacho por zonas · capacitación operativa <span class="expand-icon">▼</span></div>
+          </div>
+          <div class="phase-head-price">
+            <div class="price-launch-badge">Modelo completo</div>
+            <div class="price-anchor">Para competir con tienda online real</div>
+            <div class="price-setup">$1.490.000 <small style="font-size:11px;">setup</small></div>
+            <div class="price-monthly">$249.000/mes soporte opcional</div>
+            <div class="price-time">Entrega: 4 a 6 semanas</div>
+          </div>
+        </div>
+        <div class="phase-body" id="pb5">
+          <div class="phase-body-inner">
+            <div class="phase-tasks">
+              <h4>Qué incluye este modelo</h4>
+              <ul>
+                <li>Diseño e implementación de tienda online completa con identidad premium para Carnes Lolol</li>
+                <li>Catálogo inicial ampliado de hasta 80 productos, cortes, combos o categorías con fotos y descripciones</li>
+                <li>Carrito, checkout, confirmación de compra y flujo ordenado de pedidos</li>
+                <li>Integración de pagos según factibilidad del negocio: transferencia, Webpay u otro proveedor aprobado</li>
+                <li>Retiro en local y opción de despacho por zonas solo si Carnes Lolol decide operar delivery más adelante</li>
+                <li>Páginas de políticas: compra, retiro, despacho, cambios, contacto y preguntas frecuentes</li>
+                <li>Panel para revisar pedidos, actualizar productos principales y medir consultas</li>
+                <li>SEO técnico, Analytics, eventos de conversión y prueba completa en celular antes de entregar</li>
+                <li>Capacitación al dueño o encargado para operar pedidos, cambiar precios y pausar productos sin depender de la agencia</li>
+                <li>30 días de acompañamiento post-entrega para ajustes finos, dudas y correcciones operativas</li>
+              </ul>
+            </div>
+            <div class="phase-result">
+              <h4>Qué cambia para el negocio</h4>
+              <div class="phase-result-box">
+                <strong>Esta sí es la oferta para acercarse a Carnes Cata:</strong> el cliente puede entrar, revisar categorías, sumar productos al carrito, pagar o solicitar confirmación, y dejar el pedido ordenado. Ya no es solo presencia digital: es canal de venta.
+                <br><br>
+                La diferencia importante es operativa. Para que funcione, Carnes Lolol debe tener precios definidos, fotos, productos ordenados, alguien que revise pedidos y una decisión clara sobre retiro o despacho. Por eso se cotiza aparte y no se mezcla con el Pack 360 MVP.
+                <div class="phase-seo-tag">SEO + conversión: además de aparecer en Google, la web queda preparada para medir compras, productos consultados y campañas futuras.</div>
+              </div>
+              <div class="phase-resolves">
+                <span class="resolve-tag">E-commerce real</span>
+                <span class="resolve-tag">Checkout y pagos</span>
+                <span class="resolve-tag">Operación escalable</span>
+                <span class="resolve-tag">Soporte post-entrega</span>
+              </div>
+            </div>
+          </div>
+          <div class="wsp-phase-wrap">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+conversar+la+oferta+Premium+Pro+de+e-commerce+completo+%281.490.000%29." target="_blank">
+              Conversar Premium Pro — $1.490.000 setup
             </a>
           </div>
         </div>
@@ -1623,7 +1717,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── GANTT TIMELINE ── -->
 <section id="timeline">
-  <div class="sec-title">📅 Cuándo ve resultados — cronograma real</div>
+  <div class="sec-title">Cuándo ve resultados — cronograma real</div>
   <div class="sec-sub">Cada fase tiene un momento de entrega y un momento en que se empiezan a ver clientes nuevos. Esto no es marketing — es lo que pasa en la práctica.</div>
   <div class="gantt-wrap">
     <table class="gantt-table">
@@ -1671,12 +1765,20 @@ input[type=range] { height: 5px; }
           <td></td>
         </tr>
         <tr>
-          <td>4 — Pack 360</td>
+          <td>4 — Pack 360 MVP</td>
           <td></td>
           <td></td>
           <td></td>
           <td><span class="gbar gbar4" style="width:100%"></span></td>
-          <td><span class="gbar-result">Nivel Doña Cata superado</span></td>
+          <td><span class="gbar-result">Web premium y catálogo validados</span></td>
+        </tr>
+        <tr>
+          <td>5 — Premium Pro</td>
+          <td></td>
+          <td></td>
+          <td><span class="gbar gbar5" style="width:100%"></span></td>
+          <td><span class="gbar-result">E-commerce completo operativo</span></td>
+          <td><span class="gbar-result">Soporte y crecimiento</span></td>
         </tr>
       </tbody>
     </table>
@@ -1685,7 +1787,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── ROI CALCULATOR ── -->
 <section id="roi">
-  <div class="sec-title">💰 ¿Cuánto puede ganar con cada fase?</div>
+  <div class="sec-title">Cuánto puede ganar con cada fase</div>
   <div class="sec-sub">Estimación realista basada en ticket promedio de carnicería de barrio. Ajuste los valores según lo que conozca de su negocio.</div>
 
   <div class="roi-box">
@@ -1697,21 +1799,21 @@ input[type=range] { height: 5px; }
     </div>
 
     <div class="roi-controls">
-      <div>
+      <div class="roi-control">
         <label>Clientes nuevos captados por mes</label>
         <div class="roi-val" id="roiClientsVal">15 clientes/mes</div>
-        <input type="range" id="roiClients" min="5" max="50" value="15"
+        <input type="range" id="roiClients" min="5" max="50" value="15" aria-label="Clientes nuevos captados por mes"
                oninput="updateROI()">
-        <div style="display:flex;justify-content:space-between;font-family:sans-serif;font-size:10px;color:#4A5A45;margin-top:4px;">
+        <div class="roi-scale">
           <span>5 (conservador)</span><span>50 (agresivo)</span>
         </div>
       </div>
-      <div>
+      <div class="roi-control">
         <label>Ticket promedio por compra</label>
         <div class="roi-val" id="roiTicketVal">$8.000 CLP</div>
-        <input type="range" class="blue-range" id="roiTicket" min="5000" max="20000" step="500" value="8000"
+        <input type="range" class="blue-range" id="roiTicket" min="5000" max="20000" step="500" value="8000" aria-label="Ticket promedio por compra"
                oninput="updateROI()">
-        <div style="display:flex;justify-content:space-between;font-family:sans-serif;font-size:10px;color:#4A5A45;margin-top:4px;">
+        <div class="roi-scale">
           <span>$5.000</span><span>$20.000</span>
         </div>
       </div>
@@ -1740,12 +1842,12 @@ input[type=range] { height: 5px; }
 
 <!-- ── RISK SECTION ── -->
 <section id="riesgo">
-  <div class="sec-title">⏰ ¿Qué pasa si espera 6 meses más?</div>
+  <div class="sec-title">Qué pasa si espera 6 meses más</div>
   <div class="sec-sub">Doña Cata no está esperando. Cada mes sin presencia digital activa es un mes donde la brecha crece.</div>
 
   <div class="risk-grid">
     <div class="risk-card risk-now">
-      <div class="risk-card-title">⚠ Hoy — la brecha es cerrable</div>
+      <div class="risk-card-title">Hoy — la brecha es cerrable</div>
       <ul style="list-style:none;font-family:sans-serif;font-size:13px;color:var(--muted);line-height:2;">
         <li>• Doña Cata: ~1.929 seguidores Instagram</li>
         <li>• Carnes Lolol: 113 seguidores</li>
@@ -1755,7 +1857,7 @@ input[type=range] { height: 5px; }
       </ul>
     </div>
     <div class="risk-card risk-later">
-      <div class="risk-card-title">🔴 En 6 meses sin actuar</div>
+      <div class="risk-card-title">En 6 meses sin actuar</div>
       <ul style="list-style:none;font-family:sans-serif;font-size:13px;color:var(--muted);line-height:2;">
         <li>• Doña Cata sigue creciendo en digital sin competencia</li>
         <li>• Sus clientes nuevos los están capturando ellos</li>
@@ -1805,7 +1907,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── PRECIOS ── -->
 <section id="precios">
-  <div class="sec-title">💰 Precios — sin letras pequeñas</div>
+  <div class="sec-title">Precios — sin letras pequeñas</div>
   <div class="sec-sub">Setup es pago único. Mensualidad incluye gestión activa (publicaciones, reportes, ajustes). Sin contratos de permanencia — se puede pausar en cualquier momento.</div>
 
   <div class="pricing-grid">
@@ -1817,7 +1919,7 @@ input[type=range] { height: 5px; }
       <div class="pc-setup">$79.000 <small>CLP</small></div>
       <div class="pc-unico">Pago único</div>
       <div class="pc-monthly">Sin mensualidad</div>
-      <div class="pc-time">⏱ 24 horas</div>
+      <div class="pc-time">24 horas</div>
     </div>
     <div class="price-card featured">
       <div class="pc-fase">Fase 1B</div>
@@ -1827,7 +1929,7 @@ input[type=range] { height: 5px; }
       <div class="pc-setup">$219.000 <small>CLP</small></div>
       <div class="pc-unico">Incluye 1A · Pago único</div>
       <div class="pc-monthly">Sin mensualidad</div>
-      <div class="pc-time">⏱ 7 días</div>
+      <div class="pc-time">7 días</div>
     </div>
     <div class="price-card">
       <div class="pc-fase">Fase 2</div>
@@ -1836,7 +1938,7 @@ input[type=range] { height: 5px; }
       <div class="pc-anchor">Para mantener contenido activo</div>
       <div class="pc-setup">$129.000 <small>/mes</small></div>
       <div class="pc-monthly"><strong>Sin setup</strong> si viene de Fase 1B</div>
-      <div class="pc-time">⏱ 7 días</div>
+      <div class="pc-time">7 días</div>
     </div>
     <div class="price-card">
       <div class="pc-fase">Fase 3</div>
@@ -1845,26 +1947,35 @@ input[type=range] { height: 5px; }
       <div class="pc-anchor">Pedido para retiro, sin delivery</div>
       <div class="pc-setup">$349.000 <small>único</small></div>
       <div class="pc-monthly">Gestión mensual opcional</div>
-      <div class="pc-time">⏱ 10 días</div>
+      <div class="pc-time">10 días</div>
     </div>
     <div class="price-card">
-      <div class="pc-fase">Fase 4 — Pack 360</div>
-      <div class="pc-name">"Tienda online completa"</div>
-      <div class="pc-launch-badge">Visión premium</div>
-      <div class="pc-anchor">Evolución completa por fases</div>
+      <div class="pc-fase">Fase 4 — Pack 360 MVP</div>
+      <div class="pc-name">"Web premium + catálogo inicial"</div>
+      <div class="pc-launch-badge">Premium inicial</div>
+      <div class="pc-anchor">Valida el canal antes de e-commerce completo</div>
       <div class="pc-setup">$690.000 <small>setup</small></div>
       <div class="pc-monthly">Gestión mensual opcional</div>
-      <div class="pc-time">⏱ 30 días</div>
+      <div class="pc-time">21 a 30 días</div>
+    </div>
+    <div class="price-card">
+      <div class="pc-fase">Fase 5 — Premium Pro</div>
+      <div class="pc-name">"E-commerce completo tipo Carnes Cata"</div>
+      <div class="pc-launch-badge">Modelo avanzado</div>
+      <div class="pc-anchor">Carrito, checkout, pagos y operación</div>
+      <div class="pc-setup">$1.490.000 <small>setup</small></div>
+      <div class="pc-monthly">$249.000/mes soporte opcional</div>
+      <div class="pc-time">4 a 6 semanas</div>
     </div>
   </div>
 
-  <div style="margin-top:14px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 20px;font-family:sans-serif;font-size:13px;color:var(--muted);line-height:1.7;">
+  <div style="margin-top:14px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 22px;font-family:sans-serif;font-size:15px;color:var(--muted);line-height:1.8;">
     <strong style="color:var(--text);">Forma de pago:</strong> 50% al iniciar el trabajo · 50% al entregar todo funcionando. La mensualidad empieza solo cuando el sistema está operativo y el dueño lo verifica.<br>
-    <strong style="color:var(--bronze);">Recomendación:</strong> partir con Fase 1B / Presencia Local Premium Express. Las fases siguientes son opcionales y se evalúan solo si el dueño ve valor en continuar.
+    <strong style="color:var(--bronze);">Recomendación:</strong> partir con Fase 1B / Presencia Local Premium Express. Si más adelante quiere "status premium", el Pack 360 MVP es el paso prudente. Premium Pro queda como inversión separada cuando ya exista decisión de operar una tienda online real.
   </div>
 
   <div class="garantia-box">
-    <div class="garantia-icon">🛡️</div>
+    <div class="garantia-icon">OK</div>
     <div>
       <div class="garantia-title">Garantía de satisfacción — 7 días</div>
       <div class="garantia-text">Si en 7 días desde la entrega el trabajo no queda funcionando exactamente como se acordó — Google verificado, WhatsApp activo, Instagram actualizado — se devuelve el dinero completo. Sin preguntas, sin trámites.</div>
@@ -1874,7 +1985,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── FAQ ── -->
 <section id="faq">
-  <div class="sec-title">❓ Preguntas frecuentes</div>
+  <div class="sec-title">Preguntas frecuentes</div>
   <div class="sec-sub">Las preguntas reales que hace cualquier dueño de negocio antes de decidir.</div>
 
   <div class="faq-item" onclick="toggleFaq(this)">
@@ -1883,7 +1994,11 @@ input[type=range] { height: 5px; }
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Google va a cobrarme algo? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><div class="faq-answer-inner">No. Google Business es completamente gratuito para todos los negocios. WhatsApp Business también es gratuito. Instagram es gratuito. El valor que se cobra es el trabajo de configuración y gestión mensual — no hay costos de plataforma en ninguna de las 4 fases (excepto en la Fase 4 donde hay presupuesto de publicidad Meta que va aparte).</div></div>
+    <div class="faq-answer"><div class="faq-answer-inner">No. Google Business es completamente gratuito para todos los negocios. WhatsApp Business también es gratuito. Instagram es gratuito. El valor que se cobra es el trabajo de configuración y gestión mensual. En web o e-commerce pueden existir costos externos como dominio, hosting, pasarela de pago o publicidad, pero se informan antes de avanzar.</div></div>
+  </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-question">¿El Pack 360 MVP de $690.000 es igual a Carnes Cata? <span class="faq-icon">+</span></div>
+    <div class="faq-answer"><div class="faq-answer-inner">No. El Pack 360 MVP deja a Carnes Lolol con imagen premium, web propia, catálogo inicial y pedidos para retiro por WhatsApp. Sirve para validar el canal sin sobreinvertir. Si el objetivo es una tienda online completa con carrito, checkout, pagos y operación más parecida a Carnes Cata, corresponde Premium Pro de $1.490.000 setup.</div></div>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Cuánto tarda en verse un resultado concreto? <span class="faq-icon">+</span></div>
@@ -1905,7 +2020,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── PREMORTEM ── -->
 <section id="premortem">
-  <div class="sec-title">⚠️ Riesgos si no se corrige la presencia digital</div>
+  <div class="sec-title">Riesgos si no se corrige la presencia digital</div>
   <div class="sec-sub">No se trata de asustar. Se trata de ver con calma qué puede pasar si Google, WhatsApp e Instagram siguen desordenados mientras otros negocios avanzan.</div>
 
   <div class="premortem-intro">
@@ -1921,41 +2036,41 @@ input[type=range] { height: 5px; }
     <div class="pm-card">
       <div class="pm-prob prob-certeza">Ya está ocurriendo</div>
       <div class="pm-title">El error de Google decepcionó al cliente equivocado</div>
-      <div class="pm-year">⏱ Plazo: Hoy mismo</div>
+      <div class="pm-year">Plazo: Hoy mismo</div>
       <div class="pm-story">Un cliente buscó "carnicería con delivery El Bosque", encontró Carnes Lolol, intentó pedir a domicilio y descubrió que no existe ese servicio. Aunque no deje reseña, queda una mala experiencia. Si ese error se repite, puede afectar la confianza que el negocio construyó durante años.</div>
-      <div class="pm-fix">✓ Se evita con <span>Fase 1A — en 24 horas</span></div>
+      <div class="pm-fix">Se evita con <span>Fase 1A — en 24 horas</span></div>
     </div>
 
     <div class="pm-card">
       <div class="pm-prob prob-alta">Probabilidad: Alta</div>
       <div class="pm-title">Otra carnicería del sector se movió primero</div>
-      <div class="pm-year">⏱ Plazo: 12 – 18 meses</div>
+      <div class="pm-year">Plazo: 12 – 18 meses</div>
       <div class="pm-story">Una carnicería competidora — no necesariamente mejor — activó WhatsApp Business, reclamó su Google Business y empezó a publicar en Instagram dos veces por semana. Los clientes de 30 a 45 años del barrio empezaron a escribirle por WhatsApp porque es más fácil que llamar. Carnes Lolol tiene más historia y mejor producto, pero el otro negocio aparece primero en Google y tiene botón de contacto. El resultado: ese segmento activo se perdió para siempre.</div>
-      <div class="pm-fix">✓ Se evita con <span>Fase 1B — fundación digital completa</span></div>
+      <div class="pm-fix">Se evita con <span>Fase 1B — fundación digital completa</span></div>
     </div>
 
     <div class="pm-card">
       <div class="pm-prob prob-alta">Probabilidad: Alta</div>
       <div class="pm-title">El cuello de botella de Agrosuper nunca se resolvió</div>
-      <div class="pm-year">⏱ Plazo: Continúa cada semana</div>
+      <div class="pm-year">Plazo: Continúa cada semana</div>
       <div class="pm-story">El ciclo se repite: compra volumen para negociar precio, no puede avisar a los clientes a tiempo, la oferta se comunica solo en el local y parte de la oportunidad se pierde. No siempre es merma directa, pero sí es venta potencial que no se aprovecha.</div>
-      <div class="pm-fix">✓ Se evita con <span>Fase 2 — motor de ofertas en tiempo real</span></div>
+      <div class="pm-fix">Se evita con <span>Fase 2 — motor de ofertas en tiempo real</span></div>
     </div>
 
     <div class="pm-card">
       <div class="pm-prob prob-media">Probabilidad: Media</div>
       <div class="pm-title">Los supermercados ganaron por conveniencia</div>
-      <div class="pm-year">⏱ Plazo: 18 – 30 meses</div>
+      <div class="pm-year">Plazo: 18 – 30 meses</div>
       <div class="pm-story">Lider y Unimarc activaron sus aplicaciones de delivery en El Bosque. Los clientes de 35 a 55 años — los más fieles a Carnes Lolol — descubrieron que podían pedir carne desde el celular sin salir de casa. No era más barata ni mejor, pero era conveniente. Carnes Lolol no tenía catálogo digital ni sistema de pedidos para retiro. El cliente habitual empezó a ir al local solo cuando "estaba de paso". La frecuencia bajó de dos veces por semana a una vez cada dos semanas.</div>
-      <div class="pm-fix">✓ Se evita con <span>Fase 3 — catálogo y pedidos anticipados</span></div>
+      <div class="pm-fix">Se evita con <span>Fase 3 — catálogo y pedidos anticipados</span></div>
     </div>
 
     <div class="pm-card" style="grid-column:1/-1;border-top-color:var(--muted);">
       <div class="pm-prob prob-media">Riesgo a largo plazo</div>
       <div class="pm-title">El negocio no tenía valor de traspaso</div>
-      <div class="pm-year">⏱ Plazo: 5 – 8 años</div>
+      <div class="pm-year">Plazo: 5 – 8 años</div>
       <div class="pm-story">Después de 25 años, el dueño quiso jubilarse y vender el negocio. El local tenía historia, reputación oral y clientela fiel — pero nada de eso quedaba registrado en ningún sistema. No había base de datos de clientes, no había canal de comunicación propio, no había presencia digital que un comprador pudiera valorar. El tasador dijo que el fondo de comercio valía solo el arriendo y el equipamiento. Un negocio sin sistema digital no se vende — se cierra. Con un sistema instalado, ese mismo negocio tiene una cartera de clientes contactable, un canal de ingresos recurrente y una marca local con presencia medible — eso sí tiene precio.</div>
-      <div class="pm-fix">✓ Se evita construyendo <span>el sistema desde Fase 1B en adelante — cada mes suma valor al negocio</span></div>
+      <div class="pm-fix">Se evita construyendo <span>el sistema desde Fase 1B en adelante — cada mes suma valor al negocio</span></div>
     </div>
 
   </div>
@@ -1963,7 +2078,7 @@ input[type=range] { height: 5px; }
 
 <!-- ── PRÓXIMOS PASOS ── -->
 <section id="pasos">
-  <div class="sec-title">▶️ Para avanzar esta semana</div>
+  <div class="sec-title">Para avanzar esta semana</div>
   <div class="sec-sub">Solo necesitamos 3 cosas para arrancar. Nada más.</div>
   <div class="steps-grid">
     <div class="step-card">
@@ -1985,11 +2100,12 @@ input[type=range] { height: 5px; }
 
   <div class="cta-final-box">
     <div class="cta-final-title">Recomendación para comenzar: Presencia Local Premium Express.</div>
-    <div class="cta-final-sub">La opción recomendada es Fase 1B: deja la base digital completa en 5 a 7 días. Si prefiere partir más pequeño, Fase 1A corrige solo Google. Las fases futuras se conversan después.</div>
+    <div class="cta-final-sub">La opción recomendada es Fase 1B: deja la base digital completa en 5 a 7 días. Si prefiere partir más pequeño, Fase 1A corrige solo Google. Pack 360 MVP y Premium Pro quedan como visión de crecimiento cuando el dueño vea valor y quiera subir el estatus del negocio.</div>
     <div class="cta-final-btns">
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+Presencia+Local+Premium+Express+%28219.000%29." target="_blank">★ Plan recomendado — $219.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+corregir+primero+Google+con+la+Fase+1A+%2879.000%29." target="_blank">▶ Solo Google — $79.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+entender+las+fases+futuras+despu%C3%A9s+del+primer+paso." target="_blank">▶ Conversar fases futuras</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+Presencia+Local+Premium+Express+%28219.000%29." target="_blank">Plan recomendado — $219.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+corregir+primero+Google+con+la+Fase+1A+%2879.000%29." target="_blank">Solo Google — $79.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+entender+las+fases+futuras+despu%C3%A9s+del+primer+paso." target="_blank">Conversar fases futuras</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+entender+la+diferencia+entre+Pack+360+MVP+y+Premium+Pro." target="_blank">Diferencia Pack 360 / Premium Pro</a>
     </div>
   </div>
 </section>
@@ -2040,7 +2156,7 @@ function togglePhase(idx){
   const body=document.getElementById('pb'+idx);
   const isOpen=card.classList.contains('expanded');
   // close all
-  for(let i=0;i<5;i++){
+  for(let i=0;i<6;i++){
     document.getElementById('pc'+i).classList.remove('expanded');
     document.getElementById('pb'+i).classList.remove('open');
     document.getElementById('ld'+i)?.classList.remove('active');
@@ -2075,7 +2191,7 @@ function updateROI(){
   const ticket=parseInt(document.getElementById('roiTicket').value);
   const visitsPerMonth=2;
   const monthlyExtra=clients*ticket*visitsPerMonth;
-  const setupPhase1=179000;
+  const setupPhase1=219000;
   const weeksToRecover=Math.ceil(setupPhase1/(monthlyExtra/4.3));
   const annual=monthlyExtra*12;
 

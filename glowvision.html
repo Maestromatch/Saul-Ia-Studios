@@ -1,0 +1,1297 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optica Glow Vision | Lentes opticos y de sol en Punitaqui</title>
+  <meta name="description" content="Optica Glow Vision en Punitaqui. Lentes opticos, lentes de sol, asesoria personalizada y agenda por WhatsApp. Visitanos en Caupolican 763.">
+  <meta name="theme-color" content="#0b2b3f">
+  <meta property="og:title" content="Optica Glow Vision">
+  <meta property="og:description" content="Lentes opticos y de sol con atencion cercana en Punitaqui. Agenda por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="glowvision-assets/hero-atencion.jpg">
+  <link rel="preload" as="image" href="glowvision-assets/hero-atencion.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Optician",
+    "name": "Optica Glow Vision",
+    "image": "glowvision-assets/logo-glowvision.png",
+    "telephone": "+56954932802",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Caupolican 763",
+      "addressLocality": "Punitaqui",
+      "addressCountry": "CL"
+    },
+    "url": "https://wa.me/56954932802",
+    "sameAs": ["https://www.instagram.com/opticaglowvision/"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:30",
+        "closes": "18:30"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #122532;
+      --ink-soft: #49606b;
+      --paper: #fbfbf8;
+      --white: #ffffff;
+      --mist: #eef7f4;
+      --navy: #0b2b3f;
+      --blue: #0e6da8;
+      --orange: #ef6a2f;
+      --orange-dark: #c64d1f;
+      --mint: #0d8f7c;
+      --gold: #f4b64b;
+      --line: rgba(18, 37, 50, 0.12);
+      --shadow: 0 22px 60px rgba(10, 34, 50, 0.14);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(14, 109, 168, 0.35);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .promo-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 9px 18px;
+      color: #fff;
+      background: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .promo-bar span {
+      color: #ffe5b6;
+      font-weight: 800;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px clamp(18px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(251, 251, 248, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 178px;
+    }
+
+    .brand img {
+      width: 64px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      display: grid;
+      gap: 1px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-name small {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2vw, 26px);
+      color: var(--ink-soft);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .primary-nav a {
+      transition: color 0.2s ease;
+    }
+
+    .primary-nav a:hover {
+      color: var(--ink);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle::before,
+    .menu-toggle::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: 4px auto;
+      border-radius: 999px;
+      background: currentColor;
+      content: "";
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button.primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      box-shadow: 0 14px 26px rgba(239, 106, 47, 0.24);
+    }
+
+    .button.secondary {
+      color: var(--navy);
+      border-color: rgba(11, 43, 63, 0.18);
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .button.dark {
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 78svh;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background: var(--navy);
+      isolation: isolate;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(90deg, rgba(4, 20, 31, 0.88) 0%, rgba(4, 20, 31, 0.62) 48%, rgba(4, 20, 31, 0.08) 100%),
+        linear-gradient(0deg, rgba(4, 20, 31, 0.68) 0%, rgba(4, 20, 31, 0.03) 48%),
+        url("glowvision-assets/hero-atencion.jpg") center / cover;
+      content: "";
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: auto 0 0;
+      height: 44%;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(4, 20, 31, 0.82), transparent);
+      content: "";
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: clamp(74px, 12vw, 138px) 0 54px;
+    }
+
+    .hero-kicker,
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 790px;
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: clamp(3rem, 8vw, 6.9rem);
+      font-weight: 800;
+      line-height: 0.93;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.12rem;
+      line-height: 1.2;
+    }
+
+    .hero-lead {
+      max-width: 670px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(1.05rem, 2vw, 1.34rem);
+      text-wrap: pretty;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 740px;
+    }
+
+    .proof-pill {
+      min-height: 88px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(16px);
+    }
+
+    .proof-pill strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .proof-pill span {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: clamp(64px, 9vw, 108px) 0;
+    }
+
+    .section.tight {
+      padding-top: clamp(42px, 6vw, 74px);
+      padding-bottom: clamp(42px, 6vw, 74px);
+    }
+
+    .section.dark {
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .section.soft {
+      background:
+        radial-gradient(circle at 10% 0%, rgba(13, 143, 124, 0.14), transparent 34%),
+        linear-gradient(180deg, #f6fbf9, #ffffff);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.55fr);
+      gap: clamp(26px, 5vw, 80px);
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: 1.03rem;
+      text-wrap: pretty;
+    }
+
+    .category-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .category-card {
+      display: grid;
+      min-height: 170px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 14px 34px rgba(13, 35, 51, 0.07);
+    }
+
+    .category-card span {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .category-card p {
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .showcase-image {
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #dbe6e3;
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .showcase-copy {
+      display: grid;
+      align-content: center;
+      padding: clamp(28px, 5vw, 54px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 28px;
+      color: var(--ink-soft);
+    }
+
+    .check-list li::before {
+      position: absolute;
+      top: 0.3em;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--mint);
+      content: "";
+    }
+
+    .tabs-shell {
+      display: grid;
+      gap: 22px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .tab-button {
+      min-width: max-content;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 6px;
+      color: var(--ink-soft);
+      background: transparent;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .tab-button.active {
+      color: #fff;
+      background: var(--navy);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 16px 40px rgba(10, 34, 50, 0.08);
+    }
+
+    .product-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #edf3f1;
+    }
+
+    .product-card div {
+      padding: 16px;
+    }
+
+    .product-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+
+    .product-card span {
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .buy-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .flow-step {
+      min-height: 210px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .flow-step span {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 28px;
+      border-radius: 50%;
+      color: var(--navy);
+      background: #fff;
+      font-weight: 900;
+    }
+
+    .flow-step h3 {
+      color: #fff;
+    }
+
+    .flow-step p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.73);
+      font-size: 0.94rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .gallery-main,
+    .gallery-side {
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: #eaf2f0;
+    }
+
+    .gallery-main img,
+    .gallery-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-main {
+      min-height: 530px;
+    }
+
+    .gallery-side {
+      display: grid;
+      min-height: 530px;
+      grid-template-rows: 1fr 1fr;
+      gap: 18px;
+      background: transparent;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .trust-card {
+      min-height: 250px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .trust-card.featured {
+      color: #fff;
+      background: var(--navy);
+      border-color: transparent;
+    }
+
+    .trust-card p {
+      color: var(--ink-soft);
+    }
+
+    .trust-card.featured p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .trust-card img {
+      width: 100%;
+      max-height: 260px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .location-panel {
+      padding: clamp(28px, 4vw, 42px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .hours {
+      display: grid;
+      gap: 11px;
+      margin: 24px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hours li {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 11px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink-soft);
+    }
+
+    .hours strong {
+      color: var(--ink);
+    }
+
+    .map-card {
+      position: relative;
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(11, 43, 63, 0.88), rgba(13, 143, 124, 0.72)),
+        url("glowvision-assets/muro-marcos.jpg") center / cover;
+    }
+
+    .map-card-content {
+      position: absolute;
+      inset: auto 24px 24px;
+      max-width: 460px;
+      padding: 22px;
+      border-radius: var(--radius);
+      color: #fff;
+      background: rgba(4, 20, 31, 0.78);
+      backdrop-filter: blur(14px);
+    }
+
+    .map-card-content p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .cta-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: clamp(26px, 4vw, 42px);
+      border-radius: var(--radius);
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 24%, rgba(239, 106, 47, 0.54), transparent 30%),
+        linear-gradient(135deg, var(--navy), #114968);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-band h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .cta-band p {
+      max-width: 640px;
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .site-footer {
+      padding: 34px clamp(18px, 5vw, 72px);
+      color: rgba(255, 255, 255, 0.72);
+      background: #071c29;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .footer-inner strong {
+      display: block;
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-weight: 700;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 45;
+      display: inline-grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      color: #fff;
+      background: #18a558;
+      box-shadow: 0 16px 34px rgba(24, 165, 88, 0.34);
+      font-weight: 900;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 980px) {
+      .site-header {
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .primary-nav {
+        display: flex;
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        gap: 8px;
+        overflow-x: auto;
+        padding: 4px 0 0;
+        scrollbar-width: none;
+      }
+
+      .primary-nav a {
+        min-width: max-content;
+        padding: 9px 12px;
+        border-radius: 999px;
+        background: #eef7f4;
+      }
+
+      .header-actions .button {
+        display: none;
+      }
+
+      .hero-proof,
+      .section-head,
+      .showcase-grid,
+      .gallery,
+      .trust-grid,
+      .location-grid,
+      .cta-band {
+        grid-template-columns: 1fr;
+      }
+
+      .category-row,
+      .buy-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .showcase-image,
+      .gallery-main,
+      .gallery-side {
+        min-height: 360px;
+      }
+
+      .gallery-side {
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .promo-bar {
+        font-size: 12px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-name small {
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: 74svh;
+      }
+
+      .hero-inner {
+        width: min(100% - 28px, 1180px);
+        padding-top: 96px;
+        padding-bottom: 32px;
+      }
+
+      .hero-lead {
+        max-width: 340px;
+      }
+
+      .hero-proof,
+      .category-row,
+      .buy-flow,
+      .product-grid,
+      .gallery-side {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .section.tight {
+        padding: 54px 0;
+      }
+
+      .showcase-copy,
+      .location-panel {
+        padding: 24px;
+      }
+
+      .flow-step {
+        min-height: auto;
+      }
+
+      .map-card {
+        min-height: 420px;
+      }
+
+      .map-card-content {
+        right: 14px;
+        bottom: 14px;
+        left: 14px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="promo-bar">
+    <span>Agenda por WhatsApp</span>
+    <strong>+56 9 5493 2802</strong>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio de Optica Glow Vision">
+      <img src="glowvision-assets/logo-glowvision.png" alt="Optica Glow Vision">
+      <span class="brand-name">
+        Glow Vision
+        <small>Optica</small>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Navegacion principal">
+      <a href="#opticos">Opticos</a>
+      <a href="#sol">Sol</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#garantia">Garantia</a>
+      <a href="#ubicacion">Ubicacion</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="button primary" href="https://wa.me/56954932802?text=Hola%20Glow%20Vision%2C%20quiero%20agendar%20una%20atencion" target="_blank" rel="noopener">Agendar</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="primaryNav" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-label="Optica Glow Vision">
+      <div class="hero-inner">
+        <p class="hero-kicker">Optica en Punitaqui</p>
+        <h1>Lentes que se sienten tuyos desde el primer uso.</h1>
+        <p class="hero-lead">En Glow Vision te ayudamos a elegir marcos opticos, lentes de sol y soluciones visuales con atencion cercana, clara y directa por WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://wa.me/56954932802?text=Hola%20Glow%20Vision%2C%20quiero%20cotizar%20lentes" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a class="button secondary" href="#modelos">Ver modelos</a>
+        </div>
+        <div class="hero-proof" aria-label="Datos principales">
+          <div class="proof-pill">
+            <strong>Caupolican #763</strong>
+            <span>Atencion presencial en Punitaqui.</span>
+          </div>
+          <div class="proof-pill">
+            <strong>Asesoria personalizada</strong>
+            <span>Elegimos contigo forma, ajuste y estilo.</span>
+          </div>
+          <div class="proof-pill">
+            <strong>Garantia 6 meses</strong>
+            <span>Segun politicas de fabricacion y material.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight soft" aria-label="Categorias principales">
+      <div class="container">
+        <div class="category-row">
+          <article class="category-card" id="opticos">
+            <span>01</span>
+            <h3>Lentes opticos</h3>
+            <p>Marcos para receta con asesoria de estilo, ajuste y uso diario.</p>
+          </article>
+          <article class="category-card" id="sol">
+            <span>02</span>
+            <h3>Lentes de sol</h3>
+            <p>Modelos para proteccion, comodidad y look diario.</p>
+          </article>
+          <article class="category-card">
+            <span>03</span>
+            <h3>Sobrelentes</h3>
+            <p>Alternativas practicas para complementar tus lentes opticos.</p>
+          </article>
+          <article class="category-card">
+            <span>04</span>
+            <h3>Operativos</h3>
+            <p>Atenciones y jornadas informadas por Instagram y WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agenda">
+      <div class="container">
+        <div class="showcase-grid">
+          <div class="showcase-image">
+            <img src="glowvision-assets/atencion-mesa.jpg" alt="Atencion personalizada en Optica Glow Vision" loading="lazy">
+          </div>
+          <div class="showcase-copy">
+            <p class="eyebrow">Atencion cercana</p>
+            <h2>Trae tu receta, consulta por modelos o agenda una orientacion.</h2>
+            <p>La compra no parte con un carrito frio. Parte con una conversacion: que necesitas, que uso le daras y que marco te acomoda mejor.</p>
+            <ul class="check-list">
+              <li>Atencion presencial en Caupolican #763, Punitaqui.</li>
+              <li>Compra directa por Instagram Direct o WhatsApp.</li>
+              <li>Seleccion de marcos opticos, de sol y sobrelentes.</li>
+              <li>Orientacion sobre garantias y cuidados del producto.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="modelos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Catalogo inicial</p>
+            <h2>Modelos destacados para partir simple y vender por WhatsApp.</h2>
+          </div>
+          <p>El foco esta en lo que Glow Vision ya muestra y vende con fuerza: opticos, sol, sobrelentes y atencion personalizada.</p>
+        </div>
+
+        <div class="tabs-shell">
+          <div class="tabs" role="tablist" aria-label="Filtros de catalogo">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" data-filter="all">Todos</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-filter="optico">Opticos</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-filter="sol">Sol</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" data-filter="color">Color</button>
+          </div>
+
+          <div class="product-grid" id="productGrid">
+            <article class="product-card" data-type="optico">
+              <img src="glowvision-assets/marco-azul.jpg" alt="Marco optico azul disponible en Glow Vision" loading="lazy">
+              <div>
+                <strong>Marco optico azul</strong>
+                <span>Para receta y uso diario.</span>
+              </div>
+            </article>
+            <article class="product-card" data-type="optico">
+              <img src="glowvision-assets/marco-transparente.jpg" alt="Marco optico transparente disponible en Glow Vision" loading="lazy">
+              <div>
+                <strong>Marco transparente</strong>
+                <span>Liviano, limpio y versatil.</span>
+              </div>
+            </article>
+            <article class="product-card" data-type="color">
+              <img src="glowvision-assets/marco-dorado.jpg" alt="Marco dorado disponible en Glow Vision" loading="lazy">
+              <div>
+                <strong>Marco dorado</strong>
+                <span>Detalle fino para un look elegante.</span>
+              </div>
+            </article>
+            <article class="product-card" data-type="color">
+              <img src="glowvision-assets/marco-amarillo.jpg" alt="Marco amarillo disponible en Glow Vision" loading="lazy">
+              <div>
+                <strong>Marco con color</strong>
+                <span>Para quienes quieren destacar.</span>
+              </div>
+            </article>
+            <article class="product-card" data-type="sol">
+              <img src="glowvision-assets/lentes-sol.jpg" alt="Lentes de sol disponibles en Glow Vision" loading="lazy">
+              <div>
+                <strong>Lentes de sol</strong>
+                <span>Proteccion y estilo para todos los dias.</span>
+              </div>
+            </article>
+            <article class="product-card" data-type="optico">
+              <img src="glowvision-assets/marco-carey.jpg" alt="Marco carey disponible en Glow Vision" loading="lazy">
+              <div>
+                <strong>Marco carey</strong>
+                <span>Clasico, combinable y comodo.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Compra simple</p>
+            <h2>Del mensaje a la atencion, sin vueltas.</h2>
+          </div>
+          <p style="color: rgba(255,255,255,0.74);">Una web chica puede funcionar como una tienda ordenada: muestra, orienta y lleva al cliente directo al canal donde Glow Vision ya vende.</p>
+        </div>
+
+        <div class="buy-flow">
+          <article class="flow-step">
+            <span>1</span>
+            <h3>Escribe</h3>
+            <p>Cuenta si buscas opticos, sol, sobrelentes o ayuda con tu receta.</p>
+          </article>
+          <article class="flow-step">
+            <span>2</span>
+            <h3>Envia datos</h3>
+            <p>Comparte receta, foto de referencia o el tipo de marco que te gusta.</p>
+          </article>
+          <article class="flow-step">
+            <span>3</span>
+            <h3>Elige</h3>
+            <p>Te orientamos con opciones disponibles y proximo paso de compra.</p>
+          </article>
+          <article class="flow-step">
+            <span>4</span>
+            <h3>Retira</h3>
+            <p>Coordina atencion en la optica y confirma horario por WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="gallery">
+          <div class="gallery-main">
+            <img src="glowvision-assets/muro-marcos.jpg" alt="Muro de marcos disponibles en Glow Vision" loading="lazy">
+          </div>
+          <div class="gallery-side">
+            <img src="glowvision-assets/consulta-receta.jpg" alt="Consulta con cliente en Glow Vision" loading="lazy">
+            <img src="glowvision-assets/instagram-perfil.jpg" alt="Perfil de Instagram de Optica Glow Vision" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="garantia">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Confianza</p>
+            <h2>Informacion clara antes y despues de comprar.</h2>
+          </div>
+          <p>La pagina deja visibles las razones para escribir: garantia, medios de pago, horario y ubicacion. Lo importante es que el cliente no tenga que adivinar.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card featured">
+            <h3>Garantia legal</h3>
+            <p>Todos los productos cuentan con garantia legal. La politica indicada por la optica contempla 6 meses para errores de fabricacion o fatiga de material, con comprobante.</p>
+          </article>
+          <article class="trust-card">
+            <h3>Pagos</h3>
+            <p>Consulta por alternativas disponibles al momento de comprar. Puedes coordinar datos y comprobantes por WhatsApp.</p>
+            <img src="glowvision-assets/pago-transferencia.jpg" alt="Pago presencial en optica" loading="lazy">
+          </article>
+          <article class="trust-card">
+            <h3>Horario publicado</h3>
+            <p>Horario visible en tienda y redes. Para evitar viajes innecesarios, confirma tu atencion antes de ir.</p>
+            <img src="glowvision-assets/horario.jpg" alt="Horario de atencion de Optica Glow Vision" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ubicacion">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-panel">
+            <p class="eyebrow">Ubicacion</p>
+            <h2>Estamos en Punitaqui.</h2>
+            <p>Visitanos en Caupolican #763 o escribe antes por WhatsApp para consultar disponibilidad, agenda o modelos.</p>
+            <ul class="hours" aria-label="Horario de atencion">
+              <li><strong>Lunes</strong><span>Confirmar por WhatsApp</span></li>
+              <li><strong>Martes a viernes</strong><span>11:30 a 18:30 hrs</span></li>
+              <li><strong>Sabado</strong><span>Cerrado</span></li>
+              <li><strong>Domingo</strong><span>Cerrado</span></li>
+            </ul>
+            <div class="hero-actions">
+              <a class="button primary" href="https://wa.me/56954932802?text=Hola%20Glow%20Vision%2C%20quiero%20confirmar%20horario%20y%20agendar" target="_blank" rel="noopener">Confirmar horario</a>
+              <a class="button secondary" href="https://www.google.com/maps/search/?api=1&query=Caupolican%20763%2C%20Punitaqui%2C%20Chile" target="_blank" rel="noopener">Abrir mapa</a>
+            </div>
+          </div>
+          <div class="map-card" aria-label="Mapa visual de ubicacion">
+            <div class="map-card-content">
+              <h3>Caupolican #763</h3>
+              <p>Punitaqui, Chile. Cerca de comercio local y atencion directa en tienda.</p>
+              <a class="button secondary" href="https://www.instagram.com/opticaglowvision/" target="_blank" rel="noopener">Ver Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h2>Escribe a Glow Vision y cotiza tus proximos lentes.</h2>
+            <p>Envia tu receta, una foto de referencia o simplemente cuenta que necesitas. Te responderan por WhatsApp.</p>
+          </div>
+          <a class="button primary" href="https://wa.me/56954932802?text=Hola%20Glow%20Vision%2C%20vi%20la%20pagina%20web%20y%20quiero%20cotizar" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Optica Glow Vision</strong>
+        <span>Caupolican #763, Punitaqui.</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://wa.me/56954932802" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/opticaglowvision/" target="_blank" rel="noopener">@opticaglowvision</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/56954932802?text=Hola%20Glow%20Vision%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Abrir WhatsApp de Glow Vision">WA</a>
+
+  <script>
+    (function () {
+      var menuToggle = document.getElementById('menuToggle');
+      var primaryNav = document.getElementById('primaryNav');
+      var filterButtons = document.querySelectorAll('.tab-button');
+      var products = document.querySelectorAll('.product-card');
+
+      if (menuToggle && primaryNav) {
+        menuToggle.addEventListener('click', function () {
+          var open = primaryNav.classList.toggle('open');
+          document.body.classList.toggle('menu-open', open);
+          menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        primaryNav.addEventListener('click', function (event) {
+          if (event.target.tagName === 'A') {
+            primaryNav.classList.remove('open');
+            document.body.classList.remove('menu-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          var filter = button.getAttribute('data-filter');
+          filterButtons.forEach(function (item) {
+            var active = item === button;
+            item.classList.toggle('active', active);
+            item.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+
+          products.forEach(function (card) {
+            var match = filter === 'all' || card.getAttribute('data-type') === filter;
+            card.hidden = !match;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

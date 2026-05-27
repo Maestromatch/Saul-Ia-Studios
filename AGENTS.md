@@ -41,6 +41,7 @@ Servicios técnicos queda en pausa.
 - **Track A · Ópticas** (Saúl ejecuta físico): enviar mensajes, llamar fijos, verificar IG/FB, primer cierre — pausado pendiente
 - **Track B · Constructora interna** (dogfooding): bot WhatsApp ✅ FUNCIONANDO (ejecución 1132 exitosa). Landing v3 ✅ DESPLEGADA en `landing-bio-saul.vercel.app`. Chat widget web ✅ integrado. **Próximo**: importar `n8n-webchat-workflow.json` + test 6 casos — ver `clientes/saul-el-constructor/CHECKPOINT-2026-05-18.md`.
 - **Track C · Ads Growth Constructoras** (agencia): módulo premium de captación pagada para Saul El Constructor y futuras constructoras. Carpeta creada en `clientes/saul-el-constructor/05-ads-growth/` con brief, campaña Meta 14 días, matriz de anuncios, guía creativa, tracking CRM, rutina de optimización, respuestas y reporte semanal.
+- **Track D · Glow Vision** (portafolio / cliente familiar): migrado a repo independiente `https://github.com/Maestromatch/GlowVision.git` y Vercel propio. No mantener archivos GlowVision dentro del repo de agencia. Roadmap privado en `clientes/glowvision/roadmap.md`.
 
 ## Bloqueos abiertos
 1. WhatsApps faltantes: 4 ópticas con fijo (llamar para pedir WA), 15 con verificación manual por IG/FB
@@ -50,6 +51,7 @@ Servicios técnicos queda en pausa.
 5. **Track B**: test 6 casos WhatsApp (ver `casos-prueba.md`) antes de activar producción
 6. **n8n plan**: 837+/1000 ejecuciones — decidir upgrade ($20/mes) o migrar webchat a Vercel serverless
 7. **Track C Ads**: no lanzar presupuesto hasta que bot/CRM/landing pasen test end-to-end y existan fotos/videos reales suficientes.
+8. **Track D Glow Vision**: confirmar dominio, URL exacta Google Maps, precios desde y politicas finales redactadas.
 
 ## Decisiones tomadas
 - Foco vertical 1: ópticas
@@ -149,5 +151,5 @@ Regla activa desde 2026-05-21:
 
 ---
 
-**Última actualización**: 2026-05-18
+**Última actualización**: 2026-05-27
 **Mantener actualizado**: al terminar cada sesión, ajustar Estado / Bloqueos / Decisiones / Próximos pasos.

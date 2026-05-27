@@ -2455,3 +2455,409 @@ footer::after {
     height: 40px;
   }
 }
+
+/* ============================================================
+   AETRIA level-up: cinematic diagrams and dashboard objects
+   ============================================================ */
+
+.agency-hero {
+  min-height: calc(100vh - 70px);
+  background:
+    linear-gradient(90deg, rgba(3, 5, 9, 0.96) 0%, rgba(3, 5, 9, 0.82) 44%, rgba(3, 5, 9, 0.28) 100%),
+    image-set(url("ai_process_background_banner_1920x700.png") 1x) center right / cover no-repeat;
+}
+
+.hero-neural-field {
+  position: absolute;
+  inset: 8% -8% 12% 38%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+.hero-neural-field span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background:
+    radial-gradient(circle, rgba(76, 201, 255, 0.9) 0 2px, transparent 3px) 0 50% / 34px 6px repeat-x,
+    linear-gradient(90deg, transparent, rgba(76, 201, 255, 0.48), transparent);
+  filter: drop-shadow(0 0 12px rgba(30, 167, 255, 0.55));
+  transform-origin: 100% 50%;
+  animation: neural-drift 9s linear infinite;
+}
+
+.hero-neural-field span:nth-child(1) { top: 14%; transform: rotate(8deg); animation-delay: -1s; }
+.hero-neural-field span:nth-child(2) { top: 30%; transform: rotate(-5deg); animation-delay: -3s; opacity: 0.72; }
+.hero-neural-field span:nth-child(3) { top: 48%; transform: rotate(4deg); animation-delay: -5s; opacity: 0.9; }
+.hero-neural-field span:nth-child(4) { top: 66%; transform: rotate(-8deg); animation-delay: -2s; opacity: 0.62; }
+.hero-neural-field span:nth-child(5) { top: 82%; transform: rotate(5deg); animation-delay: -6s; opacity: 0.5; }
+
+@keyframes neural-drift {
+  from { background-position: 0 50%, 0 0; }
+  to { background-position: 340px 50%, 0 0; }
+}
+
+.hero-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  max-width: 760px;
+  margin-top: 26px;
+}
+
+.hero-capabilities span {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  color: rgba(247, 250, 255, 0.86);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.hero-capabilities svg,
+.process-orb svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-capabilities svg {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid rgba(76, 201, 255, 0.45);
+  border-radius: 10px;
+  color: #4cc9ff;
+  background: rgba(3, 5, 9, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(18, 107, 255, 0.1),
+    0 0 22px rgba(30, 167, 255, 0.2);
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 18px 20px 4px;
+}
+
+.dashboard-metrics div {
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid rgba(191, 217, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(3, 5, 9, 0.42);
+}
+
+.dashboard-metrics small {
+  display: block;
+  color: rgba(185, 196, 214, 0.68);
+  font-size: 10px;
+}
+
+.dashboard-metrics strong {
+  display: block;
+  margin-top: 7px;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.dashboard-chart {
+  margin: 12px 20px 4px;
+  padding: 14px 14px 8px;
+  border: 1px solid rgba(191, 217, 255, 0.08);
+  border-radius: 12px;
+  background:
+    linear-gradient(to right, rgba(191, 217, 255, 0.04) 1px, transparent 1px) 0 0 / 44px 100%,
+    linear-gradient(to bottom, rgba(191, 217, 255, 0.035) 1px, transparent 1px) 0 0 / 100% 30px,
+    rgba(3, 5, 9, 0.38);
+}
+
+.dashboard-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dashboard-chart polyline {
+  fill: none;
+  stroke: url(#chartGlow);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 10px rgba(76, 201, 255, 0.55));
+  stroke-dasharray: 760;
+  animation: chart-draw 4.8s ease-in-out infinite alternate;
+}
+
+.dashboard-chart .chart-fill {
+  fill: rgba(30, 167, 255, 0.12);
+}
+
+@keyframes chart-draw {
+  from { stroke-dashoffset: 90; opacity: 0.65; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.ai-map-visual {
+  border-radius: 0;
+  min-height: clamp(520px, 50vw, 720px);
+  border-left: 0;
+  border-right: 0;
+  margin-left: calc(clamp(20px, 6vw, 86px) * -1);
+  margin-right: calc(clamp(20px, 6vw, 86px) * -1);
+}
+
+.ai-map-visual img {
+  opacity: 0.74;
+}
+
+.ai-map-connectors {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.ai-map-connectors path {
+  fill: none;
+  stroke: url(#aetriaLine);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.flow-lines path {
+  stroke-dasharray: 8 12;
+  animation: line-flow 12s linear infinite;
+}
+
+.flow-pulses circle {
+  fill: #4cc9ff;
+  filter: drop-shadow(0 0 10px rgba(76, 201, 255, 0.9));
+}
+
+@keyframes line-flow {
+  to { stroke-dashoffset: -120; }
+}
+
+.ai-map-overlay {
+  z-index: 3;
+  inset: clamp(30px, 5vw, 70px) clamp(42px, 8vw, 120px);
+}
+
+.ai-map-overlay span {
+  min-width: 170px;
+  justify-content: flex-start;
+  gap: 12px;
+  color: rgba(247, 250, 255, 0.86);
+}
+
+.ai-map-overlay span::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #4cc9ff;
+  box-shadow: 0 0 16px rgba(76, 201, 255, 0.86);
+}
+
+.ai-map-overlay strong {
+  width: 104px;
+  height: 104px;
+  border-radius: 22px;
+  animation: core-pulse 3.8s ease-in-out infinite;
+}
+
+@keyframes core-pulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(76, 201, 255, 0.24), 0 0 44px rgba(30, 167, 255, 0.38); }
+  50% { box-shadow: 0 0 0 1px rgba(76, 201, 255, 0.46), 0 0 74px rgba(30, 167, 255, 0.58); }
+}
+
+.process-circuit {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  min-height: 430px;
+  padding: clamp(40px, 5vw, 68px) 0 0;
+  overflow: hidden;
+}
+
+.process-circuit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(76, 201, 255, 0.05) 1px, transparent 1px) 0 0 / 70px 100%,
+    linear-gradient(to bottom, rgba(76, 201, 255, 0.04) 1px, transparent 1px) 0 0 / 100% 70px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 10%, transparent 80%);
+  pointer-events: none;
+}
+
+.process-line {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.process-line path {
+  fill: none;
+  stroke: url(#processLineBlue);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 12px rgba(76, 201, 255, 0.45));
+}
+
+.process-line circle {
+  fill: #4cc9ff;
+  filter: drop-shadow(0 0 10px rgba(76, 201, 255, 0.9));
+}
+
+.process-circuit article {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 12px;
+  text-align: center;
+}
+
+.process-orb {
+  display: grid;
+  width: 116px;
+  height: 116px;
+  place-items: center;
+  border: 1px solid rgba(76, 201, 255, 0.42);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(191, 217, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 50% 50%, rgba(30, 167, 255, 0.16), rgba(3, 5, 9, 0.92) 68%);
+  color: rgba(216, 230, 248, 0.9);
+  box-shadow:
+    inset 0 0 28px rgba(76, 201, 255, 0.12),
+    0 0 34px rgba(30, 167, 255, 0.2);
+}
+
+.process-circuit span {
+  margin-top: 20px;
+  color: #126bff;
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.process-circuit h3 {
+  margin: 0;
+  color: rgba(247, 250, 255, 0.9);
+  font-size: 1.08rem;
+  text-transform: uppercase;
+}
+
+.process-circuit p {
+  max-width: 260px;
+  margin: 0 auto;
+  color: rgba(185, 196, 214, 0.86);
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-neural-field span,
+  .dashboard-chart polyline,
+  .flow-lines path,
+  .ai-map-overlay strong {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .agency-hero {
+    background:
+      linear-gradient(180deg, rgba(3, 5, 9, 0.95) 0%, rgba(3, 5, 9, 0.7) 100%),
+      url("ai_process_background_banner_1920x700.png") center / cover no-repeat;
+  }
+
+  .hero-neural-field {
+    inset: 22% -35% 20% 8%;
+    opacity: 0.42;
+  }
+
+  .hero-capabilities,
+  .dashboard-metrics,
+  .process-circuit {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-line {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-capabilities,
+  .dashboard-metrics,
+  .process-circuit {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-capabilities span {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .hero-capabilities svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dashboard-chart {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .ai-map-visual {
+    min-height: 620px;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  .ai-map-connectors {
+    display: none;
+  }
+
+  .ai-map-overlay {
+    inset: 18px;
+  }
+
+  .ai-map-overlay span {
+    min-width: 0;
+  }
+
+  .process-circuit {
+    min-height: auto;
+    gap: 32px;
+    padding-top: 20px;
+  }
+
+  .process-orb {
+    width: 96px;
+    height: 96px;
+  }
+}

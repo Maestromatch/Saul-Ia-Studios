@@ -13,6 +13,21 @@ Conectar herramientas premium sin perder velocidad comercial: primero vender y v
 - Assets de marca AETRIA en raiz del proyecto.
 - Ideal para probar copy, diseno, CTA y oferta rapido.
 
+## Camino Next.js iniciado
+
+- Carpeta paralela creada: `web-aetria-next/`.
+- Stack instalado: Next.js 16, React 19, TypeScript, Tailwind 4 y ESLint.
+- Assets copiados a `web-aetria-next/public/brand/`.
+- Primera landing base creada en `web-aetria-next/src/app/page.tsx`.
+- Este proyecto no reemplaza todavia el deploy actual. Sirve para migrar por componentes sin romper produccion.
+
+### Notas de instalacion Windows
+
+- `npm` necesito usar certificados del sistema:
+  - PowerShell: `$env:NODE_OPTIONS='--use-system-ca'; npm install --no-audit --no-fund`
+- Se agrego `.npmrc` local en `web-aetria-next/` con timeouts largos, SSL activo y sin audit/fund.
+- No usar `strict-ssl=false` salvo emergencia justificada. Preferir certificados del sistema.
+
 ## Herramientas pro sugeridas
 
 ### 1. Figma
@@ -87,7 +102,7 @@ Cuando usar:
 
 ## Checklist antes de activar Next.js
 
-- Confirmar que Node.js y npm funcionan.
+- Confirmar que Node.js y npm funcionan. Hecho: Node `v24.15.0`, npm `11.12.1`.
 - Decidir dominio principal: `aetriastudio.cl` o Vercel temporal.
 - Definir rutas: home, servicios, proyectos, privacidad, terminos, demos.
 - Mover assets a `public/brand/`.

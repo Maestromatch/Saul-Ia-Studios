@@ -903,6 +903,55 @@ input[type=range] { height: 5px; }
 }
 .cta-phase-btn:hover{background:rgba(139,105,20,.25);border-color:#8B6914;}
 
+/* ── PREMORTEM ── */
+.premortem-intro{
+  background:linear-gradient(135deg,#1C0A0A,#2D1010);
+  border:1px solid rgba(192,57,43,.3);
+  border-radius:14px;padding:28px 32px;margin-bottom:32px;
+  font-family:sans-serif;
+}
+.premortem-intro-label{
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:#F87171;margin-bottom:10px;
+}
+.premortem-intro-title{
+  font-size:20px;color:#FAF8F4;line-height:1.4;margin-bottom:10px;
+}
+.premortem-intro-body{
+  font-size:13px;color:#A09080;line-height:1.75;
+}
+.premortem-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.pm-card{
+  background:#FAF8F4;border:1px solid var(--border);
+  border-radius:12px;padding:22px 22px 18px;
+  border-top:4px solid var(--red);
+  position:relative;overflow:hidden;
+}
+.pm-card::before{
+  content:'';position:absolute;top:0;right:0;
+  width:60px;height:60px;
+  background:radial-gradient(circle,rgba(192,57,43,.07),transparent 70%);
+}
+.pm-prob{
+  display:inline-block;font-family:sans-serif;font-size:9px;font-weight:700;
+  letter-spacing:.8px;text-transform:uppercase;padding:3px 10px;border-radius:20px;
+  margin-bottom:10px;
+}
+.prob-alta{background:#FEE2E2;color:#B91C1C;}
+.prob-media{background:#FEF3C7;color:#92400E;}
+.prob-certeza{background:#B91C1C;color:#fff;}
+.pm-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.35;}
+.pm-year{font-family:sans-serif;font-size:11px;color:var(--light);margin-bottom:10px;}
+.pm-story{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px;}
+.pm-fix{
+  background:var(--green-lt);border-left:3px solid var(--green);
+  border-radius:0 6px 6px 0;padding:8px 12px;
+  font-family:sans-serif;font-size:12px;color:var(--green);font-weight:600;
+}
+.pm-fix span{font-weight:400;color:#065F46;}
+
 /* ── PRINT ── */
 @media print{
   nav,#progress-bar,.nav-share,#countdown-bar,#wsp-float{display:none;}
@@ -942,6 +991,13 @@ input[type=range] { height: 5px; }
   .steps-grid{grid-template-columns:1fr;}
   nav{overflow-x:auto;flex-wrap:nowrap;padding:8px 16px;}
   .kw-text{width:130px;}
+  .premortem-grid{grid-template-columns:1fr;}
+  .pm-card[style*="grid-column"]{grid-column:1 !important;}
+  .premortem-intro{padding:20px 18px;}
+  .cta-final-box{padding:24px 18px;}
+  #countdown-bar{flex-direction:column;gap:8px;padding:10px 14px;top:38px;}
+  .cd-label{text-align:center;}
+  .cd-scarcity{text-align:center;}
 }
 </style>
 </head>
@@ -959,6 +1015,7 @@ input[type=range] { height: 5px; }
   <a href="#fases">Las fases</a>
   <a href="#roi">ROI</a>
   <a href="#precios">Precios</a>
+  <a href="#premortem" style="color:#F87171 !important;">⚠ Riesgos</a>
   <button class="nav-share" onclick="shareWhatsApp()">📲 Compartir</button>
 </nav>
 
@@ -1852,6 +1909,64 @@ input[type=range] { height: 5px; }
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Puede mi personal manejarlo sin mí? <span class="faq-icon">+</span></div>
     <div class="faq-answer"><div class="faq-answer-inner">Sí. La Fase 1B incluye una guía de 1 página para el personal del local con los pasos básicos de WhatsApp Business (cómo responder, cómo usar las respuestas rápidas, cómo agregar etiquetas). No necesita estar el dueño para responder consultas básicas de horario o ubicación.</div></div>
+  </div>
+</section>
+
+<!-- ── PREMORTEM ── -->
+<section id="premortem">
+  <div class="sec-title">⚠️ Análisis Premortem — Qué pasa si no cambia nada</div>
+  <div class="sec-sub">El premortem es una técnica usada por empresas grandes: imaginar que el peor escenario ya ocurrió y entender qué lo causó. Esto es lo que les pasa a los negocios como Carnes Lolol que esperan demasiado.</div>
+
+  <div class="premortem-intro">
+    <div class="premortem-intro-label">Escenario · 2029</div>
+    <div class="premortem-intro-title">"Carnes Lolol cerró después de 23 años.<br>Nadie lo vio venir — o sí."</div>
+    <div class="premortem-intro-body">
+      No fue un solo golpe. Fueron cinco sangrados pequeños que nadie tomó en serio, uno por uno, durante tres años. Cada uno parecía menor. Juntos fueron fatales. Lo que sigue es el análisis de cada uno — y cómo se evita antes de que empiece.
+    </div>
+  </div>
+
+  <div class="premortem-grid">
+
+    <div class="pm-card">
+      <div class="pm-prob prob-certeza">Ya está ocurriendo</div>
+      <div class="pm-title">El error de Google decepcionó al cliente equivocado</div>
+      <div class="pm-year">⏱ Plazo: Hoy mismo</div>
+      <div class="pm-story">Un cliente buscó "carnicería con delivery El Bosque", encontró Carnes Lolol, intentó pedir a domicilio y descubrió que no existe ese servicio. Puso una reseña de 1 estrella: <em>"Dicen que tienen delivery y es mentira."</em> La nota bajó de 4.6 a 4.2. Los clientes nuevos ya no llaman — con 4.2 eligen a la competencia que tiene 4.5. El dueño nunca supo que eso pasó porque el perfil no está en sus manos.</div>
+      <div class="pm-fix">✓ Se evita con <span>Fase 1A — en 24 horas</span></div>
+    </div>
+
+    <div class="pm-card">
+      <div class="pm-prob prob-alta">Probabilidad: Alta</div>
+      <div class="pm-title">Otra carnicería del sector se movió primero</div>
+      <div class="pm-year">⏱ Plazo: 12 – 18 meses</div>
+      <div class="pm-story">Una carnicería competidora — no necesariamente mejor — activó WhatsApp Business, reclamó su Google Business y empezó a publicar en Instagram dos veces por semana. Los clientes de 30 a 45 años del barrio empezaron a escribirle por WhatsApp porque es más fácil que llamar. Carnes Lolol tiene más historia y mejor producto, pero el otro negocio aparece primero en Google y tiene botón de contacto. El resultado: ese segmento activo se perdió para siempre.</div>
+      <div class="pm-fix">✓ Se evita con <span>Fase 1B — fundación digital completa</span></div>
+    </div>
+
+    <div class="pm-card">
+      <div class="pm-prob prob-alta">Probabilidad: Alta</div>
+      <div class="pm-title">El cuello de botella de Agrosuper nunca se resolvió</div>
+      <div class="pm-year">⏱ Plazo: Continúa cada semana</div>
+      <div class="pm-story">El ciclo se repitió durante tres años: compra volumen para negociar precio → no puede avisar a los clientes a tiempo → la oferta vence → merma. Cada semana perdida son $150.000–$400.000 en producto que no se vendió al precio correcto. En tres años, esa merma acumulada supera los $15 millones. El margen se erosionó. Los precios subieron para compensar. Los clientes notaron que el local "se puso caro" — y algunos no volvieron.</div>
+      <div class="pm-fix">✓ Se evita con <span>Fase 2 — motor de ofertas en tiempo real</span></div>
+    </div>
+
+    <div class="pm-card">
+      <div class="pm-prob prob-media">Probabilidad: Media</div>
+      <div class="pm-title">Los supermercados ganaron por conveniencia</div>
+      <div class="pm-year">⏱ Plazo: 18 – 30 meses</div>
+      <div class="pm-story">Lider y Unimarc activaron sus aplicaciones de delivery en El Bosque. Los clientes de 35 a 55 años — los más fieles a Carnes Lolol — descubrieron que podían pedir carne desde el celular sin salir de casa. No era más barata ni mejor, pero era conveniente. Carnes Lolol no tenía catálogo digital ni sistema de pedidos para retiro. El cliente habitual empezó a ir al local solo cuando "estaba de paso". La frecuencia bajó de dos veces por semana a una vez cada dos semanas.</div>
+      <div class="pm-fix">✓ Se evita con <span>Fase 3 — catálogo y pedidos anticipados</span></div>
+    </div>
+
+    <div class="pm-card" style="grid-column:1/-1;border-top-color:var(--muted);">
+      <div class="pm-prob prob-media">Riesgo a largo plazo</div>
+      <div class="pm-title">El negocio no tenía valor de traspaso</div>
+      <div class="pm-year">⏱ Plazo: 5 – 8 años</div>
+      <div class="pm-story">Después de 25 años, el dueño quiso jubilarse y vender el negocio. El local tenía historia, reputación oral y clientela fiel — pero nada de eso quedaba registrado en ningún sistema. No había base de datos de clientes, no había canal de comunicación propio, no había presencia digital que un comprador pudiera valorar. El tasador dijo que el fondo de comercio valía solo el arriendo y el equipamiento. Un negocio sin sistema digital no se vende — se cierra. Con un sistema instalado, ese mismo negocio tiene una cartera de clientes contactable, un canal de ingresos recurrente y una marca local con presencia medible — eso sí tiene precio.</div>
+      <div class="pm-fix">✓ Se evita construyendo <span>el sistema desde Fase 1B en adelante — cada mes suma valor al negocio</span></div>
+    </div>
+
   </div>
 </section>
 

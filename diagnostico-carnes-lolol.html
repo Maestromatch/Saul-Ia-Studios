@@ -833,7 +833,7 @@ input[type=range] { height: 5px; }
 .cd-unit small{font-size:9px;letter-spacing:.8px;text-transform:uppercase;color:#8A9985;margin-top:1px;}
 .cd-sep{font-size:20px;font-weight:900;color:#8B6914;margin:0 2px;}
 .cd-scarcity{
-  font-size:11px;color:#F4C7A0;font-style:italic;white-space:nowrap;
+  font-size:11px;color:#F4C7A0;font-style:italic;white-space:normal;text-align:center;
 }
 .cd-expired{
   font-size:13px;font-weight:700;color:#F87171;letter-spacing:.3px;
@@ -1019,19 +1019,10 @@ input[type=range] { height: 5px; }
   <button class="nav-share" onclick="shareWhatsApp()">📲 Compartir</button>
 </nav>
 
-<!-- ── COUNTDOWN BAR ── -->
+<!-- ── RECOMMENDATION BAR ── -->
 <div id="countdown-bar">
-  <span class="cd-label">⚡ Precio lanzamiento válido por:</span>
-  <div class="cd-timer">
-    <div class="cd-unit"><span id="cd-days">5</span><small>días</small></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><span id="cd-hours">00</span><small>hrs</small></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><span id="cd-mins">00</span><small>min</small></div>
-    <div class="cd-sep">:</div>
-    <div class="cd-unit"><span id="cd-secs">00</span><small>seg</small></div>
-  </div>
-  <span class="cd-scarcity">Solo para el primer cliente de El Bosque</span>
+  <span class="cd-label">Recomendación clara</span>
+  <span class="cd-scarcity">Partir por Presencia Local Premium Express · $219.000 CLP · 5 a 7 días · sin mensualidad obligatoria</span>
 </div>
 
 <!-- ── HERO ── -->
@@ -1296,8 +1287,8 @@ input[type=range] { height: 5px; }
 
 <!-- ── FASES ── -->
 <section id="fases">
-  <div class="sec-title">🗓️ El plan completo — 5 fases desde lo urgente hasta el nivel Doña Cata</div>
-  <div class="sec-sub">Cada fase construye sobre la anterior. No es necesario hacerlas todas — se puede empezar en Fase 1A y decidir después. Haga clic en cada fase para ver el detalle completo.</div>
+  <div class="sec-title">🗓️ El plan completo — desde lo urgente hasta una carnicería premium de barrio</div>
+  <div class="sec-sub">Cada fase construye sobre la anterior. La recomendación es partir con Fase 1B, porque deja Google, WhatsApp, Instagram, QR y presentación local listos en una sola entrega. Fase 1A queda como opción mínima si solo se quiere corregir Google.</div>
 
   <div class="phase-layout">
     <!-- Ladder (desktop) -->
@@ -1337,7 +1328,7 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Google Business reclamado · Error delivery eliminado · 24 horas de entrega <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Precio lanzamiento</div>
+            <div class="price-launch-badge">Opción mínima</div>
             <div class="price-anchor">Valor regular: $159.000</div>
             <div class="price-setup">$79.000</div>
             <div class="price-unico">Pago único</div>
@@ -1391,9 +1382,9 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">WhatsApp Business · Instagram optimizado · SEO Google · QR imprimibles · 7 días <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Precio lanzamiento</div>
-            <div class="price-anchor">Valor regular: $359.000</div>
-            <div class="price-setup">$179.000</div>
+            <div class="price-launch-badge">Plan recomendado</div>
+            <div class="price-anchor">Precio fijo y cerrado</div>
+            <div class="price-setup">$219.000</div>
             <div class="price-unico">Incluye 1A</div>
             <div class="price-time">⏱ Entrega: 7 días</div>
           </div>
@@ -1437,9 +1428,9 @@ input[type=range] { height: 5px; }
             </div>
           </div>
           <div class="wsp-phase-wrap">
-            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1B+%28179.000%29.+%C2%BFCu%C3%A1ndo+arrancamos%3F" target="_blank">
+            <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1B+%28219.000%29.+%C2%BFCu%C3%A1ndo+arrancamos%3F" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
-              Quiero comenzar con la Fase 1B — $179.000
+              Quiero comenzar con la Fase 1B — $219.000
             </a>
           </div>
         </div>
@@ -1457,10 +1448,10 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Motor de contenido Zernio · WA broadcast · Publicación automática IG + Google · Mensual <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Precio lanzamiento</div>
-            <div class="price-anchor">Valor regular: $259.000 · $119.000/mes</div>
-            <div class="price-setup">$129.000 <small style="font-size:11px;">setup</small></div>
-            <div class="price-monthly">+ <strong>$59.000/mes</strong></div>
+            <div class="price-launch-badge">Continuidad opcional</div>
+            <div class="price-anchor">Para mantener Instagram y Google activos</div>
+            <div class="price-setup">$129.000 <small style="font-size:11px;">/mes</small></div>
+            <div class="price-monthly"><strong>Sin setup</strong> si viene de Fase 1B</div>
             <div class="price-time">⏱ Entrega: 7 días</div>
           </div>
         </div>
@@ -1500,7 +1491,7 @@ input[type=range] { height: 5px; }
           <div class="wsp-phase-wrap">
             <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+2+%28motor+de+ofertas%29.+%C2%BFC%C3%B3mo+avanzamos%3F" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
-              Me interesa la Fase 2 — $129.000 setup
+              Me interesa la Fase 2 — $129.000/mes
             </a>
           </div>
         </div>
@@ -1515,10 +1506,10 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Catálogo digital · Pedidos para retiro · Bot WA básico · Organización de stock anticipada <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Precio lanzamiento</div>
-            <div class="price-anchor">Valor regular: $499.000 · $179.000/mes</div>
-            <div class="price-setup">$249.000 <small style="font-size:11px;">setup</small></div>
-            <div class="price-monthly">+ <strong>$89.000/mes</strong></div>
+            <div class="price-launch-badge">Siguiente crecimiento</div>
+            <div class="price-anchor">Pedido para retiro, sin prometer delivery</div>
+            <div class="price-setup">$349.000 <small style="font-size:11px;">único</small></div>
+            <div class="price-monthly">Gestión mensual opcional</div>
             <div class="price-time">⏱ Entrega: 10 días</div>
           </div>
         </div>
@@ -1557,7 +1548,7 @@ input[type=range] { height: 5px; }
           <div class="wsp-phase-wrap">
             <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+3+con+cat%C3%A1logo+y+pedidos.+%C2%BFC%C3%B3mo+avanzamos%3F" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
-              Me interesa la Fase 3 — $249.000 setup
+              Me interesa la Fase 3 — $349.000
             </a>
           </div>
         </div>
@@ -1575,10 +1566,10 @@ input[type=range] { height: 5px; }
             <div class="phase-tagline">Web propia · E-commerce · Bot IA WhatsApp · SEO técnico · Publicidad Meta · Dominio propio <span class="expand-icon">▼</span></div>
           </div>
           <div class="phase-head-price">
-            <div class="price-launch-badge">Precio lanzamiento</div>
-            <div class="price-anchor">Valor regular: $990.000 · $299.000/mes</div>
-            <div class="price-setup">$490.000 <small style="font-size:11px;">setup</small></div>
-            <div class="price-monthly">+ <strong>$149.000/mes</strong></div>
+            <div class="price-launch-badge">Visión premium</div>
+            <div class="price-anchor">Evolución completa, paso a paso</div>
+            <div class="price-setup">$690.000 <small style="font-size:11px;">setup</small></div>
+            <div class="price-monthly">Gestión mensual opcional</div>
             <div class="price-time">⏱ Entrega: 30 días</div>
           </div>
         </div>
@@ -1620,7 +1611,7 @@ input[type=range] { height: 5px; }
           <div class="wsp-phase-wrap">
             <a class="wsp-cta-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360+completo.+%C2%BFPodemos+hablar%3F" target="_blank">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.528 5.855L.057 23.5l5.793-1.448A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.878 9.878 0 01-5.032-1.374l-.361-.214-3.741.981.998-3.648-.235-.374A9.862 9.862 0 012.106 12C2.106 6.579 6.579 2.106 12 2.106S21.894 6.579 21.894 12 17.421 21.894 12 21.894z"/></svg>
-              Me interesa el Pack 360 — $490.000 setup
+              Me interesa el Pack 360 — $690.000 setup
             </a>
           </div>
         </div>
@@ -1742,7 +1733,7 @@ input[type=range] { height: 5px; }
     </div>
 
     <div class="roi-note">
-      <strong>Cálculo base:</strong> Clientes nuevos × ticket promedio × 2 visitas al mes. El multiplicador de 2 es conservador — una carnicería de barrio bien posicionada genera visitas semanales o quincenales en clientes fidelizados. La Fase 1B se recupera en semanas, no en meses.
+      <strong>Cálculo base:</strong> Clientes nuevos × ticket promedio × 2 visitas al mes. Es una estimación simple para entender el punto de equilibrio: no promete ventas automáticas, pero muestra que pocos clientes nuevos pueden justificar la inversión inicial.
     </div>
   </div>
 </section>
@@ -1821,7 +1812,7 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 1A</div>
       <div class="pc-name">"Corrección urgente"</div>
-      <div class="pc-launch-badge">Precio lanzamiento</div>
+      <div class="pc-launch-badge">Opción mínima</div>
       <div class="pc-anchor">Valor regular: $159.000</div>
       <div class="pc-setup">$79.000 <small>CLP</small></div>
       <div class="pc-unico">Pago único</div>
@@ -1831,9 +1822,9 @@ input[type=range] { height: 5px; }
     <div class="price-card featured">
       <div class="pc-fase">Fase 1B</div>
       <div class="pc-name">"Fundación completa"</div>
-      <div class="pc-launch-badge">Precio lanzamiento</div>
-      <div class="pc-anchor">Valor regular: $359.000</div>
-      <div class="pc-setup">$179.000 <small>CLP</small></div>
+      <div class="pc-launch-badge">Plan recomendado</div>
+      <div class="pc-anchor">Precio fijo y cerrado</div>
+      <div class="pc-setup">$219.000 <small>CLP</small></div>
       <div class="pc-unico">Incluye 1A · Pago único</div>
       <div class="pc-monthly">Sin mensualidad</div>
       <div class="pc-time">⏱ 7 días</div>
@@ -1841,35 +1832,35 @@ input[type=range] { height: 5px; }
     <div class="price-card">
       <div class="pc-fase">Fase 2</div>
       <div class="pc-name">"Motor de ofertas"</div>
-      <div class="pc-launch-badge">Precio lanzamiento</div>
-      <div class="pc-anchor">Valor regular: $259.000 setup · $119.000/mes</div>
-      <div class="pc-setup">$129.000 <small>setup</small></div>
-      <div class="pc-monthly">+ <strong>$59.000/mes</strong></div>
+      <div class="pc-launch-badge">Continuidad opcional</div>
+      <div class="pc-anchor">Para mantener contenido activo</div>
+      <div class="pc-setup">$129.000 <small>/mes</small></div>
+      <div class="pc-monthly"><strong>Sin setup</strong> si viene de Fase 1B</div>
       <div class="pc-time">⏱ 7 días</div>
     </div>
     <div class="price-card">
       <div class="pc-fase">Fase 3</div>
       <div class="pc-name">"Pedidos y catálogo"</div>
-      <div class="pc-launch-badge">Precio lanzamiento</div>
-      <div class="pc-anchor">Valor regular: $499.000 setup · $179.000/mes</div>
-      <div class="pc-setup">$249.000 <small>setup</small></div>
-      <div class="pc-monthly">+ <strong>$89.000/mes</strong></div>
+      <div class="pc-launch-badge">Siguiente crecimiento</div>
+      <div class="pc-anchor">Pedido para retiro, sin delivery</div>
+      <div class="pc-setup">$349.000 <small>único</small></div>
+      <div class="pc-monthly">Gestión mensual opcional</div>
       <div class="pc-time">⏱ 10 días</div>
     </div>
     <div class="price-card">
       <div class="pc-fase">Fase 4 — Pack 360</div>
       <div class="pc-name">"Tienda online completa"</div>
-      <div class="pc-launch-badge">Precio lanzamiento</div>
-      <div class="pc-anchor">Valor regular: $990.000 setup · $299.000/mes</div>
-      <div class="pc-setup">$490.000 <small>setup</small></div>
-      <div class="pc-monthly">+ <strong>$149.000/mes</strong></div>
+      <div class="pc-launch-badge">Visión premium</div>
+      <div class="pc-anchor">Evolución completa por fases</div>
+      <div class="pc-setup">$690.000 <small>setup</small></div>
+      <div class="pc-monthly">Gestión mensual opcional</div>
       <div class="pc-time">⏱ 30 días</div>
     </div>
   </div>
 
   <div style="margin-top:14px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:14px 20px;font-family:sans-serif;font-size:13px;color:var(--muted);line-height:1.7;">
     <strong style="color:var(--text);">Forma de pago:</strong> 50% al iniciar el trabajo · 50% al entregar todo funcionando. La mensualidad empieza solo cuando el sistema está operativo y el dueño lo verifica.<br>
-    <strong style="color:var(--bronze);">⚠ Precio de lanzamiento:</strong> Válido para el primer cliente de la zona El Bosque. El valor regular de cada fase está indicado sobre cada precio.
+    <strong style="color:var(--bronze);">Recomendación:</strong> partir con Fase 1B / Presencia Local Premium Express. Las fases siguientes son opcionales y se evalúan solo si el dueño ve valor en continuar.
   </div>
 
   <div class="garantia-box">
@@ -1896,7 +1887,7 @@ input[type=range] { height: 5px; }
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Cuánto tarda en verse un resultado concreto? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><div class="faq-answer-inner">El primer resultado se ve el mismo día que se entrega la Fase 1A: Google deja de mostrar el delivery falso. En la primera semana de Fase 1B, los primeros clientes empiezan a llegar por WhatsApp. En el primer mes de Fase 2, las ofertas de Agrosuper ya llegan a 200+ clientes en minutos. No hay promesas de magia — son resultados específicos con tiempos reales.</div></div>
+    <div class="faq-answer"><div class="faq-answer-inner">El primer resultado se ve el mismo día que se entrega la Fase 1A: Google deja de mostrar el delivery falso. Con Fase 1B, el negocio queda con WhatsApp, Instagram, Google y QR listos para recibir consultas. En Fase 2, las ofertas se pueden enviar a la lista de clientes que el dueño autorice. No hay promesas de magia: son mejoras concretas para que el cliente encuentre, entienda y contacte al local.</div></div>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Qué pasa si decido no seguir con las fases siguientes? <span class="faq-icon">+</span></div>
@@ -1904,7 +1895,7 @@ input[type=range] { height: 5px; }
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Por qué no hacerlo yo mismo? <span class="faq-icon">+</span></div>
-    <div class="faq-answer"><div class="faq-answer-inner">Técnicamente, es posible. Pero reclamar Google Business tiene pasos específicos que mal hechos pueden bloquear el perfil por semanas. Configurar WhatsApp Business para listas de difusión tiene restricciones que hay que conocer para no quedar baneado. Y coordinar el sistema de ofertas entre WhatsApp, Instagram y Google Business en simultáneo toma entre 4 y 6 horas de trabajo técnico si se sabe cómo. El valor es que queda bien hecho a la primera, sin riesgo de bloqueos.</div></div>
+    <div class="faq-answer"><div class="faq-answer-inner">Técnicamente, es posible. La diferencia es que hacerlo bien requiere ordenar Google, WhatsApp, Instagram, textos, fotos, QR y reseñas sin dejar datos contradictorios. El valor está en que queda configurado, explicado y probado, sin que el dueño tenga que aprender todo desde cero.</div></div>
   </div>
   <div class="faq-item" onclick="toggleFaq(this)">
     <div class="faq-question">¿Puede mi personal manejarlo sin mí? <span class="faq-icon">+</span></div>
@@ -1914,14 +1905,14 @@ input[type=range] { height: 5px; }
 
 <!-- ── PREMORTEM ── -->
 <section id="premortem">
-  <div class="sec-title">⚠️ Análisis Premortem — Qué pasa si no cambia nada</div>
-  <div class="sec-sub">El premortem es una técnica usada por empresas grandes: imaginar que el peor escenario ya ocurrió y entender qué lo causó. Esto es lo que les pasa a los negocios como Carnes Lolol que esperan demasiado.</div>
+  <div class="sec-title">⚠️ Riesgos si no se corrige la presencia digital</div>
+  <div class="sec-sub">No se trata de asustar. Se trata de ver con calma qué puede pasar si Google, WhatsApp e Instagram siguen desordenados mientras otros negocios avanzan.</div>
 
   <div class="premortem-intro">
-    <div class="premortem-intro-label">Escenario · 2029</div>
-    <div class="premortem-intro-title">"Carnes Lolol cerró después de 23 años.<br>Nadie lo vio venir — o sí."</div>
+    <div class="premortem-intro-label">Escenario posible · 2029</div>
+    <div class="premortem-intro-title">"Carnes Lolol perdió terreno digital frente a negocios más activos."</div>
     <div class="premortem-intro-body">
-      No fue un solo golpe. Fueron cinco sangrados pequeños que nadie tomó en serio, uno por uno, durante tres años. Cada uno parecía menor. Juntos fueron fatales. Lo que sigue es el análisis de cada uno — y cómo se evita antes de que empiece.
+      No suele pasar por un solo golpe. Pasa por varios detalles pequeños: datos incorrectos, pocas publicaciones, clientes que no encuentran WhatsApp, ofertas que no se comunican y competidores que se ven más fáciles de contactar. Lo importante es que todo eso se puede corregir por etapas.
     </div>
   </div>
 
@@ -1931,7 +1922,7 @@ input[type=range] { height: 5px; }
       <div class="pm-prob prob-certeza">Ya está ocurriendo</div>
       <div class="pm-title">El error de Google decepcionó al cliente equivocado</div>
       <div class="pm-year">⏱ Plazo: Hoy mismo</div>
-      <div class="pm-story">Un cliente buscó "carnicería con delivery El Bosque", encontró Carnes Lolol, intentó pedir a domicilio y descubrió que no existe ese servicio. Puso una reseña de 1 estrella: <em>"Dicen que tienen delivery y es mentira."</em> La nota bajó de 4.6 a 4.2. Los clientes nuevos ya no llaman — con 4.2 eligen a la competencia que tiene 4.5. El dueño nunca supo que eso pasó porque el perfil no está en sus manos.</div>
+      <div class="pm-story">Un cliente buscó "carnicería con delivery El Bosque", encontró Carnes Lolol, intentó pedir a domicilio y descubrió que no existe ese servicio. Aunque no deje reseña, queda una mala experiencia. Si ese error se repite, puede afectar la confianza que el negocio construyó durante años.</div>
       <div class="pm-fix">✓ Se evita con <span>Fase 1A — en 24 horas</span></div>
     </div>
 
@@ -1947,7 +1938,7 @@ input[type=range] { height: 5px; }
       <div class="pm-prob prob-alta">Probabilidad: Alta</div>
       <div class="pm-title">El cuello de botella de Agrosuper nunca se resolvió</div>
       <div class="pm-year">⏱ Plazo: Continúa cada semana</div>
-      <div class="pm-story">El ciclo se repitió durante tres años: compra volumen para negociar precio → no puede avisar a los clientes a tiempo → la oferta vence → merma. Cada semana perdida son $150.000–$400.000 en producto que no se vendió al precio correcto. En tres años, esa merma acumulada supera los $15 millones. El margen se erosionó. Los precios subieron para compensar. Los clientes notaron que el local "se puso caro" — y algunos no volvieron.</div>
+      <div class="pm-story">El ciclo se repite: compra volumen para negociar precio, no puede avisar a los clientes a tiempo, la oferta se comunica solo en el local y parte de la oportunidad se pierde. No siempre es merma directa, pero sí es venta potencial que no se aprovecha.</div>
       <div class="pm-fix">✓ Se evita con <span>Fase 2 — motor de ofertas en tiempo real</span></div>
     </div>
 
@@ -1993,14 +1984,12 @@ input[type=range] { height: 5px; }
   </div>
 
   <div class="cta-final-box">
-    <div class="cta-final-title">¿Cuál fase quiere comenzar, Don Juan Carlos?</div>
-    <div class="cta-final-sub">Toque el botón de la fase que le interesa — llega directo a WhatsApp con el mensaje listo. Sin formularios, sin esperas.</div>
+    <div class="cta-final-title">Recomendación para comenzar: Presencia Local Premium Express.</div>
+    <div class="cta-final-sub">La opción recomendada es Fase 1B: deja la base digital completa en 5 a 7 días. Si prefiere partir más pequeño, Fase 1A corrige solo Google. Las fases futuras se conversan después.</div>
     <div class="cta-final-btns">
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1A+%2879.000%29." target="_blank">▶ Fase 1A — $79.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+la+Fase+1B+%28179.000%29." target="_blank">★ Fase 1B — $179.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+2." target="_blank">▶ Fase 2 — $129.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+la+Fase+3." target="_blank">▶ Fase 3 — $249.000</a>
-      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Me+interesa+el+Pack+360." target="_blank">▶ Pack 360 — $490.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+comenzar+con+Presencia+Local+Premium+Express+%28219.000%29." target="_blank">★ Plan recomendado — $219.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+corregir+primero+Google+con+la+Fase+1A+%2879.000%29." target="_blank">▶ Solo Google — $79.000</a>
+      <a class="cta-phase-btn" href="https://wa.me/56968171774?text=Hola+Sa%C3%BAl%2C+soy+Juan+Carlos+de+Carnes+Lolol.+Quiero+entender+las+fases+futuras+despu%C3%A9s+del+primer+paso." target="_blank">▶ Conversar fases futuras</a>
     </div>
   </div>
 </section>
@@ -2121,31 +2110,6 @@ const gapIO=new IntersectionObserver((entries)=>{
 const gapSection=document.querySelector('#riesgo .gap-visual');
 if(gapSection) gapIO.observe(gapSection);
 
-// ── COUNTDOWN TIMER ──
-(function(){
-  // Deadline: 5 días desde envío del documento (2026-05-31 23:59:59 CLT = UTC-4)
-  const deadline = new Date('2026-05-31T23:59:59-04:00');
-  const pad = n => String(n).padStart(2,'0');
-  function tick(){
-    const now = new Date();
-    const diff = deadline - now;
-    if(diff <= 0){
-      document.getElementById('countdown-bar').innerHTML =
-        '<span class="cd-expired">⛔ Precio de lanzamiento expirado — consultar valor regular</span>';
-      return;
-    }
-    const days  = Math.floor(diff / 86400000);
-    const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins  = Math.floor((diff % 3600000)  / 60000);
-    const secs  = Math.floor((diff % 60000)    / 1000);
-    document.getElementById('cd-days').textContent  = days;
-    document.getElementById('cd-hours').textContent = pad(hours);
-    document.getElementById('cd-mins').textContent  = pad(mins);
-    document.getElementById('cd-secs').textContent  = pad(secs);
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
 </script>
 
 <!-- ── FLOATING WSP BUTTON ── -->

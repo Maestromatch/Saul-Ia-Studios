@@ -13,7 +13,8 @@ La oferta debe avanzar por fases:
 2. ordenar contacto;
 3. instalar sistema;
 4. captar mas demanda;
-5. sostener contenido y optimizacion.
+5. sostener contenido y optimizacion;
+6. convertir la presencia en una vitrina premium cuando ya existe oferta clara.
 
 El cliente debe entender siempre:
 
@@ -53,6 +54,7 @@ Evita gastar en algo equivocado. Detecta las fugas reales: Google incompleto, Wh
 
 - Auditoria puntual: $29.000 CLP.
 - Diagnostico completo: $49.000 CLP.
+- Correccion Google Business urgente: $79.000 CLP. Esto ya no es diagnostico; es implementacion minima.
 - Sin mensualidad.
 
 ### Upsell natural
@@ -88,9 +90,9 @@ Cuando un vecino busca el negocio, lo encuentra actualizado, con datos claros y 
 
 ### Valor realista El Bosque
 
-- Base: $149.000 CLP.
-- Recomendado: $179.000 CLP.
-- Completo: $199.000 CLP.
+- Base: $179.000 CLP.
+- Recomendado/premium local: $219.000 CLP.
+- Completo con extras visuales o rescate complejo: desde $249.000 CLP.
 - Mantencion opcional: $60.000 - $120.000 CLP/mes.
 
 ### Nota
@@ -210,7 +212,53 @@ Setup 3 a 7 dias. Entrega semanal o quincenal.
 
 ---
 
-## Fase 5 - Operacion completa / 360
+## Fase 5 - Web Premium IA
+
+### Para quien es
+
+Negocio que ya tiene una oferta clara y necesita verse de alto nivel: constructora, optica, servicio local, marca personal o pyme que quiere usar la web como prueba de confianza antes de invertir mas fuerte en ads.
+
+### Beneficio
+
+Transforma el negocio en una vitrina premium, confiable y medible: diseño, historia, autoridad, CTA, WhatsApp, visuales IA y experiencia responsive.
+
+### Incluye
+
+- Brief comercial.
+- Arquitectura de secciones.
+- Landing o sitio premium segun alcance.
+- Copy orientado a conversion.
+- Integracion de logo, fotos, assets o visuales IA.
+- Mapa visual IA/proceso cuando aporte autoridad.
+- CTA WhatsApp y/o agenda.
+- SEO on-page basico.
+- QA desktop/mobile.
+- 7 dias de ajustes post-entrega.
+
+### Tiempo
+
+10 a 21 dias segun cantidad de secciones, assets y aprobaciones.
+
+### Valor
+
+- Precio regular: $890.000 - $1.200.000 CLP.
+- Oferta de lanzamiento: $590.000 - $790.000 CLP para los primeros 3 casos de portfolio.
+- Web + automatizacion simple: desde $1.400.000 CLP si incluye CRM, bot o integraciones.
+
+### Psicologia comercial
+
+- El precio regular posiciona calidad alta gama.
+- El lanzamiento baja la friccion de entrada sin regalar el trabajo.
+- El bono fundador aumenta valor percibido sin bajar mas precio.
+- La condicion de caso/testimonio justifica el beneficio.
+
+### Upsell natural
+
+Fase 2 - Sistema WhatsApp + CRM, Fase 3 - Captacion y Ads, o Fase 4 - Content Engine.
+
+---
+
+## Fase 6 - Operacion completa / 360
 
 ### Para quien es
 

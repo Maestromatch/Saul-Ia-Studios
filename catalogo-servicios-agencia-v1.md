@@ -21,7 +21,8 @@ Vende sistemas:
 6. Formaliza Tu Negocio.
 7. Pack Emprendedor 360.
 8. Ads Growth Management.
-9. Mini-servicios de entrada.
+9. Web Premium IA.
+10. Mini-servicios de entrada.
 
 ---
 
@@ -288,7 +289,63 @@ No incluye:
 
 ---
 
-# 9. Mini-servicios de entrada
+# 9. Web Premium IA
+
+## Promesa
+
+Convertimos un negocio real en una web premium, futurista y confiable: identidad visual, copy de conversion, visuales IA, WhatsApp, SEO basico, performance y QA desktop/mobile.
+
+## Para quien
+
+- Constructoras y maestros que necesitan verse confiables antes de invertir en ads.
+- Opticas, clinicas, servicios locales y pymes que venden por WhatsApp.
+- Marcas que ya tienen oferta clara y necesitan una vitrina de alto nivel.
+- Clientes que quieren usar la web como prueba de autoridad, no solo como tarjeta digital.
+
+## Incluye
+
+- Brief comercial y arquitectura de secciones.
+- Landing o sitio premium segun alcance.
+- Integracion de identidad visual y assets reales.
+- Visual IA / mapa de proceso / seccion de autoridad.
+- CTA WhatsApp y/o agenda.
+- SEO on-page basico.
+- Revision responsive desktop/mobile.
+- QA de links, textos, CTA y carga.
+- 7 dias de ajustes post-entrega.
+
+## Precio
+
+- Precio regular landing premium: $890.000 - $1.200.000 CLP.
+- Precio regular web + sistema visual + automatizacion simple: $1.400.000 - $1.800.000+ CLP.
+- Oferta de lanzamiento: $590.000 - $790.000 CLP para los primeros 3 casos de portfolio.
+
+## Psicologia de oferta de lanzamiento
+
+- Ancla: se muestra el precio regular para posicionar el nivel premium.
+- Descuento fundador: el cliente entra con precio menor a cambio de caso/testimonio.
+- Bono: mapa visual IA + conexion WhatsApp + QA desktop/mobile incluido.
+- Riesgo reducido: 50% anticipo / 50% contra entrega funcional.
+- Escasez honesta: solo 3 cupos fundadores, porque requieren documentacion y seguimiento cercano.
+
+## Requisitos
+
+- Oferta clara.
+- Fotos, logo o material base del negocio.
+- WhatsApp operativo.
+- Responsable que apruebe textos y visuales.
+- Autorizacion para usar el resultado como caso o captura de portfolio, si toma precio fundador.
+
+## Upsell natural
+
+- Pack IA Express.
+- Sistema WhatsApp + CRM.
+- Ads Growth Management.
+- Content Engine IA.
+
+---
+
+# 10. Mini-servicios de entrada
 
 ## Promesa
 
@@ -300,7 +357,7 @@ Partimos chico, demostramos valor y dejamos un camino claro para escalar.
 - Diagnostico IA Pyme: $49.000 CLP.
 - Mini Landing de Confianza: $79.000 - $120.000 CLP.
 - Kit de Respuestas WhatsApp: $39.000 CLP.
-- Auditoria Google Business: $39.000 CLP.
+- Google Business Urgente: $79.000 CLP.
 - Perfil 2x3 / Marketplace Upgrade: $49.000 CLP.
 - Pack 3 Posts IA: $45.000 CLP.
 - Pack 1 Reel Simple: $59.000 - $89.000 CLP.
@@ -389,16 +446,18 @@ Precio:
 
 ## Para ticket alto
 
-1. Constructor Premium.
-2. Pack Emprendedor 360.
+1. Web Premium IA.
+2. Constructor Premium.
+3. Pack Emprendedor 360.
 
 ## Para autoridad
 
 1. Saul El Constructor como caso real.
-2. Perfil 2x3.
-3. Google Business.
-4. Resultados de Ads.
-5. Publicador con contenido constante.
+2. Web Premium IA como vitrina de calidad.
+3. Perfil 2x3.
+4. Google Business.
+5. Resultados de Ads.
+6. Publicador con contenido constante.
 
 ---
 

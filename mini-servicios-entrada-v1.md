@@ -21,7 +21,7 @@ Debe tener:
 | Diagnostico IA Pyme | $49.000 | Priorizar que automatizar primero |
 | Mini Landing de Confianza | $79.000-$120.000 | Tener presencia simple y CTA a WhatsApp |
 | Kit de Respuestas WhatsApp | $39.000 | Respuestas listas para copiar/pegar |
-| Auditoria Google Business | $39.000 | Mejorar confianza local y reseñas |
+| Google Business Urgente | $79.000 | Reclamar/corregir perfil y ordenar datos criticos |
 | Perfil 2x3 / Marketplace Upgrade | $49.000 | Optimizar perfil de plataforma |
 | Pack 3 Posts IA | $45.000 | Convertir fotos reales en publicaciones |
 | Pack 1 Reel Simple | $59.000-$89.000 | Guion y estructura de reel |
@@ -78,21 +78,21 @@ Te dejamos ordenada la base digital para operar como negocio serio en Meta: Inst
 
 Incluye:
 - Auditoria WhatsApp Express.
-- Auditoria Google Business.
+- Google Business Urgente.
 - Kit de Respuestas WhatsApp.
 
-### Presencia Local Express — $149.000
+### Presencia Local Express — $179.000-$219.000
 
 Incluye:
 - Mini Landing de Confianza.
-- Auditoria Google Business.
+- Google Business Urgente.
 - Pack 3 Posts IA.
 
-### Meta Ready — $149.000
+### Meta Ready — $199.000
 
 Incluye:
 - Setup Identidad Meta Legal.
-- Auditoria Google Business.
+- Google Business Urgente.
 - Auditoria Ads Express.
 
 ### Diagnostico Growth — $99.000
@@ -101,6 +101,25 @@ Incluye:
 - Diagnostico IA Pyme.
 - Auditoria Ads Express.
 - Plan de 14 dias.
+
+### Puente Web Premium IA — $149.000
+
+Incluye:
+- Diagnostico IA Pyme.
+- Mapa de secciones de la web premium.
+- Checklist de assets: logo, fotos, pruebas, oferta, CTA y referencias.
+- Propuesta cerrada con precio regular, precio lanzamiento y alcance.
+
+Sirve para clientes que quieren una web alta gama, pero aun no tienen claro si deben partir por landing, sistema WhatsApp, CRM o contenido.
+
+## Oferta de lanzamiento conectada
+
+Cuando el cliente ya tiene oferta clara y material minimo, el upsell natural es:
+
+- Web Premium IA regular: $890.000 - $1.200.000 CLP.
+- Web Premium IA lanzamiento: $590.000 - $790.000 CLP.
+- Bono fundador: mapa visual IA + conexion WhatsApp + QA desktop/mobile incluido.
+- Condicion: 3 cupos fundadores para documentar caso, captura y testimonio.
 
 ## Frase comercial
 
